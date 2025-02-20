@@ -33,7 +33,7 @@
   display: inline-block;
   font-family: $font1;
   color: $Black;
-  background-color: $White;
+  background-color: transparent;
   border: 2px solid $Black;
   border-radius: 50rem;
   padding: 12rem 24rem 12rem 24rem;
@@ -56,13 +56,13 @@
   }
 }
 
-@mixin buttonTSecond {
+@mixin buttonSecond {
   display: inline-block;
   font-family: $font1;
   background-color: transparent;
   border: 0;
   border-radius: 0;
-  padding: 15rem 40rem 15rem 40rem;
+  padding: 0;
   transition: $animation1;
   line-height: normal;
   letter-spacing: .25rem;
@@ -75,10 +75,19 @@
   font-size: 18rem;
   line-height: 1;
   color: $Black;
+  display: flex;
+  gap: 4px;
+  align-items: center;
 
-  .arrow {
+  .icon {
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    display: flex;
+
     svg {
       fill: $BrightBlue;
+      vertical-align: middle;
     }
   }
 

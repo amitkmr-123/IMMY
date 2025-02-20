@@ -213,7 +213,7 @@
   }
 }
 
-@mixin eyebrow {
+@mixin HeroEyebrow {
   display: block;
   font-family: $font1;
   font-style: normal;
@@ -226,7 +226,7 @@
   margin-bottom: 20rem;
 }
 
-@mixin HeroEyebrow {
+@mixin eyebrow {
   display: block;
   font-family: $font1;
   font-style: normal;
@@ -236,7 +236,7 @@
   letter-spacing: 1rem;
   text-transform: uppercase;
   color: $Red;
-  margin-bottom: 12rem;
+  margin-bottom: 17rem;
 }
 
 @mixin CardEyebrow {

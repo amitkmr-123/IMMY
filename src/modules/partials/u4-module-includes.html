@@ -17,8 +17,13 @@ require_css (get_asset_url('../../css/styles.css')) }} {% endif %}
 	{% endif %} {% if module.module_overrides.background_settings.background_type
   == "gradient" %}
 	<div
-			 class="bg_overlay bg_color {{ module.module_overrides.background_settings.select_gradient }}"
+			 class="bg_overlay {{ module.module_overrides.background_settings.select_gradient }}"
 			 ></div>
+	{% if module.module_overrides.background_settings.overlay_image.src %}
+		<div
+			 class="bg_overlay overlay_img  " style="background-image:url({{ module.module_overrides.background_settings.overlay_image.src }});"
+			 ></div>
+		{% endif %}
 	{% endif %} {% if module.module_overrides.background_settings.background_type
   == "image" %}
 	<div class="bg_overlay bg_image {% if module.module_overrides.background_settings.include_overlay_gradient %}{{ module.module_overrides.background_settings.select_gradient }}{% endif %}"></div>

@@ -10,8 +10,12 @@ section.u4m-drag-and-drop-area {
 .dnd_padd,
 .dnd-section {
     max-width: $outercontainerSize ;
-    padding: 100rem $outercontainerSpacingLR;
+    // padding: 100rem $outercontainerSpacingLR;
+    padding: 100rem 0;
     border-radius: $outercontainerRadius;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
 
     form {
         @include form;

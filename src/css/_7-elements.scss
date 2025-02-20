@@ -297,10 +297,6 @@ div#hs-eu-cookie-confirmation.hs-cookie-notification-position-bottom.can-use-gra
 }
 
 // default p size
-p {
-  @include b3;
-}
-
 a {
   @include link
 }
@@ -498,19 +494,19 @@ section[class*='u4m-'] {
 }
 
 .gradient1 {
-  background-image: $gradient1;
+  background: $gradient1;
 }
 
 .gradient2 {
-  background-image: $gradient2;
+  background: $gradient2;
 }
 
 .gradient3 {
-  background-image: $gradient3;
+  background: $gradient3;
 }
 
 .gradient4 {
-  background-image: $gradient4;
+  background: $gradient4;
 }
 
 //
@@ -522,6 +518,13 @@ section[class*='u4m-'] {
   height: 100%;
   z-index: 1;
   pointer-events: none;
+
+  &.overlay_img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    mix-blend-mode: overlay;
+  }
 }
 
 .bg_image {
@@ -667,4 +670,168 @@ section[class*='u4m-'] {
 
 .White_Clr {
   color: $White;
+}
+
+
+
+.intro_content {
+  max-width: 715rem;
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 50rem;
+  text-align: center;
+
+  .eyebrow_text {
+    @include eyebrow;
+  }
+
+  .intro_title {
+    margin-top: 0;
+    margin-bottom: 15rem;
+  }
+
+  .intro_btn_wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin-top: 30rem;
+  }
+
+  .intro_desc {
+    margin-bottom: 0px;
+
+    p:last-child {
+      margin: 0;
+    }
+  }
+
+  &.right {
+    margin-right: 0;
+    text-align: right;
+
+    .intro_title span {
+      left: auto;
+      right: 0;
+      transform: none;
+    }
+
+    .intro_btn_wrap {
+      justify-content: right;
+    }
+  }
+
+  &.left {
+    text-align: left;
+    margin-left: 0;
+
+    .intro_title span {
+      left: 0;
+      right: auto;
+      transform: none;
+    }
+
+    .intro_btn_wrap {
+      justify-content: left;
+    }
+  }
+
+
+}
+
+.reverse-text {
+  color: $white;
+
+  .themeStyle,
+  .bodystyle2,
+  .bodystyle1,
+  .bodystyle3,
+  .bodystyle4,
+  .bodystyle5,
+
+  .eyebrow_text,
+  .intro_desc,
+  .intro_title {
+    color: $white;
+  }
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    color: $white;
+  }
+
+  .arrow-link:not(:hover) {
+    color: $white;
+  }
+}
+
+
+.hs-button {
+  @include button;
+}
+
+.hs-arrow-btn {
+  @include buttonSecond;
+}
+
+.hs-sec-btn {
+  @include buttonThird;
+}
+
+.hs-button_small {
+  @include buttonSm;
+}
+
+.hs-arrow-btn_small {
+  @include buttonTSecondSm;
+}
+
+.reverse-text {
+  .hs-button {
+    background-color: $white;
+    color: $Black;
+
+    &:hover,
+    &:focus {
+      background: rgba($White, 0.8);
+      color: $Black;
+    }
+  }
+
+  .hs-arrow-btn {
+    background-color: transparent;
+    color: $White;
+
+
+    .icon {
+      svg {
+        fill: $White;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: rgba($White, 0.8);
+
+      .icon {
+        svg {
+          fill: rgba($White, 0.8);
+          ;
+        }
+      }
+    }
+  }
+
+  .hs-sec-btn {
+    border-color: $White;
+    color: $White;
+
+    &:hover,
+    &:focus {
+      background: $White;
+      color: $Black;
+      border-color: $White;
+    }
+  }
+
 }
