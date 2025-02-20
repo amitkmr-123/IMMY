@@ -11,22 +11,26 @@ require_css (get_asset_url('../../css/styles.css')) }} {% endif %}
 				 >
 	{% if module.module_overrides.background_settings.background_type == "color"
   %}
-	<div
-			 class="bg_overlay bg_color {{ module.module_overrides.background_settings.select_color }}"
-			 ></div>
-	{% endif %} {% if module.module_overrides.background_settings.background_type
-  == "gradient" %}
-	<div
-			 class="bg_overlay {{ module.module_overrides.background_settings.select_gradient }}"
-			 ></div>
+	<div class="bg_overlay bg_color {{ module.module_overrides.background_settings.select_color }}"></div>
+	{% endif %} 
+	
+	{% if module.module_overrides.background_settings.background_type== "gradient" %}
+	{% if module.module_overrides.background_settings.select_gradient=="gradient5"%}
+			<div class="bg_overlay" style="background: var(--{{  module.module_overrides.background_settings.select_gradient }}), url({{ module.module_overrides.background_settings.overlay_image.src }});"></div>
+	{% else %}
+		<div class="bg_overlay {{ module.module_overrides.background_settings.select_gradient }}"></div>
 	{% if module.module_overrides.background_settings.overlay_image.src %}
-		<div
-			 class="bg_overlay overlay_img  " style="background-image:url({{ module.module_overrides.background_settings.overlay_image.src }});"
-			 ></div>
+	<div class="bg_overlay overlay_img " style="background-image:url({{ module.module_overrides.background_settings.overlay_image.src }});"></div>
+	{% endif %}
 		{% endif %}
-	{% endif %} {% if module.module_overrides.background_settings.background_type
+	{% endif %}
+	
+	{% if module.module_overrides.background_settings.background_type
   == "image" %}
 	<div class="bg_overlay bg_image {% if module.module_overrides.background_settings.include_overlay_gradient %}{{ module.module_overrides.background_settings.select_gradient }}{% endif %}"></div>
+	{% if module.module_overrides.background_settings.include_overlay %}
+	<div class="bg_overlay  bg_ovarlayclr {{ module.module_overrides.background_settings.image_overlay_select_color }}" style="opacity:{{ module.module_overrides.background_settings.opacity }};"></div>
+	{% endif %}
 	{% endif %} {% if module.module_overrides.enable_overrides %} {% require_js %}
 	<style>
 		{% if module.module_overrides.top_margin == 'top-margin-custom' %}
@@ -49,8 +53,6 @@ require_css (get_asset_url('../../css/styles.css')) }} {% endif %}
 
 
 
-
-
 		{% if module.module_overrides.background_settings.background_type == "color"%}
 
 		{% if module.module_overrides.background_settings.include_overlay_image %}
@@ -62,61 +64,12 @@ require_css (get_asset_url('../../css/styles.css')) }} {% endif %}
 		{% endif %}
 		{% endif %}
 
-
-
-
 		{% if module.module_overrides.background_settings.background_type == "image"  %}
-
-			{% if module.module_overrides.background_settings.include_overlay_gradient %}
-
-			{% if  module.module_overrides.background_settings.select_gradient  %} 
-				{% if  module.module_overrides.background_settings.select_gradient == "gradient1" %}
-				.{{ moduleName}}.{{ name }} .bg_image.gradient1{
-/* 					background-image: linear-gradient(180deg,rgba(0,0,0,0) 0%,#0b3160 100%), url({{ module.module_overrides.background_settings.background_image.src }}); */
-										background-image: var(--gradient1), url({{ module.module_overrides.background_settings.background_image.src }});
-				}
-				{% endif %}
-
-				{% if  module.module_overrides.background_settings.select_gradient == "gradient2" %}
-				.{{ moduleName}}.{{ name }} .bg_image.gradient2{
-{# 					background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #151f33 100%), url({{ module.module_overrides.background_settings.background_image.src }}); #}
-										background-image: var(--gradient2), url({{ module.module_overrides.background_settings.background_image.src }});
-				}
-				{% endif %}
-		
-				{% if  module.module_overrides.background_settings.select_gradient == "gradient3" %}
-				.{{ moduleName}}.{{ name }} .bg_image.gradient3{
-{# 					background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #151f33 100%), url({{ module.module_overrides.background_settings.background_image.src }}); #}
-										background-image: var(--gradient3), url({{ module.module_overrides.background_settings.background_image.src }});
-				}
-				{% endif %}
-		
-				{% if  module.module_overrides.background_settings.select_gradient == "gradient4" %}
-				.{{ moduleName}}.{{ name }} .bg_image.gradient4{
-{# 					background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #151f33 100%), url({{ module.module_overrides.background_settings.background_image.src }}); #}
-										background-image: var(--gradient4), url({{ module.module_overrides.background_settings.background_image.src }});
-				}
-				{% endif %}
-
-			{% else %}
-
-			.{{ moduleName}}.{{ name }} .bg_image{
-				background-image: url({{ module.module_overrides.background_settings.background_image.src }})
-			}
-			{% endif %}
-
-		{# === #}
-
-		{% else %}
-		.{{ moduleName}}.{{ name }} .bg_image{
+	.{{ moduleName}}.{{ name }} .bg_image{
 			background-image: url({{ module.module_overrides.background_settings.background_image.src }})
 		}
 
 		{% endif %}
-
-
-		{% endif %}
-
 
 		{% if module.module_overrides.container.size == "full-width"%}
 		.{{name}} .page-center{
@@ -128,5 +81,10 @@ require_css (get_asset_url('../../css/styles.css')) }} {% endif %}
 			max-width: {{ module.module_overrides.container.custom_size }}px;
 		}
 		{% endif %}
+		{% if  module.module_overrides.background_settings.select_color == 'custom'%}
+	.{{name}} .bg_overlay.custom{
+		background-color:{{ module.module_overrides.background_settings.custom_color.rgba }};
+	}
+{% endif %}	 
 	</style>
 	{% end_require_js %} {% endif %}

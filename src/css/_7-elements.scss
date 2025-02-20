@@ -509,6 +509,18 @@ section[class*='u4m-'] {
   background: $gradient4;
 }
 
+.gradient5 {
+  background: $gradient5;
+}
+
+:root {
+  --gradient1: #{$gradient1};
+  --gradient2: #{$gradient2};
+  --gradient3: #{$gradient3};
+  --gradient4: #{$gradient4};
+  --gradient5: #{$gradient5};
+}
+
 //
 .bg_overlay {
   position: absolute;
