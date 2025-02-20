@@ -20,9 +20,9 @@ body {
   font-family: $font1;
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
-  color: $black;
-  font-weight: normal;
-  margin-top: 78rem;
+  color: $FontGray;
+  font-weight: 325;
+  margin-top: 0;
 
   &.hide-header {
     margin-top: 0;
@@ -336,7 +336,6 @@ ol {
 
 li {
   margin-bottom: 5rem;
-  letter-spacing: .5rem;
 }
 
 ul ul,
@@ -475,4 +474,197 @@ a[href='javascript:;'] {
 //
 section[class*='u4m-'] {
   scroll-margin-top: 150px;
+}
+
+
+.bodystyle1 {
+  @include b1;
+}
+
+.bodystyle2 {
+  @include b2;
+}
+
+.bodystyle3 {
+  @include b3;
+}
+
+.bodystyle4 {
+  @include b4;
+}
+
+.bodystyle5 {
+  @include b5;
+}
+
+.gradient1 {
+  background-image: $gradient1;
+}
+
+.gradient2 {
+  background-image: $gradient2;
+}
+
+.gradient3 {
+  background-image: $gradient3;
+}
+
+.gradient4 {
+  background-image: $gradient4;
+}
+
+//
+.bg_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bg_image {
+  background-size: cover;
+  background-position: center;
+}
+
+.dnd_padd {
+  position: relative;
+}
+
+.bg_overlay~*:not(.bg_overlay) {
+  position: relative;
+  z-index: 2;
+}
+
+
+.Blue_bg {
+  background-color: $Blue;
+}
+
+.Red_bg {
+  background-color: $Red;
+}
+
+.BrightBlue_bg {
+  background-color: $BrightBlue;
+}
+
+.BrightRed_bg {
+  background-color: $BrightRed;
+}
+
+.Green_bg {
+  background-color: $Green;
+}
+
+.Purple_bg {
+  background-color: $Purple;
+}
+
+.Orange_bg {
+  background-color: $Orange;
+}
+
+.Teal_bg {
+  background-color: $Teal;
+}
+
+.Pink_bg {
+  background-color: $Pink;
+}
+
+.DarkNavy_bg {
+  background-color: $DarkNavy;
+}
+
+.LightGray_bg {
+  background-color: $LightGray;
+}
+
+.Gray_bg {
+  background-color: $Gray;
+}
+
+.Charcoal_bg {
+  background-color: $Charcoal;
+}
+
+.FontGray_bg {
+  background-color: $FontGray;
+}
+
+.Black_bg {
+  background-color: $Black;
+}
+
+.White_bg {
+  background-color: $White;
+}
+
+
+
+.Blue_Clr {
+  color: $Blue;
+}
+
+.Red_Clr {
+  color: $Red;
+}
+
+.BrightBlue_Clr {
+  color: $BrightBlue;
+}
+
+.BrightRed_Clr {
+  color: $BrightRed;
+}
+
+.Green_Clr {
+  color: $Green;
+}
+
+.Purple_Clr {
+  color: $Purple;
+}
+
+.Orange_Clr {
+  color: $Orange;
+}
+
+.Teal_Clr {
+  color: $Teal;
+}
+
+.Pink_Clr {
+  color: $Pink;
+}
+
+.DarkNavy_Clr {
+  color: $DarkNavy;
+}
+
+.LightGray_Clr {
+  color: $LightGray;
+}
+
+.Gray_Clr {
+  color: $Gray;
+}
+
+.Charcoal_Clr {
+  color: $Charcoal;
+}
+
+.FontGray_Clr {
+  color: $FontGray;
+}
+
+.Black_Clr {
+  color: $Black;
+}
+
+.White_Clr {
+  color: $White;
 }

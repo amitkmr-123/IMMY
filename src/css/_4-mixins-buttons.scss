@@ -2,28 +2,103 @@
 @mixin button {
   display: inline-block;
   font-family: $font1;
-  color: $white;
-  background-color: $action1;
+  color: $White;
+  background-color: $Red;
   border: 0;
-  border-radius: $border1;
-  padding: 15rem 40rem 15rem 40rem;
-  margin: 20rem 0;
+  border-radius: 50rem;
+  padding: 16rem 40rem 16rem 40rem;
   transition: $animation1;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 14rem;
-  line-height: 1.2;
-  letter-spacing: .25rem;
+  text-transform: none;
+  font-weight: 400;
+  font-size: 18rem;
+  line-height: 1;
+  letter-spacing: normal;
   text-decoration: none;
   cursor: pointer;
   text-align: center;
-  box-shadow: $shadow1;
+  box-shadow: none;
 
   &:hover,
   &:focus {
-    background-color: $black;
-    color: $white;
+    background-color: $BrightRed;
+    color: $White;
   }
+}
+
+@mixin buttonSm {
+  padding: 12px 24px;
+}
+
+@mixin buttonThird {
+  display: inline-block;
+  font-family: $font1;
+  color: $Black;
+  background-color: $White;
+  border: 2px solid $Black;
+  border-radius: 50rem;
+  padding: 12rem 24rem 12rem 24rem;
+  transition: $animation1;
+  text-transform: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18rem;
+  line-height: 1;
+  letter-spacing: normal;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    border-color: $Black;
+    background-color: $Black;
+    color: $White;
+  }
+}
+
+@mixin buttonTSecond {
+  display: inline-block;
+  font-family: $font1;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 15rem 40rem 15rem 40rem;
+  transition: $animation1;
+  line-height: normal;
+  letter-spacing: .25rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: $animation1;
+  text-transform: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18rem;
+  line-height: 1;
+  color: $Black;
+
+  .arrow {
+    svg {
+      fill: $BrightBlue;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $BrightBlue;
+
+    .arrow {
+      svg {
+        fill: $BrightBlue;
+      }
+    }
+
+  }
+}
+
+@mixin buttonTSecondSm {
+  font-size: 16rem;
+  line-height: 1;
 }
 
 // 
