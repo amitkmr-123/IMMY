@@ -1,5 +1,5 @@
-# Unified 4 - v1.6.4
-Unified 4 for the HubSpot CMS by New Breed
+# IMMY - v1.6.4
+IMMY for the HubSpot CMS by New Breed
 =======
 Copyright 2024 New Breed - newbreedrevenue.com
 Last Updated - 12-31-2024
@@ -18,29 +18,29 @@ hs hubdb create u4-resource-library.json
 
 #### Upload entire project
 ```
-hs upload src unified4
+hs upload src IMMY
 ```
 
 #### Watch entire project
 ```
-hs watch src unified4
+hs watch src IMMY
 ```
 
 #### Fetch entire project with overwriting
 ```
-hs fetch unified4 src -o
+hs fetch IMMY src -o
 ```
 
 #### Fetch a specific module add -o to the end to overwrite files
 ```
-hs fetch unified4/modules/u4m-000.module src/modules/u4m-000.module -o
+hs fetch IMMY/modules/u4m-000.module src/modules/u4m-000.module -o
 ```
 
-hs fetch unified4/modules/u4m-cards-side.module src/modules/u4m-cards-side.module -o
+hs fetch IMMY/modules/u4m-cards-side.module src/modules/u4m-cards-side.module -o
 
 #### Watch entire folder on non-default portal (portal names are set in hubspot.config.yml)
 ```
-hs watch --account=hug_vt src unified4
+hs watch --account=hug_vt src IMMY
 ```
 
 #### Fetch a HubDB table (the numbers are the ID of the table)
