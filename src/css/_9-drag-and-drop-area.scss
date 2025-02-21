@@ -28,7 +28,7 @@ section.u4m-drag-and-drop-area {
     }
 
     @include phone {
-        padding: 40rem 20rem;
+        padding: 40rem 10rem;
     }
 }
 
@@ -46,6 +46,11 @@ section.u4m-drag-and-drop-area {
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+
+    @include tabletMid {
+        padding-left: 20rem;
+        padding-right: 20rem;
+    }
 }
 
 .full-width,
