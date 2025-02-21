@@ -9,10 +9,8 @@ section.u4m-drag-and-drop-area {
 
 .dnd_padd,
 .dnd-section {
-    max-width: $outercontainerSize ;
-    // padding: 100rem $outercontainerSpacingLR;
-    padding: 100rem 0;
-    border-radius: $outercontainerRadius;
+    max-width: 100%;
+    padding: 100rem 20rem;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
@@ -22,15 +20,15 @@ section.u4m-drag-and-drop-area {
     }
 
     @include tablet {
-        padding: 60rem 0;
+        padding: 60rem 20rem;
     }
 
     @include tabletvert {
-        padding: 50rem 0;
+        padding: 50rem 20rem;
     }
 
     @include phone {
-        padding: 40rem 0;
+        padding: 40rem 20rem;
     }
 }
 
@@ -46,6 +44,8 @@ section.u4m-drag-and-drop-area {
 .dnd-section>.row-fluid {
     @include center;
     margin: 0 auto;
+    position: relative;
+    overflow: hidden;
 }
 
 .full-width,
