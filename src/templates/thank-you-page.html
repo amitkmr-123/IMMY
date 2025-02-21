@@ -1,7 +1,7 @@
 <!--
 templateType: page
 isAvailableForNewContent: true
-label: IMMY - Thank You Page
+label: Unified 4 - Thank You Page
 screenshotPath: images/u4-thank-you-page.jpg
 -->
 {% extends './base.html' %}
@@ -9,7 +9,7 @@ screenshotPath: images/u4-thank-you-page.jpg
 {% block body %}
 
 <main id="main-content">
-{% dnd_area "IMMY_dnd_area" %}
+{% dnd_area "unified4_dnd_area" %}
   {% dnd_section
   full_width=false
 %}
@@ -27,7 +27,7 @@ screenshotPath: images/u4-thank-you-page.jpg
     {% end_dnd_row %}
     {% dnd_row %}
       {% dnd_module
-        path="/IMMY/modules/u4m-slider-resource-cards",
+        path="/unified4/modules/u4m-slider-resource-cards",
         offset=0,
         width=12,
         heading="Other Content You Might Like"
@@ -36,7 +36,7 @@ screenshotPath: images/u4-thank-you-page.jpg
     {% end_dnd_row %}
     {% dnd_row %}
       {% dnd_module
-        path="/IMMY/modules/u4m-share-page",
+        path="/unified4/modules/u4m-share-page",
         offset=0,
         width=12,
         page_to_share={

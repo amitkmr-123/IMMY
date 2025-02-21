@@ -1,0 +1,254 @@
+<!--
+ templateType: global_partial
+ label: Footer
+ -->
+
+<footer class="footer">
+	<div class="page-center">
+		<div class="ftrInnerWrap">
+			<div class="navSection">
+				<div class="navWrap">
+					<div class="productMenu">
+						{% menu "product_menu_1" id=186424956181, flyouts=false, label='Product Menu' %}
+					</div>
+					<div class="mainMenu">
+						{% menu "main_menu_1" id=186428789080, flyouts=false, label='Main Menu' %}
+					</div>
+				</div>
+			</div>
+			<div class="socialSection">
+				{% module "social_share" path="../../modules/u4m-social-share", label="Social Share",
+				items=[ {
+          "icon" : {
+            "name" : "X Twitter",
+            "type" : "REGULAR",
+            "unicode" : "e61b"
+          },
+          "image" : {
+            "loading" : "lazy",
+            "size_type" : "auto",
+            "src" : ""
+          },
+          "link" : "https://x.com",
+          "select_icon_type" : "icon"
+        }, {
+          "icon" : {
+            "name" : "LinkedIn In",
+            "type" : "REGULAR",
+            "unicode" : "f0e1"
+          },
+          "image" : {
+            "loading" : "lazy",
+            "size_type" : "auto",
+            "src" : ""
+          },
+          "link" : "https://www.linkedin.com",
+          "select_icon_type" : "icon"
+        }, {
+          "icon" : {
+            "name" : "Instagram",
+            "type" : "REGULAR",
+            "unicode" : "f16d"
+          },
+          "image" : {
+            "loading" : "lazy",
+            "size_type" : "auto",
+            "src" : ""
+          },
+          "link" : "https://www.instagram.com",
+          "select_icon_type" : "icon"
+        } ]
+				%}
+			</div>
+			<div class="bottomSection">
+				<div class="logoWrap">
+					{% set logo_file =  get_asset_url('../..//templates/images/IMMY Logo-03.png') %}
+					{% module "footer_logo" path="@hubspot/logo", label="Footer Logo", link='/', img={src="{{logo_file}}", width=360, alt= IMMY, override_inherited_src= true} %}
+				</div>
+				<div class="privacySection">
+					{% module_block module "copyright_and_privacy" path="@hubspot/rich_text" label="Privacy And Copyright Content" %}
+					{% module_attribute "html" %}
+					<p>
+						<span>© {{year}} IMMY</span>
+						<a href="#">Legal</a>
+						<a href="#">Privacy Policy</a>
+					</p>
+					{% end_module_attribute %}
+					{% end_module_block %}
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+{% require_css %}
+<style>
+	.footer{
+		padding-top:80px;
+		padding-bottom:80px;
+		position:relative;
+		z-index:99;
+		background-color: #002F58;
+	}
+	.footer .navSection {
+		margin-bottom: 60px;
+	}
+
+	.footer .socialSection {
+		margin-bottom: 40px;
+	}
+
+	.footer .bottomSection {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		border-top: 1px solid #FFFFFF;
+		padding-top:40px;
+		gap: 30px;
+	}
+	.footer .privacySection p {
+		margin: 0;
+		font-size: 12px;
+		color:white;
+	}
+
+	.footer .privacySection p a {
+		color: inherit;
+		display: inline-block;
+		margin-left: 16px;
+	}
+	.footer .logoWrap a {
+		display: block;
+		max-width: 180px;
+	}
+	.footer .navWrap .hs-menu-wrapper >ul {
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+		justify-content: space-between;
+	}
+	.footer .hs-menu-wrapper.hs-menu-flow-horizontal>ul:before,
+	.footer .hs-menu-wrapper.hs-menu-flow-horizontal>ul:after{
+		display: none;
+	}
+	.footer .hs-menu-wrapper.hs-menu-flow-horizontal>ul li.hs-menu-depth-1 {
+		float: unset;
+	}
+	.footer .navWrap .hs-menu-wrapper >ul ul.hs-menu-children-wrapper {
+		position: static !important;
+	}
+	.footer .hs-menu-wrapper.hs-menu-flow-horizontal>ul li.hs-item-has-children ul.hs-menu-children-wrapper li a {
+		overflow: auto;
+		text-overflow: unset;
+		white-space: normal;
+		width: auto;
+		max-width: unset;
+	}
+	.footer .hs-menu-wrapper.hs-menu-flow-horizontal>ul li a{
+		padding:0;
+		color:#fff;
+		cursor:pointer;
+		overflow: unset;
+    text-overflow: unset;
+    white-space: normal;
+		max-width: unset;
+	}
+	.footer .navWrap .hs-menu-wrapper >ul li{
+		margin: 0;
+	}
+	.footer .navWrap .hs-menu-wrapper >ul >li >a {
+		font-size: 16px;
+		font-weight:500;
+	}
+	.footer .navWrap .hs-menu-wrapper >ul ul li a{
+		font-size:14px;
+	}
+	.footer .navWrap .hs-menu-wrapper >ul ul{
+		margin-top:12px;
+		row-gap:12px;
+	}
+
+	.footer .navWrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+		column-gap: 4%;
+	}
+
+	.footer .productMenu, 
+	.footer .mainMenu {
+		width: 46%;
+	}
+
+	.footer .productMenu .hs-menu-wrapper >ul >li >ul {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.footer .productMenu .hs-menu-wrapper >ul ul,
+	.footer .mainMenu .hs-menu-wrapper >ul ul{
+		display: flex;
+	}
+	.footer .productMenu .hs-menu-wrapper >ul ul ul,
+	.footer .mainMenu .hs-menu-wrapper >ul ul{
+		flex-direction: column;
+	}
+	.footer .productMenu .hs-menu-wrapper >ul >li{
+		width:100%;
+	}
+	.footer .productMenu .hs-menu-wrapper >ul >li >ul >li >a {
+		font-weight: 700;
+	}
+	.footer .productMenu .hs-menu-wrapper >ul >li >ul{
+		column-gap:20px;
+	}
+
+	@media(max-width:991px){
+		.footer .productMenu, .footer .mainMenu {
+			width: 100%;
+		}
+
+		.footer .navWrap {
+			row-gap: 40px;
+		}
+
+		.footer .navSection {
+			margin-bottom: 40px;
+		}
+
+		.footer .productMenu .hs-menu-wrapper >ul >li >ul >li,
+		.footer .mainMenu .hs-menu-wrapper >ul >li {
+			width: 25%;
+		}
+	}
+
+	@media(max-width:767px){
+		.footer .bottomSection {
+			justify-content: center;
+			flex-direction: column;
+		}
+		.footer .productMenu .hs-menu-wrapper >ul >li >ul{
+			flex-direction: column;
+		}
+		.footer .privacySection p,
+		.footer .navWrap .hs-menu-wrapper >ul{
+			text-align:center
+		}
+		.footer .productMenu .hs-menu-wrapper >ul >li >ul >li,
+		.footer .mainMenu .hs-menu-wrapper >ul >li {
+			width: 100%;
+		}
+		.footer {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+
+	}
+
+</style>
+{% end_require_css %}
+
+

@@ -1,0 +1,65 @@
+<!--
+templateType: global_partial
+label: Header
+-->
+<headar class="header">
+	<div class="topHeader">
+		<div class="page-center">
+			<div class="topInnerWrap">
+
+			</div>
+		</div>
+	</div>
+	<div class="mainHeader">
+		<div class="page-center">
+			<div class="bottomInnerWrap">
+				<div class="logoWrap">
+					{% set logo_file =  get_asset_url('../..//templates/images/IMMY-header-Logo.png') %}
+					{% module "header_logo" path="@hubspot/logo", label="Header Logo", link='/', img={src="{{logo_file}}", width=360, alt= IMMY, override_inherited_src= true} %}
+				</div>
+				<div class="rightSection">
+					<div class="nav">
+						Mega Menu
+					</div>
+					<div class="BtnWrap">
+						{% module "button_mixin_button" path="@hubspot/button", label="Button Mixin",  button_text="Button Mixin", link={ "url": { "type": "EXTERNAL", "href": "", "content_id": null }, "open_in_new_tab": true, "no_follow": false } %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</headar>
+
+{% require_css %}
+
+<style>
+	.header{
+		position:relative;
+		z-index:101;
+	}
+	.header .topHeader{
+		background-color: #002F58;
+		padding: 10px 0;
+	}
+	.header .bottomInnerWrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.header .logoWrap a {
+		display: block;
+		max-width: 189px;
+	}
+	.header .mainHeader {
+		padding: 30px 0;
+	}
+	.header .rightSection {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		column-gap: 40px;
+	}
+</style>
+
+{% end_require_css %}
