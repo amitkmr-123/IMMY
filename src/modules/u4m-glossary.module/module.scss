@@ -12,7 +12,11 @@
     margin: 0;
     max-width: 100%;
     .page-center {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
       .glossCat {
+        flex: 1;
         ul {
           display: flex;
         }
@@ -22,9 +26,68 @@
       }
     }
   }
-
-  .cnt {
-    height: 70px;
-    overflow: hidden;
+  .glossInr {
+    max-height: 1000px;
+    overflow: auto;
+    .glossList {
+      .glossGroup {
+        background-color: $white;
+        padding: 50px 0 100px;
+        &:nth-child(odd) {
+          background-color: $LightGray;
+        }
+        .page-center {
+          position: relative;
+          overflow: visible;
+          .first_letter {
+            position: absolute;
+            font-size: 85px;
+            color: $DarkNavy;
+            opacity: 0.2;
+            line-height: 1;
+          }
+          .glossItems {
+            padding-left: 200px;
+            .glossItembrd {
+              padding: 50px 0;
+              border-bottom: 1px solid $Gray;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 65px;
+              .glossItem {
+                flex: 1;
+                .cnt {
+                  height: 70px;
+                  overflow: hidden;
+                }
+              }
+              .glossBtnwrap {
+                width: 140px;
+                text-align: right;
+                svg path {
+                  fill: currentColor;
+                }
+                .glossBtnless {
+                  display: none;
+                }
+              }
+            }
+            &.cntToggle .glossItembrd {
+              .glossItem .cnt {
+                height: auto;
+              }
+              .glossBtnwrap .glossBtntext {
+                display: none;
+              }
+              .glossBtnwrap .glossBtnless {
+                display: block;
+                background-color: $black;
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
