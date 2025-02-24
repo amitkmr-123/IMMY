@@ -1,7 +1,22 @@
 {
-  "global": false,
-  "host_template_types" : [ "PAGE" ],
-"icon": "https://8292614.fs1.hubspotusercontent-na1.net/hubfs/8292614/4.svg",
-  "label": "Animated Stats",
-  "is_available_for_new_content": true
+  "global" : false,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE", "BLOG_LISTING", "BLOG_POST" ],
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 186431830623,
+  "js_assets" : [ {
+    "autoload" : true,
+    "path" : "../../js/jquery.js",
+    "name" : "jquery.js"
+  }, {
+    "autoload" : true,
+    "path" : "../../js/waypoint.js",
+    "name" : "waypoint.js"
+  }, {
+    "autoload" : true,
+    "path" : "../../js/counterUp.js",
+    "name" : "counterUp.js"
+  } ],
+  "label" : "Animated Stats",
+  "icon" : "https://8292614.fs1.hubspotusercontent-na1.net/hubfs/8292614/4.svg",
+  "is_available_for_new_content" : true
 }
