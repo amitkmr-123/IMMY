@@ -2,6 +2,16 @@
 section.u4m-hero {
   .intro_content {
     margin-bottom: 0;
+    .eyebrow_text {
+      @include HeroEyebrow;
+    }
+  }
+  &.reverse-text {
+    .intro_content {
+      .eyebrow_text {
+        color: $white;
+      }
+    }
   }
   .bannerMain {
     .flex_row {
@@ -98,6 +108,11 @@ section.u4m-hero {
         width: 100%;
       }
     }
+    .intro_content {
+      .eyebrow_text {
+        margin-bottom: 8px;
+      }
+    }
   }
   .bannerContent.fw {
     .intro_content {
@@ -150,6 +165,7 @@ section.u4m-hero {
     display: flex;
     align-items: center;
     width: 100%;
+    overflow: unset;
     .iframe_wrap {
       width: 100%;
       padding-bottom: 56.6%;
@@ -190,7 +206,7 @@ section.u4m-hero {
       top: -10px;
       width: 40px;
       z-index: 99;
-
+      background-color: $DarkNavy;
       svg {
         width: 20px;
         height: 20px;
