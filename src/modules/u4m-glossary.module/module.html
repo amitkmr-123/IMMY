@@ -1,0 +1,201 @@
+{% set moduleName = 'u4m-glossary' %}
+{% include "../partials/u4-module-includes.html" %}
+
+{{ macros.introGroup(module.intro_content, module.module_settings) }} 
+
+<div class="glossMain">
+	<form class="glossTop" autocomplete="off">
+	<div class="page-center">
+		<div class="glossCat"> 
+			<ul>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="a">
+					<span>A</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="b">
+					<span>B</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="c">
+					<span>C</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="d">
+					<span>D</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="e">
+					<span>E</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="f">
+					<span>F</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="g">
+					<span>G</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="h">
+					<span>H</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="i">
+					<span>I</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="j">
+					<span>J</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="k">
+					<span>K</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="l">
+					<span>L</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="m">
+					<span>M</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="n">
+					<span>N</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="o">
+					<span>O</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="p">
+					<span>P</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="q">
+					<span>Q</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="r">
+					<span>R</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="s">
+					<span>S</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="t">
+					<span>T</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="u">
+					<span>U</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="v">
+					<span>V</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="w">
+					<span>W</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="x">
+					<span>X</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="y">
+					<span>Y</span>
+				</li>
+				<li>
+					<input type="radio" name="alphabets" onsubmit="this.form.submit()" value="z">
+					<span>Z</span>
+				</li>
+
+			</ul> 
+		</div>
+		<div class="glossSearch">
+			<label>Search Glossary</label>
+			<input type="search" name="search" onsubmit="this.form.submit()" placeholder="Search by Keyword">
+		</div>
+		</div>
+	</form>
+	<div class="glossInr">
+
+		{% set query = "orderBy=name" %} 
+		{% if request.query_dict.alphabets %}
+		{% set query = query ~ '&name__icontains=' ~ request.query_dict.alphabets %}
+		{# {% set tabledata =  hubdb_table_rows( module.select_table, query )  %} #}
+		{% endif %}
+		{% if request.query_dict.search %}
+		{% set query = query ~ '&name__icontains=' ~ request.query_dict.search %} 
+		{% endif %}
+
+		{% set rows = hubdb_table_rows(module.select_hubdb_table, query) %}
+		{% set printed_letters = [] %}
+		<div class="glossList">
+			{% if rows|length == 0 %}
+			No Result Found
+			{% endif %}
+
+			{% set printed_letters = [] %}
+
+			{% for row in rows %}
+			{% set first_letter = row.name[:1] %} {# Get the first letter of the name #} 
+
+			{% if first_letter not in printed_letters %} 
+			{% if printed_letters|length > 0 %}
+		</div> </div>{# Close previous .glossGroup before starting a new one #}
+		{% endif %}
+ 
+		<div class="glossGroup"> 
+		<div class="page-center"> 
+			<div id="{{ first_letter|lower }}" class="first_letter">{{ first_letter }}</div>
+			{% set printed_letters = printed_letters + [first_letter] %}
+			{% endif %}
+
+			<div class="glossItems"> 
+				<div class="glossItem">
+					<div class="name"><strong>{{ row.name }}</strong></div>
+					<div class="cnt">{{ row.description }}</div> 
+				</div>
+				<div class="glossBtnwrap">
+					<div class="glossBtn">
+						<div class="glossBtntext hs-sec-btn">See More <span class="arrow"><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6 7.42843L0 1.77306L1.275 0.571289L6 5.0249L10.725 0.571289L12 1.77306L6 7.42843Z" fill="black"/>
+							</svg>
+							</span></div>
+						<div class="glossBtntext hs-sec-btn">See Less <span class="arrow"><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6 7.42843L0 1.77306L1.275 0.571289L6 5.0249L10.725 0.571289L12 1.77306L6 7.42843Z" fill="black"/>
+							</svg>
+							</span></div>
+					</div>
+				</div>
+			</div>
+
+			{% if loop.last %}
+		</div> </div>{# Close the last .glossGroup #}
+		{% endif %}
+		{% endfor %}
+	</div>
+
+
+
+
+
+</div> 
+</div>
+
+
+
+
+</div>
+</div>
+</section>
+
+
+ 
+
+
+

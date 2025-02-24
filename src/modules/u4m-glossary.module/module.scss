@@ -1,0 +1,30 @@
+@import "../../css/_module-imports";
+.u4m-glossary.dnd_padd {
+  padding-left: 0;
+  padding-right: 0;
+  & > .page-center {
+    padding: 0;
+    max-width: 100%;
+  }
+  form.glossTop {
+    background-color: $DarkNavy;
+    color: $white;
+    margin: 0;
+    max-width: 100%;
+    .page-center {
+      .glossCat {
+        ul {
+          display: flex;
+        }
+      }
+      .glossSearch {
+        width: 300px;
+      }
+    }
+  }
+
+  .cnt {
+    height: 70px;
+    overflow: hidden;
+  }
+}
