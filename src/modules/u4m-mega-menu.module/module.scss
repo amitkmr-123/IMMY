@@ -1,0 +1,286 @@
+@import "../../css/_module-imports";
+
+.cmMegaMenu {
+    .cmNav {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        list-style: none;
+
+        @include tabletMid {
+            flex-direction: column;
+        }
+    }
+
+    .megaWrap {
+        position: absolute;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        margin-top: 13px;
+        background-color: $White;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        min-width: 207px;
+
+        &.megaMenu-wrap {
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 93.549%;
+            z-index: 111;
+            padding: 40px;
+
+            @include tabletMid {
+                transform: unset;
+                width: 100%;
+                padding: 20px;
+            }
+        }
+
+        &.normalMenu-wrap {
+            padding: 30px 20px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            .megaInnerWrap {
+                @include tabletMid {
+                    margin: 0;
+                }
+            }
+
+            @include tabletMid {
+                transform: unset;
+                width: 100%;
+                padding: 20px;
+            }
+        }
+
+        @include tabletMid {
+            position: static;
+            opacity: 1;
+            visibility: visible;
+            transform: unset;
+            margin-top: 0;
+            display: none;
+            transition: unset;
+        }
+    }
+
+    .cm-has-children {
+
+        .megaWrap {
+            &:before {
+                content: "";
+                display: block;
+                height: 13px;
+                position: absolute;
+                top: -13px;
+                width: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                cursor: pointer;
+            }
+        }
+
+
+        &.normalMenu {
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+
+    .navItem {
+        margin-bottom: 0;
+
+        &.normalMenu {
+            position: relative;
+        }
+
+        @include tabletMid {
+            position: relative;
+        }
+
+        &:hover {
+
+
+            .megaWrap {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .childArrow {
+                @include tabletMidmin {
+                    transform: rotate(180deg);
+                }
+
+            }
+        }
+    }
+
+    .mainNavItem {
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        color: $black;
+        font-weight: 700;
+        white-space: nowrap;
+
+        @include tablet {
+            padding: 15px 10px;
+        }
+    }
+
+    .cmChildMenu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        .menuItem {
+            margin: 0;
+
+            &:not(:first-child) {
+                margin-top: 14px;
+            }
+
+            a {
+                &:hover {
+                    color: #0B74D5;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+    }
+
+    .megaInnerWrap {
+        @include tabletMid {
+            display: flex;
+            row-gap: 40px;
+            flex-wrap: wrap;
+            margin: 0 -20px;
+            column-gap: 0 !important;
+        }
+
+    }
+
+    .megaMenu-wrap {
+
+        .megaInnerWrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            column-gap: 40px;
+        }
+
+
+        .childNavWrap {
+            flex: 1;
+
+            @include tabletMid {
+                width: 50%;
+                padding: 0 20px;
+                flex: unset;
+
+            }
+
+            @include phone {
+                width: 100%;
+            }
+        }
+
+        @include tabletMid {
+            display: none;
+        }
+    }
+
+    .imageWrap {
+        width: 100%;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .imageInnerWrap {
+        max-width: 150px;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        height: 82px;
+
+        img {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    .cmTitle {
+        margin-bottom: 16px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.1;
+        color: $black;
+    }
+
+    .menuItem {
+        a {
+            color: $FontGray;
+            font-size: 16px;
+            line-height: 1.125;
+            display: block;
+        }
+    }
+
+    .childArrow {
+        display: inline-block;
+        width: 20px;
+        vertical-align: middle;
+        margin-left: 5px;
+        transition: all 0.3s ease;
+
+
+        svg {
+            width: 100%;
+            display: inline-block;
+            vertical-align: middle;
+            color: inherit;
+            fill: inherit;
+        }
+
+        @include tabletMid {
+            display: none;
+        }
+
+        &.mb_childArrow {
+            @include tabletMidmin {
+                display: none;
+            }
+
+            @include tabletMid {
+                display: inline-block;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 52px;
+                height: 52px;
+                padding: 12px;
+                margin-left: 0;
+                cursor: pointer;
+                z-index: 1;
+            }
+        }
+    }
+
+    .cmActive {
+        @include tabletMid {
+            transform: rotate(180deg);
+        }
+    }
+
+}

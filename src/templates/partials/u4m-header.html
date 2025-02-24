@@ -6,7 +6,15 @@ label: Header
 	<div class="topHeader">
 		<div class="page-center">
 			<div class="topInnerWrap">
+				<div class="cmSearchBtn">
+					Search
+					{% set search_logo =  get_asset_url('../../templates/images/search.png') %}
+					<span class="searchIcon"><img src="{{search_logo}}" alt="Search"/></span>
+				</div>
 
+				<div class="topBtnWrap">
+					{% module "support_button" path="@hubspot/button", label="Support Button",  button_text="Support", link={ "url": { "type": "EXTERNAL", "href": "", "content_id": null }, "open_in_new_tab": true, "no_follow": false } %}
+				</div>
 			</div>
 		</div>
 	</div>
@@ -14,12 +22,592 @@ label: Header
 		<div class="page-center">
 			<div class="bottomInnerWrap">
 				<div class="logoWrap">
-					{% set logo_file =  get_asset_url('../..//templates/images/IMMY-header-Logo.png') %}
+					{% set logo_file =  get_asset_url('../../templates/images/IMMY-header-Logo.png') %}
 					{% module "header_logo" path="@hubspot/logo", label="Header Logo", link='/', img={src="{{logo_file}}", width=360, alt= IMMY, override_inherited_src= true} %}
+				</div>
+				<div class="navTrigger">
+					<span class="trigger_item"></span>
+					<span class="trigger_item"></span>
+					<span class="trigger_item"></span>
 				</div>
 				<div class="rightSection">
 					<div class="nav">
-						Mega Menu
+						{% module "mega_menu" path="../../modules/u4m-mega-menu", label="Mega Menu",
+						main_menu=[ {
+          "child_menu" : [ {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Aspergillus Galactomannan LFA"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Cryptococcal Antigen (CrAg LFA)"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Coccidioides Antibody LFA"
+            } ],
+            "title" : "Lateral Flow Assays"
+          }, {
+            "image" : {
+              "alt" : "Enzyme-Immunoassay",
+              "height" : 109,
+              "loading" : "lazy",
+              "max_height" : 109,
+              "max_width" : 155,
+              "size_type" : "auto",
+              "src" :  get_asset_url('../../templates/images/Enzyme-Immunoassay.png') ,
+              "width" : 155
+            },
+            "image_background_color" : {
+              "color" : "#C41230",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Histoplasma Galactomannan EIA"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Cryptococcal Antigen EIA"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Coccidioides Antibody EIA"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Blastomyces Antibody EIA"
+            } ],
+            "title" : "Enzyme Immunoassay"
+          }, {
+            "image" : {
+              "alt" : "PCR",
+              "height" : 86,
+              "loading" : "lazy",
+              "max_height" : 86,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" :  get_asset_url('../../templates/images/PCR.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00AA9B",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Candida Species PCR"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Candida Auris PCR"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Aspergillus PCR"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Pneumocystis Jirovecci PCR"
+            } ],
+            "title" : "PCR"
+          }, {
+            "image" : {
+              "alt" : "Products",
+              "height" : 100,
+              "loading" : "lazy",
+              "max_height" : 100,
+              "max_width" : 109,
+              "size_type" : "auto",
+              "src" :  get_asset_url('../../templates/images/Products.png'),
+              "width" : 109
+            },
+            "image_background_color" : {
+              "color" : "#5F285E",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Latex Agglutination"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "MycoDDR"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Immunodiffusion Reagents and Plates"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Complement Fixation Reagents"
+            } ],
+            "title" : "Other Products"
+          } ],
+          "enable_child_menu" : true,
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "menu" : "Products",
+          "select_child_menu_style" : "megaMenu"
+        }, {
+          "child_menu" : [ {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Papers & Publications"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Disease Specific Education"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Glossary"
+            } ],
+            "title" : "Title"
+          } ],
+          "enable_child_menu" : true,
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "menu" : "Fungal Education",
+          "select_child_menu_style" : "normalMenu"
+        }, {
+          "child_menu" : [ {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Child Menu 1"
+            } ],
+            "title" : "Title"
+          }, {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Child Menu 1"
+            } ],
+            "title" : "Title"
+          }, {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Child Menu 1"
+            } ],
+            "title" : "Title"
+          } ],
+          "enable_child_menu" : false,
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "menu" : "Resources",
+          "select_child_menu_style" : "megaMenu"
+        }, {
+          "child_menu" : [ {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Child Menu 1"
+            } ],
+            "title" : "Title"
+          }, {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Child Menu 1"
+            } ],
+            "title" : "Title"
+          }, {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Child Menu 1"
+            } ],
+            "title" : "Title"
+          } ],
+          "enable_child_menu" : false,
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "menu" : "About",
+          "select_child_menu_style" : "megaMenu"
+        }, {
+          "child_menu" : [ {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Child Menu 1"
+            } ],
+            "title" : "Title"
+          }, {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Child Menu 1"
+            } ],
+            "title" : "Title"
+          }, {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Child Menu 1"
+            } ],
+            "title" : "Title"
+          } ],
+          "enable_child_menu" : false,
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "menu" : "Careers",
+          "select_child_menu_style" : "megaMenu"
+        } ]
+						%}
 					</div>
 					<div class="BtnWrap">
 						{% module "button_mixin_button" path="@hubspot/button", label="Button Mixin",  button_text="Button Mixin", link={ "url": { "type": "EXTERNAL", "href": "", "content_id": null }, "open_in_new_tab": true, "no_follow": false } %}
@@ -29,13 +617,22 @@ label: Header
 		</div>
 	</div>
 </headar>
+<div class="cmSearch">
+	<div class="cmSearchInner">
+		{% module "search" path="../../modules/u4m-header-search", label="Header Search" %}
+	</div>
+</div>
 
 {% require_css %}
 
 <style>
+
 	.header{
 		position:relative;
 		z-index:101;
+	}
+	.header .page-center {
+		overflow: unset;
 	}
 	.header .topHeader{
 		background-color: #002F58;
@@ -43,9 +640,10 @@ label: Header
 	}
 	.header .bottomInnerWrap {
 		display: flex;
-		flex-wrap: wrap;
+		column-gap:20px;
 		justify-content: space-between;
 		align-items: center;
+		position: relative;
 	}
 	.header .logoWrap a {
 		display: block;
@@ -57,9 +655,211 @@ label: Header
 	.header .rightSection {
 		display: flex;
 		align-items: center;
-		flex-wrap: wrap;
 		column-gap: 40px;
+	}
+	.header .topInnerWrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 30px;
+	}
+	.cmSearch {
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s ease;
+		display: flex;
+		width: 100%;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		background-color: rgba(0, 0, 0, .6);
+		top: 0;
+		z-index: 999;
+		padding: 100px 20px;
+	}
+	.cmSearch.cm_active_search {
+		opacity: 1;
+		visibility: visible;
+	}
+	.header .cmSearchBtn {
+		cursor: pointer;
+		color: #fff;
+		font-size: 14px;
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		line-height: 1.2857;
+	}
+
+	.header .cmSearchBtn .searchIcon {
+		width: 20px;
+		height: 20px;
+		padding: 1px 3px 4px 3px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.cmSearchInner form {
+		margin: 0;
+		display: flex;
+	}
+	body.cm_active_search {
+		overflow: hidden;
+	}
+	.header .topBtnWrap .hs-button {
+		background-color: transparent;
+		padding: 0;
+		font-size: 14px;
+		text-transform: uppercase;
+		line-height: 1.2857;
+		border-radius: 0;
+    color: #fff;
+		display: flex;
+    align-items: center;
+	}
+	.header .topBtnWrap{
+		font-size: 14px;
+		line-height: 1.2857;
+	}
+	.header .topBtnWrap .hs-button:after {
+		content: "";
+		background-image: url({{ get_asset_url('../../templates/images/support.png') }});
+		width: 16px;
+    display: inline-block;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+		margin-left: 7px;
+    margin-top: -1px;
+	}
+	.cmSearchInner {
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		box-shadow: 0px 24px 24px -12px rgba(0, 0, 0, 0.1);
+		border-radius: 15px;
+		max-width: 650px;
+		min-width: 280px;
+		width: 100%;
+		height: 300px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #fff;
+		padding:20px;
+	}
+	.cmSearch form button {
+		width: 40px;
+		padding: 0;
+		background-color: #f5f5f5;
+		border-width: 1px;
+	}
+	.hs-search-field__bar form button svg {
+		height: 16px;
+	}
+	.cmSearch .hs-search-field--open ul.hs-search-field__suggestions {
+		border: none;
+		padding: 10px;
+		font-size: 16px;
+		line-height: 1.25;
+	}
+	.cmSearch .hs-search-field--open ul.hs-search-field__suggestions li:not(:first-child) {
+		margin-top: 10px;
+	}
+	.cmSearch .hs-search-field--open ul.hs-search-field__suggestions li:hover a{
+		background-color:transparent;
+		color:#0B74D5;
+		text-decoration:underline;
+	}
+	.cmSearch .hs-search-field--open ul.hs-search-field__suggestions li a{
+		color:#626262;
+	}
+	.cmSearch .hs-search-field--open ul.hs-search-field__suggestions li#results-for{
+		color:black;
+	}
+	@media(min-width:992px){
+		header.header .navTrigger{
+			display:none;
+		}
+	}
+	@media(max-width:1024px){
+		.header .rightSection {
+			column-gap: 20px;
+		}
+	}
+
+	@media(max-width:991px){
+		.header .navTrigger {
+			align-items: center;
+			cursor: pointer;
+			display: flex;
+			height: 25px;
+			justify-content: center;
+			position: relative;
+			width: 30px
+		}
+		.header .navTrigger .trigger_item {
+			background-color: #000;
+			display: block;
+			height: 3px;
+			position: absolute;
+			transition: all .4s ease-in-out;
+			width: 80%
+		}
+		.header .navTrigger .trigger_item:first-child {
+			top: 3px
+		}
+		.header .navTrigger .trigger_item:nth-child(2) {
+			top: 11px
+		}
+		.header .navTrigger .trigger_item:last-child {
+			top: 19px
+		}
+		.header .cm_active .trigger_item:first-child {
+			top: 10px;
+			transform: rotate(45deg)
+		}
+		.header .cm_active .trigger_item:nth-child(2) {
+			opacity: 0;
+			visibility: hidden
+		}
+		.header .cm_active .trigger_item:last-child {
+			top: 10px;
+			transform: rotate(-45deg)
+		}
+		.header .bottomInnerWrap {
+			flex-wrap: wrap;
+			row-gap: 20px;
+		}
+		.header .rightSection{
+			display:none;
+			width: 100%;
+		}
+		.header .BtnWrap {
+			margin-top: 20px;
+		}
 	}
 </style>
 
 {% end_require_css %}
+
+{% require_js %}
+<script>
+	$('.header .navTrigger').click(function(){
+		$(this).toggleClass('cm_active');
+		$('.header .rightSection').slideToggle();
+	});
+
+	$('.header .cmSearchBtn').click(function(){
+		$('.cmSearch , body').toggleClass('cm_active_search');
+	});
+	$('.cmSearch').click(function(){
+		$('.cmSearch , body').removeClass('cm_active_search');
+	});
+	$('.cmSearchInner').click(function(event){
+		event.stopPropagation();
+	});
+</script>
+{% end_require_js %}
