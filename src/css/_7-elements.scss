@@ -140,11 +140,11 @@ div.hs_cos_wrapper_widget section.bottom-margin-medium {
   margin-bottom: 100rem;
 
   @include tabletvert {
-    margin-bottom: 75rem
+    margin-bottom: 75rem;
   }
 
   @include phone {
-    margin-bottom: 50rem
+    margin-bottom: 50rem;
   }
 }
 
@@ -220,11 +220,11 @@ div.hs_cos_wrapper_widget section.bottom-padding-medium {
   padding-bottom: 100rem;
 
   @include tabletvert {
-    padding-bottom: 75rem
+    padding-bottom: 75rem;
   }
 
   @include phone {
-    padding-bottom: 50rem
+    padding-bottom: 50rem;
   }
 }
 
@@ -267,7 +267,7 @@ div.video-popup {
 div#hs-eu-cookie-confirmation.hs-cookie-notification-position-bottom.can-use-gradients {
   box-shadow: 2rem -1rem 5rem 0rem rgba(0, 0, 0, 0.05);
   border: 0;
-  background-color: rgba($white, .9);
+  background-color: rgba($white, 0.9);
 
   div#hs-eu-cookie-confirmation-inner {
     background-color: rgba($white, 0);
@@ -298,7 +298,7 @@ div#hs-eu-cookie-confirmation.hs-cookie-notification-position-bottom.can-use-gra
 
 // default p size
 a {
-  @include link
+  @include link;
 }
 
 blockquote,
@@ -352,7 +352,7 @@ button {
 
 /* Forms */
 form {
-  margin-bottom: 30rem
+  margin-bottom: 30rem;
 }
 
 ::-webkit-input-placeholder {
@@ -415,11 +415,11 @@ code {
   border-radius: 0;
 }
 
-pre>code {
+pre > code {
   display: block;
   padding: 1rem 15rem;
   white-space: pre;
-  margin-bottom: 30rem
+  margin-bottom: 30rem;
 }
 
 pre {
@@ -451,7 +451,7 @@ td:last-child {
 }
 
 table {
-  margin-bottom: 30rem
+  margin-bottom: 30rem;
 }
 
 table th {
@@ -463,15 +463,14 @@ table td {
   font-size: 14rem;
 }
 
-a[href='javascript:;'] {
+a[href="javascript:;"] {
   cursor: default;
 }
 
 //
-section[class*='u4m-'] {
+section[class*="u4m-"] {
   scroll-margin-top: 150px;
 }
-
 
 .bodystyle1 {
   @include b1;
@@ -548,11 +547,10 @@ section[class*='u4m-'] {
   position: relative;
 }
 
-.bg_overlay~*:not(.bg_overlay) {
+.bg_overlay ~ *:not(.bg_overlay) {
   position: relative;
   z-index: 2;
 }
-
 
 .Blue_bg {
   background-color: $Blue;
@@ -618,8 +616,6 @@ section[class*='u4m-'] {
   background-color: $White;
 }
 
-
-
 .Blue_Clr {
   color: $Blue;
 }
@@ -684,8 +680,6 @@ section[class*='u4m-'] {
   color: $White;
 }
 
-
-
 .intro_content {
   max-width: 715rem;
   margin: 0 auto;
@@ -748,8 +742,6 @@ section[class*='u4m-'] {
       justify-content: left;
     }
   }
-
-
 }
 
 .reverse-text {
@@ -761,7 +753,6 @@ section[class*='u4m-'] {
   .bodystyle3,
   .bodystyle4,
   .bodystyle5,
-
   .eyebrow_text,
   .intro_desc,
   .intro_title {
@@ -776,7 +767,6 @@ section[class*='u4m-'] {
     color: $white;
   }
 }
-
 
 .hs-button {
   @include button;
@@ -814,7 +804,6 @@ section[class*='u4m-'] {
     background-color: transparent;
     color: $White;
 
-
     .icon {
       svg {
         fill: $White;
@@ -828,7 +817,6 @@ section[class*='u4m-'] {
       .icon {
         svg {
           fill: rgba($White, 0.8);
-          ;
         }
       }
     }
@@ -845,7 +833,6 @@ section[class*='u4m-'] {
       border-color: $White;
     }
   }
-
 }
 
 .BorderRadius25 {
@@ -853,13 +840,17 @@ section[class*='u4m-'] {
 }
 
 .BorderRadius15 {
-  border-radius: $BorderRadius15 ;
+  border-radius: $BorderRadius15;
 }
 
 .BorderRadius10 {
-  border-radius: $BorderRadius10 ;
+  border-radius: $BorderRadius10;
 }
 
 .BorderRadius5 {
   border-radius: $BorderRadius5;
+}
+
+.noRadius {
+  overflow: unset;
 }
