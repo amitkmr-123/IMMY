@@ -475,7 +475,8 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "display_width" : null
+      "display_width" : null,
+      "default" : "file"
     }, {
       "picker" : "video",
       "id" : "357add8b-0fa0-6c67-7f39-174f850d080f",
@@ -521,6 +522,7 @@
     "type" : "group",
     "display_width" : null,
     "default" : {
+      "video_type" : "file",
       "video" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
       "embed_path" : "https://www.youtube.com/embed/9xwazD5SyVg"
     }
@@ -546,6 +548,7 @@
     "content_style" : "bodystyle1",
     "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</p>",
     "video_section" : {
+      "video_type" : "file",
       "video" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
       "embed_path" : "https://www.youtube.com/embed/9xwazD5SyVg"
     }
