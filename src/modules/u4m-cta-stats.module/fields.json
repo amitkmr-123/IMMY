@@ -1,7 +1,7 @@
 [ {
   "id" : "081bfb60-a75d-a475-e7fb-44c8a8969c1a",
   "name" : "intro_content",
-  "label" : "Intro Content",
+  "label" : "Content Group",
   "required" : false,
   "locked" : false,
   "children" : [ {
@@ -33,7 +33,7 @@
     "show_emoji_picker" : false,
     "type" : "text",
     "display_width" : null,
-    "default" : "The Solution"
+    "default" : "Optional Eyebrow Text"
   }, {
     "id" : "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
     "name" : "include_heading",
@@ -85,7 +85,7 @@
     "show_emoji_picker" : false,
     "type" : "text",
     "display_width" : null,
-    "default" : "Animated Stats Module Headline"
+    "default" : "CTA Row Headline"
   }, {
     "id" : "2f10bd6e-cf85-1cf6-5a4f-fa75e1e78238",
     "name" : "include_content",
@@ -134,7 +134,7 @@
     },
     "type" : "richtext",
     "display_width" : null,
-    "default" : "<p>Donec malesuada arcu turpis, eget pretium nulla viverra pretium. Aenean laoreet mollis efficitur. Curabitur nec magna tellus. Cras viverra varius magna, non.</p>"
+    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>"
   }, {
     "id" : "4a517c8a-8c15-a721-dca5-db7b58a8c2a7",
     "name" : "include_button",
@@ -144,7 +144,7 @@
     "display" : "checkbox",
     "type" : "boolean",
     "display_width" : null,
-    "default" : false
+    "default" : true
   }, {
     "id" : "3d861e2f-6981-78b6-57a8-d59863169561",
     "name" : "button_group",
@@ -242,7 +242,7 @@
       "show_emoji_picker" : false,
       "type" : "text",
       "display_width" : null,
-      "default" : "Button"
+      "default" : "Button Mixin"
     }, {
       "id" : "f1ccd7fd-a18d-1262-3c67-476cdf5424cd",
       "name" : "link",
@@ -296,7 +296,7 @@
       "button_type" : "std",
       "button_style" : "hs-button",
       "button_size" : "large",
-      "button_text" : "Button",
+      "button_text" : "Button Mixin",
       "link" : {
         "url" : {
           "content_id" : null,
@@ -310,7 +310,7 @@
       "button_type" : "std",
       "button_style" : "hs-button",
       "button_size" : "large",
-      "button_text" : "Button",
+      "button_text" : "Button Mixin",
       "link" : {
         "url" : {
           "content_id" : null,
@@ -329,19 +329,19 @@
   "display_width" : null,
   "default" : {
     "include_eyebrow_text" : true,
-    "eyebrow_text" : "The Solution",
+    "eyebrow_text" : "Optional Eyebrow Text",
     "include_heading" : true,
     "heading_size" : "h2",
-    "heading" : "Animated Stats Module Headline",
+    "heading" : "CTA Row Headline",
     "include_content" : true,
     "content_style" : "themeStyle",
-    "content" : "<p>Donec malesuada arcu turpis, eget pretium nulla viverra pretium. Aenean laoreet mollis efficitur. Curabitur nec magna tellus. Cras viverra varius magna, non.</p>",
-    "include_button" : false,
+    "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>",
+    "include_button" : true,
     "button_group" : [ {
       "button_type" : "std",
       "button_style" : "hs-button",
       "button_size" : "large",
-      "button_text" : "Button",
+      "button_text" : "Button Mixin",
       "link" : {
         "url" : {
           "content_id" : null,
@@ -355,7 +355,7 @@
       "button_type" : "std",
       "button_style" : "hs-button",
       "button_size" : "large",
-      "button_text" : "Button",
+      "button_text" : "Button Mixin",
       "link" : {
         "url" : {
           "content_id" : null,
@@ -602,33 +602,354 @@
   "required" : false,
   "locked" : false,
   "children" : [ {
-    "id" : "0a83880d-e7a4-265e-44f8-4237a6ba4090",
-    "name" : "intro_content_alignment",
-    "label" : "Intro Content Alignment",
-    "required" : false,
-    "locked" : false,
-    "display" : "select",
-    "choices" : [ [ "left", "Left" ], [ "right", "Right" ], [ "center", "Center" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
-    "display_width" : null,
-    "default" : "center"
-  }, {
     "id" : "3a96dc02-6949-395a-17e1-05a066b7ef59",
     "name" : "statc_count_in_row",
     "label" : "Statc Count in Row",
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "col6", "Two" ], [ "col4", "Three" ], [ "col3", "Four" ] ],
+    "choices" : [ [ "col12", "One" ], [ "col6", "Two" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
     "display_width" : null,
-    "default" : "col3"
+    "default" : "col6"
+  }, {
+    "id" : "a196c395-103f-4a51-c1e8-ca62d226dc80",
+    "name" : "background_settings",
+    "label" : "Content Group Background Settings",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_overrides.enable_overrides",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "857b48b6-83eb-58c3-d612-438191a3c6e7",
+      "name" : "background_type",
+      "label" : "Background Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "color", "Color" ], [ "gradient", "Gradient" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "gradient"
+    }, {
+      "id" : "ef5614aa-442e-8072-0cb5-fff132a796ce",
+      "name" : "select_color",
+      "label" : "Select Color",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_settings.background_settings.background_type",
+        "controlling_value_regex" : "color",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "Blue_bg", "Blue" ], [ "Red_bg", "Red" ], [ "BrightBlue_bg", "BrightBlue" ], [ "BrightRed_bg", "BrightRed" ], [ "Green_bg", "Green" ], [ "Purple_bg", "Purple" ], [ "Orange_bg", "Orange" ], [ "Teal_bg", "Teal" ], [ "Pink_bg", "Pink" ], [ "DarkNavy_bg", "DarkNavy" ], [ "LightGray_bg", "LightGray" ], [ "Gray_bg", "Gray" ], [ "Charcoal_bg", "Charcoal" ], [ "FontGray_bg", "FontGray" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ], [ "custom", "Custom" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "White_bg"
+    }, {
+      "id" : "a51503ec-eca3-54d2-666e-801f8fce037e",
+      "name" : "custom_color",
+      "label" : "Custom Color",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_settings.background_settings.select_color",
+        "controlling_value_regex" : "custom",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "type" : "color",
+      "display_width" : null,
+      "default" : {
+        "color" : null,
+        "opacity" : null
+      }
+    }, {
+      "id" : "24ff897d-e024-f033-e0be-710115f446e7",
+      "name" : "select_gradient",
+      "label" : "Select Gradient",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_settings.background_settings.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "gradient1", "Gradient 1" ], [ "gradient2", "Gradient 2" ], [ "gradient3", "Gradient 3" ], [ "gradient4", "Gradient 4" ], [ "gradient5", "Gradient 5" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "gradient1"
+    }, {
+      "id" : "a3ed3275-fb3e-1dd7-6b14-fcb270a14d2c",
+      "name" : "overlay_image",
+      "label" : "Overlay Image",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_settings.background_settings.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "responsive" : true,
+      "resizable" : false,
+      "show_loading" : false,
+      "type" : "image",
+      "display_width" : null,
+      "default" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/shrooms%20-%20Pneumocystic%20jirovecii%201%20(2).png",
+        "alt" : "shrooms - Pneumocystic jirovecii 1 (2)",
+        "loading" : "lazy",
+        "width" : 610,
+        "height" : 518,
+        "max_width" : 610,
+        "max_height" : 518
+      }
+    }, {
+      "id" : "716be7b7-df7d-4aae-7f16-8f871dfff4b2",
+      "name" : "inner_container_spacing_group",
+      "label" : "Spacing Group",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "94f5c3b6-2cec-acff-354b-52586bbf1d66",
+        "name" : "border_radius_type",
+        "label" : "Border Radius Type",
+        "required" : false,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "BorderRadius25", "Largest Border Radius" ], [ "BorderRadius15", "Second Largest Border  Radius" ], [ "BorderRadius10", "Second Smallest Border Radius" ], [ "BorderRadius5", "Smallest Border Radius" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "display_width" : null,
+        "default" : "BorderRadius25"
+      }, {
+        "id" : "fb67cd2d-52b6-38c0-4793-fe390c133c89",
+        "name" : "top_padding",
+        "label" : "Top Padding",
+        "required" : false,
+        "locked" : false,
+        "display" : "text",
+        "step" : 1,
+        "type" : "number",
+        "display_width" : null,
+        "default" : 139
+      }, {
+        "id" : "8645ab23-7ca7-78c1-4917-9eda3823fc28",
+        "name" : "right_padding",
+        "label" : "Right Padding",
+        "required" : false,
+        "locked" : false,
+        "display" : "text",
+        "step" : 1,
+        "type" : "number",
+        "display_width" : null,
+        "default" : 55
+      }, {
+        "id" : "8611cad7-38fa-6dd5-d95d-97a7212381a5",
+        "name" : "bottom_padding",
+        "label" : "Bottom Padding",
+        "required" : false,
+        "locked" : false,
+        "display" : "text",
+        "step" : 1,
+        "type" : "number",
+        "display_width" : null,
+        "default" : 139
+      }, {
+        "id" : "cd3a6362-16c7-0a55-5882-b0b673e59c27",
+        "name" : "left_padding",
+        "label" : "Left Padding",
+        "required" : false,
+        "locked" : false,
+        "display" : "text",
+        "step" : 1,
+        "type" : "number",
+        "display_width" : null,
+        "default" : 55
+      }, {
+        "id" : "3de6a168-3a93-ee24-2dcf-263032a78952",
+        "name" : "change_spacing_in_mobile",
+        "label" : "Change Spacing In Mobile",
+        "required" : false,
+        "locked" : false,
+        "display" : "checkbox",
+        "type" : "boolean",
+        "display_width" : null,
+        "default" : true
+      }, {
+        "id" : "607d01e0-f78b-02bd-2e9c-39389a5b69e9",
+        "name" : "mobile_spacing_group",
+        "label" : "Mobile Spacing Group",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "module_settings.background_settings.inner_container_spacing_group.change_spacing_in_mobile",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "children" : [ {
+          "id" : "e2c14a41-09a9-6dda-af07-0c089a5bb437",
+          "name" : "top_padding",
+          "label" : "Top Padding",
+          "required" : false,
+          "locked" : false,
+          "display" : "text",
+          "step" : 1,
+          "type" : "number",
+          "display_width" : null,
+          "default" : 20
+        }, {
+          "id" : "b4a03331-6d7c-d86f-df3f-c269c7853854",
+          "name" : "right_padding",
+          "label" : "Right Padding",
+          "required" : false,
+          "locked" : false,
+          "display" : "text",
+          "step" : 1,
+          "type" : "number",
+          "display_width" : null,
+          "default" : 20
+        }, {
+          "id" : "5233f471-b3b8-8107-3733-d44f775e0e00",
+          "name" : "bottom_padding",
+          "label" : "Bottom Padding",
+          "required" : false,
+          "locked" : false,
+          "display" : "text",
+          "step" : 1,
+          "type" : "number",
+          "display_width" : null,
+          "default" : 20
+        }, {
+          "id" : "78947ab4-eb99-ef20-5f72-60f39a0ee2f5",
+          "name" : "left_padding",
+          "label" : "Left Padding",
+          "required" : false,
+          "locked" : false,
+          "display" : "text",
+          "step" : 1,
+          "type" : "number",
+          "display_width" : null,
+          "default" : 20
+        } ],
+        "tab" : "CONTENT",
+        "expanded" : false,
+        "group_occurrence_meta" : null,
+        "type" : "group",
+        "display_width" : null,
+        "default" : {
+          "top_padding" : 20,
+          "right_padding" : 20,
+          "bottom_padding" : 20,
+          "left_padding" : 20
+        }
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "group_occurrence_meta" : null,
+      "type" : "group",
+      "display_width" : null,
+      "default" : {
+        "border_radius_type" : "BorderRadius25",
+        "top_padding" : 139,
+        "right_padding" : 55,
+        "bottom_padding" : 139,
+        "left_padding" : 55,
+        "change_spacing_in_mobile" : true,
+        "mobile_spacing_group" : {
+          "top_padding" : 20,
+          "right_padding" : 20,
+          "bottom_padding" : 20,
+          "left_padding" : 20
+        }
+      }
+    }, {
+      "id" : "56d586aa-9c23-64f6-d6fd-ee48b10e72c1",
+      "name" : "dark_mode",
+      "label" : "Dark Mode",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "display_width" : null,
+      "default" : true
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : true,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "background_type" : "gradient",
+      "select_color" : "White_bg",
+      "custom_color" : {
+        "color" : null,
+        "opacity" : null
+      },
+      "select_gradient" : "gradient1",
+      "overlay_image" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/shrooms%20-%20Pneumocystic%20jirovecii%201%20(2).png",
+        "alt" : "shrooms - Pneumocystic jirovecii 1 (2)",
+        "loading" : "lazy",
+        "width" : 610,
+        "height" : 518,
+        "max_width" : 610,
+        "max_height" : 518
+      },
+      "inner_container_spacing_group" : {
+        "border_radius_type" : "BorderRadius25",
+        "top_padding" : 139,
+        "right_padding" : 55,
+        "bottom_padding" : 139,
+        "left_padding" : 55,
+        "change_spacing_in_mobile" : true,
+        "mobile_spacing_group" : {
+          "top_padding" : 20,
+          "right_padding" : 20,
+          "bottom_padding" : 20,
+          "left_padding" : 20
+        }
+      },
+      "dark_mode" : true
+    }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -636,8 +957,41 @@
   "type" : "group",
   "display_width" : null,
   "default" : {
-    "intro_content_alignment" : "center",
-    "statc_count_in_row" : "col3"
+    "statc_count_in_row" : "col6",
+    "background_settings" : {
+      "background_type" : "gradient",
+      "select_color" : "White_bg",
+      "custom_color" : {
+        "color" : null,
+        "opacity" : null
+      },
+      "select_gradient" : "gradient1",
+      "overlay_image" : {
+        "size_type" : "auto",
+        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/shrooms%20-%20Pneumocystic%20jirovecii%201%20(2).png",
+        "alt" : "shrooms - Pneumocystic jirovecii 1 (2)",
+        "loading" : "lazy",
+        "width" : 610,
+        "height" : 518,
+        "max_width" : 610,
+        "max_height" : 518
+      },
+      "inner_container_spacing_group" : {
+        "border_radius_type" : "BorderRadius25",
+        "top_padding" : 139,
+        "right_padding" : 55,
+        "bottom_padding" : 139,
+        "left_padding" : 55,
+        "change_spacing_in_mobile" : true,
+        "mobile_spacing_group" : {
+          "top_padding" : 20,
+          "right_padding" : 20,
+          "bottom_padding" : 20,
+          "left_padding" : 20
+        }
+      },
+      "dark_mode" : true
+    }
   }
 }, {
   "id" : "module_overrides",
@@ -922,14 +1276,6 @@
     "label" : "Inner Container Group",
     "required" : false,
     "locked" : false,
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "module_overrides.enable_overrides",
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
     "children" : [ {
       "id" : "85b3867d-bfc1-6f81-cdac-7f76a2f6c5dd",
       "name" : "border_radius_type",
@@ -1345,14 +1691,6 @@
     "label" : "Container Size",
     "required" : false,
     "locked" : false,
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "module_overrides.enable_overrides",
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
     "display" : "select",
     "choices" : [ [ "theme", "Theme" ], [ "full_width", "Full Width" ], [ "custom", "Custom" ] ],
     "multiple" : false,
@@ -1379,7 +1717,7 @@
     "step" : 1,
     "type" : "number",
     "display_width" : null,
-    "default" : 1160
+    "default" : 1285
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -1440,6 +1778,6 @@
       }
     },
     "container_size" : "custom",
-    "custom_container_size" : 1160
+    "custom_container_size" : 1285
   }
 } ]
