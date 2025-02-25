@@ -618,6 +618,7 @@ label: Header
 	</div>
 </headar>
 <div class="cmSearch">
+	<a class="close" href="#close"></a>
 	<div class="cmSearchInner">
 		{% module "search" path="../../modules/u4m-header-search", label="Header Search" %}
 	</div>
@@ -671,13 +672,15 @@ label: Header
 		display: flex;
 		width: 100%;
 		height: 100%;
-		align-items: center;
+		margin: auto;
 		justify-content: center;
-		position: absolute;
+		position: fixed;
 		background-color: rgba(0, 0, 0, .6);
+		backdrop-filter: blur(10px);
 		top: 0;
 		z-index: 999;
 		padding: 100px 20px;
+		overflow-y: auto;
 	}
 	.cmSearch.cm_active_search {
 		opacity: 1;
@@ -705,9 +708,15 @@ label: Header
 	.cmSearchInner form {
 		margin: 0;
 		display: flex;
+		border: 2px solid #fff;
+		border-radius: 50px;
+		overflow: hidden;
 	}
 	body.cm_active_search {
 		overflow: hidden;
+	}
+	.cmSearchInner >div {
+		width: 100%;
 	}
 	.header .topBtnWrap .hs-button {
 		background-color: transparent;
@@ -716,9 +725,9 @@ label: Header
 		text-transform: uppercase;
 		line-height: 1.2857;
 		border-radius: 0;
-    color: #fff;
+		color: #fff;
 		display: flex;
-    align-items: center;
+		align-items: center;
 	}
 	.header .topBtnWrap{
 		font-size: 14px;
@@ -728,42 +737,44 @@ label: Header
 		content: "";
 		background-image: url({{ get_asset_url('../../templates/images/support.png') }});
 		width: 16px;
-    display: inline-block;
-    height: 16px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+		display: inline-block;
+		height: 16px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
 		margin-left: 7px;
-    margin-top: -1px;
+		margin-top: -1px;
 	}
 	.cmSearchInner {
-		border: 1px solid rgba(0, 0, 0, 0.1);
-		box-shadow: 0px 24px 24px -12px rgba(0, 0, 0, 0.1);
-		border-radius: 15px;
 		max-width: 650px;
 		min-width: 280px;
 		width: 100%;
-		height: 300px;
 		display: flex;
-		align-items: center;
+		margin:auto;
+		position: relative;
 		justify-content: center;
-		background-color: #fff;
-		padding:20px;
 	}
 	.cmSearch form button {
 		width: 40px;
 		padding: 0;
-		background-color: #f5f5f5;
-		border-width: 1px;
+		background-color: transparent;
+		border: none;
 	}
-	.hs-search-field__bar form button svg {
+	.cmSearch form button svg {
 		height: 16px;
+		color: #fff;
+		fill:#fff;
 	}
 	.cmSearch .hs-search-field--open ul.hs-search-field__suggestions {
-		border: none;
-		padding: 10px;
 		font-size: 16px;
 		line-height: 1.25;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		border-radius: 15px;
+		padding: 20px;
+		margin-top: 20px;
+		background-color:#fff;
+		position: absolute;
+    width: 100%;
 	}
 	.cmSearch .hs-search-field--open ul.hs-search-field__suggestions li:not(:first-child) {
 		margin-top: 10px;
@@ -779,6 +790,57 @@ label: Header
 	.cmSearch .hs-search-field--open ul.hs-search-field__suggestions li#results-for{
 		color:black;
 	}
+	.cmSearch form input.hs-search-field__input {
+		border: none;
+		background-color:transparent;
+		padding: 10px 15px;
+		outline: none;
+		color:#fff;
+	}
+
+	.cmSearch form input.hs-search-field__input::-webkit-input-placeholder {
+		color: #fff;
+		font-size: 18px;
+	}
+	.cmSearch form input.hs-search-field__input:focus{
+		border:none;
+	}
+	.cmInputWrap {
+		flex: 1;
+	}
+	.cmSearch .close {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 32px;
+		position: fixed;
+		right: 20px;
+		top: 20px;
+		width: 32px;
+	}
+	.cmSearch .close:hover {
+		opacity: 1
+	}
+
+	.cmSearch .close:after,.cmSearch .close:before {
+		content: " ";
+		height: 33px;
+		left: 15px;
+		position: absolute;
+		width: 2px;
+		background-color: #fff;
+	}
+
+	.cmSearch .close:before {
+		transform: rotate(45deg)
+	}
+
+	.cmSearch .close:after {
+		transform: rotate(-45deg)
+	}
+
+
+
 	@media(min-width:992px){
 		header.header .navTrigger{
 			display:none;
@@ -853,13 +915,10 @@ label: Header
 	});
 
 	$('.header .cmSearchBtn').click(function(){
-		$('.cmSearch , body').toggleClass('cm_active_search');
+		$('.cmSearch').toggleClass('cm_active_search');
 	});
-	$('.cmSearch').click(function(){
-		$('.cmSearch , body').removeClass('cm_active_search');
-	});
-	$('.cmSearchInner').click(function(event){
-		event.stopPropagation();
+	$('.cmSearch .close').click(function(){
+		$('.cmSearch').removeClass('cm_active_search');
 	});
 </script>
 {% end_require_js %}

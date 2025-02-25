@@ -5,4 +5,74 @@
         align-items: center;
         gap: 40px;
     }
+
+    .noRadius {
+        overflow: hidden;
+    }
+
+    .cmTrustInnerWrap {
+
+        &.twoColmun {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 80px;
+
+            @include tabletMid {
+                column-gap: 50px;
+            }
+
+            @include tabletvert {
+                flex-wrap: wrap;
+                column-gap: 0;
+                row-gap: 50px;
+                flex-direction: column;
+            }
+
+            .intro_content {
+                flex: 1;
+                max-width: 100%;
+                margin: 0;
+            }
+
+            .MainsliderCnntt {
+                flex: 1;
+                overflow: hidden;
+            }
+
+            .logosType2 {
+                flex: 1;
+                margin: 0;
+            }
+
+            .intro__inner {
+                margin-right: 30px;
+
+                @include tabletMid {
+                    margin-right: 0;
+                }
+
+
+            }
+        }
+
+        .logos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .logosType2 {
+            margin-top: 50px;
+        }
+
+        .items {
+            display: flex;
+            align-items: center;
+            max-width: 115px;
+        }
+    }
+
 }
