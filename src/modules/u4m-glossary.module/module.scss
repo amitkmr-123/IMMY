@@ -11,25 +11,98 @@
     color: $white;
     margin: 0;
     max-width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
     .page-center {
       display: flex;
       flex-wrap: wrap;
       gap: 50px;
+      align-items: flex-end;
+      @include tabletvert {
+        gap: 30px;
+        padding: 0;
+      }
       .glossCat {
         flex: 1;
         ul {
           display: flex;
+          gap: 20px;
+          flex-wrap: wrap;
+          margin: 0;
+          @include tabletvert {
+            gap: 10px;
+          }
+          li {
+            border: 2px solid $white;
+            border-radius: 5px;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            @include tabletvert {
+              height: 35px;
+              width: 35px;
+            }
+            &.active {
+              background: $white;
+              span {
+                color: $black;
+              }
+            }
+            input[type="radio"] {
+              width: 100%;
+              height: 100%;
+              border-color: transparent;
+              background-color: transparent;
+              border: none;
+              appearance: none;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              position: relative;
+              z-index: 2;
+              cursor: pointer;
+            }
+            span {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              top: 0;
+              z-index: 1;
+              color: $white;
+              font-size: 18px;
+              line-height: 1;
+            }
+          }
         }
       }
       .glossSearch {
         width: 300px;
+        @include tablet {
+          width: 230px;
+        }
+        @include tabletvert {
+          width: 100%;
+        }
+        h4 {
+          color: $white;
+        }
+        input[type="search"] {
+          background-size: 20px 20px;
+          background-repeat: no-repeat;
+          background-position: 95% center;
+        }
       }
     }
   }
   .glossInr {
-    max-height: 1000px;
+    height: 1000px;
     overflow: auto;
     .glossList {
+      .errMsg {
+        padding: 50px 0;
+      }
       .glossGroup {
         background-color: $white;
         padding: 50px 0 100px;
@@ -45,25 +118,43 @@
             color: $DarkNavy;
             opacity: 0.2;
             line-height: 1;
+            @include tabletvert {
+              position: static;
+            }
           }
           .glossItems {
             padding-left: 200px;
+            @include tablet {
+              padding-left: 100px;
+            }
+            @include tabletvert {
+              padding-left: 0;
+            }
             .glossItembrd {
               padding: 50px 0;
               border-bottom: 1px solid $Gray;
               display: flex;
               flex-wrap: wrap;
               gap: 65px;
+              @include tabletvert {
+                gap: 10px;
+              }
               .glossItem {
                 flex: 1;
                 .cnt {
-                  height: 70px;
+                  height: 65px;
                   overflow: hidden;
+                  font-size: 18px;
+                  line-height: 1.72;
                 }
               }
               .glossBtnwrap {
                 width: 140px;
                 text-align: right;
+                @include tabletvert {
+                  text-align: left;
+                  width: 100%;
+                }
                 svg path {
                   fill: currentColor;
                 }
@@ -80,7 +171,7 @@
                 display: none;
               }
               .glossBtnwrap .glossBtnless {
-                display: block;
+                display: inline-block;
                 background-color: $black;
                 color: $white;
               }

@@ -117,7 +117,7 @@
 				</ul> 
 			</div>
 			<div class="glossSearch">
-				<label>Search Glossary</label>
+				<h4>Search Glossary</h4>
 				<input type="search" name="search" onsubmit="this.form.submit()" placeholder="Search by Keyword">
 			</div>
 		</div>
@@ -156,7 +156,7 @@
 	 
 		<div class="glossList">
 			{% if rows|length == 0 %}
-			No Result Found
+			<div class="errMsg"><div class="page-center">No Result Found</div></div>
 			{% endif %}
 
 			{% set printed_letters = [] %}
@@ -178,7 +178,7 @@
 			<div class="glossItems"> 
 			<div class="glossItembrd">
 				<div class="glossItem">
-					<div class="name"><h3>{{ row.name }}</h3></div>
+					<div class="name"><h4>{{ row.name }}</h4></div>
 					<div class="cnt">{{ row.description }}</div> 
 				</div>
 				<div class="glossBtnwrap">
@@ -217,7 +217,14 @@
 </section>
 
 
+{% require_css %}
 
+	<style>
+	.u4m-glossary.dnd_padd form.glossTop .page-center .glossSearch input[type="search"] {
+		background-image: url({{ get_asset_url('../../templates/images/Vector.png') }});
+	}
+	</style>
+	
+	{% end_require_css %}
 
-
-
+ 
