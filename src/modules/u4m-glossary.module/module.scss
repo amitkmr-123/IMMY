@@ -98,6 +98,7 @@
   }
   .glossInr {
     max-height: 1000px;
+    height: calc(100vh - 210px);
     overflow: auto;
     .glossList {
       .errMsg {
