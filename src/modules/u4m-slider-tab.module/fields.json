@@ -395,7 +395,7 @@
     "locked" : false,
     "occurrence" : {
       "min" : null,
-      "max" : null,
+      "max" : 8,
       "sorting_label_field" : null,
       "default" : 4
     },
@@ -417,11 +417,12 @@
       "allow_new_line" : false,
       "show_emoji_picker" : false,
       "type" : "text",
-      "display_width" : null
+      "display_width" : null,
+      "default" : "This is the Active Tab Title"
     }, {
       "id" : "a3828e7d-321b-8ab5-9852-0bb72a6d124a",
-      "name" : "content_column_copy",
-      "label" : "Content Column copy",
+      "name" : "content_column_card",
+      "label" : "Content Column",
       "required" : false,
       "locked" : false,
       "children" : [ {
@@ -433,7 +434,7 @@
         "display" : "checkbox",
         "type" : "boolean",
         "display_width" : null,
-        "default" : true
+        "default" : false
       }, {
         "id" : "301f4864-c38a-a8f9-1de0-e48fc22305af",
         "name" : "eyebrow_text",
@@ -443,7 +444,7 @@
         "validation_regex" : "",
         "visibility" : {
           "controlling_field" : null,
-          "controlling_field_path" : "tab_group.tab_items_2.content_column.include_eyebrow_text",
+          "controlling_field_path" : "tab_group.tab_items.content_column_card.include_eyebrow_text",
           "controlling_value_regex" : "true",
           "property" : null,
           "operator" : "EQUAL",
@@ -472,7 +473,7 @@
         "locked" : false,
         "visibility" : {
           "controlling_field" : null,
-          "controlling_field_path" : "tab_group.tab_items_2.content_column.include_heading",
+          "controlling_field_path" : "tab_group.tab_items.content_column_card.include_heading",
           "controlling_value_regex" : "true",
           "property" : null,
           "operator" : "EQUAL",
@@ -505,7 +506,7 @@
         "show_emoji_picker" : false,
         "type" : "text",
         "display_width" : null,
-        "default" : "Tab Group Slide Headline"
+        "default" : "Tab Group Slide Headline Goes Here."
       }, {
         "id" : "a18a3e52-f2b9-d350-c0c5-c12929a6151e",
         "name" : "include_content",
@@ -524,7 +525,7 @@
         "locked" : false,
         "visibility" : {
           "controlling_field" : null,
-          "controlling_field_path" : "tab_group.tab_items_2.content_column.include_content",
+          "controlling_field_path" : "tab_group.tab_items.content_column_card.include_content",
           "controlling_value_regex" : "true",
           "property" : null,
           "operator" : "EQUAL",
@@ -546,7 +547,7 @@
         "locked" : false,
         "visibility" : {
           "controlling_field" : null,
-          "controlling_field_path" : "tab_group.tab_items_2.content_column.include_content",
+          "controlling_field_path" : "tab_group.tab_items.content_column_card.include_content",
           "controlling_value_regex" : "true",
           "property" : null,
           "operator" : "EQUAL",
@@ -554,7 +555,7 @@
         },
         "type" : "richtext",
         "display_width" : null,
-        "default" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</span></p>"
+        "default" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span></p>"
       }, {
         "id" : "e758dfd8-3d01-6477-75df-bd4cb0f423a7",
         "name" : "include_button",
@@ -564,7 +565,7 @@
         "display" : "checkbox",
         "type" : "boolean",
         "display_width" : null,
-        "default" : true
+        "default" : false
       }, {
         "id" : "8340e8cf-77bf-4e9e-f882-02ed6dd322cf",
         "name" : "button_group",
@@ -579,7 +580,7 @@
         },
         "visibility" : {
           "controlling_field" : null,
-          "controlling_field_path" : "tab_group.tab_items_2.content_column.include_button",
+          "controlling_field_path" : "tab_group.tab_items.content_column_card.include_button",
           "controlling_value_regex" : "true",
           "property" : null,
           "operator" : "EQUAL",
@@ -607,7 +608,7 @@
           "locked" : false,
           "visibility" : {
             "controlling_field" : null,
-            "controlling_field_path" : "tab_group.tab_items_2.content_column.button_group.button_type",
+            "controlling_field_path" : "tab_group.tab_items.content_column_card.button_group.button_type",
             "controlling_value_regex" : "std|popup_content",
             "property" : null,
             "operator" : "MATCHES_REGEX",
@@ -629,7 +630,7 @@
           "locked" : false,
           "visibility" : {
             "controlling_field" : null,
-            "controlling_field_path" : "tab_group.tab_items_2.content_column.button_group.button_style",
+            "controlling_field_path" : "tab_group.tab_items.content_column_card.button_group.button_style",
             "controlling_value_regex" : "hs-sec-btn",
             "property" : null,
             "operator" : "NOT_EQUAL",
@@ -652,7 +653,7 @@
           "validation_regex" : "",
           "visibility" : {
             "controlling_field" : null,
-            "controlling_field_path" : "tab_group.tab_items_2.content_column.button_group.button_type",
+            "controlling_field_path" : "tab_group.tab_items.content_column_card.button_group.button_type",
             "controlling_value_regex" : "std|popup_content",
             "property" : null,
             "operator" : "MATCHES_REGEX",
@@ -671,7 +672,7 @@
           "locked" : false,
           "visibility" : {
             "controlling_field" : null,
-            "controlling_field_path" : "tab_group.tab_items_2.content_column.button_group.button_type",
+            "controlling_field_path" : "tab_group.tab_items.content_column_card.button_group.button_type",
             "controlling_value_regex" : "std",
             "property" : null,
             "operator" : "EQUAL",
@@ -698,7 +699,7 @@
           "locked" : false,
           "visibility" : {
             "controlling_field" : null,
-            "controlling_field_path" : "tab_group.tab_items_2.content_column.button_group.button_type",
+            "controlling_field_path" : "tab_group.tab_items.content_column_card.button_group.button_type",
             "controlling_value_regex" : "cta",
             "property" : null,
             "operator" : "EQUAL",
@@ -734,15 +735,15 @@
       "type" : "group",
       "display_width" : null,
       "default" : {
-        "include_eyebrow_text" : true,
+        "include_eyebrow_text" : false,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
         "heading_size" : "h2",
-        "heading" : "Tab Group Slide Headline",
+        "heading" : "Tab Group Slide Headline Goes Here.",
         "include_content" : true,
         "content_style" : "themeStyle",
-        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</span></p>",
-        "include_button" : true,
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span></p>",
+        "include_button" : false,
         "button_group" : [ {
           "button_type" : "std",
           "button_style" : "hs-button",
@@ -759,6 +760,441 @@
           }
         } ]
       }
+    }, {
+      "id" : "3984c193-c007-9533-e8a2-123b9337c3a0",
+      "name" : "cards",
+      "label" : "Cards",
+      "required" : false,
+      "locked" : false,
+      "occurrence" : {
+        "min" : null,
+        "max" : null,
+        "sorting_label_field" : "74f093a9-fa34-497b-8514-7a15d38e55b8",
+        "default" : 4
+      },
+      "children" : [ {
+        "id" : "107ac40b-8337-d11b-46ea-d1641c296239",
+        "name" : "select_image_type",
+        "label" : "Select Image Type",
+        "required" : false,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "imgWithBg", "Image" ], [ "iconWithBg", "Icon" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "display_width" : null,
+        "default" : "imgWithBg"
+      }, {
+        "id" : "d62dea59-f2d7-91f5-dee8-9b713753ce2d",
+        "name" : "image_field",
+        "label" : "Image",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items.cards.select_image_type",
+          "controlling_value_regex" : "imgWithBg",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "responsive" : true,
+        "resizable" : false,
+        "show_loading" : false,
+        "type" : "image",
+        "display_width" : null,
+        "default" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        }
+      }, {
+        "id" : "c297894f-e7c5-03ea-caef-6e0aa72940a6",
+        "name" : "icon",
+        "label" : "Icon",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items.cards.select_image_type",
+          "controlling_value_regex" : "iconWithBg",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "icon_set" : "fontawesome-6.4.2",
+        "type" : "icon",
+        "display_width" : null,
+        "default" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        }
+      }, {
+        "id" : "9d25659e-4d07-ec87-0591-763c4b94d9e3",
+        "name" : "select_background_color",
+        "label" : "Select Background Color",
+        "required" : false,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "Blue_bg", "Blue" ], [ "Red_bg", "Red" ], [ "BrightBlue_bg", "BrightBlue" ], [ "BrightRed_bg", "BrightRed" ], [ "Green_bg", "Green" ], [ "Purple_bg", "Purple" ], [ "Orange_bg", "Orange" ], [ "Teal_bg", "Teal" ], [ "Pink_bg", "Pink" ], [ "DarkNavy_bg", "DarkNavy" ], [ "LightGray_bg", "LightGray" ], [ "Gray_bg", "Gray" ], [ "Charcoal_bg", "Charcoal" ], [ "FontGray_bg", "FontGray" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ], [ "custom", "Custom" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "display_width" : null,
+        "default" : "Blue_bg"
+      }, {
+        "id" : "74f093a9-fa34-497b-8514-7a15d38e55b8",
+        "name" : "title",
+        "label" : "Title",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "display_width" : null,
+        "default" : "LFA Card Title Here"
+      }, {
+        "id" : "b97739d0-27a3-5925-7767-5fe399175108",
+        "name" : "content",
+        "label" : "Content",
+        "required" : false,
+        "locked" : false,
+        "type" : "richtext",
+        "display_width" : null,
+        "default" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>"
+      }, {
+        "id" : "11177646-cc36-71a6-f396-abe1f2589beb",
+        "name" : "include_button",
+        "label" : "Include Button",
+        "required" : false,
+        "locked" : false,
+        "display" : "checkbox",
+        "type" : "boolean",
+        "display_width" : null,
+        "default" : true
+      }, {
+        "id" : "66cadd5e-efea-0f79-b46f-572023b962c5",
+        "name" : "button_group_copy",
+        "label" : "Button Group",
+        "required" : false,
+        "locked" : false,
+        "occurrence" : {
+          "min" : null,
+          "max" : 2,
+          "sorting_label_field" : "43e0936c-b29a-7bd7-61e3-b4671077ba62",
+          "default" : 1
+        },
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items.cards.include_button",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "children" : [ {
+          "id" : "4046e58d-962c-a6dd-8d5e-cb563642510c",
+          "name" : "button_type",
+          "label" : "Button Type",
+          "required" : false,
+          "locked" : false,
+          "display" : "select",
+          "choices" : [ [ "std", "Standard" ], [ "cta", "Call to Action" ] ],
+          "multiple" : false,
+          "reordering_enabled" : true,
+          "preset" : null,
+          "type" : "choice",
+          "display_width" : null,
+          "default" : "std"
+        }, {
+          "id" : "64210473-93e7-babb-06a8-66d6e6dbbd87",
+          "name" : "button_style",
+          "label" : "Button Style",
+          "required" : false,
+          "locked" : false,
+          "visibility" : {
+            "controlling_field" : null,
+            "controlling_field_path" : "tab_group.tab_items.cards.button_group_copy.button_type",
+            "controlling_value_regex" : "std|popup_content",
+            "property" : null,
+            "operator" : "MATCHES_REGEX",
+            "access" : null
+          },
+          "display" : "select",
+          "choices" : [ [ "hs-button", "Primary" ], [ "hs-sec-btn", "Secondary" ], [ "hs-arrow-btn", "Arrow Button" ] ],
+          "multiple" : false,
+          "reordering_enabled" : true,
+          "preset" : null,
+          "type" : "choice",
+          "display_width" : null,
+          "default" : "hs-button"
+        }, {
+          "id" : "7376a9c2-9c0f-f7e7-1782-8b6496c42a68",
+          "name" : "button_size",
+          "label" : "Button Size",
+          "required" : false,
+          "locked" : false,
+          "visibility" : {
+            "controlling_field" : null,
+            "controlling_field_path" : "tab_group.tab_items.cards.button_group_copy.button_style",
+            "controlling_value_regex" : "hs-sec-btn",
+            "property" : null,
+            "operator" : "NOT_EQUAL",
+            "access" : null
+          },
+          "display" : "select",
+          "choices" : [ [ "large", "Large" ], [ "small", "Small" ] ],
+          "multiple" : false,
+          "reordering_enabled" : true,
+          "preset" : null,
+          "type" : "choice",
+          "display_width" : null,
+          "default" : "large"
+        }, {
+          "id" : "5677a65e-b77f-77ee-0897-1a6bc434e27a",
+          "name" : "button_text",
+          "label" : "Button Text",
+          "required" : false,
+          "locked" : false,
+          "validation_regex" : "",
+          "visibility" : {
+            "controlling_field" : null,
+            "controlling_field_path" : "tab_group.tab_items.cards.button_group_copy.button_type",
+            "controlling_value_regex" : "std|popup_content",
+            "property" : null,
+            "operator" : "MATCHES_REGEX",
+            "access" : null
+          },
+          "allow_new_line" : false,
+          "show_emoji_picker" : false,
+          "type" : "text",
+          "display_width" : null,
+          "default" : "Subpage Link Here"
+        }, {
+          "id" : "02bb7ac9-88f0-e016-485d-d8238963b3b0",
+          "name" : "link",
+          "label" : "Link",
+          "required" : false,
+          "locked" : false,
+          "visibility" : {
+            "controlling_field" : null,
+            "controlling_field_path" : "tab_group.tab_items.cards.button_group_copy.button_type",
+            "controlling_value_regex" : "std",
+            "property" : null,
+            "operator" : "EQUAL",
+            "access" : null
+          },
+          "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "PHONE_NUMBER" ],
+          "show_advanced_rel_options" : false,
+          "type" : "link",
+          "display_width" : null,
+          "default" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        }, {
+          "id" : "ebbb04e7-0086-809e-d486-e82a6264805f",
+          "name" : "cta",
+          "label" : "CTA",
+          "required" : false,
+          "locked" : false,
+          "visibility" : {
+            "controlling_field" : null,
+            "controlling_field_path" : "tab_group.tab_items.cards.button_group_copy.button_type",
+            "controlling_value_regex" : "cta",
+            "property" : null,
+            "operator" : "EQUAL",
+            "access" : null
+          },
+          "type" : "cta",
+          "display_width" : null
+        } ],
+        "tab" : "CONTENT",
+        "expanded" : false,
+        "group_occurrence_meta" : null,
+        "type" : "group",
+        "display_width" : null,
+        "default" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "group_occurrence_meta" : null,
+      "type" : "group",
+      "display_width" : null,
+      "default" : [ {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
@@ -766,16 +1202,17 @@
     "type" : "group",
     "display_width" : null,
     "default" : [ {
-      "content_column_copy" : {
-        "include_eyebrow_text" : true,
+      "title" : "This is the Active Tab Title",
+      "content_column_card" : {
+        "include_eyebrow_text" : false,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
         "heading_size" : "h2",
-        "heading" : "Tab Group Slide Headline",
+        "heading" : "Tab Group Slide Headline Goes Here.",
         "include_content" : true,
         "content_style" : "themeStyle",
-        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</span></p>",
-        "include_button" : true,
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span></p>",
+        "include_button" : false,
         "button_group" : [ {
           "button_type" : "std",
           "button_style" : "hs-button",
@@ -791,18 +1228,164 @@
             "no_follow" : false
           }
         } ]
-      }
+      },
+      "cards" : [ {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
     }, {
-      "content_column_copy" : {
-        "include_eyebrow_text" : true,
+      "title" : "This is the Active Tab Title",
+      "content_column_card" : {
+        "include_eyebrow_text" : false,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
         "heading_size" : "h2",
-        "heading" : "Tab Group Slide Headline",
+        "heading" : "Tab Group Slide Headline Goes Here.",
         "include_content" : true,
         "content_style" : "themeStyle",
-        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</span></p>",
-        "include_button" : true,
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span></p>",
+        "include_button" : false,
         "button_group" : [ {
           "button_type" : "std",
           "button_style" : "hs-button",
@@ -818,18 +1401,164 @@
             "no_follow" : false
           }
         } ]
-      }
+      },
+      "cards" : [ {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
     }, {
-      "content_column_copy" : {
-        "include_eyebrow_text" : true,
+      "title" : "This is the Active Tab Title",
+      "content_column_card" : {
+        "include_eyebrow_text" : false,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
         "heading_size" : "h2",
-        "heading" : "Tab Group Slide Headline",
+        "heading" : "Tab Group Slide Headline Goes Here.",
         "include_content" : true,
         "content_style" : "themeStyle",
-        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</span></p>",
-        "include_button" : true,
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span></p>",
+        "include_button" : false,
         "button_group" : [ {
           "button_type" : "std",
           "button_style" : "hs-button",
@@ -845,18 +1574,164 @@
             "no_follow" : false
           }
         } ]
-      }
+      },
+      "cards" : [ {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
     }, {
-      "content_column_copy" : {
-        "include_eyebrow_text" : true,
+      "title" : "This is the Active Tab Title",
+      "content_column_card" : {
+        "include_eyebrow_text" : false,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
         "heading_size" : "h2",
-        "heading" : "Tab Group Slide Headline",
+        "heading" : "Tab Group Slide Headline Goes Here.",
         "include_content" : true,
         "content_style" : "themeStyle",
-        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</span></p>",
-        "include_button" : true,
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span></p>",
+        "include_button" : false,
         "button_group" : [ {
           "button_type" : "std",
           "button_style" : "hs-button",
@@ -872,7 +1747,152 @@
             "no_follow" : false
           }
         } ]
-      }
+      },
+      "cards" : [ {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
     } ]
   }, {
     "id" : "37b22121-8dfd-53c0-32d9-5b2f8e7f284f",
@@ -882,7 +1902,7 @@
     "locked" : false,
     "occurrence" : {
       "min" : null,
-      "max" : null,
+      "max" : 8,
       "sorting_label_field" : "6bb5f148-1959-abde-2473-4bf6d0e46493",
       "default" : 3
     },
@@ -906,6 +1926,28 @@
       "type" : "text",
       "display_width" : null,
       "default" : "This is the Active Tab Title"
+    }, {
+      "id" : "4519bd24-b78a-1b8c-fcea-4d14edc6795d",
+      "name" : "tab_content_position",
+      "label" : "Content Position",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "tab_group.select_tab_type",
+        "controlling_value_regex" : "cmTwoColTab",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "cmLeft", "Left" ], [ "cmRight", "Right" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "cmLeft"
     }, {
       "id" : "ae7595a9-2ae6-a253-207f-92359998e7f0",
       "name" : "content_column",
@@ -1260,7 +2302,7 @@
         "required" : false,
         "locked" : false,
         "display" : "select",
-        "choices" : [ [ "cmVideo", "Video" ], [ "cmImage", "Image" ] ],
+        "choices" : [ [ "cmVideo", "Video" ], [ "cmImage", "Image" ], [ "cmContent", "Content" ] ],
         "multiple" : false,
         "reordering_enabled" : true,
         "preset" : null,
@@ -1355,6 +2397,23 @@
         "type" : "text",
         "display_width" : null,
         "default" : "https://www.youtube.com/embed/9xwazD5SyVg"
+      }, {
+        "id" : "5c2a7a78-7303-622d-1694-3423a05cc57f",
+        "name" : "content",
+        "label" : "Content",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items_2.media_column.select_media_type",
+          "controlling_value_regex" : "cmContent",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "type" : "richtext",
+        "display_width" : null,
+        "default" : "Content Here"
       } ],
       "tab" : "CONTENT",
       "expanded" : false,
@@ -1374,7 +2433,8 @@
           "max_height" : 814
         },
         "file" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
-        "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg"
+        "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
+        "content" : "Content Here"
       }
     } ],
     "tab" : "CONTENT",
@@ -1384,6 +2444,7 @@
     "display_width" : null,
     "default" : [ {
       "title" : "This is the Active Tab Title",
+      "tab_content_position" : "cmLeft",
       "content_column" : {
         "include_eyebrow_text" : true,
         "eyebrow_text" : "Optional Eyebrow Text",
@@ -1423,10 +2484,12 @@
           "max_height" : 814
         },
         "file" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
-        "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg"
+        "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
+        "content" : "Content Here"
       }
     }, {
       "title" : "This is the Active Tab Title",
+      "tab_content_position" : "cmLeft",
       "content_column" : {
         "include_eyebrow_text" : true,
         "eyebrow_text" : "Optional Eyebrow Text",
@@ -1466,10 +2529,12 @@
           "max_height" : 814
         },
         "file" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
-        "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg"
+        "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
+        "content" : "Content Here"
       }
     }, {
       "title" : "This is the Active Tab Title",
+      "tab_content_position" : "cmLeft",
       "content_column" : {
         "include_eyebrow_text" : true,
         "eyebrow_text" : "Optional Eyebrow Text",
@@ -1509,7 +2574,8 @@
           "max_height" : 814
         },
         "file" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
-        "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg"
+        "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
+        "content" : "Content Here"
       }
     } ]
   } ],
@@ -1521,16 +2587,17 @@
   "default" : {
     "select_tab_type" : "cmTwoColTab",
     "tab_items" : [ {
-      "content_column_copy" : {
-        "include_eyebrow_text" : true,
+      "title" : "This is the Active Tab Title",
+      "content_column_card" : {
+        "include_eyebrow_text" : false,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
         "heading_size" : "h2",
-        "heading" : "Tab Group Slide Headline",
+        "heading" : "Tab Group Slide Headline Goes Here.",
         "include_content" : true,
         "content_style" : "themeStyle",
-        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</span></p>",
-        "include_button" : true,
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span></p>",
+        "include_button" : false,
         "button_group" : [ {
           "button_type" : "std",
           "button_style" : "hs-button",
@@ -1546,18 +2613,164 @@
             "no_follow" : false
           }
         } ]
-      }
+      },
+      "cards" : [ {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
     }, {
-      "content_column_copy" : {
-        "include_eyebrow_text" : true,
+      "title" : "This is the Active Tab Title",
+      "content_column_card" : {
+        "include_eyebrow_text" : false,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
         "heading_size" : "h2",
-        "heading" : "Tab Group Slide Headline",
+        "heading" : "Tab Group Slide Headline Goes Here.",
         "include_content" : true,
         "content_style" : "themeStyle",
-        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</span></p>",
-        "include_button" : true,
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span></p>",
+        "include_button" : false,
         "button_group" : [ {
           "button_type" : "std",
           "button_style" : "hs-button",
@@ -1573,18 +2786,164 @@
             "no_follow" : false
           }
         } ]
-      }
+      },
+      "cards" : [ {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
     }, {
-      "content_column_copy" : {
-        "include_eyebrow_text" : true,
+      "title" : "This is the Active Tab Title",
+      "content_column_card" : {
+        "include_eyebrow_text" : false,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
         "heading_size" : "h2",
-        "heading" : "Tab Group Slide Headline",
+        "heading" : "Tab Group Slide Headline Goes Here.",
         "include_content" : true,
         "content_style" : "themeStyle",
-        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</span></p>",
-        "include_button" : true,
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span></p>",
+        "include_button" : false,
         "button_group" : [ {
           "button_type" : "std",
           "button_style" : "hs-button",
@@ -1600,18 +2959,164 @@
             "no_follow" : false
           }
         } ]
-      }
+      },
+      "cards" : [ {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
     }, {
-      "content_column_copy" : {
-        "include_eyebrow_text" : true,
+      "title" : "This is the Active Tab Title",
+      "content_column_card" : {
+        "include_eyebrow_text" : false,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
         "heading_size" : "h2",
-        "heading" : "Tab Group Slide Headline",
+        "heading" : "Tab Group Slide Headline Goes Here.",
         "include_content" : true,
         "content_style" : "themeStyle",
-        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</span></p>",
-        "include_button" : true,
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span></p>",
+        "include_button" : false,
         "button_group" : [ {
           "button_type" : "std",
           "button_style" : "hs-button",
@@ -1627,10 +3132,156 @@
             "no_follow" : false
           }
         } ]
-      }
+      },
+      "cards" : [ {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
     } ],
     "tab_items_2" : [ {
       "title" : "This is the Active Tab Title",
+      "tab_content_position" : "cmLeft",
       "content_column" : {
         "include_eyebrow_text" : true,
         "eyebrow_text" : "Optional Eyebrow Text",
@@ -1670,10 +3321,12 @@
           "max_height" : 814
         },
         "file" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
-        "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg"
+        "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
+        "content" : "Content Here"
       }
     }, {
       "title" : "This is the Active Tab Title",
+      "tab_content_position" : "cmLeft",
       "content_column" : {
         "include_eyebrow_text" : true,
         "eyebrow_text" : "Optional Eyebrow Text",
@@ -1713,10 +3366,12 @@
           "max_height" : 814
         },
         "file" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
-        "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg"
+        "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
+        "content" : "Content Here"
       }
     }, {
       "title" : "This is the Active Tab Title",
+      "tab_content_position" : "cmLeft",
       "content_column" : {
         "include_eyebrow_text" : true,
         "eyebrow_text" : "Optional Eyebrow Text",
@@ -1756,7 +3411,8 @@
           "max_height" : 814
         },
         "file" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
-        "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg"
+        "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
+        "content" : "Content Here"
       }
     } ]
   }
@@ -1783,7 +3439,7 @@
   }, {
     "id" : "e6ad9337-bda5-2862-ead0-295056bea9f4",
     "name" : "tab_border_radius_type",
-    "label" : "Tab Border Radius Type",
+    "label" : "Card Border Radius Type",
     "required" : false,
     "locked" : false,
     "display" : "select",
@@ -1795,19 +3451,33 @@
     "display_width" : null,
     "default" : "BorderRadius25"
   }, {
-    "id" : "b4d0c78b-2825-b641-ec30-e01c26bda594",
-    "name" : "select_tab_background_color",
-    "label" : "Select Tab Background Color",
+    "id" : "07adf110-503f-9c8c-1f54-0e7fe8117e00",
+    "name" : "select_card_border_radius",
+    "label" : "Tab Content Border Radius Type",
     "required" : false,
     "locked" : false,
     "visibility" : {
       "controlling_field" : null,
-      "controlling_field_path" : "module_overrides.background_settings.background_type",
-      "controlling_value_regex" : "color",
+      "controlling_field_path" : "tab_group.select_tab_type",
+      "controlling_value_regex" : "cmCardTab",
       "property" : null,
       "operator" : "EQUAL",
       "access" : null
     },
+    "display" : "select",
+    "choices" : [ [ "BorderRadius25", "Largest Border Radius" ], [ "BorderRadius15", "Second Largest Border  Radius" ], [ "BorderRadius10", "Second Smallest Border Radius" ], [ "BorderRadius5", "Smallest Border Radius" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "BorderRadius10"
+  }, {
+    "id" : "b4d0c78b-2825-b641-ec30-e01c26bda594",
+    "name" : "select_tab_background_color",
+    "label" : "Tab Content Background Type",
+    "required" : false,
+    "locked" : false,
     "display" : "select",
     "choices" : [ [ "Blue_bg", "Blue" ], [ "Red_bg", "Red" ], [ "BrightBlue_bg", "BrightBlue" ], [ "BrightRed_bg", "BrightRed" ], [ "Green_bg", "Green" ], [ "Purple_bg", "Purple" ], [ "Orange_bg", "Orange" ], [ "Teal_bg", "Teal" ], [ "Pink_bg", "Pink" ], [ "DarkNavy_bg", "DarkNavy" ], [ "LightGray_bg", "LightGray" ], [ "Gray_bg", "Gray" ], [ "Charcoal_bg", "Charcoal" ], [ "FontGray_bg", "FontGray" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ], [ "custom", "Custom" ] ],
     "multiple" : false,
@@ -1816,6 +3486,36 @@
     "type" : "choice",
     "display_width" : null,
     "default" : "LightGray_bg"
+  }, {
+    "id" : "0dce8b5f-93c9-8a35-99d4-ca4fe528d97d",
+    "name" : "custom_color",
+    "label" : "Custom Color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_settings.select_tab_background_color",
+      "controlling_value_regex" : "custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : null,
+      "opacity" : null
+    }
+  }, {
+    "id" : "9d3133be-d04a-3cfa-8a11-0e78bc43ceab",
+    "name" : "tab_content_dark_theme",
+    "label" : "Tab Content Dark Theme",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : false
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -1825,7 +3525,13 @@
   "default" : {
     "intro_content_alignment" : "center",
     "tab_border_radius_type" : "BorderRadius25",
-    "select_tab_background_color" : "LightGray_bg"
+    "select_card_border_radius" : "BorderRadius10",
+    "select_tab_background_color" : "LightGray_bg",
+    "custom_color" : {
+      "color" : null,
+      "opacity" : null
+    },
+    "tab_content_dark_theme" : false
   }
 }, {
   "id" : "module_overrides",
@@ -2005,7 +3711,7 @@
     "preset" : null,
     "type" : "choice",
     "display_width" : null,
-    "default" : "top-padding-default"
+    "default" : "top-padding-small"
   }, {
     "id" : "custom_top_padding",
     "name" : "custom_top_padding",
@@ -2065,7 +3771,7 @@
     "preset" : null,
     "type" : "choice",
     "display_width" : null,
-    "default" : "bottom-padding-default"
+    "default" : "bottom-padding-small"
   }, {
     "id" : "custom_bottom_padding",
     "name" : "custom_bottom_padding",
@@ -2142,7 +3848,7 @@
       "step" : 1,
       "type" : "number",
       "display_width" : null,
-      "default" : 100
+      "default" : 0
     }, {
       "id" : "60e2a3f2-d388-17dc-c420-f7d819caa54c",
       "name" : "right_padding",
@@ -2164,7 +3870,7 @@
       "step" : 1,
       "type" : "number",
       "display_width" : null,
-      "default" : 100
+      "default" : 0
     }, {
       "id" : "d92aba00-5806-6a06-0388-6b9c37ba4101",
       "name" : "left_padding",
@@ -2264,9 +3970,9 @@
     "display_width" : null,
     "default" : {
       "border_radius_type" : "",
-      "top_padding" : 100,
+      "top_padding" : 0,
       "right_padding" : 0,
-      "bottom_padding" : 100,
+      "bottom_padding" : 0,
       "left_padding" : 0,
       "change_spacing_in_mobile" : false,
       "mobile_spacing_group" : {
@@ -2582,17 +4288,17 @@
     "bottom_margin" : "bottom-margin-none",
     "custom_bottom_margin" : 100,
     "custom_bottom_margin_mobile" : 50,
-    "top_padding" : "top-padding-default",
+    "top_padding" : "top-padding-small",
     "custom_top_padding" : 100,
     "custom_top_padding_mobile" : 50,
-    "bottom_padding" : "bottom-padding-default",
+    "bottom_padding" : "bottom-padding-small",
     "custom_bottom_padding" : 100,
     "custom_bottom_padding_mobile" : 50,
     "inner_container_spacing_group" : {
       "border_radius_type" : "",
-      "top_padding" : 100,
+      "top_padding" : 0,
       "right_padding" : 0,
-      "bottom_padding" : 100,
+      "bottom_padding" : 0,
       "left_padding" : 0,
       "change_spacing_in_mobile" : false,
       "mobile_spacing_group" : {

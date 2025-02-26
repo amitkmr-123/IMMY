@@ -315,7 +315,6 @@ strong {
 }
 
 ul {
-  @include b3;
   list-style: disc;
   padding-left: 40rem;
   margin-top: 0;
@@ -323,7 +322,6 @@ ul {
 }
 
 ol {
-  @include b3;
   list-style: decimal;
   padding-left: 40rem;
   margin-top: 0;
@@ -415,7 +413,7 @@ code {
   border-radius: 0;
 }
 
-pre > code {
+pre>code {
   display: block;
   padding: 1rem 15rem;
   white-space: pre;
@@ -547,7 +545,7 @@ section[class*="u4m-"] {
   position: relative;
 }
 
-.bg_overlay ~ *:not(.bg_overlay) {
+.bg_overlay~*:not(.bg_overlay) {
   position: relative;
   z-index: 2;
 }

@@ -80,11 +80,19 @@ section.u4m-drag-and-drop-area {
     }
 }
 
+@include midlaptop {
+    .col3_row .col3 {
+        width: 33.3333333%;
+    }
+}
+
 @include tablet {
     .col20_row .col20 {
         width: 33.33%;
     }
 }
+
+
 
 @include tabletMid {
 

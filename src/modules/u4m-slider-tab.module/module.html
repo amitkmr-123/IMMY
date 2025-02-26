@@ -1,126 +1,555 @@
 {% set moduleName = 'cmSliderTab' %}
 {% include "../partials/u4-module-includes.html" %}
 
+
+{% set newName =  name%}
+
 {{ macros.introGroup(module.intro_content, module.module_settings) }} 
 
 <div class="cmSliderTabWrap {{ module.tab_group.select_tab_type }}">
 	{% if module.tab_group.select_tab_type == "cmCardTab" %}
-	<div class="cmCardTab">
+	<div class="cmCardTabInner">
 		<ul class="tabnav">
-			<li><a href="#tab1">Tab 1</a></li>
-			<li><a href="#tab2">Tab 2</a></li>
-		</ul>
-		<div class="tabcontent-wrapper">
-			<div class="tabcontent" id="tab1">
-				<h2>What is Lorem Ipsum?</h2>
-				<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			{% for item in module.tab_group.tab_items %}
+			<li  {% if loop.index == "1" %}class="active activeMobile"{% endif %}><a href="javascript:void(0);" tab-id="tab{{ loop.index }}_{{ name }}">{{ item.title }}
+			<span class="iconWrapper plus">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
+		</span>
+		<span class="iconWrapper minus">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M200-440v-80h560v80H200Z"/></svg>
+		</span>
+			</a>
+			<div class="toggle_content {% if module.module_settings.tab_content_dark_theme %}lightCntt{% endif %} {{ module.module_settings.tab_border_radius_type }} {{ module.module_settings.select_tab_background_color }}" {% if module.module_settings.select_tab_background_color == "custom" %} style="background-color:{{ module.module_settings.custom_color.rgba }};"{% endif %}>
+			<div class="tabcontent">
+			<div class="cmCardTopCnt">
+				<div class="leftCntt">
+					<div class="intro_content ">
+						<div class="intro__inner ">
+							{% if item.content_column_card.include_eyebrow_text %}
+							<div class="eyebrow_text">
+								{{ item.content_column_card.eyebrow_text }}
+							</div>
+							{% endif %}
+							{% if item.content_column_card.include_heading %}
+							<{{ item.content_column_card.heading_size }} class="intro_title">{{ item.content_column_card.heading }}</{{ item.content_column_card.heading_size }}>
+								{% endif %}
+								{% if item.content_column_card.include_content %}
+								<div class="intro_desc {{ item.content_column_card.content_style }}">
+							{{ item.content_column_card.content }}
+						</div>
+						{% endif %}
+
+						{% if item.content_column_card.include_button %}
+						<div class="intro_btn_wrap">
+							{% for item2 in item.content_column_card.button_group %}
+							<div class="btn_item">
+								{% if item2.button_text %}
+								{% if item2.button_type == "std" %}
+								{% set href = item2.link.url.href %}
+								{% if item2.link.url.type is equalto "EMAIL_ADDRESS" %}
+								{% set href = "mailto:" + href %}
+								{% endif %}
+								<a class="{{ item2.button_style }} {{ item2.button_size }}"
+									 {% if item2.link.url.type is equalto "CALL_TO_ACTION"  %}
+									 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+									 {% else %}
+									 href="{{ href|escape_url }}"
+									 {% endif %}
+									 {% if item2.link.open_in_new_tab %}
+									 target="_blank"
+									 {% endif %}
+									 {% if item2.link.rel %}
+									 rel="{{ item2.link.rel|escape_attr }}"
+									 {% endif %}
+									 >
+									 <span>{{ item2.button_text }}</span>
+									 {% if item2.button_style  == "hs-arrow-btn" %}
+					 <div class="icon">
+						 <div class="inner">
+							 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								 <path d="M9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12L4.9375 10.9375L9.125 6.75Z" />
+							 </svg>
+						 </div> 
+					 </div>
+					 {% endif %}
+								</a>
+								{% endif %}
+								{% elif item2.button_type == "cta" %}
+								{% cta guid="{{ item2.cta }}" %}
+								{% endif %}
+							</div>
+							{% endfor %}
+						</div>
+						{% endif %}
+
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
-	{% else %}
-	<div class="cmTwoColTabWrap">
-
-		<ul class="tabnav">
-			{% for item in module.tab_group.tab_items_2 %}
-			<li><a href="#tab{{loop.index}}">{{ item.title }}</a></li>
-			{% endfor %}
-
-		</ul>
-		<div class="tabcontent-wrapper {{ module.module_settings.tab_border_radius_type }} {{ module.module_settings.select_tab_background_color }}">
-			{% for item in module.tab_group.tab_items_2 %}
-			<div class="tabcontent" id="tab{{loop.index}}">
-				<div class="tabcontentInner">
-					<div class="cmContentWrap">
-						<div class=" leftCntt">
-							<div class="intro_content ">
-								<div class="intro__inner ">
-									{% if item.content_column.include_eyebrow_text %}
-									<div class="eyebrow_text">
-										{{ item.content_column.eyebrow_text }}
-									</div>
-									{% endif %}
-									{% if item.content_column.include_heading %}
-									<{{ item.content_column.heading_size }} class="intro_title">{{ item.content_column.heading }}</{{ item.content_column.heading_size }}>
-									{% endif %}
-										{% if item.content_column.include_content %}
-										<div class="intro_desc {{ item.content_column.content_style }}">
-									{{ item.content_column.content }}
-								</div>
+		<div class="tabCardWrap">
+			<div class="tabCardInner flex_row col3_row">
+			{% for item2 in item.cards %}
+			<div class="items col col3">
+				<div class="Inneritems {{ module.module_settings.select_card_border_radius }} White_bg">
+					<div class="top_item">
+						<div class="iconImg BorderRadius5 {{ item2.select_background_color }}">
+							<div class="iconImgInner">
+							{% if item2.select_image_type == "imgWithBg" %}
+								{% if item2.image_field.src %}
+								<img src="{{ item2.image_field.src }}" alt="{{ item2.image_field.alt }}">
 								{% endif %}
-
-								{% if item.content_column.include_button %}
-								<div class="intro_btn_wrap">
-									{% for item2 in item.content_column.button_group %}
-									<div class="btn_item">
-										{% if item2.button_text %}
-										{% if item2.button_type == "std" %}
-										{% set href = item2.link.url.href %}
-										{% if item2.link.url.type is equalto "EMAIL_ADDRESS" %}
-										{% set href = "mailto:" + href %}
-										{% endif %}
-										<a class="{{ item2.button_style }} {{ item2.button_size }}"
-											 {% if item2.link.url.type is equalto "CALL_TO_ACTION"  %}
-											 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
-											 {% else %}
-											 href="{{ href|escape_url }}"
-											 {% endif %}
-											 {% if item2.link.open_in_new_tab %}
-											 target="_blank"
-											 {% endif %}
-											 {% if item2.link.rel %}
-											 rel="{{ item2.link.rel|escape_attr }}"
-											 {% endif %}
-											 >
-											{{ item2.button_text }}
-										</a>
-										{% endif %}
-										{% elif item2.button_type == "cta" %}
-                      {% cta guid="{{ item2.cta }}" %}
-										{% endif %}
-
-
-									</div>
-									{% endfor %}
-								</div>
-								{% endif %}
-
-								</div>
+								{% elif item2.select_image_type == "iconWithBg" %}
+								  {% icon
+										name="{{ item2.icon.name }}"
+										style="{{ item2.icon.type }}"
+										unicode="{{ item2.icon.unicode }}"
+										icon_set="{{ item2.icon.icon_set }}"
+									%}
+									{% endif %}
 							</div>
 						</div>
-					</div>
-					<div class="cmMediaWrap">
-						{% if item.media_column.select_media_type =="cmImage" %}
-						<div class="MainImg BorderRadius15"> 
-							{% if item.media_column.image.src %}
-							<div class="imgBg" style="background-image:url({{ item.media_column.image.src }});"></div>
-							{% endif %}
-						</div>
-						{% elif item.media_column.select_media_type =="cmVideo" %}
-						{% if item.media_column.select_video_type =="cmEmbed" %}
-						<div class="embedVideo">
-							{% if item.media_column.embed_url %}
-				    <iframe src="{{ item.media_column.embed_url }}?autoplay=1&loop=0&mute=1&showinfo=0&controls=1"  frameborder="0" allowfullscreen="" class="iframe_video" ></iframe>
-							{% endif %}
-						</div>
-						{% elif item.media_column.select_video_type =="cmFile" %}
-							{% if item.media_column.file %}
-								<div class="cmVideoFile">
-								<video class="video-media" controls>
-									<source src="{{ item.media_column.file }}" type="video/mp4">
-								</video>
-								</div>
-								{% endif %}
-
-						
+						{% if item2.title %}
+						<h6 class="intro_title">{{ item2.title }}</h6>
 						{% endif %}
-            {% endif %}
-				</div>
+						{% if item2.content %}
+						<div class="intro_desc 	bodystyle1">
+							{{ item2.content }}
+						</div>
+						{% endif %}
+
+					</div>
+					{% if item2.include_button %}
+						<div class="intro_btn_wrap">
+							{% for item3 in item2.button_group_copy %}
+							<div class="btn_item">
+								{% if item3.button_text %}
+								{% if item3.button_type == "std" %}
+								{% set href = item3.link.url.href %}
+								{% if item3.link.url.type is equalto "EMAIL_ADDRESS" %}
+								{% set href = "mailto:" + href %}
+								{% endif %}
+								<a class="{{ item3.button_style }} {{ item3.button_size }}"
+									 {% if item3.link.url.type is equalto "CALL_TO_ACTION"  %}
+									 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+									 {% else %}
+									 href="{{ href|escape_url }}"
+									 {% endif %}
+									 {% if item3.link.open_in_new_tab %}
+									 target="_blank"
+									 {% endif %}
+									 {% if item3.link.rel %}
+									 rel="{{ item3.link.rel|escape_attr }}"
+									 {% endif %}
+									 >
+								 <span>{{ item3.button_text }}</span>
+									 {% if item3.button_style  == "hs-arrow-btn" %}
+					 <div class="icon">
+						 <div class="inner">
+							 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								 <path d="M9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12L4.9375 10.9375L9.125 6.75Z" />
+							 </svg>
+						 </div> 
+					 </div>
+					 {% endif %}
+								</a>
+								{% endif %}
+								{% elif item3.button_type == "cta" %}
+								{% cta guid="{{ item3.cta }}" %}
+								{% endif %}
+							</div>
+							{% endfor %}
+						</div>
+						{% endif %}
 				</div>
 			</div>
 			{% endfor %}
+			</div>
+		</div>
+		
+	</div>
+	</div></li>
+			{% endfor %}
+		</ul>
+		<div class="tabcontent-wrapper {% if module.module_settings.tab_content_dark_theme %}lightCntt{% endif %} {{ module.module_settings.tab_border_radius_type }} {{ module.module_settings.select_tab_background_color }}" {% if module.module_settings.select_tab_background_color == "custom" %} style="background-color:{{ module.module_settings.custom_color.rgba }};"{% endif %}>
+			{% for item in module.tab_group.tab_items %}
+			<div class="tabcontent {% if loop.index == "1" %}active{% endif %}" content-id="tab{{ loop.index }}_{{ name }}">
+				<div class="cmCardTopCnt">
+					<div class="leftCntt">
+						<div class="intro_content ">
+							<div class="intro__inner ">
+								{% if item.content_column_card.include_eyebrow_text %}
+								<div class="eyebrow_text">
+									{{ item.content_column_card.eyebrow_text }}
+								</div>
+								{% endif %}
+								{% if item.content_column_card.include_heading %}
+								<{{ item.content_column_card.heading_size }} class="intro_title">{{ item.content_column_card.heading }}</{{ item.content_column_card.heading_size }}>
+									{% endif %}
+									{% if item.content_column_card.include_content %}
+									<div class="intro_desc {{ item.content_column_card.content_style }}">
+								{{ item.content_column_card.content }}
+							</div>
+							{% endif %}
+
+							{% if item.content_column_card.include_button %}
+							<div class="intro_btn_wrap">
+								{% for item2 in item.content_column_card.button_group %}
+								<div class="btn_item">
+									{% if item2.button_text %}
+									{% if item2.button_type == "std" %}
+									{% set href = item2.link.url.href %}
+									{% if item2.link.url.type is equalto "EMAIL_ADDRESS" %}
+									{% set href = "mailto:" + href %}
+									{% endif %}
+									<a class="{{ item2.button_style }} {{ item2.button_size }}"
+										 {% if item2.link.url.type is equalto "CALL_TO_ACTION"  %}
+										 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+										 {% else %}
+										 href="{{ href|escape_url }}"
+										 {% endif %}
+										 {% if item2.link.open_in_new_tab %}
+										 target="_blank"
+										 {% endif %}
+										 {% if item2.link.rel %}
+										 rel="{{ item2.link.rel|escape_attr }}"
+										 {% endif %}
+										 >
+										 <span>{{ item2.button_text }}</span>
+										 {% if item2.button_style  == "hs-arrow-btn" %}
+						 <div class="icon">
+							 <div class="inner">
+								 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									 <path d="M9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12L4.9375 10.9375L9.125 6.75Z" />
+								 </svg>
+							 </div> 
+						 </div>
+						 {% endif %}
+									</a>
+									{% endif %}
+									{% elif item2.button_type == "cta" %}
+									{% cta guid="{{ item2.cta }}" %}
+									{% endif %}
+								</div>
+								{% endfor %}
+							</div>
+							{% endif %}
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tabCardWrap">
+				<div class="tabCardInner flex_row col3_row">
+				{% for item2 in item.cards %}
+				<div class="items col col3">
+					<div class="Inneritems {{ module.module_settings.select_card_border_radius }} White_bg">
+						<div class="top_item">
+							<div class="iconImg BorderRadius5 {{ item2.select_background_color }}">
+								<div class="iconImgInner">
+								{% if item2.select_image_type == "imgWithBg" %}
+									{% if item2.image_field.src %}
+									<img src="{{ item2.image_field.src }}" alt="{{ item2.image_field.alt }}">
+									{% endif %}
+									{% elif item2.select_image_type == "iconWithBg" %}
+									  {% icon
+											name="{{ item2.icon.name }}"
+											style="{{ item2.icon.type }}"
+											unicode="{{ item2.icon.unicode }}"
+											icon_set="{{ item2.icon.icon_set }}"
+										%}
+										{% endif %}
+								</div>
+							</div>
+							{% if item2.title %}
+							<h6 class="intro_title">{{ item2.title }}</h6>
+							{% endif %}
+							{% if item2.content %}
+							<div class="intro_desc 	bodystyle1">
+								{{ item2.content }}
+							</div>
+							{% endif %}
+
+						</div>
+						{% if item2.include_button %}
+							<div class="intro_btn_wrap">
+								{% for item3 in item2.button_group_copy %}
+								<div class="btn_item">
+									{% if item3.button_text %}
+									{% if item3.button_type == "std" %}
+									{% set href = item3.link.url.href %}
+									{% if item3.link.url.type is equalto "EMAIL_ADDRESS" %}
+									{% set href = "mailto:" + href %}
+									{% endif %}
+									<a class="{{ item3.button_style }} {{ item3.button_size }}"
+										 {% if item3.link.url.type is equalto "CALL_TO_ACTION"  %}
+										 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+										 {% else %}
+										 href="{{ href|escape_url }}"
+										 {% endif %}
+										 {% if item3.link.open_in_new_tab %}
+										 target="_blank"
+										 {% endif %}
+										 {% if item3.link.rel %}
+										 rel="{{ item3.link.rel|escape_attr }}"
+										 {% endif %}
+										 >
+									 <span>{{ item3.button_text }}</span>
+										 {% if item3.button_style  == "hs-arrow-btn" %}
+						 <div class="icon">
+							 <div class="inner">
+								 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									 <path d="M9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12L4.9375 10.9375L9.125 6.75Z" />
+								 </svg>
+							 </div> 
+						 </div>
+						 {% endif %}
+									</a>
+									{% endif %}
+									{% elif item3.button_type == "cta" %}
+									{% cta guid="{{ item3.cta }}" %}
+									{% endif %}
+								</div>
+								{% endfor %}
+							</div>
+							{% endif %}
+					</div>
+				</div>
+				{% endfor %}
+				</div>
+			</div>
+			
+		</div>
+		{% endfor %}
+	</div>
+</div>
+{% else %}
+<div class="cmDiffrentStyle">
+
+	<ul class="tabnav">
+		{% for item in module.tab_group.tab_items_2 %}
+		<li {% if loop.index == "1" %}class="active activeMobile"{% endif %}><a  href="javascript:void(0);" tab-id="tab{{ loop.index }}_{{ name }}">{{ item.title }}
+		<span class="iconWrapper plus">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
+		</span>
+		<span class="iconWrapper minus">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M200-440v-80h560v80H200Z"/></svg>
+		</span>
+		</a>
+		<div class="toggle_content {% if module.module_settings.tab_content_dark_theme %}lightCntt{% endif %} {{ module.module_settings.tab_border_radius_type }} {{ module.module_settings.select_tab_background_color }}" {% if module.module_settings.select_tab_background_color == "custom" %} style="background-color:{{ module.module_settings.custom_color.rgba }};"{% endif %}>
+		<div class="tabcontent ">
+	<div class="tabcontentInner {% if module.tab_group.select_tab_type == "cmTwoColTab" %}{{ item.tab_content_position }}{% endif %}">
+		<div class="cmContentWrap">
+			<div class=" leftCntt">
+				<div class="intro_content ">
+					<div class="intro__inner ">
+						{% if item.content_column.include_eyebrow_text %}
+						<div class="eyebrow_text">
+							{{ item.content_column.eyebrow_text }}
+						</div>
+						{% endif %}
+						{% if item.content_column.include_heading %}
+						<{{ item.content_column.heading_size }} class="intro_title">{{ item.content_column.heading }}</{{ item.content_column.heading_size }}>
+							{% endif %}
+							{% if item.content_column.include_content %}
+							<div class="intro_desc {{ item.content_column.content_style }}">
+						{{ item.content_column.content }}
+					</div>
+					{% endif %}
+
+					{% if item.content_column.include_button %}
+					<div class="intro_btn_wrap">
+						{% for item2 in item.content_column.button_group %}
+						<div class="btn_item">
+							{% if item2.button_text %}
+							{% if item2.button_type == "std" %}
+							{% set href = item2.link.url.href %}
+							{% if item2.link.url.type is equalto "EMAIL_ADDRESS" %}
+							{% set href = "mailto:" + href %}
+							{% endif %}
+							<a class="{{ item2.button_style }} {{ item2.button_size }}"
+								 {% if item2.link.url.type is equalto "CALL_TO_ACTION"  %}
+								 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+								 {% else %}
+								 href="{{ href|escape_url }}"
+								 {% endif %}
+								 {% if item2.link.open_in_new_tab %}
+								 target="_blank"
+								 {% endif %}
+								 {% if item2.link.rel %}
+								 rel="{{ item2.link.rel|escape_attr }}"
+								 {% endif %}
+								 >
+								<span>{{ item2.button_text }}</span>
+									 {% if item2.button_style  == "hs-arrow-btn" %}
+					 <div class="icon">
+						 <div class="inner">
+							 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								 <path d="M9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12L4.9375 10.9375L9.125 6.75Z" />
+							 </svg>
+						 </div> 
+					 </div>
+					 {% endif %}
+							</a>
+							{% endif %}
+							{% elif item2.button_type == "cta" %}
+							{% cta guid="{{ item2.cta }}" %}
+							{% endif %}
+
+
+						</div>
+						{% endfor %}
+					</div>
+					{% endif %}
+
+				</div>
+			</div>
 		</div>
 	</div>
-	{% endif %}
+	<div class="cmMediaWrap">
+		{% if item.media_column.select_media_type =="cmImage" %}
+		<div class="MainImg BorderRadius15"> 
+			{% if item.media_column.image.src %}
+			<div class="imgBg" style="background-image:url({{ item.media_column.image.src }});"></div>
+			{% endif %}
+		</div>
+		{% elif item.media_column.select_media_type =="cmVideo" %}
+		{% if item.media_column.select_video_type =="cmEmbed" %}
+		<div class="embedVideo">
+			{% if item.media_column.embed_url %}
+			<iframe src="{{ item.media_column.embed_url }}?autoplay=1&loop=0&mute=1&showinfo=0&controls=1"  frameborder="0" allowfullscreen="" class="iframe_video" ></iframe>
+			{% endif %}
+		</div>
+		{% elif item.media_column.select_video_type =="cmFile" %}
+		{% if item.media_column.file %}
+		<div class="cmVideoFile">
+			<video class="video-media" controls>
+				<source src="{{ item.media_column.file }}" type="video/mp4">
+			</video>
+		</div>
+		{% endif %}
+		{% endif %}
+		{% elif item.media_column.select_media_type =="cmContent" %}
+		{% if item.media_column.content %}
+		<div class="cmContentWrap">
+			{{ item.media_column.content }}
+		</div>
+		{% endif %}
+		{% endif %}
+	</div>
+</div>
+</div>
+</div></li>
+		{% endfor %}
+
+	</ul>
+	<div class="tabcontent-wrapper {% if module.module_settings.tab_content_dark_theme %}lightCntt{% endif %} {{ module.module_settings.tab_border_radius_type }} {{ module.module_settings.select_tab_background_color }}" {% if module.module_settings.select_tab_background_color == "custom" %} style="background-color:{{ module.module_settings.custom_color.rgba }};"{% endif %}>
+		{% for item in module.tab_group.tab_items_2 %}
+		<div class="tabcontent {% if loop.index == "1" %}active{% endif %}" content-id="tab{{ loop.index }}_{{ name }}">
+			<div class="tabcontentInner {% if module.tab_group.select_tab_type == "cmTwoColTab" %}{{ item.tab_content_position }}{% endif %}">
+				<div class="cmContentWrap">
+					<div class=" leftCntt">
+						<div class="intro_content ">
+							<div class="intro__inner ">
+								{% if item.content_column.include_eyebrow_text %}
+								<div class="eyebrow_text">
+									{{ item.content_column.eyebrow_text }}
+								</div>
+								{% endif %}
+								{% if item.content_column.include_heading %}
+								<{{ item.content_column.heading_size }} class="intro_title">{{ item.content_column.heading }}</{{ item.content_column.heading_size }}>
+									{% endif %}
+									{% if item.content_column.include_content %}
+									<div class="intro_desc {{ item.content_column.content_style }}">
+								{{ item.content_column.content }}
+							</div>
+							{% endif %}
+
+							{% if item.content_column.include_button %}
+							<div class="intro_btn_wrap">
+								{% for item2 in item.content_column.button_group %}
+								<div class="btn_item">
+									{% if item2.button_text %}
+									{% if item2.button_type == "std" %}
+									{% set href = item2.link.url.href %}
+									{% if item2.link.url.type is equalto "EMAIL_ADDRESS" %}
+									{% set href = "mailto:" + href %}
+									{% endif %}
+									<a class="{{ item2.button_style }} {{ item2.button_size }}"
+										 {% if item2.link.url.type is equalto "CALL_TO_ACTION"  %}
+										 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+										 {% else %}
+										 href="{{ href|escape_url }}"
+										 {% endif %}
+										 {% if item2.link.open_in_new_tab %}
+										 target="_blank"
+										 {% endif %}
+										 {% if item2.link.rel %}
+										 rel="{{ item2.link.rel|escape_attr }}"
+										 {% endif %}
+										 >
+										<span>{{ item2.button_text }}</span>
+									 {% if item2.button_style  == "hs-arrow-btn" %}
+					 <div class="icon">
+						 <div class="inner">
+							 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								 <path d="M9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12L4.9375 10.9375L9.125 6.75Z" />
+							 </svg>
+						 </div> 
+					 </div>
+					 {% endif %}
+									</a>
+									{% endif %}
+									{% elif item2.button_type == "cta" %}
+									{% cta guid="{{ item2.cta }}" %}
+									{% endif %}
+
+
+								</div>
+								{% endfor %}
+							</div>
+							{% endif %}
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cmMediaWrap">
+				{% if item.media_column.select_media_type =="cmImage" %}
+				<div class="MainImg BorderRadius15"> 
+					{% if item.media_column.image.src %}
+					<div class="imgBg" style="background-image:url({{ item.media_column.image.src }});"></div>
+					{% endif %}
+				</div>
+				{% elif item.media_column.select_media_type =="cmVideo" %}
+				{% if item.media_column.select_video_type =="cmEmbed" %}
+				<div class="embedVideo">
+					{% if item.media_column.embed_url %}
+					<iframe src="{{ item.media_column.embed_url }}?autoplay=1&loop=0&mute=1&showinfo=0&controls=1"  frameborder="0" allowfullscreen="" class="iframe_video" ></iframe>
+					{% endif %}
+				</div>
+				{% elif item.media_column.select_video_type =="cmFile" %}
+				{% if item.media_column.file %}
+				<div class="cmVideoFile">
+					<video class="video-media" controls>
+						<source src="{{ item.media_column.file }}" type="video/mp4">
+					</video>
+				</div>
+				{% endif %}
+				{% endif %}
+				{% elif item.media_column.select_media_type =="cmContent" %}
+				{% if item.media_column.content %}
+				<div class="cmContentWrap">
+					{{ item.media_column.content }}
+				</div>
+				{% endif %}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+</div>
+{% endif %}
 </div>
 
 
@@ -132,19 +561,42 @@
 
 {% require_js %}
 <script>
-$('.tabnav li:first-child a').addClass('active');
-$('.tabcontent').first().show();
-$('.tabnav li a').click(function() {
-	var target = $(this).attr('href');
-	$(this).addClass('active').closest('li').siblings().find('a').removeClass('active');
-	$(target).show().siblings('.tabcontent').hide();
-	return false;
+
+document.addEventListener("DOMContentLoaded", function () {
+const tabLinks = document.querySelectorAll(".{{ name }} .tabnav a");
+const tabContents = document.querySelectorAll(".{{ name }} .tabcontent");
+
+tabLinks.forEach((tab) => {
+  tab.addEventListener("click", function () {
+	const tabId = this.getAttribute("tab-id");
+
+	// Remove active class from all tabs and contents
+	tabLinks.forEach((link) => link.parentElement.classList.remove("active"));
+	tabContents.forEach((content) => content.classList.remove("active"));
+
+	// Add active class to the clicked tab and corresponding content
+	this.parentElement.classList.add("active");
+	document
+	  .querySelector(`.{{ name }} .tabcontent[content-id="${tabId}"]`)
+	  .classList.add("active");
+  });
 });
+});
+
+	$(".{{name}} .tabnav > li > a").click(
+  function () {
+    $(this)
+      .next()
+      .slideToggle(250)
+      .parent()
+      .siblings()
+      .children(".toggle_content")
+      .slideUp(250);
+    $(this).parent().toggleClass("activeMobile").siblings().removeClass("activeMobile");
+  }
+);
 </script>
 {% end_require_js %}
-
-
-
 
 
 

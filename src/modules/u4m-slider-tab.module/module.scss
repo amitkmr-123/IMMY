@@ -2,8 +2,40 @@
 
 
 .cmSliderTab {
+    .iconWrapper {
+        color: inherit;
+
+        svg {
+            color: inherit;
+            fill: inherit;
+        }
+
+        @include tabletvertmin {
+            display: none;
+        }
+    }
+
+    .toggle_content {
+        display: none;
+
+        @include tabletvertmin {
+            display: none !important;
+        }
+
+        @include tabletvert {
+            padding: 20px;
+        }
+    }
+
     .tabcontent {
         display: none;
+
+    }
+
+    .tabCardInner {
+        @include tabletvert {
+            row-gap: 40px;
+        }
     }
 
     .cmTwoColTab {
@@ -11,12 +43,112 @@
             display: flex;
             align-items: center;
             margin: 0 -40px;
+
+            @include tabletMid {
+                margin: 0 -20px;
+            }
+
+            @include tabletvert {
+                flex-wrap: wrap;
+                row-gap: 40px;
+            }
         }
 
         .intro_content {
             text-align: left;
             max-width: 100%;
             margin: 0;
+
+            .eyebrow_text {
+                color: $Red;
+            }
+
+            .intro_title {
+                color: $Black;
+            }
+
+            .intro_desc {
+                color: $FontGray;
+            }
+
+            .hs-button {
+                @include button;
+            }
+
+            .hs-arrow-btn {
+                @include buttonSecond;
+            }
+
+            .hs-sec-btn {
+                @include buttonThird;
+            }
+
+            .hs-button_small {
+                @include buttonSm;
+            }
+
+            .hs-arrow-btn_small {
+                @include buttonTSecondSm;
+            }
+        }
+
+        .lightCntt {
+            .eyebrow_text {
+                color: $White;
+            }
+
+            .intro_title {
+                color: $White;
+            }
+
+            .intro_desc {
+                color: $White ;
+            }
+
+            .hs-button {
+                background-color: $white;
+                color: $Black ;
+
+                &:hover,
+                &:focus {
+                    background: rgba($White, 0.8);
+                    color: $Black ;
+                }
+            }
+
+            .hs-arrow-btn {
+                background-color: transparent;
+                color: $White;
+
+                .icon {
+                    svg {
+                        fill: $White;
+                    }
+                }
+
+                &:hover,
+                &:focus {
+                    color: rgba($White, 0.8);
+
+                    .icon {
+                        svg {
+                            fill: rgba($White, 0.8);
+                        }
+                    }
+                }
+            }
+
+            .hs-sec-btn {
+                border-color: $White;
+                color: $White;
+
+                &:hover,
+                &:focus {
+                    background: $White;
+                    color: $Black ;
+                    border-color: $White;
+                }
+            }
         }
 
         .intro_btn_wrap {
@@ -26,11 +158,141 @@
         .cmContentWrap {
             width: 50%;
             padding: 0 40px;
+
+            @include tabletMid {
+                padding: 0 20px;
+            }
+
+            @include tabletvert {
+                width: 100%;
+            }
         }
 
         .cmMediaWrap {
             width: 50%;
             padding: 0 40px;
+
+            @include tabletMid {
+                padding: 0 20px;
+            }
+
+            @include tabletvert {
+                width: 100%;
+            }
+        }
+
+
+        .imgBg {
+            padding-bottom: 70.175%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 15px;
+            overflow: hidden;
+
+            @include tabletvert {
+                padding-bottom: 56.6%;
+            }
+        }
+
+        .embedVideo {
+            width: 100%;
+            position: relative;
+            padding-bottom: 70.175%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 36px 36px -12px rgba($Black, 0.1);
+
+            @include tabletvert {
+                padding-bottom: 56.6%;
+            }
+        }
+
+        .cmVideoFile {
+            display: flex;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 36px 36px -12px rgba($Black, 0.1);
+        }
+
+        .MainImg {
+            box-shadow: 0px 36px 36px -12px rgba($Black, 0.1);
+        }
+
+        .cmRight {
+            flex-direction: row-reverse;
+
+            @include tabletvert {
+                flex-direction: column-reverse;
+            }
+        }
+
+    }
+
+    .cmFullWidthTab {
+        .intro_btn_wrap {
+            justify-content: flex-start;
+        }
+
+        .embedVideo {
+            padding-bottom: 67.215%;
+            position: relative;
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .tabcontent {
+            max-width: 610px;
+            margin: 0 auto;
+
+            @include tabletvert {
+                max-width: 100%;
+            }
+        }
+
+        .tabcontentInner {
+            display: flex;
+            flex-direction: column;
+            row-gap: 50px;
+        }
+
+        .intro_content {
+            text-align: left;
+            max-width: 100%;
+            margin: 0;
+
+            .eyebrow_text {
+                color: $Red;
+            }
+
+            .intro_title {
+                color: $Black;
+            }
+
+            .intro_desc {
+                color: $FontGray;
+            }
+
+            .hs-button {
+                @include button;
+            }
+
+            .hs-arrow-btn {
+                @include buttonSecond;
+            }
+
+            .hs-sec-btn {
+                @include buttonThird;
+            }
+
+            .hs-button_small {
+                @include buttonSm;
+            }
+
+            .hs-arrow-btn_small {
+                @include buttonTSecondSm;
+            }
         }
 
         .imgBg {
@@ -40,6 +302,10 @@
             background-repeat: no-repeat;
             border-radius: 15px;
             overflow: hidden;
+
+            @include tabletvert {
+                padding-bottom: 56.6%;
+            }
         }
 
         .embedVideo {
@@ -48,20 +314,82 @@
             padding-bottom: 70.175%;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0px 36px 36px -12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 36px 36px -12px rgba($Black, 0.1);
+
+            @include tabletvert {
+                padding-bottom: 56.6%;
+            }
         }
 
         .cmVideoFile {
             display: flex;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0px 36px 36px -12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 36px 36px -12px rgba($Black, 0.1);
         }
 
         .MainImg {
-            box-shadow: 0px 36px 36px -12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 36px 36px -12px rgba($Black, 0.1);
         }
 
+        .lightCntt {
+            .eyebrow_text {
+                color: $White;
+            }
+
+            .intro_title {
+                color: $White;
+            }
+
+            .intro_desc {
+                color: $White ;
+            }
+
+            .hs-button {
+                background-color: $white;
+                color: $Black ;
+
+                &:hover,
+                &:focus {
+                    background: rgba($White, 0.8);
+                    color: $Black ;
+                }
+            }
+
+            .hs-arrow-btn {
+                background-color: transparent;
+                color: $White;
+
+                .icon {
+                    svg {
+                        fill: $White;
+                    }
+                }
+
+                &:hover,
+                &:focus {
+                    color: rgba($White, 0.8);
+
+                    .icon {
+                        svg {
+                            fill: rgba($White, 0.8);
+                        }
+                    }
+                }
+            }
+
+            .hs-sec-btn {
+                border-color: $White;
+                color: $White;
+
+                &:hover,
+                &:focus {
+                    background: $White;
+                    color: $Black ;
+                    border-color: $White;
+                }
+            }
+        }
     }
 
     .tabnav {
@@ -72,14 +400,91 @@
         align-items: center;
         justify-content: center;
         width: 100%;
+
+        @include tabletvert {
+            display: block;
+        }
     }
 
     .tabnav {
-        li {
+        >li {
             margin: 0;
             flex: 1;
 
-            a {
+            .iconWrapper {
+                display: none;
+
+                &.minus {
+                    display: none;
+                }
+
+                svg {
+                    color: $FontGray;
+                    fill: $FontGray;
+                }
+
+                @include tabletvert {
+                    display: flex;
+                    width: 40px;
+                    height: 40px;
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    padding: 5px;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+            }
+
+
+
+
+            &.active {
+                >a {
+                    @include tabletvertmin {
+                        background-color: $DarkNavy;
+                        color: $White;
+                    }
+                }
+
+
+            }
+
+            &.activeMobile {
+
+                >a {
+
+                    @include tabletvert {
+                        background-color: $DarkNavy;
+                        color: $White;
+
+                        .plus {
+                            display: none;
+                        }
+
+                        .minus {
+                            display: flex;
+                        }
+
+                        svg {
+                            color: $White;
+                            fill: $White;
+                        }
+
+                    }
+                }
+
+                .toggle_content {
+                    @include tabletvert {
+                        display: block;
+                    }
+
+                }
+            }
+
+            >a {
                 padding-top: 20px;
                 padding-bottom: 15px;
                 padding-left: 20px;
@@ -90,10 +495,13 @@
                 text-align: center;
                 border-radius: 10px 10px 0px 0px;
                 color: $FontGray;
+                position: relative;
 
-                &.active {
-                    background-color: $DarkNavy;
-                    color: $White;
+            }
+
+            .tabcontent {
+                @include tabletvert {
+                    display: block;
                 }
             }
         }
@@ -102,6 +510,109 @@
     .tabcontent-wrapper {
         margin: 0 -50px;
         padding: 80px 50px;
+
+        .eyebrow_text {
+            color: $Red;
+        }
+
+        .intro_title {
+            color: $Black;
+        }
+
+        .intro_desc {
+            color: $FontGray;
+        }
+
+        .hs-button {
+            @include button;
+        }
+
+        .hs-arrow-btn {
+            @include buttonSecond;
+        }
+
+        .hs-sec-btn {
+            @include buttonThird;
+        }
+
+        .hs-button_small {
+            @include buttonSm;
+        }
+
+        .hs-arrow-btn_small {
+            @include buttonTSecondSm;
+        }
+
+
+
+        @include tabletMid {
+            margin: 0 -20px;
+            padding: 40px 20px;
+        }
+
+        @include tabletvert {
+            display: none;
+        }
+
+    }
+
+    .lightCntt {
+        .eyebrow_text {
+            color: $White;
+        }
+
+        .intro_title {
+            color: $White;
+        }
+
+        .intro_desc {
+            color: $White ;
+        }
+
+        .hs-button {
+            background-color: $white;
+            color: $Black ;
+
+            &:hover,
+            &:focus {
+                background: rgba($White, 0.8);
+                color: $Black ;
+            }
+        }
+
+        .hs-arrow-btn {
+            background-color: transparent;
+            color: $White;
+
+            .icon {
+                svg {
+                    fill: $White;
+                }
+            }
+
+            &:hover,
+            &:focus {
+                color: rgba($White, 0.8);
+
+                .icon {
+                    svg {
+                        fill: rgba($White, 0.8);
+                    }
+                }
+            }
+        }
+
+        .hs-sec-btn {
+            border-color: $White;
+            color: $White;
+
+            &:hover,
+            &:focus {
+                background: $White;
+                color: $Black ;
+                border-color: $White;
+            }
+        }
     }
 
     .iframe_video {
@@ -112,4 +623,92 @@
         top: 0;
         width: 100%;
     }
+
+    .tabcontent {
+        &.active {
+            display: block;
+        }
+    }
+
+    .cmCardTabInner {
+        .tabCardInner {
+            row-gap: 40px;
+        }
+
+        .Inneritems {
+            padding: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0px 24px 24px -12px rgba($Black, 0.1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+            &:hover {
+                transform: translateY(-10px);
+            }
+        }
+
+        .top_item {
+            text-align: center;
+        }
+
+        .intro_btn_wrap {
+            margin-top: auto;
+        }
+
+        .btn_item {
+            text-align: center;
+
+
+            .hs-arrow-btn {
+                justify-content: center;
+                width: auto;
+            }
+        }
+
+        .Inneritems {
+            .intro_title {
+                margin: 20px 0 0 0;
+                line-height: 1.363;
+            }
+        }
+
+
+        .intro_desc {
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+
+        .iconImg {
+            align-items: center;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            .iconImgInner {
+                height: 82px;
+                margin-left: 15px;
+                margin-right: 15px;
+                max-width: 150px;
+                padding-bottom: 15px;
+                padding-top: 15px;
+
+                img {
+                    display: inline-block;
+                    height: 100%;
+                    width: 100%;
+                }
+
+                svg {
+                    display: inline-block;
+                    width: auto;
+                    height: 100%;
+                }
+
+            }
+        }
+    }
+
+
 }
