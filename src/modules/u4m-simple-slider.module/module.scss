@@ -236,9 +236,16 @@
                 .pd.full_width {
                     padding: 80px 105px 80px 91px;
 
+
+
+                    @include tablet {
+                        padding: 50px;
+                    }
+
                     @include phone {
                         padding: 20px;
                     }
+
 
                     .bg {
                         width: calc(100% - 6.1%);
