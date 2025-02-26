@@ -24,7 +24,12 @@
             display: block;
             height: 100%;
             width: 100%;
-            padding: 8px 9px;
+            padding: 9px;
+
+            >* {
+                display: flex;
+                align-items: center;
+            }
 
             svg {
                 display: inline-block;

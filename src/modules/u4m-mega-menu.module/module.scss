@@ -47,6 +47,8 @@
                 @include tabletMid {
                     margin: 0;
                 }
+
+
             }
 
             @include tabletMid {
@@ -126,6 +128,7 @@
         color: $black;
         font-weight: 700;
         white-space: nowrap;
+        font-size: 18px;
 
         @include tablet {
             padding: 15px 10px;
@@ -161,6 +164,10 @@
             flex-wrap: wrap;
             margin: 0 -20px;
             column-gap: 0 !important;
+
+            @include tabletvert {
+                margin: 0;
+            }
         }
 
     }
@@ -171,19 +178,11 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            column-gap: 40px;
+            row-gap: 40px;
         }
 
 
         .childNavWrap {
-            flex: 1;
-
-            @include tabletMid {
-                width: 50%;
-                padding: 0 20px;
-                flex: unset;
-
-            }
 
             @include phone {
                 width: 100%;
