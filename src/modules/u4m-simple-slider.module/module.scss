@@ -1,0 +1,320 @@
+@import "../../css/_module-imports";
+
+
+.u4m-simple-slider {
+    &.reverse-text {
+        .desc {
+            .authorName {
+                color: $White !important;
+            }
+        }
+    }
+
+    .authorGroup {
+        .pd {
+            .Innercnt {
+                display: flex;
+                flex-wrap: wrap;
+                row-gap: 40px;
+                overflow: hidden;
+                position: relative;
+                z-index: 9;
+                overflow: visible;
+                flex-wrap: nowrap;
+
+                @include tablet {
+                    flex-direction: column;
+                }
+
+                .rhtcol {
+                    right: -8%;
+                    text-align: center;
+
+                    @include tablet {
+                        right: auto;
+                    }
+
+                    .title {
+                        margin-top: 0 !important;
+                        margin-bottom: 30px;
+
+                        * {
+                            color: $Black;
+                        }
+                    }
+
+                    .cnt {
+                        color: $FontGray;
+                    }
+
+                    .hs-button {
+                        @include button;
+                    }
+
+                    .hs-arrow-btn {
+                        @include buttonSecond;
+                        justify-content: center;
+                    }
+
+                    .hs-sec-btn {
+                        @include buttonThird;
+                    }
+
+                    .hs-button_small {
+                        @include buttonSm;
+                    }
+
+                    .hs-arrow-btn_small {
+                        @include buttonTSecondSm;
+                    }
+
+                    &.lightCnt {
+                        .title {
+                            margin-top: 0 !important;
+                            margin-bottom: 30px;
+
+                            * {
+                                color: $White;
+                            }
+                        }
+
+                        .cnt {
+                            color: $White;
+                        }
+
+                        .hs-button {
+                            background-color: $white;
+                            color: $Black;
+
+                            &:hover,
+                            &:focus {
+                                background: rgba($White, 0.8);
+                                color: $Black;
+                            }
+                        }
+
+                        .hs-arrow-btn {
+                            background-color: transparent;
+                            color: $White;
+
+                            .icon {
+                                svg {
+                                    fill: $White;
+                                }
+                            }
+
+                            &:hover,
+                            &:focus {
+                                color: rgba($White, 0.8);
+
+                                .icon {
+                                    svg {
+                                        fill: rgba($White, 0.8);
+                                    }
+                                }
+                            }
+                        }
+
+                        .hs-sec-btn {
+                            border-color: $White;
+                            color: $White;
+
+                            &:hover,
+                            &:focus {
+                                background: $White;
+                                color: $Black;
+                                border-color: $White;
+                            }
+                        }
+                    }
+                }
+
+                h5.qute {
+                    margin-bottom: 30rem;
+                    font-style: italic;
+                    font-weight: 325;
+                    line-height: 1.70833333;
+                }
+
+                .btmCntt {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                    @include phone {
+                        flex-direction: column;
+                    }
+
+                    .authorImage {
+                        img {
+                            border-radius: 100%;
+                            overflow: hidden;
+                            width: 80px;
+                            height: 80px !important;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .desc {
+                        margin: 0;
+
+                        .authorName {
+                            color: $Black;
+                        }
+
+                        @include phone {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            .cnt {
+                max-width: calc(100% - 400px);
+                width: 100%;
+
+                @include midlaptop {
+                    max-width: calc(100% - 330px);
+                }
+
+                @include tablet {
+                    max-width: 100%;
+                }
+            }
+
+            .rhtcol.inner {
+                width: 400px;
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                box-shadow: 0px 24px 24px -12px rgba($Black, 0.1);
+
+                @include midlaptop {
+                    width: 330px;
+                }
+
+                @include tablet {
+                    width: 100%;
+                }
+            }
+
+            .bg {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                width: calc(100% - 12.729%);
+
+                @include tablet {
+                    width: 100% !important;
+                }
+
+            }
+
+            .u4m-simple-slider {
+                .authorGroup {
+                    .pd {
+                        .Innercnt {
+                            position: relative;
+                            z-index: 99;
+                        }
+                    }
+                }
+            }
+        }
+
+        .flex_row {
+            flex-wrap: nowrap;
+
+            .items {
+                width: 100%;
+
+                .pd.full_width {
+                    padding: 80px 105px 80px 91px;
+
+                    @include phone {
+                        padding: 20px;
+                    }
+
+                    .bg {
+                        width: calc(100% - 6.1%);
+                    }
+
+                    .cnt {
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            .pd.Enablecard {
+                padding: 72px 154px 72px 91px;
+
+                @include midlaptop {
+                    padding: 50px 110px 50px 50px;
+                }
+
+                @include tablet {
+                    padding: 50px;
+                }
+
+                @include phone {
+                    padding: 20px;
+                }
+            }
+        }
+    }
+
+    .splide__pagination {
+
+        padding: 0;
+        gap: 20px;
+
+
+        @include tabletMin {
+            right: 0;
+            top: 50%;
+            transform: translateY(-50px);
+            align-items: flex-end;
+            flex-direction: column;
+            border: unset;
+            justify-content: flex-start;
+        }
+
+        @include tablet {
+            bottom: -40px;
+        }
+
+        li {
+            line-height: normal;
+            display: flex;
+
+            button {
+                margin: 0;
+                width: 24px;
+                height: 24px;
+                opacity: 1;
+                border: 2px solid $Black;
+                background: $White;
+            }
+
+            &:hover {
+                button {
+                    background: $Black;
+                }
+            }
+        }
+    }
+
+    .splide__pagination__page.is-active {
+        transform: none;
+        background: $Black;
+
+        button {
+            background: $Black;
+        }
+    }
+}
