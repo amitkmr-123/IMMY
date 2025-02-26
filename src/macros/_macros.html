@@ -101,7 +101,11 @@
 		{% if group.include_heading %}
 		<{{group.heading_size}} class="intro_title 		{% if group.include_heading_border %}hd_border{% endif %}">{{ group.heading }}{% if group.include_heading_border %}<span></span>{% endif %}</{{group.heading_size}}>
 			{% endif %}
-
+			{% if group.include_subheading %}
+				<div class="subheading">
+			{{ group.subheading }}
+		</div>
+		{% endif %}
 			{% if group.include_content %}
 			<div class="intro_desc {{ group.content_style }} {{settings.select_content_bg_color}}">
 		{{ group.content }}

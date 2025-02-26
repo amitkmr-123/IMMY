@@ -1,0 +1,96 @@
+@import "../../css/_module-imports";
+
+.u4m-split-form {
+  padding-left: 0;
+  padding-right: 0;
+  .page-center.full_width {
+    padding: 0;
+    .splitFormInr {
+      .splitFlex {
+        display: flex;
+        flex-wrap: wrap;
+        .splitcnt {
+          width: 50%;
+          padding: 80px 100px;
+          @include tabletMid {
+            width: 100%;
+          }
+          @include tabletvert {
+            padding: 50px 20px;
+          }
+          .cntLogo {
+            width: 189px;
+            padding-bottom: 100px;
+            @include tabletvert {
+              padding-bottom: 50px;
+            }
+          }
+          .intro_content {
+            max-width: 100%;
+            text-align: left;
+            .subheading {
+              padding-bottom: 50px;
+            }
+            .intro_desc {
+              border-top: 2px solid $Gray;
+              padding-top: 50px;
+            }
+            .intro_btn_wrap {
+              justify-content: flex-start;
+            }
+          }
+        }
+        .splitForm {
+          width: 50%;
+          padding: 135px 105px;
+          color: $white;
+          @include tabletMid {
+            width: 100%;
+          }
+          @include tabletvert {
+            padding: 50px 20px;
+          }
+          h3 {
+            color: inherit;
+          }
+          .formcnt {
+            @include b1;
+            line-height: 1.7;
+            color: inherit;
+            position: relative;
+            p {
+              margin-top: 0;
+            }
+          }
+          .formstyle {
+            position: relative;
+            h3 {
+              margin-bottom: 0;
+            }
+            form {
+              padding: 0;
+              margin: 0;
+              background: transparent;
+              max-width: 100%;
+              .hs-form-field > label {
+                font-size: 14px;
+              }
+              .hs-richtext p {
+                color: inherit;
+                font-size: 13rem;
+                margin: 0;
+              }
+              input.hs-button.primary.large {
+                width: 100%;
+                margin-top: 25px;
+              }
+              .hs-error-msgs {
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
