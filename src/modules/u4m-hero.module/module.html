@@ -14,7 +14,7 @@
 			</div>
 		</div>
 		<div class="media_section">
-			<div class="media_sectionin {{ module.media.shadow_type }}">
+			<div class="media_sectionin {{ module.media.border_radius_type }} {{ module.media.shadow_type }}">
 				{% if module.media.type=="img"%}
 				{% if module.media.image.src %}
 				<img src="{{ module.media.image.src }}" alt="{{ module.media.image.alt }}">

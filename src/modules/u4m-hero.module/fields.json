@@ -533,6 +533,20 @@
       "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg"
     }
   }, {
+    "id" : "76b73d60-4157-0936-10cd-5f3ba4349419",
+    "name" : "border_radius_type",
+    "label" : "Border Radius Type ",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "BorderRadius25", "Largest Border Radius" ], [ "BorderRadius15", "Second Largest Border  Radius" ], [ "BorderRadius10", "Second Smallest Border Radius" ], [ "BorderRadius5", "Smallest Border Radius" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "BorderRadius15"
+  }, {
     "id" : "7acb1051-11e5-3110-c7ff-aa8d0579e354",
     "name" : "shadow_type",
     "label" : "Shadow Type",
@@ -579,6 +593,7 @@
       "video" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
       "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg"
     },
+    "border_radius_type" : "BorderRadius15",
     "shadow_type" : "type4"
   }
 }, {

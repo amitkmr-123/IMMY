@@ -375,7 +375,7 @@
   "locked" : false,
   "occurrence" : {
     "min" : null,
-    "max" : null,
+    "max" : 4,
     "sorting_label_field" : "234292c7-787d-51e9-9460-61451df49aaf",
     "default" : 4
   },
@@ -621,14 +621,6 @@
     "label" : "Content Group Background Settings",
     "required" : false,
     "locked" : false,
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "module_overrides.enable_overrides",
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
     "children" : [ {
       "id" : "857b48b6-83eb-58c3-d612-438191a3c6e7",
       "name" : "background_type",
@@ -950,6 +942,20 @@
       },
       "dark_mode" : true
     }
+  }, {
+    "id" : "1ad725ad-57bc-5e24-0233-6d716a3455ee",
+    "name" : "content_group_alignment",
+    "label" : "Content Group Alignment",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "left", "Left" ], [ "right", "Right" ], [ "center", "Center" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "center"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -991,7 +997,8 @@
         }
       },
       "dark_mode" : true
-    }
+    },
+    "content_group_alignment" : "center"
   }
 }, {
   "id" : "module_overrides",

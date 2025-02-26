@@ -1,100 +1,157 @@
 @import "../../css/_module-imports";
 
-section.u4m-cards {
-  margin-top: 100rem;
-  margin-bottom: 100rem;
 
-  &.reverse-text {
 
-    h2.heading,
-    h3.subheading {
-      color: $white;
-    }
+.u4m-image-and-icon-cards {
+  .intro_content {
+    margin-bottom: 40px;
   }
 
-  .heading {
-    @include center;
-    @include h2;
-    text-align: center;
-  }
+  .btmCntt.intro_content {
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
 
-  .subheading {
-    @include center;
-    max-width: 1000rem;
-    @include b2;
-    font-weight: normal;
-    text-align: center;
-  }
-
-  .link {
-    text-align: center;
-
-    a {
-      @include button;
-    }
-  }
-
-  .wrapper {
-    @include center;
-    max-width: 1280rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    @include phone {
-      display: block;
+    .btn_item {
+      margin-top: 22px;
     }
 
-    &.landscape {
-      div.card {
-        flex-direction: row;
+    .mrg {
+      margin-bottom: 30px;
 
-        @include tabletvert {
+      img {
+        width: 100%;
+        height: 100% !important;
+        object-fit: cover;
+      }
+    }
+
+    .pdd {
+      margin: 0 -20px;
+      row-gap: 30px;
+
+      .items {
+        padding: 0 20px;
+        transition: all .3s ease;
+
+        .Inneritems {
+          height: 100%;
+          display: flex;
           flex-direction: column;
+
+          .btm_btn {
+            margin-top: auto;
+          }
         }
 
-        div.image.filled {
-          min-width: 200rem;
-        }
+        .Inneritems.Bgcard {
+          border: 1px solid rgba($Black, 0.1);
+          box-shadow: 0px 24px 24px -12px rgba($Black, 0.1);
+          padding: 20px 20px 30px 20px;
+          height: 100%;
 
-        div.content {
-          @include phone {
-            margin-bottom: 0;
+          .iconImg {
+            margin-bottom: 20rem;
+            height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
 
-            span.teaser {
-              margin-bottom: 0;
+            img {
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+
+          .eyebrow_text {
+            text-align: center;
+          }
+
+          .intro_title {
+            text-align: center;
+          }
+
+          .intro_desc {
+            text-align: center;
+          }
+
+          .btn_item {
+            text-align: center;
+
+            .hs-arrow-btn {
+              justify-content: center;
             }
           }
         }
       }
     }
 
-    div.card {
-      @include card;
+    .mrg.borderRadius {
+      overflow: hidden;
+      box-shadow: 0px 24px 24px -12px rgba($Black, 0.1);
+      position: relative;
     }
 
-    &.two {
-      div.card {
-        flex-basis: calc(50% - 40rem);
-      }
+    .eyebrow_text {
+      margin-bottom: 10rem;
     }
 
-    &.three {
-      div.card {
-        flex-basis: calc(33.333% - 40rem);
+    .intro_title {
+      margin-bottom: 10rem;
+    }
 
-        @include tablet {
-          flex-basis: calc(50% - 40rem);
+    .arrowIcon {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      width: 24px;
+      height: 24px;
+      display: none;
+
+      svg {
+        fill: $White;
+        color: $White;
+
+        path {
+          fill: $White;
+          color: $White;
         }
       }
     }
 
-    &.four {
-      div.card {
-        flex-basis: calc(25% - 40rem);
+    .items {
+      transition: all .3s ease;
 
-        @include tablet {
-          flex-basis: calc(50% - 40rem);
+      .borderRadius {
+        &:before {
+          content: "";
+          opacity: 0;
+          visibility: hidden;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          transition: all .3s ease;
+        }
+      }
+
+      &:hover {
+        transform: translateY(-10px);
+
+        .mrg.borderRadius {
+          .arrowIcon {
+            display: block;
+          }
+        }
+
+        .borderRadius {
+          &:before {
+            background: linear-gradient(0deg, rgba($Black, 0.6), rgba($Black, 0.6));
+            opacity: 1;
+            visibility: visible;
+          }
         }
       }
     }

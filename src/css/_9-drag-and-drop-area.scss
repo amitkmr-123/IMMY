@@ -39,7 +39,7 @@ section.u4m-drag-and-drop-area {
 
 .page-center,
 .content-wrapper,
-.dnd-section > .row-fluid {
+.dnd-section>.row-fluid {
     @include center;
     margin: 0 auto;
     position: relative;
@@ -52,12 +52,12 @@ section.u4m-drag-and-drop-area {
 }
 
 .full-width,
-[class*="full-width-section"].dnd-section > .row-fluid {
+[class*="full-width-section"].dnd-section>.row-fluid {
     max-width: 100%;
     padding: 0;
 }
 
-[class*="full-width-section"].dnd-section > .row-fluid > .dnd-column {
+[class*="full-width-section"].dnd-section>.row-fluid>.dnd-column {
     padding: 0;
 }
 
@@ -69,12 +69,11 @@ section.u4m-drag-and-drop-area {
 
 .page-center.full_width {
     max-width: 100%;
-    padding-left: 0;
-    padding-right: 0;
 }
 
 @include tabletvertmin {
-    .dnd-section .row-fluid > .dnd-column,
+
+    .dnd-section .row-fluid>.dnd-column,
     .col {
         padding-left: 15px;
         padding-right: 15px;
@@ -88,6 +87,7 @@ section.u4m-drag-and-drop-area {
 }
 
 @include tabletMid {
+
     .col20_row .col20,
     .col3_row .col3,
     .col4_row .col4 {
@@ -96,6 +96,7 @@ section.u4m-drag-and-drop-area {
 }
 
 @include tabletvert {
+
     .col20_row .col20,
     .col3_row .col3,
     .col4_row .col4 {

@@ -164,6 +164,54 @@
     }
 }
 
+
+.u4m-cta-stats {
+    .innerContainer {
+        .leftCnt {
+            .inner.left_align {
+                text-align: left;
+
+                .eyebrow_text {
+                    text-align: left;
+                }
+
+                .intro_title {
+                    text-align: left;
+                }
+
+                .intro_desc {
+                    text-align: left;
+                }
+
+                .intro_btn_wrap {
+                    justify-content: flex-start;
+                }
+            }
+
+            .inner.right_align {
+                text-align: right;
+
+                .eyebrow_text {
+                    text-align: right;
+                }
+
+                .intro_title {
+                    text-align: right;
+                }
+
+                .intro_desc {
+                    text-align: right;
+                }
+
+                .intro_btn_wrap {
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+}
+
+
 @include navbreak {
     .u4m-cta-stats {
         .innerContainer {
