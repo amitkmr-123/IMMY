@@ -34,10 +34,10 @@
 				<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
 				</span>
 			<div class="megaWrap {{ item.select_child_menu_style }}-wrap">
-			<div class="megaInnerWrap flex_row col3_row">
+			<div class="megaInnerWrap {% if  item.select_child_menu_style =="megaMenu" %} flex_row col3_row {% endif %}">
 				{% for item2 in item.child_menu %}
 				
-				<div class="childNavWrap childNavWrap-{{loop.index}} col col3">
+				<div class="childNavWrap childNavWrap-{{loop.index}} {% if  item.select_child_menu_style =="megaMenu" %} col col3 {% endif %}">
 					{% if item.select_child_menu_style == "megaMenu" %}
 					{% if item2.image.src %}
 					<div class="imageWrap" style="background-color:{{ item2.image_background_color.rgba }};">

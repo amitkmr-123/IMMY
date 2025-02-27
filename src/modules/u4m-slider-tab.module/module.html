@@ -93,7 +93,7 @@
 				<div class="Inneritems {{ module.module_settings.select_card_border_radius }} White_bg">
 					<div class="top_item">
 						<div class="iconImg BorderRadius5 {{ item2.select_background_color }}">
-							<div class="iconImgInner">
+							<div class="iconImgInner {{ item2.select_icon_color }}">
 							{% if item2.select_image_type == "imgWithBg" %}
 								{% if item2.image_field.src %}
 								<img src="{{ item2.image_field.src }}" alt="{{ item2.image_field.alt }}">
@@ -245,7 +245,7 @@
 					<div class="Inneritems {{ module.module_settings.select_card_border_radius }} White_bg">
 						<div class="top_item">
 							<div class="iconImg BorderRadius5 {{ item2.select_background_color }}">
-								<div class="iconImgInner">
+								<div class="iconImgInner {{ item2.select_icon_color }}">
 								{% if item2.select_image_type == "imgWithBg" %}
 									{% if item2.image_field.src %}
 									<img src="{{ item2.image_field.src }}" alt="{{ item2.image_field.alt }}">

@@ -844,13 +844,35 @@
         "required" : false,
         "locked" : false,
         "display" : "select",
-        "choices" : [ [ "Blue_bg", "Blue" ], [ "Red_bg", "Red" ], [ "BrightBlue_bg", "BrightBlue" ], [ "BrightRed_bg", "BrightRed" ], [ "Green_bg", "Green" ], [ "Purple_bg", "Purple" ], [ "Orange_bg", "Orange" ], [ "Teal_bg", "Teal" ], [ "Pink_bg", "Pink" ], [ "DarkNavy_bg", "DarkNavy" ], [ "LightGray_bg", "LightGray" ], [ "Gray_bg", "Gray" ], [ "Charcoal_bg", "Charcoal" ], [ "FontGray_bg", "FontGray" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ], [ "custom", "Custom" ] ],
+        "choices" : [ [ "Blue_bg", "Blue" ], [ "Red_bg", "Red" ], [ "BrightBlue_bg", "BrightBlue" ], [ "BrightRed_bg", "BrightRed" ], [ "Green_bg", "Green" ], [ "Purple_bg", "Purple" ], [ "Orange_bg", "Orange" ], [ "Teal_bg", "Teal" ], [ "Pink_bg", "Pink" ], [ "DarkNavy_bg", "DarkNavy" ], [ "LightGray_bg", "LightGray" ], [ "Gray_bg", "Gray" ], [ "Charcoal_bg", "Charcoal" ], [ "FontGray_bg", "FontGray" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ] ],
         "multiple" : false,
         "reordering_enabled" : true,
         "preset" : null,
         "type" : "choice",
         "display_width" : null,
         "default" : "Blue_bg"
+      }, {
+        "id" : "f552e295-dd80-23c2-793e-79b16b47c716",
+        "name" : "select_icon_color",
+        "label" : "Select Icon Color",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items.cards.select_image_type",
+          "controlling_value_regex" : "iconWithBg",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "display" : "select",
+        "choices" : [ [ "Blue_Clr", "Blue" ], [ "Red_Clr", "Red" ], [ "BrightBlue_Clr", "BrightBlue" ], [ "BrightRed_Clr", "BrightRed" ], [ "Green_Clr", "Green" ], [ "Purple_Clr", "Purple" ], [ "Orange_Clr", "Orange" ], [ "Teal_Clr", "Teal" ], [ "Pink_Clr", "Pink" ], [ "DarkNavy_Clr", "DarkNavy" ], [ "LightGray_Clr", "LightGray" ], [ "Gray_Clr", "Gray" ], [ "Charcoal_Clr", "Charcoal" ], [ "FontGray_Clr", "FontGray" ], [ "Black_Clr", "Black" ], [ "White_Clr", "White" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "display_width" : null,
+        "default" : "White_Clr"
       }, {
         "id" : "74f093a9-fa34-497b-8514-7a15d38e55b8",
         "name" : "title",
@@ -1068,6 +1090,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -1104,6 +1127,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -1140,6 +1164,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -1176,6 +1201,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -1247,6 +1273,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -1283,6 +1310,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -1319,6 +1347,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -1355,6 +1384,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -1420,6 +1450,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -1456,6 +1487,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -1492,6 +1524,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -1528,6 +1561,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -1593,6 +1627,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -1629,6 +1664,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -1665,6 +1701,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -1701,6 +1738,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -1766,6 +1804,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -1802,6 +1841,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -1838,6 +1878,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -1874,6 +1915,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -2632,6 +2674,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -2668,6 +2711,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -2704,6 +2748,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -2740,6 +2785,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -2805,6 +2851,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -2841,6 +2888,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -2877,6 +2925,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -2913,6 +2962,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -2978,6 +3028,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -3014,6 +3065,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -3050,6 +3102,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -3086,6 +3139,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -3151,6 +3205,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -3187,6 +3242,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -3223,6 +3279,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,
@@ -3259,6 +3316,7 @@
           "type" : "SOLID"
         },
         "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
         "title" : "LFA Card Title Here",
         "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
         "include_button" : true,

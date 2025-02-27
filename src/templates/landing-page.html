@@ -6,13 +6,18 @@
 -->
 {% extends './base.html' %}
 
+
+{% block header %}
+{% global_partial path='./partials/u4m-header-no-navigation.html' %}
+{% endblock header %}
+
 {% block body %}
   <main id="main-content">
   {% dnd_area "unified4_dnd_area" %}
-    {% dnd_section %}
+    {% dnd_section full_width=true %}
       {% dnd_column %}
         {% dnd_row %}
-          {% dnd_module path='../modules/u4m-landing-page-overlap', label='Landing Page Overlap' width="12" %}
+          {% dnd_module path='../modules/u4m-split-form', label='Landing Page Overlap' width="12" %}
           {% end_dnd_module %}
         {% end_dnd_row %}
       {% end_dnd_column %}
@@ -20,3 +25,7 @@
   {% end_dnd_area %}  
   </main>
 {% endblock body %}
+
+{% block footer %}
+{% global_partial path='./partials/u4m-footer-no-navigation.html' %}
+{% endblock footer %}

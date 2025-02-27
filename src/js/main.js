@@ -31,3 +31,18 @@ window.addEventListener('scroll', function () {
     document.body.classList.remove('page-scrolled');
   }
 });
+
+
+// Header----
+
+$('.header .navTrigger').click(function(){
+  $(this).toggleClass('cm_active');
+  $('.header .rightSection').slideToggle();
+});
+
+$('.header .cmSearchBtn').click(function(){
+  $('.cmSearch').toggleClass('cm_active_search');
+});
+$('.cmSearch .close').click(function(){
+  $('.cmSearch').removeClass('cm_active_search');
+});

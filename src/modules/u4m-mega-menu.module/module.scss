@@ -262,16 +262,19 @@
             }
 
             @include tabletMid {
-                display: inline-block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 position: absolute;
                 right: 0;
                 top: 0;
                 width: 52px;
-                height: 52px;
+                height: 58px;
                 padding: 12px;
                 margin-left: 0;
                 cursor: pointer;
                 z-index: 1;
+
             }
         }
     }
