@@ -2,7 +2,7 @@
 @mixin form {
   background-color: rgba($gray1, 1);
   padding: 20rem 30rem;
-  max-width: 765rem;
+  max-width: 710rem;
   margin: 30rem auto 30rem auto;
   float: none;
   overflow: auto;
@@ -58,12 +58,18 @@
 
     .hs-form-field {
       >label {
-        font-size: 12rem;
-        font-weight: bold;
-        line-height: 1.2;
-        letter-spacing: 1rem;
         pointer-events: auto;
+        font-weight: 400;
+        font-size: 14rem;
+        line-height: 1.21428571;
+        letter-spacing: 0.05em;
       }
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      min-height: auto !important;
+      width: auto !important;
     }
 
     .input {
@@ -73,7 +79,7 @@
       input[type="tel"],
       input[type="email"] {
         border: 1rem solid transparent;
-        border-radius: 4rem;
+        border-radius: $BorderRadius5;
         margin-top: 2rem;
         margin-bottom: 20rem;
         font-size: 16rem; // Note anything below 16rem will trigger the zoom feature on iOS
@@ -81,6 +87,8 @@
         padding: 16rem;
         width: 100%;
         appearance: none;
+        outline: none;
+        min-height: 55px;
 
         &.error,
         &.invalid {
@@ -94,7 +102,8 @@
 
       input[type="checkbox"],
       input[type="radio"] {
-        width: auto;
+        min-height: auto !important;
+        width: auto !important;
       }
 
       input select {
@@ -104,6 +113,9 @@
         margin-bottom: 20rem;
         font-size: 16rem; // Note anything below 16rem will trigger the zoom feature on iOS
         background-color: $white;
+        outline: none;
+        min-height: 55px;
+        border-radius: $BorderRadius5;
       }
 
       input[type="file"] {
@@ -113,11 +125,14 @@
         position: relative;
         font-weight: bold;
         margin-bottom: 23rem;
+        outline: none;
+        min-height: 55px;
+        border-radius: $BorderRadius5;
       }
 
       select {
         appearance: none;
-        background: url('//cdn2.hubspot.net/hubfs/302335/select-arrow.png') no-repeat;
+        background: url("{{ get_asset_url('./../templates/images/Select-Arrow.png') }}") no-repeat;
         background-size: 13rem 8rem;
         background-position: 97% 51%;
         border: 0;
@@ -127,6 +142,9 @@
         font-size: 16rem; // Note anything below 16rem will trigger the zoom feature on iOS
         background-color: $white;
         padding: 16rem;
+        outline: none;
+        min-height: 55px;
+        border-radius: $BorderRadius5;
         // Note anything below 16rem will trigger the zoom feature on iOS
       }
 
