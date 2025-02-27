@@ -1,0 +1,128 @@
+{% set moduleName = 'cmTrustMarkWrap' %}
+{% include "../partials/u4-module-includes.html" %}
+<div class="cmTrustInnerWrap {{ module.module_settings.select_module_type }}">
+	{{ macros.introGroup(module.intro_content, module.module_settings) }} 
+  
+
+{% if module.module_settings.include_slider %}
+	  <div id="gallery" class="btm MainsliderCnntt item_{{name}} splide logosType1">
+
+    <div class="splide__track" id="splide-track">
+      <div class="splide__list cmLogoList" >
+        {% for item in module.items_group %}
+        <div  class="items {{ module.module_settings.logo_theme }} splide__slide">
+          <div  class="img">
+            {% if item.image_field.src %}
+            {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
+            {% if item.image_field.size_type == 'auto' %}
+            {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+            {% elif item.image_field.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
+            <img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+
+  </div>
+	 {% else %}
+	<div class="logosType2">
+      <div class="logos">
+        {% for item in module.items_group %}
+        <div  class="items {{ module.module_settings.logo_theme }}">
+          <div  class="img">
+            {% if item.image_field.src %}
+            {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
+            {% if item.image_field.size_type == 'auto' %}
+            {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+            {% elif item.image_field.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
+            <img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+  </div>
+	 {% endif %}
+</div>
+</div>
+</div>
+</section>
+
+
+{% if module.module_settings.include_slider %}
+{% require_js %}
+
+{% end_require_js %}
+
+{% endif %}
+{% if module.module_settings.select_module_type == "fullWidth"%}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide(".MainsliderCnntt.item_{{name}}.splide", {
+    type: "loop",
+    drag: "free",
+    focus: "center",
+    perPage: 7,
+    autoScroll: {
+      speed: 2,
+    },
+    arrows: false,
+    pagination: false,
+    breakpoints: {
+      680: {
+        perPage: 2,
+      },
+      768: {
+        perPage: 3,
+      },
+      992: {
+        perPage: 4,
+      },
+      1200: {
+        perPage: 6,
+      },
+    },
+  }).mount(window.splide.Extensions);
+});
+
+</script>
+
+{% else %}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide(".MainsliderCnntt.item_{{name}}.splide", {
+    type: "loop",
+    drag: "free",
+    focus: "center",
+    perPage: 4,
+    autoScroll: {
+      speed: 2,
+    },
+    arrows: false,
+    pagination: false,
+    breakpoints: {
+      680: {
+        perPage: 2,
+      },
+      992: {
+        perPage: 4,
+      },
+      1200: {
+        perPage: 3,
+      },
+    },
+  }).mount(window.splide.Extensions);
+});
+</script>
+{% endif %}
+

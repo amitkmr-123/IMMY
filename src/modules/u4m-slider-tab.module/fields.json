@@ -1,0 +1,4397 @@
+[ {
+  "id" : "081bfb60-a75d-a475-e7fb-44c8a8969c1a",
+  "name" : "intro_content",
+  "label" : "Intro Content",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "c5ccdda8-6960-e255-a51f-c61077a633ca",
+    "name" : "include_eyebrow_text",
+    "label" : "Include Eyebrow Text",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : true
+  }, {
+    "id" : "5baff6ad-02e1-6b84-3429-260a0ded7ef6",
+    "name" : "eyebrow_text",
+    "label" : "Eyebrow Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_eyebrow_text",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Optional Eyebrow Text"
+  }, {
+    "id" : "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
+    "name" : "include_heading",
+    "label" : "Include Heading",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : true
+  }, {
+    "id" : "aef5e961-e297-2654-68e0-6128687770bf",
+    "name" : "heading_size",
+    "label" : "Heading Size",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_heading",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "h1", "Heading 1" ], [ "h2", "Heading 2" ], [ "h3", "Heading 3" ], [ "h4", "Heading 4" ], [ "h5", "Heading 5" ], [ "h6", "Heading 6" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "h2"
+  }, {
+    "id" : "c7aa6b72-58e0-4caa-9b63-4da765e70069",
+    "name" : "heading",
+    "label" : "Heading",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "e1a83e2f-f82a-c168-4ab5-d2e59735e581",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Headline"
+  }, {
+    "id" : "2f10bd6e-cf85-1cf6-5a4f-fa75e1e78238",
+    "name" : "include_content",
+    "label" : "Include Content",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : true
+  }, {
+    "id" : "88e2784a-4cb2-624f-1493-1e017330f5bb",
+    "name" : "content_style",
+    "label" : "Content Style",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_content",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "themeStyle", "Theme" ], [ "bodystyle1", "Body Style 1" ], [ "bodystyle2", "Body Style 2" ], [ "bodystyle3", "Body Style 3" ], [ "bodystyle4", "Body Style 4" ], [ "bodystyle5", "Body Style 5" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "themeStyle"
+  }, {
+    "id" : "0dc03814-a33d-3284-f2d6-b130f633f03d",
+    "name" : "content",
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_content",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>"
+  }, {
+    "id" : "4a517c8a-8c15-a721-dca5-db7b58a8c2a7",
+    "name" : "include_button",
+    "label" : "Include Button",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : false
+  }, {
+    "id" : "3d861e2f-6981-78b6-57a8-d59863169561",
+    "name" : "button_group",
+    "label" : "Button Group",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : 2,
+      "sorting_label_field" : "43e0936c-b29a-7bd7-61e3-b4671077ba62",
+      "default" : 2
+    },
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_button",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "43e0936c-b29a-7bd7-61e3-b4671077ba62",
+      "name" : "button_type",
+      "label" : "Button Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "std", "Standard" ], [ "cta", "Call to Action" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "std"
+    }, {
+      "id" : "9d5fe057-d461-68d1-9845-607ec6d892ff",
+      "name" : "button_style",
+      "label" : "Button Style",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.button_group.button_type",
+        "controlling_value_regex" : "std|popup_content",
+        "property" : null,
+        "operator" : "MATCHES_REGEX",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "hs-button", "Primary" ], [ "hs-sec-btn", "Secondary" ], [ "hs-arrow-btn", "Arrow Button" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "hs-button"
+    }, {
+      "id" : "deee2048-28d4-4092-0e56-27a04c3d764b",
+      "name" : "button_size",
+      "label" : "Button Size",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.button_group.button_style",
+        "controlling_value_regex" : "hs-sec-btn",
+        "property" : null,
+        "operator" : "NOT_EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "large", "Large" ], [ "small", "Small" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "large"
+    }, {
+      "id" : "105bbd69-dccc-fd6b-3d3d-3f4063128744",
+      "name" : "button_text",
+      "label" : "Button Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.button_group.button_type",
+        "controlling_value_regex" : "std|popup_content",
+        "property" : null,
+        "operator" : "MATCHES_REGEX",
+        "access" : null
+      },
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "Button"
+    }, {
+      "id" : "f1ccd7fd-a18d-1262-3c67-476cdf5424cd",
+      "name" : "link",
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.button_group.button_type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "PHONE_NUMBER" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "display_width" : null,
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "ef46548d-bcc7-841c-4635-d4d035ae7022",
+      "name" : "cta",
+      "label" : "CTA",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.button_group.button_type",
+        "controlling_value_regex" : "cta",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "type" : "cta",
+      "display_width" : null
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : [ {
+      "button_type" : "std",
+      "button_style" : "hs-button",
+      "button_size" : "large",
+      "button_text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "button_type" : "std",
+      "button_style" : "hs-button",
+      "button_size" : "large",
+      "button_text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "include_eyebrow_text" : true,
+    "eyebrow_text" : "Optional Eyebrow Text",
+    "include_heading" : true,
+    "heading_size" : "h2",
+    "heading" : "Headline",
+    "include_content" : true,
+    "content_style" : "themeStyle",
+    "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>",
+    "include_button" : false,
+    "button_group" : [ {
+      "button_type" : "std",
+      "button_style" : "hs-button",
+      "button_size" : "large",
+      "button_text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "button_type" : "std",
+      "button_style" : "hs-button",
+      "button_size" : "large",
+      "button_text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }
+}, {
+  "id" : "0b77bcae-3ed4-b8c4-a85e-6c7e093e0840",
+  "name" : "tab_group",
+  "label" : "Tab Group",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "4d888e10-d5b2-be5c-be2b-9edf56ad426d",
+    "name" : "select_tab_type",
+    "label" : "Select Tab Type",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "cmCardTab", "Cards" ], [ "cmTwoColTab", "Two Column" ], [ "cmFullWidthTab", "Full Width" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "cmTwoColTab"
+  }, {
+    "id" : "80d60f72-1767-848c-ce30-eea7e9cd5b36",
+    "name" : "tab_items",
+    "label" : "Tab Items",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : 8,
+      "sorting_label_field" : null,
+      "default" : 4
+    },
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "tab_group.select_tab_type",
+      "controlling_value_regex" : "cmCardTab",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "bb85c9d7-cc81-e55a-bc09-8516af8f1072",
+      "name" : "title",
+      "label" : "Title",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "This is the Active Tab Title"
+    }, {
+      "id" : "a3828e7d-321b-8ab5-9852-0bb72a6d124a",
+      "name" : "content_column_card",
+      "label" : "Content Column",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "2b557f1e-f661-92c4-f625-bc8d7e7bdec9",
+        "name" : "include_eyebrow_text",
+        "label" : "Include Eyebrow Text",
+        "required" : false,
+        "locked" : false,
+        "display" : "checkbox",
+        "type" : "boolean",
+        "display_width" : null,
+        "default" : false
+      }, {
+        "id" : "301f4864-c38a-a8f9-1de0-e48fc22305af",
+        "name" : "eyebrow_text",
+        "label" : "Eyebrow Text",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items.content_column_card.include_eyebrow_text",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "display_width" : null,
+        "default" : "Optional Eyebrow Text"
+      }, {
+        "id" : "a64ae6d3-6553-540d-b07d-92a00bf42d3d",
+        "name" : "include_heading",
+        "label" : "Include Heading",
+        "required" : false,
+        "locked" : false,
+        "display" : "checkbox",
+        "type" : "boolean",
+        "display_width" : null,
+        "default" : true
+      }, {
+        "id" : "b0cf50aa-8ead-2620-1f26-11ab05d3a189",
+        "name" : "heading_size",
+        "label" : "Heading Size",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items.content_column_card.include_heading",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "display" : "select",
+        "choices" : [ [ "h1", "Heading 1" ], [ "h2", "Heading 2" ], [ "h3", "Heading 3" ], [ "h4", "Heading 4" ], [ "h5", "Heading 5" ], [ "h6", "Heading 6" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "display_width" : null,
+        "default" : "h2"
+      }, {
+        "id" : "d16233b0-a25f-c0e5-bf3e-639b03d42456",
+        "name" : "heading",
+        "label" : "Heading",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "visibility" : {
+          "controlling_field" : "a64ae6d3-6553-540d-b07d-92a00bf42d3d",
+          "controlling_field_path" : null,
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "display_width" : null,
+        "default" : "Tab Group Slide Headline Goes Here."
+      }, {
+        "id" : "a18a3e52-f2b9-d350-c0c5-c12929a6151e",
+        "name" : "include_content",
+        "label" : "Include Content",
+        "required" : false,
+        "locked" : false,
+        "display" : "checkbox",
+        "type" : "boolean",
+        "display_width" : null,
+        "default" : true
+      }, {
+        "id" : "bd36294d-6605-eb2e-943f-a2c83bb69c71",
+        "name" : "content_style",
+        "label" : "Content Style",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items.content_column_card.include_content",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "display" : "select",
+        "choices" : [ [ "themeStyle", "Theme" ], [ "bodystyle1", "Body Style 1" ], [ "bodystyle2", "Body Style 2" ], [ "bodystyle3", "Body Style 3" ], [ "bodystyle4", "Body Style 4" ], [ "bodystyle5", "Body Style 5" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "display_width" : null,
+        "default" : "themeStyle"
+      }, {
+        "id" : "68372fea-838b-7b4e-3d8b-b6211932d80f",
+        "name" : "content",
+        "label" : "Content",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items.content_column_card.include_content",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "type" : "richtext",
+        "display_width" : null,
+        "default" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span></p>"
+      }, {
+        "id" : "e758dfd8-3d01-6477-75df-bd4cb0f423a7",
+        "name" : "include_button",
+        "label" : "Include Button",
+        "required" : false,
+        "locked" : false,
+        "display" : "checkbox",
+        "type" : "boolean",
+        "display_width" : null,
+        "default" : false
+      }, {
+        "id" : "8340e8cf-77bf-4e9e-f882-02ed6dd322cf",
+        "name" : "button_group",
+        "label" : "Button Group",
+        "required" : false,
+        "locked" : false,
+        "occurrence" : {
+          "min" : null,
+          "max" : 2,
+          "sorting_label_field" : "43e0936c-b29a-7bd7-61e3-b4671077ba62",
+          "default" : 1
+        },
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items.content_column_card.include_button",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "children" : [ {
+          "id" : "21506cac-c345-4931-d19a-8e133410190f",
+          "name" : "button_type",
+          "label" : "Button Type",
+          "required" : false,
+          "locked" : false,
+          "display" : "select",
+          "choices" : [ [ "std", "Standard" ], [ "cta", "Call to Action" ] ],
+          "multiple" : false,
+          "reordering_enabled" : true,
+          "preset" : null,
+          "type" : "choice",
+          "display_width" : null,
+          "default" : "std"
+        }, {
+          "id" : "6ce4b523-0cfa-4d54-1feb-636f64a1a7c3",
+          "name" : "button_style",
+          "label" : "Button Style",
+          "required" : false,
+          "locked" : false,
+          "visibility" : {
+            "controlling_field" : null,
+            "controlling_field_path" : "tab_group.tab_items.content_column_card.button_group.button_type",
+            "controlling_value_regex" : "std|popup_content",
+            "property" : null,
+            "operator" : "MATCHES_REGEX",
+            "access" : null
+          },
+          "display" : "select",
+          "choices" : [ [ "hs-button", "Primary" ], [ "hs-sec-btn", "Secondary" ], [ "hs-arrow-btn", "Arrow Button" ] ],
+          "multiple" : false,
+          "reordering_enabled" : true,
+          "preset" : null,
+          "type" : "choice",
+          "display_width" : null,
+          "default" : "hs-button"
+        }, {
+          "id" : "5e6f551a-9e33-4f4b-c9fb-2aac8ae457da",
+          "name" : "button_size",
+          "label" : "Button Size",
+          "required" : false,
+          "locked" : false,
+          "visibility" : {
+            "controlling_field" : null,
+            "controlling_field_path" : "tab_group.tab_items.content_column_card.button_group.button_style",
+            "controlling_value_regex" : "hs-sec-btn",
+            "property" : null,
+            "operator" : "NOT_EQUAL",
+            "access" : null
+          },
+          "display" : "select",
+          "choices" : [ [ "large", "Large" ], [ "small", "Small" ] ],
+          "multiple" : false,
+          "reordering_enabled" : true,
+          "preset" : null,
+          "type" : "choice",
+          "display_width" : null,
+          "default" : "large"
+        }, {
+          "id" : "d9187890-a9fe-5bd7-9358-7b60fafd73c9",
+          "name" : "button_text",
+          "label" : "Button Text",
+          "required" : false,
+          "locked" : false,
+          "validation_regex" : "",
+          "visibility" : {
+            "controlling_field" : null,
+            "controlling_field_path" : "tab_group.tab_items.content_column_card.button_group.button_type",
+            "controlling_value_regex" : "std|popup_content",
+            "property" : null,
+            "operator" : "MATCHES_REGEX",
+            "access" : null
+          },
+          "allow_new_line" : false,
+          "show_emoji_picker" : false,
+          "type" : "text",
+          "display_width" : null,
+          "default" : "Button"
+        }, {
+          "id" : "afcb0645-80d8-f936-957a-c8afaac23902",
+          "name" : "link",
+          "label" : "Link",
+          "required" : false,
+          "locked" : false,
+          "visibility" : {
+            "controlling_field" : null,
+            "controlling_field_path" : "tab_group.tab_items.content_column_card.button_group.button_type",
+            "controlling_value_regex" : "std",
+            "property" : null,
+            "operator" : "EQUAL",
+            "access" : null
+          },
+          "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "PHONE_NUMBER" ],
+          "show_advanced_rel_options" : false,
+          "type" : "link",
+          "display_width" : null,
+          "default" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        }, {
+          "id" : "e168c59d-160f-4773-0980-9f43b4c89dbf",
+          "name" : "cta",
+          "label" : "CTA",
+          "required" : false,
+          "locked" : false,
+          "visibility" : {
+            "controlling_field" : null,
+            "controlling_field_path" : "tab_group.tab_items.content_column_card.button_group.button_type",
+            "controlling_value_regex" : "cta",
+            "property" : null,
+            "operator" : "EQUAL",
+            "access" : null
+          },
+          "type" : "cta",
+          "display_width" : null
+        } ],
+        "tab" : "CONTENT",
+        "expanded" : false,
+        "group_occurrence_meta" : null,
+        "type" : "group",
+        "display_width" : null,
+        "default" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Button",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "group_occurrence_meta" : null,
+      "type" : "group",
+      "display_width" : null,
+      "default" : {
+        "include_eyebrow_text" : false,
+        "eyebrow_text" : "Optional Eyebrow Text",
+        "include_heading" : true,
+        "heading_size" : "h2",
+        "heading" : "Tab Group Slide Headline Goes Here.",
+        "include_content" : true,
+        "content_style" : "themeStyle",
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span></p>",
+        "include_button" : false,
+        "button_group" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Button",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }
+    }, {
+      "id" : "3984c193-c007-9533-e8a2-123b9337c3a0",
+      "name" : "cards",
+      "label" : "Cards",
+      "required" : false,
+      "locked" : false,
+      "occurrence" : {
+        "min" : null,
+        "max" : null,
+        "sorting_label_field" : "74f093a9-fa34-497b-8514-7a15d38e55b8",
+        "default" : 4
+      },
+      "children" : [ {
+        "id" : "107ac40b-8337-d11b-46ea-d1641c296239",
+        "name" : "select_image_type",
+        "label" : "Select Image Type",
+        "required" : false,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "imgWithBg", "Image" ], [ "iconWithBg", "Icon" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "display_width" : null,
+        "default" : "imgWithBg"
+      }, {
+        "id" : "d62dea59-f2d7-91f5-dee8-9b713753ce2d",
+        "name" : "image_field",
+        "label" : "Image",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items.cards.select_image_type",
+          "controlling_value_regex" : "imgWithBg",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "responsive" : true,
+        "resizable" : false,
+        "show_loading" : false,
+        "type" : "image",
+        "display_width" : null,
+        "default" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        }
+      }, {
+        "id" : "c297894f-e7c5-03ea-caef-6e0aa72940a6",
+        "name" : "icon",
+        "label" : "Icon",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items.cards.select_image_type",
+          "controlling_value_regex" : "iconWithBg",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "icon_set" : "fontawesome-6.4.2",
+        "type" : "icon",
+        "display_width" : null,
+        "default" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        }
+      }, {
+        "id" : "9d25659e-4d07-ec87-0591-763c4b94d9e3",
+        "name" : "select_background_color",
+        "label" : "Select Background Color",
+        "required" : false,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "Blue_bg", "Blue" ], [ "Red_bg", "Red" ], [ "BrightBlue_bg", "BrightBlue" ], [ "BrightRed_bg", "BrightRed" ], [ "Green_bg", "Green" ], [ "Purple_bg", "Purple" ], [ "Orange_bg", "Orange" ], [ "Teal_bg", "Teal" ], [ "Pink_bg", "Pink" ], [ "DarkNavy_bg", "DarkNavy" ], [ "LightGray_bg", "LightGray" ], [ "Gray_bg", "Gray" ], [ "Charcoal_bg", "Charcoal" ], [ "FontGray_bg", "FontGray" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "display_width" : null,
+        "default" : "Blue_bg"
+      }, {
+        "id" : "f552e295-dd80-23c2-793e-79b16b47c716",
+        "name" : "select_icon_color",
+        "label" : "Select Icon Color",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items.cards.select_image_type",
+          "controlling_value_regex" : "iconWithBg",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "display" : "select",
+        "choices" : [ [ "Blue_Clr", "Blue" ], [ "Red_Clr", "Red" ], [ "BrightBlue_Clr", "BrightBlue" ], [ "BrightRed_Clr", "BrightRed" ], [ "Green_Clr", "Green" ], [ "Purple_Clr", "Purple" ], [ "Orange_Clr", "Orange" ], [ "Teal_Clr", "Teal" ], [ "Pink_Clr", "Pink" ], [ "DarkNavy_Clr", "DarkNavy" ], [ "LightGray_Clr", "LightGray" ], [ "Gray_Clr", "Gray" ], [ "Charcoal_Clr", "Charcoal" ], [ "FontGray_Clr", "FontGray" ], [ "Black_Clr", "Black" ], [ "White_Clr", "White" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "display_width" : null,
+        "default" : "White_Clr"
+      }, {
+        "id" : "74f093a9-fa34-497b-8514-7a15d38e55b8",
+        "name" : "title",
+        "label" : "Title",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "display_width" : null,
+        "default" : "LFA Card Title Here"
+      }, {
+        "id" : "b97739d0-27a3-5925-7767-5fe399175108",
+        "name" : "content",
+        "label" : "Content",
+        "required" : false,
+        "locked" : false,
+        "type" : "richtext",
+        "display_width" : null,
+        "default" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>"
+      }, {
+        "id" : "11177646-cc36-71a6-f396-abe1f2589beb",
+        "name" : "include_button",
+        "label" : "Include Button",
+        "required" : false,
+        "locked" : false,
+        "display" : "checkbox",
+        "type" : "boolean",
+        "display_width" : null,
+        "default" : true
+      }, {
+        "id" : "66cadd5e-efea-0f79-b46f-572023b962c5",
+        "name" : "button_group_copy",
+        "label" : "Button Group",
+        "required" : false,
+        "locked" : false,
+        "occurrence" : {
+          "min" : null,
+          "max" : 2,
+          "sorting_label_field" : "43e0936c-b29a-7bd7-61e3-b4671077ba62",
+          "default" : 1
+        },
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items.cards.include_button",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "children" : [ {
+          "id" : "4046e58d-962c-a6dd-8d5e-cb563642510c",
+          "name" : "button_type",
+          "label" : "Button Type",
+          "required" : false,
+          "locked" : false,
+          "display" : "select",
+          "choices" : [ [ "std", "Standard" ], [ "cta", "Call to Action" ] ],
+          "multiple" : false,
+          "reordering_enabled" : true,
+          "preset" : null,
+          "type" : "choice",
+          "display_width" : null,
+          "default" : "std"
+        }, {
+          "id" : "64210473-93e7-babb-06a8-66d6e6dbbd87",
+          "name" : "button_style",
+          "label" : "Button Style",
+          "required" : false,
+          "locked" : false,
+          "visibility" : {
+            "controlling_field" : null,
+            "controlling_field_path" : "tab_group.tab_items.cards.button_group_copy.button_type",
+            "controlling_value_regex" : "std|popup_content",
+            "property" : null,
+            "operator" : "MATCHES_REGEX",
+            "access" : null
+          },
+          "display" : "select",
+          "choices" : [ [ "hs-button", "Primary" ], [ "hs-sec-btn", "Secondary" ], [ "hs-arrow-btn", "Arrow Button" ] ],
+          "multiple" : false,
+          "reordering_enabled" : true,
+          "preset" : null,
+          "type" : "choice",
+          "display_width" : null,
+          "default" : "hs-button"
+        }, {
+          "id" : "7376a9c2-9c0f-f7e7-1782-8b6496c42a68",
+          "name" : "button_size",
+          "label" : "Button Size",
+          "required" : false,
+          "locked" : false,
+          "visibility" : {
+            "controlling_field" : null,
+            "controlling_field_path" : "tab_group.tab_items.cards.button_group_copy.button_style",
+            "controlling_value_regex" : "hs-sec-btn",
+            "property" : null,
+            "operator" : "NOT_EQUAL",
+            "access" : null
+          },
+          "display" : "select",
+          "choices" : [ [ "large", "Large" ], [ "small", "Small" ] ],
+          "multiple" : false,
+          "reordering_enabled" : true,
+          "preset" : null,
+          "type" : "choice",
+          "display_width" : null,
+          "default" : "large"
+        }, {
+          "id" : "5677a65e-b77f-77ee-0897-1a6bc434e27a",
+          "name" : "button_text",
+          "label" : "Button Text",
+          "required" : false,
+          "locked" : false,
+          "validation_regex" : "",
+          "visibility" : {
+            "controlling_field" : null,
+            "controlling_field_path" : "tab_group.tab_items.cards.button_group_copy.button_type",
+            "controlling_value_regex" : "std|popup_content",
+            "property" : null,
+            "operator" : "MATCHES_REGEX",
+            "access" : null
+          },
+          "allow_new_line" : false,
+          "show_emoji_picker" : false,
+          "type" : "text",
+          "display_width" : null,
+          "default" : "Subpage Link Here"
+        }, {
+          "id" : "02bb7ac9-88f0-e016-485d-d8238963b3b0",
+          "name" : "link",
+          "label" : "Link",
+          "required" : false,
+          "locked" : false,
+          "visibility" : {
+            "controlling_field" : null,
+            "controlling_field_path" : "tab_group.tab_items.cards.button_group_copy.button_type",
+            "controlling_value_regex" : "std",
+            "property" : null,
+            "operator" : "EQUAL",
+            "access" : null
+          },
+          "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "PHONE_NUMBER" ],
+          "show_advanced_rel_options" : false,
+          "type" : "link",
+          "display_width" : null,
+          "default" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        }, {
+          "id" : "ebbb04e7-0086-809e-d486-e82a6264805f",
+          "name" : "cta",
+          "label" : "CTA",
+          "required" : false,
+          "locked" : false,
+          "visibility" : {
+            "controlling_field" : null,
+            "controlling_field_path" : "tab_group.tab_items.cards.button_group_copy.button_type",
+            "controlling_value_regex" : "cta",
+            "property" : null,
+            "operator" : "EQUAL",
+            "access" : null
+          },
+          "type" : "cta",
+          "display_width" : null
+        } ],
+        "tab" : "CONTENT",
+        "expanded" : false,
+        "group_occurrence_meta" : null,
+        "type" : "group",
+        "display_width" : null,
+        "default" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "group_occurrence_meta" : null,
+      "type" : "group",
+      "display_width" : null,
+      "default" : [ {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : [ {
+      "title" : "This is the Active Tab Title",
+      "content_column_card" : {
+        "include_eyebrow_text" : false,
+        "eyebrow_text" : "Optional Eyebrow Text",
+        "include_heading" : true,
+        "heading_size" : "h2",
+        "heading" : "Tab Group Slide Headline Goes Here.",
+        "include_content" : true,
+        "content_style" : "themeStyle",
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span></p>",
+        "include_button" : false,
+        "button_group" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Button",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      },
+      "cards" : [ {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
+    }, {
+      "title" : "This is the Active Tab Title",
+      "content_column_card" : {
+        "include_eyebrow_text" : false,
+        "eyebrow_text" : "Optional Eyebrow Text",
+        "include_heading" : true,
+        "heading_size" : "h2",
+        "heading" : "Tab Group Slide Headline Goes Here.",
+        "include_content" : true,
+        "content_style" : "themeStyle",
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span></p>",
+        "include_button" : false,
+        "button_group" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Button",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      },
+      "cards" : [ {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
+    }, {
+      "title" : "This is the Active Tab Title",
+      "content_column_card" : {
+        "include_eyebrow_text" : false,
+        "eyebrow_text" : "Optional Eyebrow Text",
+        "include_heading" : true,
+        "heading_size" : "h2",
+        "heading" : "Tab Group Slide Headline Goes Here.",
+        "include_content" : true,
+        "content_style" : "themeStyle",
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span></p>",
+        "include_button" : false,
+        "button_group" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Button",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      },
+      "cards" : [ {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
+    }, {
+      "title" : "This is the Active Tab Title",
+      "content_column_card" : {
+        "include_eyebrow_text" : false,
+        "eyebrow_text" : "Optional Eyebrow Text",
+        "include_heading" : true,
+        "heading_size" : "h2",
+        "heading" : "Tab Group Slide Headline Goes Here.",
+        "include_content" : true,
+        "content_style" : "themeStyle",
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span></p>",
+        "include_button" : false,
+        "button_group" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Button",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      },
+      "cards" : [ {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
+    } ]
+  }, {
+    "id" : "37b22121-8dfd-53c0-32d9-5b2f8e7f284f",
+    "name" : "tab_items_2",
+    "label" : "Tab Items",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : 8,
+      "sorting_label_field" : "6bb5f148-1959-abde-2473-4bf6d0e46493",
+      "default" : 3
+    },
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "tab_group.select_tab_type",
+      "controlling_value_regex" : "cmCardTab",
+      "property" : null,
+      "operator" : "NOT_EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "6bb5f148-1959-abde-2473-4bf6d0e46493",
+      "name" : "title",
+      "label" : "Title",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "This is the Active Tab Title"
+    }, {
+      "id" : "4519bd24-b78a-1b8c-fcea-4d14edc6795d",
+      "name" : "tab_content_position",
+      "label" : "Content Position",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "tab_group.select_tab_type",
+        "controlling_value_regex" : "cmTwoColTab",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "cmLeft", "Left" ], [ "cmRight", "Right" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "cmLeft"
+    }, {
+      "id" : "ae7595a9-2ae6-a253-207f-92359998e7f0",
+      "name" : "content_column",
+      "label" : "Content Column",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "cf2ddb96-e651-28f6-9eac-60aa1d0c30c4",
+        "name" : "include_eyebrow_text",
+        "label" : "Include Eyebrow Text",
+        "required" : false,
+        "locked" : false,
+        "display" : "checkbox",
+        "type" : "boolean",
+        "display_width" : null,
+        "default" : true
+      }, {
+        "id" : "33357918-4bca-5256-9c11-05519c937a2b",
+        "name" : "eyebrow_text",
+        "label" : "Eyebrow Text",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items_2.content_column.include_eyebrow_text",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "display_width" : null,
+        "default" : "Optional Eyebrow Text"
+      }, {
+        "id" : "330e622c-529a-40a7-5091-ac65d46ce2d7",
+        "name" : "include_heading",
+        "label" : "Include Heading",
+        "required" : false,
+        "locked" : false,
+        "display" : "checkbox",
+        "type" : "boolean",
+        "display_width" : null,
+        "default" : true
+      }, {
+        "id" : "9892e1c7-0e9c-2c3d-c6e8-15b80cb57d61",
+        "name" : "heading_size",
+        "label" : "Heading Size",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items_2.content_column.include_heading",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "display" : "select",
+        "choices" : [ [ "h1", "Heading 1" ], [ "h2", "Heading 2" ], [ "h3", "Heading 3" ], [ "h4", "Heading 4" ], [ "h5", "Heading 5" ], [ "h6", "Heading 6" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "display_width" : null,
+        "default" : "h2"
+      }, {
+        "id" : "63860a4c-f31c-3230-5456-baacddd4575d",
+        "name" : "heading",
+        "label" : "Heading",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "visibility" : {
+          "controlling_field" : "330e622c-529a-40a7-5091-ac65d46ce2d7",
+          "controlling_field_path" : null,
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "display_width" : null,
+        "default" : "Tab Group Slide Headline"
+      }, {
+        "id" : "88b2a4d1-e652-ef05-6473-10a24d61b2ea",
+        "name" : "include_content",
+        "label" : "Include Content",
+        "required" : false,
+        "locked" : false,
+        "display" : "checkbox",
+        "type" : "boolean",
+        "display_width" : null,
+        "default" : true
+      }, {
+        "id" : "2e952038-32fd-e1a3-fbd1-26b6ee1d0b1d",
+        "name" : "content_style",
+        "label" : "Content Style",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items_2.content_column.include_content",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "display" : "select",
+        "choices" : [ [ "themeStyle", "Theme" ], [ "bodystyle1", "Body Style 1" ], [ "bodystyle2", "Body Style 2" ], [ "bodystyle3", "Body Style 3" ], [ "bodystyle4", "Body Style 4" ], [ "bodystyle5", "Body Style 5" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "display_width" : null,
+        "default" : "themeStyle"
+      }, {
+        "id" : "cf92bc2c-4689-063c-cf73-cf0562547952",
+        "name" : "content",
+        "label" : "Content",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items_2.content_column.include_content",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "type" : "richtext",
+        "display_width" : null,
+        "default" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</span></p>"
+      }, {
+        "id" : "5ab3c836-4c54-d6e1-e42f-eed4ea72f54b",
+        "name" : "include_button",
+        "label" : "Include Button",
+        "required" : false,
+        "locked" : false,
+        "display" : "checkbox",
+        "type" : "boolean",
+        "display_width" : null,
+        "default" : true
+      }, {
+        "id" : "deae26d8-0868-fbaf-e155-ca9a0b156732",
+        "name" : "button_group",
+        "label" : "Button Group",
+        "required" : false,
+        "locked" : false,
+        "occurrence" : {
+          "min" : null,
+          "max" : 3,
+          "sorting_label_field" : "43e0936c-b29a-7bd7-61e3-b4671077ba62",
+          "default" : 1
+        },
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items_2.content_column.include_button",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "children" : [ {
+          "id" : "dd46e81d-bedf-b56e-ebd2-b3b1d0441989",
+          "name" : "button_type",
+          "label" : "Button Type",
+          "required" : false,
+          "locked" : false,
+          "display" : "select",
+          "choices" : [ [ "std", "Standard" ], [ "cta", "Call to Action" ] ],
+          "multiple" : false,
+          "reordering_enabled" : true,
+          "preset" : null,
+          "type" : "choice",
+          "display_width" : null,
+          "default" : "std"
+        }, {
+          "id" : "df4b82af-f3b6-4943-38cb-a2b612ef56bb",
+          "name" : "button_style",
+          "label" : "Button Style",
+          "required" : false,
+          "locked" : false,
+          "visibility" : {
+            "controlling_field" : null,
+            "controlling_field_path" : "tab_group.tab_items_2.content_column.button_group.button_type",
+            "controlling_value_regex" : "std|popup_content",
+            "property" : null,
+            "operator" : "MATCHES_REGEX",
+            "access" : null
+          },
+          "display" : "select",
+          "choices" : [ [ "hs-button", "Primary" ], [ "hs-sec-btn", "Secondary" ], [ "hs-arrow-btn", "Arrow Button" ] ],
+          "multiple" : false,
+          "reordering_enabled" : true,
+          "preset" : null,
+          "type" : "choice",
+          "display_width" : null,
+          "default" : "hs-button"
+        }, {
+          "id" : "12a25a69-b2c0-f9d9-b681-d69ec839aaca",
+          "name" : "button_size",
+          "label" : "Button Size",
+          "required" : false,
+          "locked" : false,
+          "visibility" : {
+            "controlling_field" : null,
+            "controlling_field_path" : "tab_group.tab_items_2.content_column.button_group.button_style",
+            "controlling_value_regex" : "hs-sec-btn",
+            "property" : null,
+            "operator" : "NOT_EQUAL",
+            "access" : null
+          },
+          "display" : "select",
+          "choices" : [ [ "large", "Large" ], [ "small", "Small" ] ],
+          "multiple" : false,
+          "reordering_enabled" : true,
+          "preset" : null,
+          "type" : "choice",
+          "display_width" : null,
+          "default" : "large"
+        }, {
+          "id" : "3564fab7-365a-9122-ce6c-bf8bed761c15",
+          "name" : "button_text",
+          "label" : "Button Text",
+          "required" : false,
+          "locked" : false,
+          "validation_regex" : "",
+          "visibility" : {
+            "controlling_field" : null,
+            "controlling_field_path" : "tab_group.tab_items_2.content_column.button_group.button_type",
+            "controlling_value_regex" : "std|popup_content",
+            "property" : null,
+            "operator" : "MATCHES_REGEX",
+            "access" : null
+          },
+          "allow_new_line" : false,
+          "show_emoji_picker" : false,
+          "type" : "text",
+          "display_width" : null,
+          "default" : "Button"
+        }, {
+          "id" : "5a062189-5438-ca6b-ddaa-b053b270b150",
+          "name" : "link",
+          "label" : "Link",
+          "required" : false,
+          "locked" : false,
+          "visibility" : {
+            "controlling_field" : null,
+            "controlling_field_path" : "tab_group.tab_items_2.content_column.button_group.button_type",
+            "controlling_value_regex" : "std",
+            "property" : null,
+            "operator" : "EQUAL",
+            "access" : null
+          },
+          "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "PHONE_NUMBER" ],
+          "show_advanced_rel_options" : false,
+          "type" : "link",
+          "display_width" : null,
+          "default" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        }, {
+          "id" : "17c0c187-4d54-6c3c-a6f1-6f37d329ae4a",
+          "name" : "cta",
+          "label" : "CTA",
+          "required" : false,
+          "locked" : false,
+          "visibility" : {
+            "controlling_field" : null,
+            "controlling_field_path" : "tab_group.tab_items_2.content_column.button_group.button_type",
+            "controlling_value_regex" : "cta",
+            "property" : null,
+            "operator" : "EQUAL",
+            "access" : null
+          },
+          "type" : "cta",
+          "display_width" : null
+        } ],
+        "tab" : "CONTENT",
+        "expanded" : false,
+        "group_occurrence_meta" : null,
+        "type" : "group",
+        "display_width" : null,
+        "default" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Button",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "group_occurrence_meta" : null,
+      "type" : "group",
+      "display_width" : null,
+      "default" : {
+        "include_eyebrow_text" : true,
+        "eyebrow_text" : "Optional Eyebrow Text",
+        "include_heading" : true,
+        "heading_size" : "h2",
+        "heading" : "Tab Group Slide Headline",
+        "include_content" : true,
+        "content_style" : "themeStyle",
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</span></p>",
+        "include_button" : true,
+        "button_group" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Button",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }
+    }, {
+      "id" : "9c798d76-868e-672e-f1ec-ceff7cf69632",
+      "name" : "media_column",
+      "label" : "Media Column",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "99e115bf-8538-b4d8-662f-368acba26546",
+        "name" : "select_media_type",
+        "label" : "Select Media Type",
+        "required" : false,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "cmVideo", "Video" ], [ "cmImage", "Image" ], [ "cmContent", "Content" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "display_width" : null,
+        "default" : "cmImage"
+      }, {
+        "id" : "500aa473-ca6b-151c-d0b6-4aa699277ec1",
+        "name" : "image",
+        "label" : "Image",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items_2.media_column.select_media_type",
+          "controlling_value_regex" : "cmImage",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "responsive" : true,
+        "resizable" : false,
+        "show_loading" : false,
+        "type" : "image",
+        "display_width" : null,
+        "default" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/tab-image.png",
+          "alt" : "tab-image",
+          "loading" : "lazy",
+          "width" : 1220,
+          "height" : 814,
+          "max_width" : 1220,
+          "max_height" : 814
+        }
+      }, {
+        "id" : "957aa394-9460-cda9-31b7-337a2d4fbd9c",
+        "name" : "select_video_type",
+        "label" : "Select Video Type",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items_2.media_column.select_media_type",
+          "controlling_value_regex" : "cmVideo",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "display" : "select",
+        "choices" : [ [ "cmEmbed", "Embed" ], [ "cmFile", "File" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "display_width" : null
+      }, {
+        "picker" : "video",
+        "id" : "6191f0fe-e582-b190-00aa-acc513a24f55",
+        "name" : "file",
+        "label" : "Video",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items_2.media_column.select_video_type",
+          "controlling_value_regex" : "cmFile",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "type" : "file",
+        "display_width" : null,
+        "default" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4"
+      }, {
+        "id" : "4fafeea2-ebf0-ba6f-7c13-0f8b4948ef08",
+        "name" : "embed_url",
+        "label" : "Embed Url",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items_2.media_column.select_video_type",
+          "controlling_value_regex" : "cmEmbed",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "display_width" : null,
+        "default" : "https://www.youtube.com/embed/9xwazD5SyVg"
+      }, {
+        "id" : "5c2a7a78-7303-622d-1694-3423a05cc57f",
+        "name" : "content",
+        "label" : "Content",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "tab_group.tab_items_2.media_column.select_media_type",
+          "controlling_value_regex" : "cmContent",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "type" : "richtext",
+        "display_width" : null,
+        "default" : "Content Here"
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "group_occurrence_meta" : null,
+      "type" : "group",
+      "display_width" : null,
+      "default" : {
+        "select_media_type" : "cmImage",
+        "image" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/tab-image.png",
+          "alt" : "tab-image",
+          "loading" : "lazy",
+          "width" : 1220,
+          "height" : 814,
+          "max_width" : 1220,
+          "max_height" : 814
+        },
+        "file" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
+        "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
+        "content" : "Content Here"
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : [ {
+      "title" : "This is the Active Tab Title",
+      "tab_content_position" : "cmLeft",
+      "content_column" : {
+        "include_eyebrow_text" : true,
+        "eyebrow_text" : "Optional Eyebrow Text",
+        "include_heading" : true,
+        "heading_size" : "h2",
+        "heading" : "Tab Group Slide Headline",
+        "include_content" : true,
+        "content_style" : "themeStyle",
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</span></p>",
+        "include_button" : true,
+        "button_group" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Button",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      },
+      "media_column" : {
+        "select_media_type" : "cmImage",
+        "image" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/tab-image.png",
+          "alt" : "tab-image",
+          "loading" : "lazy",
+          "width" : 1220,
+          "height" : 814,
+          "max_width" : 1220,
+          "max_height" : 814
+        },
+        "file" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
+        "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
+        "content" : "Content Here"
+      }
+    }, {
+      "title" : "This is the Active Tab Title",
+      "tab_content_position" : "cmLeft",
+      "content_column" : {
+        "include_eyebrow_text" : true,
+        "eyebrow_text" : "Optional Eyebrow Text",
+        "include_heading" : true,
+        "heading_size" : "h2",
+        "heading" : "Tab Group Slide Headline",
+        "include_content" : true,
+        "content_style" : "themeStyle",
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</span></p>",
+        "include_button" : true,
+        "button_group" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Button",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      },
+      "media_column" : {
+        "select_media_type" : "cmImage",
+        "image" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/tab-image.png",
+          "alt" : "tab-image",
+          "loading" : "lazy",
+          "width" : 1220,
+          "height" : 814,
+          "max_width" : 1220,
+          "max_height" : 814
+        },
+        "file" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
+        "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
+        "content" : "Content Here"
+      }
+    }, {
+      "title" : "This is the Active Tab Title",
+      "tab_content_position" : "cmLeft",
+      "content_column" : {
+        "include_eyebrow_text" : true,
+        "eyebrow_text" : "Optional Eyebrow Text",
+        "include_heading" : true,
+        "heading_size" : "h2",
+        "heading" : "Tab Group Slide Headline",
+        "include_content" : true,
+        "content_style" : "themeStyle",
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</span></p>",
+        "include_button" : true,
+        "button_group" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Button",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      },
+      "media_column" : {
+        "select_media_type" : "cmImage",
+        "image" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/tab-image.png",
+          "alt" : "tab-image",
+          "loading" : "lazy",
+          "width" : 1220,
+          "height" : 814,
+          "max_width" : 1220,
+          "max_height" : 814
+        },
+        "file" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
+        "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
+        "content" : "Content Here"
+      }
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "select_tab_type" : "cmTwoColTab",
+    "tab_items" : [ {
+      "title" : "This is the Active Tab Title",
+      "content_column_card" : {
+        "include_eyebrow_text" : false,
+        "eyebrow_text" : "Optional Eyebrow Text",
+        "include_heading" : true,
+        "heading_size" : "h2",
+        "heading" : "Tab Group Slide Headline Goes Here.",
+        "include_content" : true,
+        "content_style" : "themeStyle",
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span></p>",
+        "include_button" : false,
+        "button_group" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Button",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      },
+      "cards" : [ {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
+    }, {
+      "title" : "This is the Active Tab Title",
+      "content_column_card" : {
+        "include_eyebrow_text" : false,
+        "eyebrow_text" : "Optional Eyebrow Text",
+        "include_heading" : true,
+        "heading_size" : "h2",
+        "heading" : "Tab Group Slide Headline Goes Here.",
+        "include_content" : true,
+        "content_style" : "themeStyle",
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span></p>",
+        "include_button" : false,
+        "button_group" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Button",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      },
+      "cards" : [ {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
+    }, {
+      "title" : "This is the Active Tab Title",
+      "content_column_card" : {
+        "include_eyebrow_text" : false,
+        "eyebrow_text" : "Optional Eyebrow Text",
+        "include_heading" : true,
+        "heading_size" : "h2",
+        "heading" : "Tab Group Slide Headline Goes Here.",
+        "include_content" : true,
+        "content_style" : "themeStyle",
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span></p>",
+        "include_button" : false,
+        "button_group" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Button",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      },
+      "cards" : [ {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
+    }, {
+      "title" : "This is the Active Tab Title",
+      "content_column_card" : {
+        "include_eyebrow_text" : false,
+        "eyebrow_text" : "Optional Eyebrow Text",
+        "include_heading" : true,
+        "heading_size" : "h2",
+        "heading" : "Tab Group Slide Headline Goes Here.",
+        "include_content" : true,
+        "content_style" : "themeStyle",
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span></p>",
+        "include_button" : false,
+        "button_group" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Button",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      },
+      "cards" : [ {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      }, {
+        "select_image_type" : "imgWithBg",
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
+          "alt" : "Lateral-Flow-Assays",
+          "loading" : "lazy",
+          "width" : 300,
+          "height" : 88,
+          "max_width" : 300,
+          "max_height" : 88
+        },
+        "icon" : {
+          "name" : "Flask",
+          "unicode" : "f0c3",
+          "type" : "SOLID"
+        },
+        "select_background_color" : "Blue_bg",
+        "select_icon_color" : "White_Clr",
+        "title" : "LFA Card Title Here",
+        "content" : "<p><span>Lorem ipsum dolor sit amet elit an, consectetur adipiscing elit, sed do.</span></p>",
+        "include_button" : true,
+        "button_group_copy" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Subpage Link Here",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      } ]
+    } ],
+    "tab_items_2" : [ {
+      "title" : "This is the Active Tab Title",
+      "tab_content_position" : "cmLeft",
+      "content_column" : {
+        "include_eyebrow_text" : true,
+        "eyebrow_text" : "Optional Eyebrow Text",
+        "include_heading" : true,
+        "heading_size" : "h2",
+        "heading" : "Tab Group Slide Headline",
+        "include_content" : true,
+        "content_style" : "themeStyle",
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</span></p>",
+        "include_button" : true,
+        "button_group" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Button",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      },
+      "media_column" : {
+        "select_media_type" : "cmImage",
+        "image" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/tab-image.png",
+          "alt" : "tab-image",
+          "loading" : "lazy",
+          "width" : 1220,
+          "height" : 814,
+          "max_width" : 1220,
+          "max_height" : 814
+        },
+        "file" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
+        "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
+        "content" : "Content Here"
+      }
+    }, {
+      "title" : "This is the Active Tab Title",
+      "tab_content_position" : "cmLeft",
+      "content_column" : {
+        "include_eyebrow_text" : true,
+        "eyebrow_text" : "Optional Eyebrow Text",
+        "include_heading" : true,
+        "heading_size" : "h2",
+        "heading" : "Tab Group Slide Headline",
+        "include_content" : true,
+        "content_style" : "themeStyle",
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</span></p>",
+        "include_button" : true,
+        "button_group" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Button",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      },
+      "media_column" : {
+        "select_media_type" : "cmImage",
+        "image" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/tab-image.png",
+          "alt" : "tab-image",
+          "loading" : "lazy",
+          "width" : 1220,
+          "height" : 814,
+          "max_width" : 1220,
+          "max_height" : 814
+        },
+        "file" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
+        "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
+        "content" : "Content Here"
+      }
+    }, {
+      "title" : "This is the Active Tab Title",
+      "tab_content_position" : "cmLeft",
+      "content_column" : {
+        "include_eyebrow_text" : true,
+        "eyebrow_text" : "Optional Eyebrow Text",
+        "include_heading" : true,
+        "heading_size" : "h2",
+        "heading" : "Tab Group Slide Headline",
+        "include_content" : true,
+        "content_style" : "themeStyle",
+        "content" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</span></p>",
+        "include_button" : true,
+        "button_group" : [ {
+          "button_type" : "std",
+          "button_style" : "hs-button",
+          "button_size" : "large",
+          "button_text" : "Button",
+          "link" : {
+            "url" : {
+              "content_id" : null,
+              "type" : "EXTERNAL",
+              "href" : ""
+            },
+            "open_in_new_tab" : false,
+            "no_follow" : false
+          }
+        } ]
+      },
+      "media_column" : {
+        "select_media_type" : "cmImage",
+        "image" : {
+          "size_type" : "auto",
+          "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/tab-image.png",
+          "alt" : "tab-image",
+          "loading" : "lazy",
+          "width" : 1220,
+          "height" : 814,
+          "max_width" : 1220,
+          "max_height" : 814
+        },
+        "file" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
+        "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
+        "content" : "Content Here"
+      }
+    } ]
+  }
+}, {
+  "id" : "fbc58b2b-b6db-82a2-8422-e7f6861ce34b",
+  "name" : "module_settings",
+  "label" : "Module Settings",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "0a83880d-e7a4-265e-44f8-4237a6ba4090",
+    "name" : "intro_content_alignment",
+    "label" : "Intro Content Alignment",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "left", "Left" ], [ "right", "Right" ], [ "center", "Center" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "center"
+  }, {
+    "id" : "e6ad9337-bda5-2862-ead0-295056bea9f4",
+    "name" : "tab_border_radius_type",
+    "label" : "Card Border Radius Type",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "BorderRadius25", "Largest Border Radius" ], [ "BorderRadius15", "Second Largest Border  Radius" ], [ "BorderRadius10", "Second Smallest Border Radius" ], [ "BorderRadius5", "Smallest Border Radius" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "BorderRadius25"
+  }, {
+    "id" : "07adf110-503f-9c8c-1f54-0e7fe8117e00",
+    "name" : "select_card_border_radius",
+    "label" : "Tab Content Border Radius Type",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "tab_group.select_tab_type",
+      "controlling_value_regex" : "cmCardTab",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "BorderRadius25", "Largest Border Radius" ], [ "BorderRadius15", "Second Largest Border  Radius" ], [ "BorderRadius10", "Second Smallest Border Radius" ], [ "BorderRadius5", "Smallest Border Radius" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "BorderRadius10"
+  }, {
+    "id" : "b4d0c78b-2825-b641-ec30-e01c26bda594",
+    "name" : "select_tab_background_color",
+    "label" : "Tab Content Background Type",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "Blue_bg", "Blue" ], [ "Red_bg", "Red" ], [ "BrightBlue_bg", "BrightBlue" ], [ "BrightRed_bg", "BrightRed" ], [ "Green_bg", "Green" ], [ "Purple_bg", "Purple" ], [ "Orange_bg", "Orange" ], [ "Teal_bg", "Teal" ], [ "Pink_bg", "Pink" ], [ "DarkNavy_bg", "DarkNavy" ], [ "LightGray_bg", "LightGray" ], [ "Gray_bg", "Gray" ], [ "Charcoal_bg", "Charcoal" ], [ "FontGray_bg", "FontGray" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ], [ "custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "LightGray_bg"
+  }, {
+    "id" : "0dce8b5f-93c9-8a35-99d4-ca4fe528d97d",
+    "name" : "custom_color",
+    "label" : "Custom Color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_settings.select_tab_background_color",
+      "controlling_value_regex" : "custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : null,
+      "opacity" : null
+    }
+  }, {
+    "id" : "9d3133be-d04a-3cfa-8a11-0e78bc43ceab",
+    "name" : "tab_content_dark_theme",
+    "label" : "Tab Content Dark Theme",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : false
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "intro_content_alignment" : "center",
+    "tab_border_radius_type" : "BorderRadius25",
+    "select_card_border_radius" : "BorderRadius10",
+    "select_tab_background_color" : "LightGray_bg",
+    "custom_color" : {
+      "color" : null,
+      "opacity" : null
+    },
+    "tab_content_dark_theme" : false
+  }
+}, {
+  "id" : "module_overrides",
+  "name" : "module_overrides",
+  "label" : "Module Overrides",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "enable_overrides",
+    "name" : "enable_overrides",
+    "label" : "Enable Overrides",
+    "help_text" : "Toggle to override section ID and vertical margin. ",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : true
+  }, {
+    "id" : "module_overrides.section_id",
+    "name" : "section_id",
+    "label" : "Section ID",
+    "help_text" : "The value you type here will be the anchor link for this section. Should be all lowercase and include dashes instead of spaces. This should be a unique value per module.",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "display_width" : null
+  }, {
+    "id" : "module_overrides.top_margin",
+    "name" : "top_margin",
+    "label" : "Top Margin",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "top-margin-default", "Default" ], [ "top-margin-none", "None" ], [ "top-margin-small", "Small" ], [ "top-margin-medium", "Medium" ], [ "top-margin-large", "Large" ], [ "top-margin-custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "top-margin-none"
+  }, {
+    "id" : "custom_top_margin",
+    "name" : "custom_top_margin",
+    "label" : "Custom Top Margin",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.top_margin",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "top-margin-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "display_width" : null,
+    "default" : 100
+  }, {
+    "id" : "custom_top_margin_mobile",
+    "name" : "custom_top_margin_mobile",
+    "label" : "Custom Top Margin Mobile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.top_margin",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "top-margin-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "display_width" : null,
+    "default" : 50
+  }, {
+    "id" : "module_overrides.bottom_margin",
+    "name" : "bottom_margin",
+    "label" : "Bottom Margin",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "bottom-margin-default", "Default" ], [ "bottom-margin-none", "None" ], [ "bottom-margin-small", "Small" ], [ "bottom-margin-medium", "Medium" ], [ "bottom-margin-large", "Large" ], [ "bottom-margin-custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "bottom-margin-none"
+  }, {
+    "id" : "custom_bottom_margin",
+    "name" : "custom_bottom_margin",
+    "label" : "Custom Bottom Margin",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.bottom_margin",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "bottom-margin-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "display_width" : null,
+    "default" : 100
+  }, {
+    "id" : "custom_bottom_margin_mobile",
+    "name" : "custom_bottom_margin_mobile",
+    "label" : "Custom Bottom Margin Mobile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.bottom_margin",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "bottom-margin-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "display_width" : null,
+    "default" : 50
+  }, {
+    "id" : "module_overrides.top_padding",
+    "name" : "top_padding",
+    "label" : "Top Padding",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "top-padding-default", "Default" ], [ "top-padding-none", "None" ], [ "top-padding-small", "Small" ], [ "top-padding-medium", "Medium" ], [ "top-padding-large", "Large" ], [ "top-padding-custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "top-padding-small"
+  }, {
+    "id" : "custom_top_padding",
+    "name" : "custom_top_padding",
+    "label" : "Custom Top Padding",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.top_padding",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "top-padding-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "display_width" : null,
+    "default" : 100
+  }, {
+    "id" : "custom_top_padding_mobile",
+    "name" : "custom_top_padding_mobile",
+    "label" : "Custom Top Padding Mobile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.top_padding",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "top-padding-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "display_width" : null,
+    "default" : 50
+  }, {
+    "id" : "module_overrides.bottom_padding",
+    "name" : "bottom_padding",
+    "label" : "Bottom Padding",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "bottom-padding-default", "Default" ], [ "bottom-padding-none", "None" ], [ "bottom-padding-small", "Small" ], [ "bottom-padding-medium", "Medium" ], [ "bottom-padding-large", "Large" ], [ "bottom-padding-custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "bottom-padding-small"
+  }, {
+    "id" : "custom_bottom_padding",
+    "name" : "custom_bottom_padding",
+    "label" : "Custom Bottom Padding",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.bottom_padding",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "bottom-padding-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "display_width" : null,
+    "default" : 100
+  }, {
+    "id" : "custom_bottom_padding_mobile",
+    "name" : "custom_bottom_padding_mobile",
+    "label" : "Custom Bottom Padding Mobile",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "module_overrides.bottom_padding",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "bottom-padding-custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "display_width" : null,
+    "default" : 50
+  }, {
+    "id" : "900e262a-499a-5bfb-cf55-0ae7f2794b9b",
+    "name" : "inner_container_spacing_group",
+    "label" : "Inner Container Group",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_overrides.enable_overrides",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "85b3867d-bfc1-6f81-cdac-7f76a2f6c5dd",
+      "name" : "border_radius_type",
+      "label" : "Border Radius Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "BorderRadius25", "Largest Border Radius" ], [ "BorderRadius15", "Second Largest Border  Radius" ], [ "BorderRadius10", "Second Smallest Border Radius" ], [ "BorderRadius5", "Smallest Border Radius" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : ""
+    }, {
+      "id" : "48d33633-bcd1-f95d-02ce-284a60606bf3",
+      "name" : "top_padding",
+      "label" : "Top Padding",
+      "required" : false,
+      "locked" : false,
+      "display" : "text",
+      "step" : 1,
+      "type" : "number",
+      "display_width" : null,
+      "default" : 0
+    }, {
+      "id" : "60e2a3f2-d388-17dc-c420-f7d819caa54c",
+      "name" : "right_padding",
+      "label" : "Right Padding",
+      "required" : false,
+      "locked" : false,
+      "display" : "text",
+      "step" : 1,
+      "type" : "number",
+      "display_width" : null,
+      "default" : 0
+    }, {
+      "id" : "3637e3d6-a345-e0e6-c34e-ec0baea1d206",
+      "name" : "bottom_padding",
+      "label" : "Bottom Padding",
+      "required" : false,
+      "locked" : false,
+      "display" : "text",
+      "step" : 1,
+      "type" : "number",
+      "display_width" : null,
+      "default" : 0
+    }, {
+      "id" : "d92aba00-5806-6a06-0388-6b9c37ba4101",
+      "name" : "left_padding",
+      "label" : "Left Padding",
+      "required" : false,
+      "locked" : false,
+      "display" : "text",
+      "step" : 1,
+      "type" : "number",
+      "display_width" : null,
+      "default" : 0
+    }, {
+      "id" : "221ecb12-72f4-335d-6471-fadc2adb13cd",
+      "name" : "change_spacing_in_mobile",
+      "label" : "Change Spacing In Mobile",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "display_width" : null,
+      "default" : false
+    }, {
+      "id" : "d795510a-997e-db8b-e681-0877b2d6ffdd",
+      "name" : "mobile_spacing_group",
+      "label" : "Mobile Spacing Group",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.inner_container_spacing_group.change_spacing_in_mobile",
+        "controlling_value_regex" : "true",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "children" : [ {
+        "id" : "7b778bd6-f728-d1cd-63b9-2ce3effad78b",
+        "name" : "top_padding",
+        "label" : "Top Padding",
+        "required" : false,
+        "locked" : false,
+        "display" : "text",
+        "step" : 1,
+        "type" : "number",
+        "display_width" : null,
+        "default" : 100
+      }, {
+        "id" : "3c711700-554b-4d12-a5e8-e8f272d5f188",
+        "name" : "right_padding",
+        "label" : "Right Padding",
+        "required" : false,
+        "locked" : false,
+        "display" : "text",
+        "step" : 1,
+        "type" : "number",
+        "display_width" : null,
+        "default" : 0
+      }, {
+        "id" : "70a9ea49-4611-9414-4071-01d161078c01",
+        "name" : "bottom_padding",
+        "label" : "Bottom Padding",
+        "required" : false,
+        "locked" : false,
+        "display" : "text",
+        "step" : 1,
+        "type" : "number",
+        "display_width" : null,
+        "default" : 100
+      }, {
+        "id" : "320427d8-59c0-22a2-5d64-3bae9bb1b987",
+        "name" : "left_padding",
+        "label" : "Left Padding",
+        "required" : false,
+        "locked" : false,
+        "display" : "text",
+        "step" : 1,
+        "type" : "number",
+        "display_width" : null,
+        "default" : 0
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "group_occurrence_meta" : null,
+      "type" : "group",
+      "display_width" : null,
+      "default" : {
+        "top_padding" : 100,
+        "right_padding" : 0,
+        "bottom_padding" : 100,
+        "left_padding" : 0
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "border_radius_type" : "",
+      "top_padding" : 0,
+      "right_padding" : 0,
+      "bottom_padding" : 0,
+      "left_padding" : 0,
+      "change_spacing_in_mobile" : false,
+      "mobile_spacing_group" : {
+        "top_padding" : 100,
+        "right_padding" : 0,
+        "bottom_padding" : 100,
+        "left_padding" : 0
+      }
+    }
+  }, {
+    "id" : "3eccf45d-b0dc-4bac-42a0-f923e4405158",
+    "name" : "reverse_text",
+    "label" : "Dark Theme",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "enable_overrides",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : false
+  }, {
+    "id" : "94e04306-ecc1-4735-09fd-9b66482a8101",
+    "name" : "background_settings",
+    "label" : "Background Settings",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_overrides.enable_overrides",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "3c812905-0c66-421d-6e7e-7a7109acdd49",
+      "name" : "background_type",
+      "label" : "Background Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "color", "Color" ], [ "image", "Image" ], [ "gradient", "Gradient" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : ""
+    }, {
+      "id" : "5d97321e-e326-2d30-8757-51608da05ea6",
+      "name" : "background_image",
+      "label" : "Background Image",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : "image",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "responsive" : true,
+      "resizable" : false,
+      "show_loading" : false,
+      "type" : "image",
+      "display_width" : null,
+      "default" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      }
+    }, {
+      "id" : "807e47d7-fe2c-b6a5-32d9-c98ca8c22f51",
+      "name" : "include_overlay",
+      "label" : "Include  Overlay",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : "image",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "checkbox",
+      "type" : "boolean",
+      "display_width" : null,
+      "default" : false
+    }, {
+      "id" : "8ea66505-07ac-5717-e6e0-f46c0ef4981b",
+      "name" : "image_overlay_select_color",
+      "label" : "Select Color",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.include_overlay",
+        "controlling_value_regex" : "true",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "Blue_bg", "Blue" ], [ "Red_bg", "Red" ], [ "BrightBlue_bg", "BrightBlue" ], [ "BrightRed_bg", "BrightRed" ], [ "Green_bg", "Green" ], [ "Purple_bg", "Purple" ], [ "Orange_bg", "Orange" ], [ "Teal_bg", "Teal" ], [ "Pink_bg", "Pink" ], [ "DarkNavy_bg", "DarkNavy" ], [ "LightGray_bg", "LightGray" ], [ "Gray_bg", "Gray" ], [ "Charcoal_bg", "Charcoal" ], [ "FontGray_bg", "FontGray" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "LightGray_bg"
+    }, {
+      "id" : "a222367c-042a-0a6f-cb4a-8cb25bb181ee",
+      "name" : "opacity",
+      "label" : "Opacity",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.include_overlay",
+        "controlling_value_regex" : "true",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "slider",
+      "min" : 0.1,
+      "max" : 0.9,
+      "step" : 0.1,
+      "type" : "number",
+      "display_width" : null,
+      "default" : 0.5
+    }, {
+      "id" : "4ea36da9-c8a6-adf2-7460-cbf4d98190fd",
+      "name" : "select_color",
+      "label" : "Select Color",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : "color",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "Blue_bg", "Blue" ], [ "Red_bg", "Red" ], [ "BrightBlue_bg", "BrightBlue" ], [ "BrightRed_bg", "BrightRed" ], [ "Green_bg", "Green" ], [ "Purple_bg", "Purple" ], [ "Orange_bg", "Orange" ], [ "Teal_bg", "Teal" ], [ "Pink_bg", "Pink" ], [ "DarkNavy_bg", "DarkNavy" ], [ "LightGray_bg", "LightGray" ], [ "Gray_bg", "Gray" ], [ "Charcoal_bg", "Charcoal" ], [ "FontGray_bg", "FontGray" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ], [ "custom", "Custom" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : ""
+    }, {
+      "id" : "0f1d99f5-31a8-7b34-766a-1f40497d8b7c",
+      "name" : "custom_color",
+      "label" : "Custom Color",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.select_color",
+        "controlling_value_regex" : "custom",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "type" : "color",
+      "display_width" : null,
+      "default" : {
+        "color" : null,
+        "opacity" : null
+      }
+    }, {
+      "id" : "2659085b-598d-e346-643e-6a9ebb3bae70",
+      "name" : "select_gradient",
+      "label" : "Select Gradient",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "gradient1", "Gradient 1" ], [ "gradient2", "Gradient 2" ], [ "gradient3", "Gradient 3" ], [ "gradient4", "Gradient 4" ], [ "gradient5", "Gradient 5" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "gradient5"
+    }, {
+      "id" : "a639160b-f897-2d37-444d-7845a638c1f1",
+      "name" : "overlay_image",
+      "label" : "Overlay Image",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "responsive" : true,
+      "resizable" : false,
+      "show_loading" : false,
+      "type" : "image",
+      "display_width" : null,
+      "default" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : true,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "background_type" : "",
+      "background_image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      },
+      "include_overlay" : false,
+      "image_overlay_select_color" : "LightGray_bg",
+      "opacity" : 0.5,
+      "select_color" : "",
+      "custom_color" : {
+        "color" : null,
+        "opacity" : null
+      },
+      "select_gradient" : "gradient5",
+      "overlay_image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      }
+    }
+  }, {
+    "id" : "fc248331-90d9-cb7e-66f6-4b85de179aa9",
+    "name" : "container_size",
+    "label" : "Container Size",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_overrides.custom_container_size",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "theme", "Theme" ], [ "full_width", "Full Width" ], [ "custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "theme"
+  }, {
+    "id" : "2106c911-74cd-42f1-af9c-4ef05f436c77",
+    "name" : "custom_container_size",
+    "label" : "Custom Container Size",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_overrides.container_size",
+      "controlling_value_regex" : "custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "display_width" : null,
+    "default" : 870
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "enable_overrides" : true,
+    "top_margin" : "top-margin-none",
+    "custom_top_margin" : 100,
+    "custom_top_margin_mobile" : 50,
+    "bottom_margin" : "bottom-margin-none",
+    "custom_bottom_margin" : 100,
+    "custom_bottom_margin_mobile" : 50,
+    "top_padding" : "top-padding-small",
+    "custom_top_padding" : 100,
+    "custom_top_padding_mobile" : 50,
+    "bottom_padding" : "bottom-padding-small",
+    "custom_bottom_padding" : 100,
+    "custom_bottom_padding_mobile" : 50,
+    "inner_container_spacing_group" : {
+      "border_radius_type" : "",
+      "top_padding" : 0,
+      "right_padding" : 0,
+      "bottom_padding" : 0,
+      "left_padding" : 0,
+      "change_spacing_in_mobile" : false,
+      "mobile_spacing_group" : {
+        "top_padding" : 100,
+        "right_padding" : 0,
+        "bottom_padding" : 100,
+        "left_padding" : 0
+      }
+    },
+    "reverse_text" : false,
+    "background_settings" : {
+      "background_type" : "",
+      "background_image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      },
+      "include_overlay" : false,
+      "image_overlay_select_color" : "LightGray_bg",
+      "opacity" : 0.5,
+      "select_color" : "",
+      "custom_color" : {
+        "color" : null,
+        "opacity" : null
+      },
+      "select_gradient" : "gradient5",
+      "overlay_image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      }
+    },
+    "container_size" : "theme",
+    "custom_container_size" : 870
+  }
+} ]

@@ -1,7 +1,117 @@
 section.u4m-drag-and-drop-area {
     @include center;
     margin: 100rem auto;
+
     form {
         @include form;
     }
+}
+
+.dnd_padd,
+.dnd-section {
+    max-width: 100%;
+    padding: 100rem 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+
+    form {
+        @include form;
+    }
+
+    @include tablet {
+        padding: 60rem 20rem;
+    }
+
+    @include tabletvert {
+        padding: 50rem 20rem;
+    }
+
+    @include phone {
+        padding: 40rem 10rem;
+    }
+}
+
+.dnd-section[class*="full-width"],
+.dnd-section.dnd_padding {
+    padding: 0rem 0;
+}
+
+.page-center,
+.content-wrapper,
+.dnd-section>.row-fluid {
+    @include center;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+
+    @include tabletMid {
+        padding-left: 20rem;
+        padding-right: 20rem;
+    }
+}
+
+.full-width,
+[class*="full-width-section"].dnd-section>.row-fluid {
+    max-width: 100%;
+    padding: 0;
+}
+
+[class*="full-width-section"].dnd-section>.row-fluid>.dnd-column {
+    padding: 0;
+}
+
+.flex-row,
+.flex_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.page-center.full_width {
+    max-width: 100%;
+}
+
+@include tabletvertmin {
+
+    .dnd-section .row-fluid>.dnd-column,
+    .col {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@include midlaptop {
+    .col3_row .col3 {
+        width: 33.3333333%;
+    }
+}
+
+@include tablet {
+    .col20_row .col20 {
+        width: 33.33%;
+    }
+}
+
+
+
+@include tabletMid {
+
+    .col20_row .col20,
+    .col3_row .col3,
+    .col4_row .col4 {
+        width: 50%;
+    }
+}
+
+@include tabletvert {
+
+    .col20_row .col20,
+    .col3_row .col3,
+    .col4_row .col4 {
+        width: 100%;
+    }
+}
+
+.noRadius {
+    overflow: unset;
 }

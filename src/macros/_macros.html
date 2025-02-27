@@ -1,0 +1,171 @@
+<!--
+ templateType: page
+ isAvailableForNewContent: false
+-->  
+
+{% macro buttonGroup(items)%}
+{% if items %}
+<div class="intro_btn_wrap">
+	{% for item in items %}
+	<div class="btn_item">
+		{% if item.button_type == "std" %}
+		{% set href = item.link.url.href %}
+		{% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+		{% set href = "mailto:" + href %}
+		{% endif %}
+		<a class="{{item.button_style}}_{{ item.button_size }} {{ item.button_style ? item.button_style : "hs-button" }} {{item.button_theme}}"
+			 {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
+			 href="{{ href }}" 
+			 {% else %}
+			 href="{{ href }}"
+			 {% endif %}
+			 {% if item.link.open_in_new_tab %}
+			 target="_blank"
+			 {% endif %}
+			 {% if item.link.rel %}
+			 rel="{{ item.link.rel }}"
+			 {% endif %}>
+			<span>{{ item.button_text }}</span>
+			{% if item.button_style  == "hs-arrow-btn"%}
+			<div class="icon">
+				<div class="inner">
+					<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12L4.9375 10.9375L9.125 6.75Z" />
+					</svg>
+				</div>
+			</div>
+			{% endif %}
+		</a>
+		{% endif %}
+		{% if item.button_type == "cta" %}
+		{% cta guid="{{ item.cta }}" %}
+		{% endif %}
+	</div>
+	{% endfor %}
+</div>
+{% endif %}
+{% endmacro %}
+
+{% macro singlebuttonGroup(item)%}
+{% if item %}
+<div class="intro_btn_wrap">
+	<div class="btn_item">
+		{% if item.button_type == "std" %}
+		{% set href = item.link.url.href %}
+		{% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+		{% set href = "mailto:" + href %}
+		{% endif %}
+		<a class="{{ item.button_style ? item.button_style : "hs-button" }} {{item.button_theme}}"
+			 {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
+			 href="{{ href }}" 
+			 {% else %}
+			 href="{{ href }}"
+			 {% endif %}
+			 {% if item.link.open_in_new_tab %}
+			 target="_blank"
+			 {% endif %}
+			 {% if item.link.rel %}
+			 rel="{{ item.link.rel }}"
+			 {% endif %}>
+			<span>{{ item.button_text }}</span>
+			{% if item.button_style  == "hs-sec-btn"%}
+			<div class="icon">
+				<div class="inner">
+					<svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="currentColor">
+						<path d="M7.5 9.5L6.45 8.4125L9.1125 5.75H0V4.25H9.1125L6.45 1.5875L7.5 0.5L12 5L7.5 9.5Z"/>
+					</svg>
+				</div>
+			</div>
+			{% endif %}
+		</a>
+		{% endif %}
+		{% if item.button_type == "cta" %}
+		{% cta guid="{{ item.cta }}" %}
+		{% endif %}
+	</div>
+</div>
+{% endif %}
+{% endmacro%}
+
+{% macro introGroup(group, settings, overrides)%}
+{% if group.include_eyebrow_text or group.include_heading or group.include_content or  group.include_button%}
+<div class="intro_content {% if settings %}{{settings.intro_content_alignment}}{% endif %}">
+
+	<div class="intro__inner ">
+		{% if group.include_eyebrow_text%}
+		<div class="eyebrow_text">
+			{{ group.eyebrow_text }}
+		</div>
+		{% endif %}
+
+		{% if group.include_heading %}
+		<{{group.heading_size}} class="intro_title 		{% if group.include_heading_border %}hd_border{% endif %}">{{ group.heading }}{% if group.include_heading_border %}<span></span>{% endif %}</{{group.heading_size}}>
+			{% endif %}
+			{% if group.include_subheading %}
+			<div class="subheading">
+		{{ group.subheading }}
+	</div>
+	{% endif %}
+
+	{% if group.include_content %}
+	<div class="intro_desc {{ group.content_style }} {{settings.select_content_bg_color}}">
+		{{ group.content }}
+	</div>
+	{% endif %}
+
+	{% if group.include_button %}
+	{{buttonGroup(group.button_group)}}
+	{% endif %}
+
+
+
+</div>
+</div>
+{% endif %}
+{% endmacro%} 
+
+
+
+
+{% macro blogCards(item,moduleSetting) %}
+{% if item %}
+<div class="splide__slide cardItem {{ moduleSetting.select_color }} {% if moduleSetting.dark_theme %} light_theme {% endif %}">
+	{% if item.featured_image %}
+	<div class="ItemImg">
+		<a href="{{ item.absolute_url }}">
+			<div class="itemImgBg" style="background-image:url({{ item.featured_image }})"></div>
+		</a>
+	</div>
+	{% endif %}
+	<div class="itemContent">
+		{% if item.topic_list %}
+		<div class="itemtag">
+			{% set included_topics = item.topic_list | rejectattr("slug", "equalto", "featured") | list %}
+			{% for topic in included_topics %}
+			{% if loop.first %}
+			<span class="{{ topic.slug }}">{{ topic.name|capitalize }}</span>{% endif %}{% endfor %}
+		</div>
+		{% endif %}
+		<div class="itemTtl">
+			<h4><a class="restitle" href="{{ item.absolute_url }}">{{ item.name }}</a></h4>
+		</div>
+		<div class="itemdesc">
+			{{ item.post_list_content|striptags|truncatehtml(80, '...' , false) }}
+		</div>
+	</div>
+	<div class="itemBtn">
+		<a class="hs-sec-btn" href="{{ item.absolute_url }}">
+			<span>Read More</span>
+			<div class="icon">
+				<div class="inner">
+					<svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="currentColor">
+						<path d="M7.5 9.5L6.45 8.4125L9.1125 5.75H0V4.25H9.1125L6.45 1.5875L7.5 0.5L12 5L7.5 9.5Z"/>
+					</svg>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+{% endif %}
+{% endmacro%}
+

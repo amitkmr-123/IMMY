@@ -1,0 +1,196 @@
+{% set moduleName = 'u4m-simple-slider' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div id="splide" class="mainCol splide">
+	<div class="authorGroup splide__track">
+		<div class="flex_row splide__list">
+			{% for item in module.quote_items %}
+			<div class="items splide__slide">
+				<div class="pd {% if item.include_card %}Enablecard{% endif %} {% if not item.include_card %}full_width{% endif%}">
+					<div class="bg {{ module.module_settings.content_group_background_settings.border_radius_type }} {{ module.module_settings.content_group_background_settings.select_color }}"> </div>
+					<div class="Innercnt">
+						<div class="cnt">
+							{% if item.quote %}
+							<h5 class="qute">
+								“{{ item.quote }}”
+							</h5>
+							{% endif %}
+							<div class="btmCntt">
+								{% if item.image.src %}
+								<div class="authorImage">
+									{% set href = item.link.url.href %}
+									{% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+									{% set href = "mailto:" + href %}
+									{% endif %}
+									<a
+										 {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
+										 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+										 {% else %}
+										 href="{{ href|escape_url }}"
+										 {% endif %}
+										 {% if item.link.open_in_new_tab %}
+										 target="_blank"
+										 {% endif %}
+										 {% if item.link.rel %}
+										 rel="{{ item.link.rel|escape_attr }}"
+										 {% endif %}
+										 >
+										{% if item.image.src %}
+										{% set sizeAttrs = 'width="{{ item.image.width|escape_attr }}" height="{{ item.image.height|escape_attr }}"' %}
+										{% if item.image.size_type == 'auto' %}
+										{% set sizeAttrs = 'width="{{ item.image.width|escape_attr }}" height="{{ item.image.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+										{% elif item.image.size_type == 'auto_custom_max' %}
+										{% set sizeAttrs = 'width="{{ item.image.max_width|escape_attr }}" height="{{ item.image.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+										{% endif %}
+										{% set loadingAttr = item.image.loading != 'disabled' ? 'loading="{{ item.image.loading|escape_attr }}"' : '' %}
+										<img src="{{ item.image.src|escape_url }}" alt="{{ item.image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+										{% endif %}
+									</a>
+								</div>
+								{% endif %}
+								<div class="desc bodystyle1">
+									{% if item.author_name %}
+									<div class="authorName">
+										<strong>{{ item.author_name }}</strong>
+									</div>
+									{% endif %}
+									{% if item.designation %}
+									<div class="designation">
+										{{ item.designation }}
+									</div>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+						{% if item.include_card %}
+						<div class="rhtcol inner {% if module.module_settings.background_settings.dark_mode %}lightCnt{% endif %} {{ module.module_settings.background_settings.inner_container_spacing_group.border_radius_type }} {% if module.module_settings.background_settings.background_type == "color"%} {{ module.module_settings.background_settings.select_color }}{% endif %}{% if module.module_settings.background_settings.background_type == "gradient"%} {{ module.module_settings.background_settings.select_gradient }}{% endif %}" style="  {% if module.module_settings.background_settings.select_color == "custom"%} background-color:{{ module.module_settings.background_settings.custom_color.rgba }};	{% endif %} padding:{{ module.module_settings.background_settings.inner_container_spacing_group.top_padding }}px {{ module.module_settings.background_settings.inner_container_spacing_group.right_padding }}px {{ module.module_settings.background_settings.inner_container_spacing_group.bottom_padding }}px {{ module.module_settings.background_settings.inner_container_spacing_group.left_padding }}px;">
+							{% if module.module_settings.background_settings.background_type == "gradient"%}
+							{% if module.module_settings.background_settings.overlay_image.src %}
+							<div class="bg_overlay overlay_img " style="background-image:url({{ module.module_settings.background_settings.overlay_image.src }});"></div>
+							{% endif %}
+							{% endif %}
+							{% if item.intro_content.content_type == "content"%}
+
+	{% if item.intro_content.content_group.include_heading %}
+							<div class="title">
+								<{{ item.intro_content.content_group.heading_size }}> {{ item.intro_content.content_group.heading }} </{{ item.intro_content.content_group.heading_size }}>
+							</div>
+								{% endif %}
+
+
+								{% if item.intro_content.content_group.include_content %}
+								<div class="normal_cnt 	{{ item.intro_content.content_group.content_style }}">
+									{{ item.intro_content.content_group.content }}
+								</div>
+								{% endif %}
+
+								{% if item.intro_content.content_group.include_button %}
+								<div class="btn_item">
+									{% if item.intro_content.content_group.button_group.button_type == "std" %}
+									{% set href = item.intro_content.content_group.button_group.link.url.href %}
+									{% if item.intro_content.content_group.button_group.link.url.type is equalto "EMAIL_ADDRESS" %}
+									{% set href = "mailto:" + href %}
+									{% endif %}
+									<a class="{{item.intro_content.content_group.button_group.button_style}}_{{ item.intro_content.content_group.button_group.button_size }} {{ item.intro_content.content_group.button_group.button_style ? item.button_style : "hs-button" }} 	{{ item.intro_content.content_group.button_group.button_style }}"
+										 {% if item.intro_content.content_group.button_group.link.url.type is equalto "CALL_TO_ACTION"  %}
+										 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+										 {% else %}
+										 href="{{ href|escape_url }}"
+										 {% endif %}
+										 {% if item.intro_content.content_group.button_group.link.open_in_new_tab %}
+										 target="_blank"
+										 {% endif %}
+										 {% if item.intro_content.content_group.button_group.link.rel %}
+										 rel="{{ item.intro_content.content_group.button_group.link.rel|escape_attr }}"
+										 {% endif %}
+										 >
+										<span>{{ item.intro_content.content_group.button_group.button_text }}</span>
+										{% if item.intro_content.content_group.button_group.button_style  == "hs-arrow-btn" %}
+										<div class="icon">
+											<div class="inner">
+												<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12L4.9375 10.9375L9.125 6.75Z" />
+												</svg>
+											</div>
+										</div>
+										{% endif %}
+									</a>
+									{% endif %}
+									{% if item.intro_content.content_group.button_group.button_type == "cta" %}
+									{% cta guid="{{ item.intro_content.content_group.button_group.cta }}" %}
+									{% endif %}
+								</div>
+								{% endif %}
+
+							{% elif item.intro_content.content_type == "logo"%}
+							<div class="logo"> 
+								{% if item.intro_content.logo.src %}
+								{% set sizeAttrs = 'width="{{ item.intro_content.logo.width|escape_attr }}" height="{{ item.intro_content.logo.height|escape_attr }}"' %}
+								{% if item.intro_content.logo.size_type == 'auto' %}
+								{% set sizeAttrs = 'width="{{ item.intro_content.logo.width|escape_attr }}" height="{{ item.intro_content.logo.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+								{% elif item.intro_content.logo.size_type == 'auto_custom_max' %}
+								{% set sizeAttrs = 'width="{{ item.intro_content.logo.max_width|escape_attr }}" height="{{ item.intro_content.logo.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+								{% endif %}
+								{% set loadingAttr = item.intro_content.logo.loading != 'disabled' ? 'loading="{{ item.intro_content.logo.loading|escape_attr }}"' : '' %}
+								<img src="{{ item.intro_content.logo.src|escape_url }}" alt="{{ item.intro_content.logo.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+								{% endif %}
+							</div>
+							{% endif %}
+						</div>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+
+</div>
+</section>
+
+
+
+
+
+
+{% require_js %}
+<script>
+	document.addEventListener( 'DOMContentLoaded', function () {
+		var splidemodule = new Splide('.{{ name|escape }} .splide', { 
+																	type: 'loop',   
+																	perPage: 1,
+																	perMove: 1,
+																	arrows: false,
+																	autoplay: true,
+																	interval: 4000,
+																	autoHeight: true,
+																	focus: 0,  // Align slides to the left
+																	gap: 0, // Ensure gap is correctly applied
+																	});
+
+	splidemodule.mount();
+	});
+
+</script>
+{% end_require_js %}
+
+
+{% require_css %}
+{% if module.module_settings.background_settings.inner_container_spacing_group.change_spacing_in_mobile %}
+<style>
+	@media(max-width:767px){
+		.u4m-simple-slider.{{name}} .authorGroup .pd .rhtcol.inner{
+			padding:{{ module.module_settings.background_settings.inner_container_spacing_group.mobile_spacing_group.top_padding}}px
+				{{ module.module_settings.background_settings.inner_container_spacing_group.mobile_spacing_group.right_padding }}px
+				{{ module.module_settings.background_settings.inner_container_spacing_group.mobile_spacing_group.bottom_padding }}px
+				{{ module.module_settings.background_settings.inner_container_spacing_group.mobile_spacing_group.left_padding }}px!important;
+		}
+	}
+</style>
+{% endif %}
+
+{% end_require_css %}
+
+

@@ -1,0 +1,95 @@
+<div class="cmMegaMenu">
+	<ul class="cmNav">
+		{% for item in module.main_menu %}
+		<li class="navItem navItem_{{loop.index}} {% if item.enable_child_menu %}{{ item.select_child_menu_style }} cm-has-children{% endif %}">
+			{% if item.menu %}
+			{% set href = item.link.url.href %}
+			{% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+			{% set href = "mailto:" + href %}
+			{% endif %}
+			<a class="mainNavItem"
+				 {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
+				 href="{{ href }}"
+				 {% else %}
+				 href="{{ href|escape_url }}"
+				 {% endif %}
+				 {% if item.link.open_in_new_tab %}
+				 target="_blank"
+				 {% endif %}
+				 {% if item.link.rel %}
+				 rel="{{ item.link.rel|escape_attr }}"
+				 {% endif %}
+				 >
+				{{ item.menu }}
+				{% if item.enable_child_menu %}
+				<span class="childArrow">
+				<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+				</span>
+			{% endif %}
+			</a>
+			{% endif %}
+
+			{% if item.enable_child_menu %}
+				<span class="childArrow mb_childArrow">
+				<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+				</span>
+			<div class="megaWrap {{ item.select_child_menu_style }}-wrap">
+			<div class="megaInnerWrap {% if  item.select_child_menu_style =="megaMenu" %} flex_row col3_row {% endif %}">
+				{% for item2 in item.child_menu %}
+				
+				<div class="childNavWrap childNavWrap-{{loop.index}} {% if  item.select_child_menu_style =="megaMenu" %} col col3 {% endif %}">
+					{% if item.select_child_menu_style == "megaMenu" %}
+					{% if item2.image.src %}
+					<div class="imageWrap" style="background-color:{{ item2.image_background_color.rgba }};">
+						<div class="imageInnerWrap">
+							<img src="{{ item2.image.src }}" alt="{{ item2.image.alt }}" {{ loadingAttr }}>
+						</div>
+					</div>
+					{% endif %}
+					{% endif %}
+					<div class="navInnerWrap">
+						<ul class="cmChildMenu">
+							{% if item.select_child_menu_style == "megaMenu" %}
+							{% if item2.title %}
+							<li class="cmTitle">{{ item2.title }}</li>
+							{% endif %}
+							{% endif %}
+							{% for item3 in item2.menu_item %}
+							{% if item3.menu %}
+							<li class="menuItem Item-{{loop.index}}">
+								{% set href = item3.link.url.href %}
+								{% if item3.link.url.type is equalto "EMAIL_ADDRESS" %}
+								{% set href = "mailto:" + href %}
+								{% endif %}
+								<a
+									 {% if item3.link.url.type is equalto "CALL_TO_ACTION"  %}
+									 href="{{ href }}"
+									 {% else %}
+									 href="{{ href|escape_url }}"
+									 {% endif %}
+									 {% if item3.link.open_in_new_tab %}
+									 target="_blank"
+									 {% endif %}
+									 {% if item3.link.rel %}
+									 rel="{{ item3.link.rel|escape_attr }}"
+									 {% endif %}
+									 >
+									{{ item3.menu }}
+									
+								</a>
+							</li>
+							{% endif %}
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+				{% endfor %}
+				</div>
+			</div>
+			{% endif %}
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+
+

@@ -1,0 +1,625 @@
+<!--
+templateType: global_partial
+label: Header
+-->
+<headar class="header">
+	<div class="topHeader">
+		<div class="page-center">
+			<div class="topInnerWrap">
+				<div class="cmSearchBtn">
+					Search
+					{% set search_logo =  get_asset_url('../../templates/images/search.png') %}
+					<span class="searchIcon"><img src="{{search_logo}}" alt="Search"/></span>
+				</div>
+
+				<div class="topBtnWrap">
+					{% module "support_button" path="@hubspot/button", label="Support Button",  button_text="Support", link={ "url": { "type": "EXTERNAL", "href": "", "content_id": null }, "open_in_new_tab": true, "no_follow": false } %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mainHeader">
+		<div class="page-center">
+			<div class="bottomInnerWrap">
+				<div class="logoWrap">
+					{% set logo_file =  get_asset_url('../../templates/images/IMMY-header-Logo.png') %}
+					{% module "header_logo" path="@hubspot/logo", label="Header Logo", link='/', img={src="{{logo_file}}", width=360, alt= IMMY, override_inherited_src= true} %}
+				</div>
+				<div class="navTrigger">
+					<span class="trigger_item"></span>
+					<span class="trigger_item"></span>
+					<span class="trigger_item"></span>
+				</div>
+				<div class="rightSection">
+					<div class="nav">
+						{% module "mega_menu" path="../../modules/u4m-mega-menu", label="Mega Menu",
+						main_menu=[ {
+          "child_menu" : [ {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Aspergillus Galactomannan LFA"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Cryptococcal Antigen (CrAg LFA)"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Coccidioides Antibody LFA"
+            } ],
+            "title" : "Lateral Flow Assays"
+          }, {
+            "image" : {
+              "alt" : "Enzyme-Immunoassay",
+              "height" : 109,
+              "loading" : "lazy",
+              "max_height" : 109,
+              "max_width" : 155,
+              "size_type" : "auto",
+              "src" :  get_asset_url('../../templates/images/Enzyme-Immunoassay.png') ,
+              "width" : 155
+            },
+            "image_background_color" : {
+              "color" : "#C41230",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Histoplasma Galactomannan EIA"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Cryptococcal Antigen EIA"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Coccidioides Antibody EIA"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Blastomyces Antibody EIA"
+            } ],
+            "title" : "Enzyme Immunoassay"
+          }, {
+            "image" : {
+              "alt" : "PCR",
+              "height" : 86,
+              "loading" : "lazy",
+              "max_height" : 86,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" :  get_asset_url('../../templates/images/PCR.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00AA9B",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Candida Species PCR"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Candida Auris PCR"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Aspergillus PCR"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Pneumocystis Jirovecci PCR"
+            } ],
+            "title" : "PCR"
+          }, {
+            "image" : {
+              "alt" : "Products",
+              "height" : 100,
+              "loading" : "lazy",
+              "max_height" : 100,
+              "max_width" : 109,
+              "size_type" : "auto",
+              "src" :  get_asset_url('../../templates/images/Products.png'),
+              "width" : 109
+            },
+            "image_background_color" : {
+              "color" : "#5F285E",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Latex Agglutination"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "MycoDDR"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Immunodiffusion Reagents and Plates"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Complement Fixation Reagents"
+            } ],
+            "title" : "Other Products"
+          } ],
+          "enable_child_menu" : true,
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "menu" : "Products",
+          "select_child_menu_style" : "megaMenu"
+        }, {
+          "child_menu" : [ {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Papers & Publications"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Disease Specific Education"
+            }, {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Glossary"
+            } ],
+            "title" : "Title"
+          } ],
+          "enable_child_menu" : true,
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "menu" : "Fungal Education",
+          "select_child_menu_style" : "normalMenu"
+        }, {
+          "child_menu" : [ {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Child Menu 1"
+            } ],
+            "title" : "Title"
+          }, {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Child Menu 1"
+            } ],
+            "title" : "Title"
+          }, {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Child Menu 1"
+            } ],
+            "title" : "Title"
+          } ],
+          "enable_child_menu" : false,
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "menu" : "Resources",
+          "select_child_menu_style" : "megaMenu"
+        }, {
+          "child_menu" : [ {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Child Menu 1"
+            } ],
+            "title" : "Title"
+          }, {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Child Menu 1"
+            } ],
+            "title" : "Title"
+          }, {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Child Menu 1"
+            } ],
+            "title" : "Title"
+          } ],
+          "enable_child_menu" : false,
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "menu" : "About",
+          "select_child_menu_style" : "megaMenu"
+        }, {
+          "child_menu" : [ {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Child Menu 1"
+            } ],
+            "title" : "Title"
+          }, {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Child Menu 1"
+            } ],
+            "title" : "Title"
+          }, {
+            "image" : {
+              "alt" : "Lateral-Flow-Assays",
+              "height" : 88,
+              "loading" : "lazy",
+              "max_height" : 88,
+              "max_width" : 300,
+              "size_type" : "auto",
+              "src" : get_asset_url('../../templates/images/Lateral-Flow-Assays.png'),
+              "width" : 300
+            },
+            "image_background_color" : {
+              "color" : "#00539b",
+              "opacity" : 100
+            },
+            "menu_item" : [ {
+              "link" : {
+                "no_follow" : false,
+                "open_in_new_tab" : false,
+                "url" : {
+                  "href" : "",
+                  "type" : "EXTERNAL"
+                }
+              },
+              "menu" : "Child Menu 1"
+            } ],
+            "title" : "Title"
+          } ],
+          "enable_child_menu" : false,
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "menu" : "Careers",
+          "select_child_menu_style" : "megaMenu"
+        } ]
+						%}
+					</div>
+					<div class="BtnWrap">
+						{% module "button_mixin_button" path="@hubspot/button", label="Button Mixin",  button_text="Button Mixin", link={ "url": { "type": "EXTERNAL", "href": "", "content_id": null }, "open_in_new_tab": true, "no_follow": false } %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</headar>
+<div class="cmSearch">
+	<a class="close" href="#close"></a>
+	<div class="cmSearchInner">
+		{% module "search" path="../../modules/u4m-header-search", label="Header Search" %}
+	</div>
+</div>

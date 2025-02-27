@@ -1,25 +1,69 @@
 // Colors - For transparency use rgba($action1, 0.5) = 50% opaque
-$action1: #733BF7;
+$action1: #733bf7;
 $action2: #00a4bd;
-$black: #33475b;
-$white: #fff;
+$white: #ffffff;
+$black: #000000;
 $gray1: #edf0f2;
 $gray2: #cbd6e2;
-$gray3: #7C98B6;
-$gradient1: linear-gradient(-45deg, $black 0%, $action2 50%);
-$font1: 'Montserrat';
-$baseFontSize: 16rem;
-$baseLineHeight: 1.61803398875; // Golden ratio
+$gray3: #7c98b6;
+
+//  Updated Color
+$Blue: #00539b;
+$Red: #c41230;
+$BrightBlue: #0b74d5;
+$BrightRed: #e2183a;
+$Green: #026937;
+$Purple: #5f285e;
+$Orange: #ff7e2e;
+$Teal: #00aa9b;
+$Pink: #d93d89;
+$DarkNavy: #002f58;
+$LightGray: #f7f8f9;
+$Gray: #a7a9ac;
+$Charcoal: #767678;
+$FontGray: #626262;
+$Black: #000000;
+$White: #ffffff;
+
+//  Updated Gradient Color
+$gradient1: linear-gradient(110.45deg, $Blue 13.65%, $Red 86.49%), $White;
+$gradient2: linear-gradient(297.46deg, $DarkNavy 0%, $Blue 75%, $BrightBlue 100%), $White;
+$gradient3: linear-gradient(270deg, $Black 29.96%, rgba($Black, 0.8075) 61.48%, rgba($Black, 0.85) 100%);
+$gradient4: linear-gradient(131.63deg, $Blue 23.49%, $Red 109.76%), $White;
+$gradient5: linear-gradient(270deg, rgba($Black, 0) 29.96%, rgba($Black, 0.8075) 61.48%, rgba($Black, 0.85) 100%);
+
+//  Base Font
+$font1: "Verlag";
+$baseFontSize: 22rem;
+$baseLineHeight: 1.6; // Golden ratio
+
 // Border Radius
 $border1: 4rem;
 $border2: 5rem;
 $border3: 10rem;
+$BorderRadius25: 25rem;
+$BorderRadius15: 15rem;
+$BorderRadius10: 10rem;
+$BorderRadius5: 5rem;
+
 // Shadow
-$shadow1: 0rem 1rem 12rem 0 rgba($black, 0.1);
-$shadow2: 0 5rem 25rem 0 rgba($black, 0.2);
-$shadow3: 0 10rem 50rem 0 rgba($black, 0.3);
-$textShadow1: 0 0 4rem rgba($black, 0.3);
+$textShadow1: 0 0 4rem rgba($Black, 0.3);
+$shadow1: 0px 36px 36px -24px rgba($Black, 0.3);
+$shadow2: 0px 24px 24px -12px rgba($Black, 0.1);
+$shadow3: 0px 16px 16px -8px rgba($Black, 0.05);
+
+$shadow4: 0px 36px 36px -12px rgba($Black, 0.1);
+
 // Animation
-$animation1: .1s ease-in;
-$animation2: .25s ease-in;
+$animation1: 0.1s ease-in;
+$animation2: 0.25s ease-in;
 $animation3: 1s ease-in;
+
+// Container
+$outercontainerSize: 1340rem;
+$outercontainerSpacingLR: 50rem;
+$outercontainerRadius: 25rem;
+$containerSize: 1340rem;
+$containerInnerSpacing: 50rem;
+
+$black80: rgba($Black, 0.8);

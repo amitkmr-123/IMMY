@@ -1,0 +1,248 @@
+.footer {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative;
+    z-index: 99;
+    background-color: $DarkNavy;
+
+    &.lpFooter {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        .bottomSection {
+            border: none;
+            padding-top: 0;
+        }
+    }
+
+    @include tabletMid {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .logoWrap {
+        a {
+            display: block;
+            max-width: 180px;
+        }
+    }
+
+    .navSection {
+        margin-bottom: 60px;
+
+        @include tabletMid {
+            margin-bottom: 40px;
+        }
+    }
+
+    .socialSection {
+        margin-bottom: 40px;
+    }
+
+    .bottomSection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid $White;
+        padding-top: 40px;
+        gap: 30px;
+
+        @include tabletvert {
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+
+    .privacySection {
+        p {
+            margin: 0;
+            font-size: 12px;
+            color: $White;
+
+            @include tabletvert {
+                text-align: center;
+            }
+
+            a {
+                color: inherit;
+                display: inline-block;
+                margin-left: 16px;
+            }
+        }
+    }
+
+    .navWrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        column-gap: 4%;
+
+        @include tabletMid {
+            row-gap: 40px;
+        }
+
+        .hs-menu-wrapper {
+            >ul {
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: space-between;
+
+                @include tabletvert {
+                    text-align: center
+                }
+
+                li {
+                    margin: 0;
+
+                }
+
+                >li {
+                    >a {
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                }
+
+                ul {
+                    margin-top: 12px;
+                    row-gap: 12px;
+
+                    &.hs-menu-children-wrapper {
+                        position: static !important;
+                    }
+
+                    li {
+                        a {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            &.hs-menu-flow-horizontal {
+                >ul {
+                    li {
+                        &.hs-menu-depth-1 {
+                            float: unset;
+                        }
+
+                        a {
+                            padding: 0;
+                            color: $White;
+                            cursor: pointer;
+                            overflow: unset;
+                            text-overflow: unset;
+                            white-space: normal;
+                            max-width: unset;
+                        }
+
+                        &.hs-item-has-children {
+                            ul {
+                                &.hs-menu-children-wrapper {
+                                    li {
+                                        a {
+                                            overflow: auto;
+                                            text-overflow: unset;
+                                            white-space: normal;
+                                            width: auto;
+                                            max-width: unset;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &::before {
+                        display: none;
+                    }
+
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .productMenu {
+
+        width: 46%;
+
+        @include tabletMid {
+            width: 100%;
+        }
+
+        .hs-menu-wrapper {
+            >ul {
+                >li {
+                    width: 100%;
+
+                    >ul {
+                        flex-direction: row;
+                        justify-content: space-between;
+                        column-gap: 20px;
+
+                        @include tabletvert {
+                            flex-direction: column;
+                        }
+
+                        >li {
+                            @include tabletMid {
+                                width: 25%;
+                            }
+
+                            @include tabletvert {
+                                width: 100%;
+                            }
+
+                            >a {
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+
+                ul {
+                    display: flex;
+
+                    ul {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .mainMenu {
+        width: 46%;
+
+        @include tabletMid {
+            width: 100%;
+        }
+
+        .hs-menu-wrapper {
+            >ul {
+                >li {
+                    @include tabletMid {
+                        width: 25%;
+                    }
+
+                    @include tabletvert {
+                        width: 100%;
+                    }
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

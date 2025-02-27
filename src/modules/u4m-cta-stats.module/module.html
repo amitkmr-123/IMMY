@@ -1,0 +1,74 @@
+{% set moduleName = 'u4m-cta-stats' %}
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="leftCnt" > 
+	<div class="inner {{ module.module_settings.content_group_alignment }}_align {% if module.module_settings.background_settings.dark_mode %}lightCnt{% endif %} {{ module.module_settings.background_settings.inner_container_spacing_group.border_radius_type }} {% if module.module_settings.background_settings.background_type == "color"%} {{ module.module_settings.background_settings.select_color }}{% endif %}{% if module.module_settings.background_settings.background_type == "gradient"%} {{ module.module_settings.background_settings.select_gradient }}{% endif %}" style="  {% if module.module_settings.background_settings.select_color == "custom"%} background-color:{{ module.module_settings.background_settings.custom_color.rgba }};	{% endif %} padding:{{ module.module_settings.background_settings.inner_container_spacing_group.top_padding }}px {{ module.module_settings.background_settings.inner_container_spacing_group.right_padding }}px {{ module.module_settings.background_settings.inner_container_spacing_group.bottom_padding }}px {{ module.module_settings.background_settings.inner_container_spacing_group.left_padding }}px;">
+		{% if module.module_settings.background_settings.background_type == "gradient"%}
+		{% if module.module_settings.background_settings.overlay_image.src %}
+		<div class="bg_overlay overlay_img " style="background-image:url({{ module.module_settings.background_settings.overlay_image.src }});"></div>
+		{% endif %}
+				{% endif %}
+		{{ macros.introGroup(module.intro_content, module.module_settings) }} 
+	</div>
+		</div>
+	<div class="right_cnt">
+		<div class="cmstats_group">
+			<div class="flex_row stats_row {{ module.module_settings.statc_count_in_row }}_row">
+				{% for item in module.stats_group %}
+				<div class="stats_group  intro_content  {{ module.module_settings.statc_count_in_row }} col">
+					<div class="inner__intro ">
+						{% if item.include_eyebrow_text %}
+						<div class="eyebrow_text">
+							{{ item.eyebrow_text }}
+						</div>
+						{% endif %}
+						{% if item.include_heading %}
+						<{{ item.heading_size }} class="intro_title ">{{ item.prefix }}<span class="counterCnt">{{ item.number }}</span>{{ item.suffix }}</{{ item.heading_size }}>
+							{% endif %}
+							{% if item.include_content %}
+							<div class="intro_desc {{ item.content_style }} ">
+						{{ item.content }}
+					</div>
+					{% endif %}
+				</div>
+			</div>
+			{% endfor %}
+
+		</div>
+	</div>
+
+</div>
+</div>
+</section>
+
+
+
+
+
+
+{% require_js %}
+<script>
+	$(document).ready(function(){
+		$('.u4m-cta-stats.{{name}} .counterCnt').counterUp({
+			delay: 10,
+			time: 1000
+			});
+	})
+</script>
+{% end_require_js %}
+
+
+
+{% if module.module_settings.background_settings.inner_container_spacing_group.change_spacing_in_mobile %}
+<style>
+	@media(max-width:767px){
+		.u4m-cta-stats.{{name}} .leftCnt .inner{
+			padding:{{ module.module_settings.background_settings.inner_container_spacing_group.mobile_spacing_group.top_padding }}px
+{{ module.module_settings.background_settings.inner_container_spacing_group.mobile_spacing_group.right_padding }}px
+{{ module.module_settings.background_settings.inner_container_spacing_group.mobile_spacing_group.bottom_padding }}px
+{{ module.module_settings.background_settings.inner_container_spacing_group.mobile_spacing_group.left_padding }}px !important;
+		}
+	}
+</style>
+{% endif %}
+

@@ -1,0 +1,28 @@
+<!--
+templateType: global_partial
+label: Footer no navigation 
+-->
+
+<footer class="footer lpFooter">
+	<div class="page-center">
+		<div class="ftrInnerWrap">
+			<div class="bottomSection">
+				<div class="logoWrap">
+					{% set logo_file =  get_asset_url('../../templates/images/IMMY Logo-03.png') %}
+					{% module "footer_logo" path="@hubspot/logo", label="Footer Logo", link='/', img={src="{{logo_file}}", width=360, alt= IMMY, override_inherited_src= true} %}
+				</div>
+				<div class="privacySection">
+					{% module_block module "copyright_and_privacy" path="@hubspot/rich_text" label="Privacy And Copyright Content" %}
+					{% module_attribute "html" %}
+					<p>
+						<span>© {{year}} IMMY</span>
+						<a href="#">Legal</a>
+						<a href="#">Privacy Policy</a>
+					</p>
+					{% end_module_attribute %}
+					{% end_module_block %}
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

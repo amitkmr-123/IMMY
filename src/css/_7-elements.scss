@@ -20,9 +20,9 @@ body {
   font-family: $font1;
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
-  color: $black;
-  font-weight: normal;
-  margin-top: 78rem;
+  color: $FontGray;
+  font-weight: 325;
+  margin-top: 0;
 
   &.hide-header {
     margin-top: 0;
@@ -140,11 +140,11 @@ div.hs_cos_wrapper_widget section.bottom-margin-medium {
   margin-bottom: 100rem;
 
   @include tabletvert {
-    margin-bottom: 75rem
+    margin-bottom: 75rem;
   }
 
   @include phone {
-    margin-bottom: 50rem
+    margin-bottom: 50rem;
   }
 }
 
@@ -220,11 +220,11 @@ div.hs_cos_wrapper_widget section.bottom-padding-medium {
   padding-bottom: 100rem;
 
   @include tabletvert {
-    padding-bottom: 75rem
+    padding-bottom: 75rem;
   }
 
   @include phone {
-    padding-bottom: 50rem
+    padding-bottom: 50rem;
   }
 }
 
@@ -267,7 +267,7 @@ div.video-popup {
 div#hs-eu-cookie-confirmation.hs-cookie-notification-position-bottom.can-use-gradients {
   box-shadow: 2rem -1rem 5rem 0rem rgba(0, 0, 0, 0.05);
   border: 0;
-  background-color: rgba($white, .9);
+  background-color: rgba($white, 0.9);
 
   div#hs-eu-cookie-confirmation-inner {
     background-color: rgba($white, 0);
@@ -297,12 +297,8 @@ div#hs-eu-cookie-confirmation.hs-cookie-notification-position-bottom.can-use-gra
 }
 
 // default p size
-p {
-  @include b3;
-}
-
 a {
-  @include link
+  @include link;
 }
 
 blockquote,
@@ -319,7 +315,6 @@ strong {
 }
 
 ul {
-  @include b3;
   list-style: disc;
   padding-left: 40rem;
   margin-top: 0;
@@ -327,7 +322,6 @@ ul {
 }
 
 ol {
-  @include b3;
   list-style: decimal;
   padding-left: 40rem;
   margin-top: 0;
@@ -336,7 +330,6 @@ ol {
 
 li {
   margin-bottom: 5rem;
-  letter-spacing: .5rem;
 }
 
 ul ul,
@@ -357,7 +350,7 @@ button {
 
 /* Forms */
 form {
-  margin-bottom: 30rem
+  margin-bottom: 30rem;
 }
 
 ::-webkit-input-placeholder {
@@ -424,7 +417,7 @@ pre>code {
   display: block;
   padding: 1rem 15rem;
   white-space: pre;
-  margin-bottom: 30rem
+  margin-bottom: 30rem;
 }
 
 pre {
@@ -456,7 +449,7 @@ td:last-child {
 }
 
 table {
-  margin-bottom: 30rem
+  margin-bottom: 30rem;
 }
 
 table th {
@@ -468,11 +461,394 @@ table td {
   font-size: 14rem;
 }
 
-a[href='javascript:;'] {
+a[href="javascript:;"] {
   cursor: default;
 }
 
 //
-section[class*='u4m-'] {
+section[class*="u4m-"] {
   scroll-margin-top: 150px;
+}
+
+.bodystyle1 {
+  @include b1;
+}
+
+.bodystyle2 {
+  @include b2;
+}
+
+.bodystyle3 {
+  @include b3;
+}
+
+.bodystyle4 {
+  @include b4;
+}
+
+.bodystyle5 {
+  @include b5;
+}
+
+.gradient1 {
+  background: $gradient1;
+}
+
+.gradient2 {
+  background: $gradient2;
+}
+
+.gradient3 {
+  background: $gradient3;
+}
+
+.gradient4 {
+  background: $gradient4;
+}
+
+.gradient5 {
+  background: $gradient5;
+}
+
+:root {
+  --gradient1: #{$gradient1};
+  --gradient2: #{$gradient2};
+  --gradient3: #{$gradient3};
+  --gradient4: #{$gradient4};
+  --gradient5: #{$gradient5};
+}
+
+//
+.bg_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+
+  &.overlay_img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    mix-blend-mode: overlay;
+  }
+}
+
+.bg_image {
+  background-size: cover;
+  background-position: center;
+}
+
+.dnd_padd {
+  position: relative;
+}
+
+.bg_overlay~*:not(.bg_overlay) {
+  position: relative;
+  z-index: 2;
+}
+
+.Blue_bg {
+  background-color: $Blue;
+}
+
+.Red_bg {
+  background-color: $Red;
+}
+
+.BrightBlue_bg {
+  background-color: $BrightBlue;
+}
+
+.BrightRed_bg {
+  background-color: $BrightRed;
+}
+
+.Green_bg {
+  background-color: $Green;
+}
+
+.Purple_bg {
+  background-color: $Purple;
+}
+
+.Orange_bg {
+  background-color: $Orange;
+}
+
+.Teal_bg {
+  background-color: $Teal;
+}
+
+.Pink_bg {
+  background-color: $Pink;
+}
+
+.DarkNavy_bg {
+  background-color: $DarkNavy;
+}
+
+.LightGray_bg {
+  background-color: $LightGray;
+}
+
+.Gray_bg {
+  background-color: $Gray;
+}
+
+.Charcoal_bg {
+  background-color: $Charcoal;
+}
+
+.FontGray_bg {
+  background-color: $FontGray;
+}
+
+.Black_bg {
+  background-color: $Black;
+}
+
+.White_bg {
+  background-color: $White;
+}
+
+.Blue_Clr {
+  color: $Blue;
+}
+
+.Red_Clr {
+  color: $Red;
+}
+
+.BrightBlue_Clr {
+  color: $BrightBlue;
+}
+
+.BrightRed_Clr {
+  color: $BrightRed;
+}
+
+.Green_Clr {
+  color: $Green;
+}
+
+.Purple_Clr {
+  color: $Purple;
+}
+
+.Orange_Clr {
+  color: $Orange;
+}
+
+.Teal_Clr {
+  color: $Teal;
+}
+
+.Pink_Clr {
+  color: $Pink;
+}
+
+.DarkNavy_Clr {
+  color: $DarkNavy;
+}
+
+.LightGray_Clr {
+  color: $LightGray;
+}
+
+.Gray_Clr {
+  color: $Gray;
+}
+
+.Charcoal_Clr {
+  color: $Charcoal;
+}
+
+.FontGray_Clr {
+  color: $FontGray;
+}
+
+.Black_Clr {
+  color: $Black;
+}
+
+.White_Clr {
+  color: $White;
+}
+
+.intro_content {
+  max-width: 715rem;
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 50rem;
+  text-align: center;
+
+  .eyebrow_text {
+    @include eyebrow;
+  }
+
+  .intro_title {
+    margin-top: 0;
+    margin-bottom: 15rem;
+  }
+
+  .intro_btn_wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin-top: 30rem;
+  }
+
+  .intro_desc {
+    margin-bottom: 0px;
+
+    p:last-child {
+      margin: 0;
+    }
+  }
+
+  &.right {
+    margin-right: 0;
+    text-align: right;
+
+    .intro_title span {
+      left: auto;
+      right: 0;
+      transform: none;
+    }
+
+    .intro_btn_wrap {
+      justify-content: right;
+    }
+  }
+
+  &.left {
+    text-align: left;
+    margin-left: 0;
+
+    .intro_title span {
+      left: 0;
+      right: auto;
+      transform: none;
+    }
+
+    .intro_btn_wrap {
+      justify-content: left;
+    }
+  }
+}
+
+.reverse-text {
+  color: $white;
+
+  .themeStyle,
+  .bodystyle2,
+  .bodystyle1,
+  .bodystyle3,
+  .bodystyle4,
+  .bodystyle5,
+  .eyebrow_text,
+  .intro_desc,
+  .intro_title {
+    color: $white;
+  }
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    color: $white;
+  }
+
+  .arrow-link:not(:hover) {
+    color: $white;
+  }
+}
+
+.hs-button {
+  @include button;
+}
+
+.hs-arrow-btn {
+  @include buttonSecond;
+}
+
+.hs-sec-btn {
+  @include buttonThird;
+}
+
+.hs-button_small {
+  @include buttonSm;
+}
+
+.hs-arrow-btn_small {
+  @include buttonTSecondSm;
+}
+
+.reverse-text {
+  .hs-button {
+    background-color: $white;
+    color: $Black;
+
+    &:hover,
+    &:focus {
+      background: rgba($White, 0.8);
+      color: $Black;
+    }
+  }
+
+  .hs-arrow-btn {
+    background-color: transparent;
+    color: $White;
+
+    .icon {
+      svg {
+        fill: $White;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: rgba($White, 0.8);
+
+      .icon {
+        svg {
+          fill: rgba($White, 0.8);
+        }
+      }
+    }
+  }
+
+  .hs-sec-btn {
+    border-color: $White;
+    color: $White;
+
+    &:hover,
+    &:focus {
+      background: $White;
+      color: $Black;
+      border-color: $White;
+    }
+  }
+}
+
+.BorderRadius25 {
+  border-radius: $BorderRadius25;
+}
+
+.BorderRadius15 {
+  border-radius: $BorderRadius15;
+}
+
+.BorderRadius10 {
+  border-radius: $BorderRadius10;
+}
+
+.BorderRadius5 {
+  border-radius: $BorderRadius5;
+}
+
+.noRadius {
+  overflow: unset;
 }

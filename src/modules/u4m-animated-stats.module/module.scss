@@ -1,77 +1,42 @@
 @import "../../css/_module-imports";
-section.u4m-animated-stats {
-  margin-top: 100rem;
-  margin-bottom: 100rem;
-  &.reverse-text {
-    color: $white;
+
+.u4m-animated-stats .innerContainer .intro_content {
+  margin-bottom: 60rem;
+}
+
+.u4m-animated-stats .innerContainer .intro_content.stats_group {
+  padding: 0 30px;
+  margin-bottom: 0rem;
+}
+
+.u4m-animated-stats .innerContainer .intro_content.stats_group .inner__intro .eyebrow_text {
+  margin-bottom: 10rem;
+}
+
+.u4m-animated-stats .innerContainer .intro_content.stats_group .inner__intro .intro_title {
+  margin-bottom: 10rem;
+}
+
+.u4m-animated-stats .innerContainer .intro_content.stats_group .inner__intro .intro_desc p:last-child {
+  margin: 0;
+}
+
+.u4m-animated-stats .innerContainer .intro_content.stats_group .inner__intro .intro_desc.bodystyle2 {
+  line-height: 1.5;
+}
+
+.u4m-animated-stats .innerContainer .cmstats_group .flex_row {
+  row-gap: 40px;
+  margin: 0 -30px;
+}
+
+@include tabletvert {
+  .u4m-animated-stats .innerContainer .intro_content.stats_group {
+    padding: 0;
   }
-  .heading {
-    @include center;
-    @include h2;
-    text-align: center;
-  }
-  .intro {
-    @include center;
-  }
-  div.statistics {
-    @include center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    &.items-four {
-      div.statistics__item {
-        flex-basis: calc(25% - 40rem);
-        @include tablet {
-          flex-basis: calc(50% - 40rem);
-        }
-        @include phone {
-          flex: 0 0 100%;
-        }
-      }
-    }
-    div.statistics__item {
-      text-align: center;
-      margin: 20rem;
-      flex-basis: calc(33.333% - 40rem);
-      flex-grow: 0;
-      flex-shrink: 0;
-      @include tablet {
-        flex-basis: calc(50% - 40rem);
-      }
-      @include phone {
-        flex: 0 0 100%;
-      }
-      .image {
-        min-height: 70rem;
-        img {
-          max-width: 80rem;
-          text-align: center;
-          margin: 0 auto;
-          display: block;
-        }
-      }
-      .count,
-      .number {
-        font-size: 50rem;
-        font-weight: bold;
-      }
-      .currency {
-        padding-right: 5rem;
-        //vertical-align: text-bottom;
-        font-size: 50rem;
-        font-weight: bold;
-      }
-      .unit {
-        padding-left: 5rem;
-        //vertical-align: text-bottom;
-        font-size: 50rem;
-        font-weight: bold;
-      }
-      .caption {
-        display: block;
-        font-weight: bold;
-      }
-    }
+
+  .u4m-animated-stats .innerContainer .cmstats_group .flex_row {
+    margin-left: 0;
+    margin-right: 0;
   }
 }

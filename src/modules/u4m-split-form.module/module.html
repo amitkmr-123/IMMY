@@ -1,0 +1,119 @@
+{% set moduleName = 'u4m-split-form' %}
+{% include "../partials/u4-module-includes.html" %}
+
+
+
+<div class="splitFormInr">
+	<div class="splitFlex">
+		<div class="splitcnt">
+			<div class="pd">
+				<div class="Inrcnt">
+					{% if module.intro_content.include_logo %} 
+					<div class="cntLogo">
+						{% set href = module.intro_content.logo_link.url.href %}
+						{% if module.intro_content.logo_link.url.type is equalto "EMAIL_ADDRESS" %}
+						{% set href = "mailto:" + href %}
+						{% endif %}
+						<a
+							 {% if module.intro_content.logo_link.url.type is equalto "CALL_TO_ACTION"  %}
+							 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+							 {% else %}
+							 href="{{ href|escape_url }}"
+							 {% endif %}
+							 {% if module.intro_content.logo_link.open_in_new_tab %}
+							 target="_blank"
+							 {% endif %}
+							 {% if module.intro_content.logo_link.rel %}
+							 rel="{{ module.intro_content.logo_link.rel|escape_attr }}"
+							 {% endif %}
+							 >
+
+							{% if module.intro_content.select_logo.src %}
+							<img src="{{ module.intro_content.select_logo.src }}" alt="{{ module.intro_content.select_logo.alt }}">
+							{% endif %} 
+						</a>
+					</div>
+					{% endif %}
+					<div class="cntcnt">
+						{{ macros.introGroup(module.intro_content) }}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="splitForm">
+			{% if module.form_section.background_settings.background_type %}
+			{% if module.form_section.background_settings.background_type == "color"
+  %}
+			<div class="bg_overlay bg_color {{ module.form_section.background_settings.select_color }}" 
+					 {% if  module.form_section.background_settings.select_color == 'custom'%}style="background-color:{{ module.form_section.background_settings.custom_color.rgba }};"{% endif %}></div>
+			{% endif %} 
+
+			{% if module.form_section.background_settings.background_type== "gradient" %}
+			{% if module.form_section.background_settings.select_gradient=="gradient5"%}
+			<div class="bg_overlay" style="background: var(--{{  module.form_section.background_settings.select_gradient }}), url({{ module.form_section.background_settings.overlay_image.src }}); background-size:cover; background-repeat:no-repeat"></div>
+			{% else %}
+			<div class="bg_overlay {{ module.form_section.background_settings.select_gradient }}"></div>
+			{% if module.form_section.background_settings.overlay_image.src %}
+			<div class="bg_overlay overlay_img " style="background-image:url({{ module.form_section.background_settings.overlay_image.src }});"></div>
+			{% endif %}
+			{% endif %}
+			{% endif %} 
+
+			{% if module.form_section.background_settings.background_type
+  == "image" %}
+			<div class="bg_overlay bg_image {% if module.form_section.background_settings.include_overlay_gradient %}{{ module.form_section.background_settings.select_gradient }}{% endif %}"></div>
+			{% if module.form_section.background_settings.include_overlay %}
+			<div class="bg_overlay  bg_ovarlayclr {{ module.form_section.background_settings.image_overlay_select_color }}" style="opacity:{{ module.form_section.background_settings.opacity }};"></div>
+			{% endif %}
+			{% endif %}
+
+			{% endif %}
+
+			<div class="pd">
+				<div class="formInr">
+					{% if module.form_section.top_content %}
+					<div class="formcnt">{{ module.form_section.top_content }}</div>
+					{% endif %}
+					{% if module.form_section.include_form %} 
+					<div class="formstyle"> 
+						{% form
+					form_to_use="{{ module.form_section.select_form.form_id }}"
+					response_response_type="{{ module.form_section.select_form.response_type }}"
+					response_message="{{ module.form_section.select_form.message }}"
+					response_redirect_id="{{ module.form_section.select_form.redirect_id }}"
+					response_redirect_url="{{module.form_section.select_form.redirect_url}}"
+					gotowebinar_webinar_key="{{ module.form_section.select_form.gotowebinar_webinar_key }}"
+				%}
+					</div> 
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</section>
+
+
+
+
+<style>
+
+	{% if module.form_section.background_settings.background_type == "image"  %}
+	.{{ moduleName}}.{{ name }} .splitForm .bg_image{
+		background-image: url({{ module.form_section.background_settings.background_image.src }})
+	}
+
+	{% endif %}
+	.splitForm {
+		position:relative;
+	}
+</style>
+
+
+
+
+
+
+
+

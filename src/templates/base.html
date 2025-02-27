@@ -20,16 +20,18 @@ isAvailableForNewContent: false
 </head>
 <body class="{{ builtin_body_classes }} {% if request.full_url is string_containing "/author/" %} author-listing {% endif %}">
     {% block header %}
-        {% module 'u4m-header' path='../modules/u4m-header', label='U4M Header' %}
-    {% endblock header %}
+			{% global_partial path='././partials/u4m-header.html' %}
+			{% endblock header %}
 
     {% block body %}
     {% endblock body %}
     
     {% block footer %}
-        {% module 'u4m-footer' path='../modules/u4m-footer', label='U4M Footer' %}
-    {% endblock footer %}
-{{ require_js(get_asset_url('../js/main.js')) }}
+			{% global_partial path='././partials/u4m-footer.html' %}
+			{% endblock footer %}
+{{ require_js(get_asset_url('../js/jquery.js')) }}
+    {{ require_js(get_asset_url('../js/aos.js')) }}
+    {{ require_js(get_asset_url('../js/main.js')) }}
 {{ standard_footer_includes }}
 </body>
 </html>

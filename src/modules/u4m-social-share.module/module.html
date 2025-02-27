@@ -1,0 +1,18 @@
+<ul class="socialNav">
+	{% for item in module.items %}
+	<li class="item social_item_{{loop.index}}">
+		<a class="iconWrap" href="{{ item.link }}" taget="_blank">
+    {% if item.select_icon_type == "img" %}
+			<img src="{{ item.image.src }}" alt="{{ item.image.alt }}" {{ loadingAttr }}>
+			{% elif item.select_icon_type == "icon" %}
+			{% icon
+					name="{{ item.icon.name }}"
+					style="{{ item.icon.type }}"
+					unicode="{{ item.icon.unicode }}"
+					icon_set="{{ item.icon.icon_set }}"
+				%}
+			{% endif %}
+		</a>
+	</li>
+	{% endfor %}
+</ul>

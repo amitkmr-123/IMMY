@@ -1,0 +1,18 @@
+<!--
+templateType: global_partial
+label: Header no navigation 
+-->
+
+<headar class="header lpHeader">
+
+	<div class="mainHeader">
+		<div class="page-center">
+			<div class="bottomInnerWrap">
+				<div class="logoWrap">
+					{% set logo_file =  get_asset_url('../../templates/images/IMMY-header-Logo.png') %}
+					{% module "header_logo" path="@hubspot/logo", label="Header Logo", link='/', img={src="{{logo_file}}", width=360, alt= IMMY, override_inherited_src= true} %}
+				</div>
+			</div>
+		</div>
+	</div>
+</headar>

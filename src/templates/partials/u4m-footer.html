@@ -1,0 +1,84 @@
+<!--
+ templateType: global_partial
+ label: Footer
+ -->
+
+<footer class="footer">
+	<div class="page-center">
+		<div class="ftrInnerWrap">
+			<div class="navSection">
+				<div class="navWrap">
+					<div class="productMenu">
+						{% menu "product_menu_1" id=186424956181, flyouts=false, label='Product Menu' %}
+					</div>
+					<div class="mainMenu">
+						{% menu "main_menu_1" id=186428789080, flyouts=false, label='Main Menu' %}
+					</div>
+				</div>
+			</div>
+			<div class="socialSection">
+				{% module "social_share" path="../../modules/u4m-social-share", label="Social Share",
+				items=[ {
+          "icon" : {
+            "name" : "X Twitter",
+            "type" : "REGULAR",
+            "unicode" : "e61b"
+          },
+          "image" : {
+            "loading" : "lazy",
+            "size_type" : "auto",
+            "src" : ""
+          },
+          "link" : "https://x.com",
+          "select_icon_type" : "icon"
+        }, {
+          "icon" : {
+            "name" : "LinkedIn In",
+            "type" : "REGULAR",
+            "unicode" : "f0e1"
+          },
+          "image" : {
+            "loading" : "lazy",
+            "size_type" : "auto",
+            "src" : ""
+          },
+          "link" : "https://www.linkedin.com",
+          "select_icon_type" : "icon"
+        }, {
+          "icon" : {
+            "name" : "Instagram",
+            "type" : "REGULAR",
+            "unicode" : "f16d"
+          },
+          "image" : {
+            "loading" : "lazy",
+            "size_type" : "auto",
+            "src" : ""
+          },
+          "link" : "https://www.instagram.com",
+          "select_icon_type" : "icon"
+        } ]
+				%}
+			</div>
+			<div class="bottomSection">
+				<div class="logoWrap">
+					{% set logo_file =  get_asset_url('../../templates/images/IMMY Logo-03.png') %}
+					{% module "footer_logo" path="@hubspot/logo", label="Footer Logo", link='/', img={src="{{logo_file}}", width=360, alt= IMMY, override_inherited_src= true} %}
+				</div>
+				<div class="privacySection">
+					{% module_block module "copyright_and_privacy" path="@hubspot/rich_text" label="Privacy And Copyright Content" %}
+					{% module_attribute "html" %}
+					<p>
+						<span>© {{year}} IMMY</span>
+						<a href="#">Legal</a>
+						<a href="#">Privacy Policy</a>
+					</p>
+					{% end_module_attribute %}
+					{% end_module_block %}
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
