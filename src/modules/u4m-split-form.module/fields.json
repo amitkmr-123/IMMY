@@ -13,7 +13,7 @@
     "display" : "checkbox",
     "type" : "boolean",
     "display_width" : null,
-    "default" : true
+    "default" : false
   }, {
     "id" : "eca09d5c-8dd6-03f0-7ded-a12f5cc1b375",
     "name" : "select_logo",
@@ -424,7 +424,7 @@
   "type" : "group",
   "display_width" : null,
   "default" : {
-    "include_logo" : true,
+    "include_logo" : false,
     "select_logo" : {
       "size_type" : "auto",
       "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/IMMY%20Logo.png",

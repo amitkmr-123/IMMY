@@ -7,6 +7,36 @@
   float: none;
   overflow: auto;
 
+  input[type=color],
+  input[type=date],
+  input[type=datetime-local],
+  input[type=datetime],
+  input[type=email],
+  input[type=month],
+  input[type=number],
+  input[type=password],
+  input[type=search],
+  input[type=tel],
+  input[type=text],
+  input[type=time],
+  input[type=url],
+  input[type=week],
+  select,
+  textarea {
+    border: 1rem solid transparent;
+    border-radius: $BorderRadius5;
+    margin-top: 2rem;
+    margin-bottom: 20rem;
+    font-size: 16rem; // Note anything below 16rem will trigger the zoom feature on iOS
+    background-color: $white;
+    padding: 16rem;
+    width: 100%;
+    appearance: none;
+    outline: none;
+    min-height: 55px;
+  }
+
+
   @include tablet {
     padding: 20rem;
   }
@@ -74,21 +104,22 @@
 
     .input {
 
-      input[type="text"],
-      input[type="number"],
-      input[type="tel"],
-      input[type="email"] {
-        border: 1rem solid transparent;
-        border-radius: $BorderRadius5;
-        margin-top: 2rem;
-        margin-bottom: 20rem;
-        font-size: 16rem; // Note anything below 16rem will trigger the zoom feature on iOS
-        background-color: $white;
-        padding: 16rem;
-        width: 100%;
-        appearance: none;
-        outline: none;
-        min-height: 55px;
+      input[type=color],
+      input[type=date],
+      input[type=datetime-local],
+      input[type=datetime],
+      input[type=email],
+      input[type=month],
+      input[type=number],
+      input[type=password],
+      input[type=search],
+      input[type=tel],
+      input[type=text],
+      input[type=time],
+      input[type=url],
+      input[type=week],
+      select,
+      textarea {
 
         &.error,
         &.invalid {
