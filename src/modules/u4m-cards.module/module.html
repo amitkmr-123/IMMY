@@ -8,54 +8,67 @@
 		{% for item in module.cards_items_group %}
 		<div class="items {{ module.module_settings.card_column_count }}">
 			<div class="Inneritems {% if module.module_settings.card_type == "bg_card"%} Bgcard {{ module.module_settings.card_border_radius_type }} {% endif %}">
-										<div class="top_item">
-				{% if module.module_settings.card_type == "normal_card"%} 
+				<div class="top_item">
+					{% if module.module_settings.card_type == "normal_card"%} 
 
-				<div class="mrg {% if module.module_settings.card_type == "normal_card" %}borderRadius {{ module.module_settings.border_radius_type }}{% endif %} img"> 
-					{% if item.image_field.src %}
-					{% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
-					{% if item.image_field.size_type == 'auto' %}
-					{% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-					{% elif item.image_field.size_type == 'auto_custom_max' %}
-					{% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-					{% endif %}
-					{% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
-					<img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
-					{% endif %}
-					{% if module.module_settings.card_type == "normal_card" %}
-					<div class="arrowIcon">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M2.58462 24L0 21.4154L17.7231 3.69231H1.84615V0H24V22.1538H20.3077V6.27692L2.58462 24Z"/>
-						</svg>
+					<div class="mrg {% if module.module_settings.card_type == "normal_card" %}borderRadius {{ module.module_settings.border_radius_type }}{% endif %} img"> 
+						{% if item.image_field.src %}
+						{% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
+						{% if item.image_field.size_type == 'auto' %}
+						{% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+						{% elif item.image_field.size_type == 'auto_custom_max' %}
+						{% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+						{% endif %}
+						{% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
+						<img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+						{% endif %}
+						{% if module.module_settings.card_type == "normal_card" %}
+						<div class="arrowIcon">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2.58462 24L0 21.4154L17.7231 3.69231H1.84615V0H24V22.1538H20.3077V6.27692L2.58462 24Z"/>
+							</svg>
+						</div>
+						{% endif %}
+					</div>
+					{% elif module.module_settings.card_type == "bg_card"%} 
+						{% if item.icon_type %}
+					<div class="iconImg {% if module.module_settings.card_type == "bg_card"%} BorderRadius10 Bgcard {{ item.cards_icon_background_group.select_color }} {% endif %}"> 
+						{% if item.icon_type == "image_bg"%}
+						{% if item.img.src %}
+						{% set sizeAttrs = 'width="{{ item.img.width|escape_attr }}" height="{{ item.img.height|escape_attr }}"' %}
+						{% if item.img.size_type == 'auto' %}
+						{% set sizeAttrs = 'width="{{ item.img.width|escape_attr }}" height="{{ item.img.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+						{% elif item.img.size_type == 'auto_custom_max' %}
+						{% set sizeAttrs = 'width="{{ item.img.max_width|escape_attr }}" height="{{ item.img.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+						{% endif %}
+						{% set loadingAttr = item.img.loading != 'disabled' ? 'loading="{{ item.img.loading|escape_attr }}"' : '' %}
+						<img src="{{ item.img.src|escape_url }}" alt="{{ item.img.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+						{% endif %}
+						{% elif item.icon_type == "icon_bg"%}
+						<div class="normal 	{{ item.cards_icon_theme_group.select_color }}"> 
+							{% icon
+		name="{{ item.normal_icon.name }}"
+		style="{{ item.normal_icon.type }}"
+		unicode="{{ item.normal_icon.unicode }}"
+		icon_set="{{ item.normal_icon.icon_set }}"
+	%}
+						</div>
+						{% endif %}
 					</div>
 					{% endif %}
-				</div>
-				{% elif module.module_settings.card_type == "bg_card"%} 
-				<div class="iconImg {% if module.module_settings.card_type == "bg_card"%} BorderRadius10 Bgcard {{ item.cards_icon_background_group.select_color }} {% endif %}"> 
-					{% if item.icon.src %}
-					{% set sizeAttrs = 'width="{{ item.icon.width|escape_attr }}" height="{{ item.icon.height|escape_attr }}"' %}
-					{% if item.icon.size_type == 'auto' %}
-					{% set sizeAttrs = 'width="{{ item.icon.width|escape_attr }}" height="{{ item.icon.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-					{% elif item.icon.size_type == 'auto_custom_max' %}
-					{% set sizeAttrs = 'width="{{ item.icon.max_width|escape_attr }}" height="{{ item.icon.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+								{% endif %}
+					{% if item.include_eyebrow_text %}
+					<div class="eyebrow_text">
+						{{ item.eyebrow_text }}
+					</div>
 					{% endif %}
-					{% set loadingAttr = item.icon.loading != 'disabled' ? 'loading="{{ item.icon.loading|escape_attr }}"' : '' %}
-					<img src="{{ item.icon.src|escape_url }}" alt="{{ item.icon.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
-					{% endif %}
-				</div>
+					{% if item.include_heading %}
+					<{{ item.heading_size }} class="intro_title">{{ item.heading }}</{{ item.heading_size }}>
+						{% endif %}
+						{% if item.include_content %}
+						<div class="intro_desc 	{{ item.content_style }}"> {{ item.content }} </div>
 				{% endif %}
-				{% if item.include_eyebrow_text %}
-				<div class="eyebrow_text">
-					{{ item.eyebrow_text }}
-				</div>
-				{% endif %}
-				{% if item.include_heading %}
-				<{{ item.heading_size }} class="intro_title">{{ item.heading }}</{{ item.heading_size }}>
-					{% endif %}
-					{% if item.include_content %}
-					<div class="intro_desc 	{{ item.content_style }}"> {{ item.content }} </div>
-			{% endif %}
-				</div>
+			</div>
 			<div class="btm_btn">
 				{% if item.include_button %}
 				<div class="btn_item">

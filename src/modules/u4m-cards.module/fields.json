@@ -409,15 +409,37 @@
       "max_height" : 258
     }
   }, {
-    "id" : "9e660b47-f5b3-10d1-bd22-f98b848876ee",
-    "name" : "icon",
-    "label" : "Icon",
+    "id" : "08efe9f8-67ef-02f7-0727-c38f17b9afb9",
+    "name" : "icon_type",
+    "label" : "Icon Type",
     "required" : false,
     "locked" : false,
     "visibility" : {
       "controlling_field" : null,
       "controlling_field_path" : "module_settings.card_type",
       "controlling_value_regex" : "bg_card",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "image_bg", "Image" ], [ "icon_bg", "Normal Icon " ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "9e660b47-f5b3-10d1-bd22-f98b848876ee",
+    "name" : "img",
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "cards_items_group.icon_type",
+      "controlling_value_regex" : "image_bg",
       "property" : null,
       "operator" : "EQUAL",
       "access" : null
@@ -436,6 +458,73 @@
       "height" : 88
     }
   }, {
+    "id" : "d287da4f-f681-3afd-71a5-02614671e550",
+    "name" : "normal_icon",
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "cards_items_group.icon_type",
+      "controlling_value_regex" : "icon_bg",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "icon_set" : "fontawesome-5.14.0",
+    "type" : "icon",
+    "display_width" : null,
+    "default" : {
+      "name" : "500px",
+      "unicode" : "f26e",
+      "type" : "REGULAR"
+    }
+  }, {
+    "id" : "1e478636-8cac-3d3b-96ca-b64ae757db23",
+    "name" : "cards_icon_theme_group",
+    "label" : "Cards Icon Theme Group",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "cards_items_group.icon_type",
+      "controlling_value_regex" : "icon_bg",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "f9a2a919-ee6c-0b59-30d9-119e7e7a3339",
+      "name" : "select_color",
+      "label" : "Select Color",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background_settings.background_type",
+        "controlling_value_regex" : "color",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "Blue_Clr", "Blue" ], [ "Red_Clr", "Red" ], [ "BrightBlue_Clr", "BrightBlue" ], [ "BrightRed_Clr", "BrightRed" ], [ "Green_Clr", "Green" ], [ "Purple_Clr", "Purple" ], [ "Orange_Clr", "Orange" ], [ "Teal_Clr", "Teal" ], [ "Pink_Clr", "Pink" ], [ "DarkNavy_Clr", "DarkNavy" ], [ "LightGray_Clr", "LightGray" ], [ "Gray_Clr", "Gray" ], [ "Charcoal_Clr", "Charcoal" ], [ "FontGray_Clr", "FontGray" ], [ "Black_Clr", "Black" ], [ "White_Clr", "White" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "White_Clr"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "select_color" : "White_Clr"
+    }
+  }, {
     "id" : "c9a78e35-bf7c-ac06-139a-351c5849c9cb",
     "name" : "cards_icon_background_group",
     "label" : "Cards Icon Background Group",
@@ -443,10 +532,10 @@
     "locked" : false,
     "visibility" : {
       "controlling_field" : null,
-      "controlling_field_path" : "module_settings.card_type",
+      "controlling_field_path" : "cards_items_group.icon_type",
       "controlling_value_regex" : "bg_card",
       "property" : null,
-      "operator" : "EQUAL",
+      "operator" : "NOT_EMPTY",
       "access" : null
     },
     "children" : [ {
@@ -794,13 +883,22 @@
       "max_width" : 386,
       "max_height" : 258
     },
-    "icon" : {
+    "icon_type" : "",
+    "img" : {
       "size_type" : "exact",
       "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
       "alt" : "Lateral-Flow-Assays",
       "loading" : "lazy",
       "width" : 300,
       "height" : 88
+    },
+    "normal_icon" : {
+      "name" : "500px",
+      "unicode" : "f26e",
+      "type" : "REGULAR"
+    },
+    "cards_icon_theme_group" : {
+      "select_color" : "White_Clr"
     },
     "cards_icon_background_group" : {
       "select_color" : "BrightBlue_bg"
@@ -840,13 +938,22 @@
       "max_width" : 386,
       "max_height" : 258
     },
-    "icon" : {
+    "icon_type" : "",
+    "img" : {
       "size_type" : "exact",
       "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
       "alt" : "Lateral-Flow-Assays",
       "loading" : "lazy",
       "width" : 300,
       "height" : 88
+    },
+    "normal_icon" : {
+      "name" : "500px",
+      "unicode" : "f26e",
+      "type" : "REGULAR"
+    },
+    "cards_icon_theme_group" : {
+      "select_color" : "White_Clr"
     },
     "cards_icon_background_group" : {
       "select_color" : "BrightBlue_bg"
@@ -886,13 +993,22 @@
       "max_width" : 386,
       "max_height" : 258
     },
-    "icon" : {
+    "icon_type" : "",
+    "img" : {
       "size_type" : "exact",
       "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Lateral-Flow-Assays.png",
       "alt" : "Lateral-Flow-Assays",
       "loading" : "lazy",
       "width" : 300,
       "height" : 88
+    },
+    "normal_icon" : {
+      "name" : "500px",
+      "unicode" : "f26e",
+      "type" : "REGULAR"
+    },
+    "cards_icon_theme_group" : {
+      "select_color" : "White_Clr"
     },
     "cards_icon_background_group" : {
       "select_color" : "BrightBlue_bg"

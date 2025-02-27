@@ -61,13 +61,24 @@
 
 {% if module.module_settings.include_slider %}
 {% require_js %}
+
+{% end_require_js %}
+
+{% endif %}
+
+
+
+
+
+
+{% if module.module_settings.select_module_type == "fullWidth"%}
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   new Splide(".MainsliderCnntt.item_{{name}}.splide", {
     type: "loop",
     drag: "free",
     focus: "center",
-    perPage: 8,
+    perPage: 7,
     autoScroll: {
       speed: 2,
     },
@@ -91,14 +102,33 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 </script>
-{% end_require_js %}
 
+{% else %}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide(".MainsliderCnntt.item_{{name}}.splide", {
+    type: "loop",
+    drag: "free",
+    focus: "center",
+    perPage: 4,
+    autoScroll: {
+      speed: 2,
+    },
+    arrows: false,
+    pagination: false,
+    breakpoints: {
+      680: {
+        perPage: 2,
+      },
+      992: {
+        perPage: 4,
+      },
+      1200: {
+        perPage: 3,
+      },
+    },
+  }).mount(window.splide.Extensions);
+});
+</script>
 {% endif %}
-
-
-
-
-
-
-
 
