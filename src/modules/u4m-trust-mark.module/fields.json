@@ -684,7 +684,7 @@
     "preset" : null,
     "type" : "choice",
     "display_width" : null,
-    "default" : "top-padding-default"
+    "default" : "top-padding-small"
   }, {
     "id" : "custom_top_padding",
     "name" : "custom_top_padding",
@@ -744,7 +744,7 @@
     "preset" : null,
     "type" : "choice",
     "display_width" : null,
-    "default" : "bottom-padding-default"
+    "default" : "bottom-padding-small"
   }, {
     "id" : "custom_bottom_padding",
     "name" : "custom_bottom_padding",
@@ -1261,10 +1261,10 @@
     "bottom_margin" : "bottom-margin-none",
     "custom_bottom_margin" : 100,
     "custom_bottom_margin_mobile" : 50,
-    "top_padding" : "top-padding-default",
+    "top_padding" : "top-padding-small",
     "custom_top_padding" : 100,
     "custom_top_padding_mobile" : 50,
-    "bottom_padding" : "bottom-padding-default",
+    "bottom_padding" : "bottom-padding-small",
     "custom_bottom_padding" : 100,
     "custom_bottom_padding_mobile" : 50,
     "inner_container_spacing_group" : {
