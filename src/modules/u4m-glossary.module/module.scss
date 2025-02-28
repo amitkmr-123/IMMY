@@ -174,6 +174,12 @@
           font-size: 18rem;
           line-height: 1;
           margin-bottom: 0;
+          padding: 13rem 16rem;
+          min-height: auto;
+          margin: 0;
+          &::placeholder {
+            color: $black;
+          }
         }
       }
     }
@@ -257,7 +263,11 @@
                 svg path {
                   fill: currentColor;
                 }
-
+                .hs-sec-btn {
+                  display: flex;
+                  font-size: 16rem;
+                  gap: 10px;
+                }
                 .glossBtnless {
                   display: none;
                   .arrow {
@@ -280,7 +290,7 @@
               }
 
               .glossBtnwrap .glossBtnless {
-                display: inline-block;
+                display: flex;
                 background-color: $black;
                 color: $white;
               }
