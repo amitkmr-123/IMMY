@@ -1,63 +1,75 @@
-# IMMY - v1.6.4
-IMMY for the HubSpot CMS by New Breed
-=======
+# IMMY-u4m - v1.6.4
+
+# IMMY-u4m for the HubSpot CMS by New Breed
+
 Copyright 2024 New Breed - newbreedrevenue.com
 Last Updated - 12-31-2024
 
 ## Frequently used commands
 
 #### Connect to HubSpot and generate .yml file for portal authentication
+
 ```
 hs init
 ```
 
 #### Create a HubDB table
+
 ```
 hs hubdb create u4-resource-library.json
 ```
 
 #### Upload entire project
+
 ```
-hs upload src IMMY
+hs upload src IMMY-u4m
 ```
 
 #### Watch entire project
+
 ```
-hs watch src IMMY
+hs watch src IMMY-u4m
 ```
 
 #### Fetch entire project with overwriting
+
 ```
-hs fetch IMMY src -o
+hs fetch IMMY-u4m src -o
 ```
 
 #### Fetch a specific module add -o to the end to overwrite files
+
 ```
-hs fetch IMMY/modules/u4m-000.module src/modules/u4m-000.module -o
+hs fetch IMMY-u4m/modules/u4m-000.module src/modules/u4m-000.module -o
 ```
 
-hs fetch IMMY/modules/u4m-cards-side.module src/modules/u4m-cards-side.module -o
+hs fetch IMMY-u4m/modules/u4m-cards-side.module src/modules/u4m-cards-side.module -o
 
 #### Watch entire folder on non-default portal (portal names are set in hubspot.config.yml)
+
 ```
-hs watch --account=hug_vt src IMMY
+hs watch --account=hug_vt src IMMY-u4m
 ```
 
 #### Fetch a HubDB table (the numbers are the ID of the table)
+
 ```
 hs hubdb fetch --account=hugvt 3411413 u4-resource-library.json
 ```
 
 ## Theme fields
+
 New Breed builds custom websites so we don't use theme level fields. For more information on this unused feature visit the link below
 https://designers.hubspot.com/docs/tutorials/themes-reference#fields-json
 
 ## Requirements
+
 - [Node.js](https://nodejs.org/en/)
 - [HubSpot CMS CLI](https://developers.hubspot.com/docs/cms/developer-reference/local-development-cms-cli)
 - [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass)
 
 ## Useful links
+
 - [CMS CLI Reference](https://developers.hubspot.com/docs/cms/developer-reference/local-development-cms-cli)
 - [Themes overview documentation](https://designers.hubspot.com/docs/building-blocks/themes)
 - [HubL Supported Tags](https://developers.hubspot.com/docs/cms/hubl/tags)
@@ -65,6 +77,7 @@ https://designers.hubspot.com/docs/tutorials/themes-reference#fields-json
 - [Boilerplate preview website](https://boilerplate.hubspotcms.com)
 
 ## Module list
+
 - src/modules/u4m-000.module
 - src/modules/u4m-accordion.module
 - src/modules/u4m-alternating-content.module
