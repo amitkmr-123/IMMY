@@ -116,7 +116,7 @@ body {
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
   color: $FontGray;
-  font-weight: 325;
+  font-weight: 400;
   margin-top: 0;
 
   &.hide-header {
@@ -129,14 +129,6 @@ body.lp-sign-up {
 }
 
 /* Set default text size */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: normal;
-}
 
 h1 {
   @include h1;
