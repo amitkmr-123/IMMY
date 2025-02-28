@@ -386,7 +386,7 @@
     "preset" : null,
     "type" : "choice",
     "display_width" : null,
-    "default" : "cmTwoColTab"
+    "default" : "cmCardTab"
   }, {
     "id" : "80d60f72-1767-848c-ce30-eea7e9cd5b36",
     "name" : "tab_items",
@@ -959,7 +959,7 @@
           "preset" : null,
           "type" : "choice",
           "display_width" : null,
-          "default" : "hs-button"
+          "default" : "hs-arrow-btn"
         }, {
           "id" : "7376a9c2-9c0f-f7e7-1782-8b6496c42a68",
           "name" : "button_size",
@@ -1053,7 +1053,7 @@
         "display_width" : null,
         "default" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -1096,7 +1096,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -1133,7 +1133,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -1170,7 +1170,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -1207,7 +1207,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -1279,7 +1279,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -1316,7 +1316,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -1353,7 +1353,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -1390,7 +1390,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -1456,7 +1456,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -1493,7 +1493,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -1530,7 +1530,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -1567,7 +1567,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -1633,7 +1633,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -1670,7 +1670,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -1707,7 +1707,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -1744,7 +1744,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -1810,7 +1810,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -1847,7 +1847,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -1884,7 +1884,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -1921,7 +1921,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -2627,7 +2627,7 @@
   "type" : "group",
   "display_width" : null,
   "default" : {
-    "select_tab_type" : "cmTwoColTab",
+    "select_tab_type" : "cmCardTab",
     "tab_items" : [ {
       "title" : "This is the Active Tab Title",
       "content_column_card" : {
@@ -2680,7 +2680,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -2717,7 +2717,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -2754,7 +2754,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -2791,7 +2791,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -2857,7 +2857,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -2894,7 +2894,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -2931,7 +2931,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -2968,7 +2968,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -3034,7 +3034,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -3071,7 +3071,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -3108,7 +3108,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -3145,7 +3145,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -3211,7 +3211,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -3248,7 +3248,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -3285,7 +3285,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
@@ -3322,7 +3322,7 @@
         "include_button" : true,
         "button_group_copy" : [ {
           "button_type" : "std",
-          "button_style" : "hs-button",
+          "button_style" : "hs-arrow-btn",
           "button_size" : "large",
           "button_text" : "Subpage Link Here",
           "link" : {
