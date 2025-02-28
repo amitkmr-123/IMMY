@@ -1,5 +1,6 @@
 // 
 @mixin button {
+  white-space: normal;
   display: inline-block;
   font-family: $font1;
   color: $White;
@@ -30,6 +31,7 @@
 }
 
 @mixin buttonThird {
+  white-space: normal;
   display: inline-block;
   font-family: $font1;
   color: $Black;
@@ -57,6 +59,7 @@
 }
 
 @mixin buttonSecond {
+  white-space: normal;
   display: inline-block;
   font-family: $font1;
   background-color: transparent;

@@ -45,6 +45,7 @@
   }
 
   div.legal-consent-container {
+
     p,
     .hs-form-booleancheckbox label {
       @include b6;
@@ -85,7 +86,7 @@
     }
 
     .hs-form-field {
-      > label {
+      >label {
         pointer-events: auto;
         font-weight: 400;
         font-size: 14rem;
@@ -101,6 +102,7 @@
     }
 
     .input {
+
       input[type="color"],
       input[type="date"],
       input[type="datetime-local"],
@@ -117,6 +119,7 @@
       input[type="week"],
       select,
       textarea {
+
         &.error,
         &.invalid {
           border: 1rem solid red;
@@ -175,7 +178,7 @@
         // Note anything below 16rem will trigger the zoom feature on iOS
       }
 
-      & + .hs-error-msgs {
+      &+.hs-error-msgs {
         position: relative;
         width: 100%;
         padding-left: 0;
@@ -355,6 +358,7 @@
     .form-columns-1,
     .form-columns-2,
     .form-columns-3 {
+
       .input,
       select {
         margin-right: 0;
@@ -364,6 +368,7 @@
       .hs-input {
         width: 100% !important;
       }
+
       div div,
       div:last-child div {
         @include phone {
@@ -377,7 +382,7 @@
     }
 
     .form-columns-2 {
-      & > div {
+      &>div {
         width: calc(50% - 10rem);
 
         &:last-of-type {

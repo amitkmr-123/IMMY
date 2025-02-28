@@ -155,3 +155,11 @@ section.u4m-subscriptions-confirmation {
     font-weight: bold;
   }
 }
+
+.hs-search-results__pagination {
+  flex-wrap: wrap;
+}
+
+.hs-search-results__pagination__link--number {
+  padding: 1.35rem 14.7rem;
+}
