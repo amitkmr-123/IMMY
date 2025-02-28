@@ -70,6 +70,7 @@
         drag: "free",
         focus: "center",
         perPage: 7,
+        gap: "40px",
         autoScroll: {
           speed: 2,
         },
@@ -102,6 +103,7 @@
         drag: "free",
         focus: "center",
         perPage: 4,
+        gap: "40px",
         autoScroll: {
           speed: 2,
         },
@@ -127,3 +129,14 @@
     
 {% endif %}
     
+{% require_css %}
+  {% if not module.module_settings.include_slider %}
+    <style>
+    .cmTrustMarkWrap.{{name}} .cmTrustInnerWrap .items{
+      max-width:114px;
+    }
+</style>
+
+  {% endif %}
+
+{% end_require_css %}
