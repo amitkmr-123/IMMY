@@ -697,6 +697,28 @@
     "display_width" : null,
     "default" : "col4"
   }, {
+    "id" : "888be14f-1f8f-2f53-8108-d4aa1ff45efe",
+    "name" : "content_style",
+    "label" : "Bottom Content Style",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "enable_bottom_content",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "themeStyle", "Theme" ], [ "bodystyle1", "Body Style 1" ], [ "bodystyle2", "Body Style 2" ], [ "bodystyle3", "Body Style 3" ], [ "bodystyle4", "Body Style 4" ], [ "bodystyle5", "Body Style 5" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "bodystyle1"
+  }, {
     "id" : "52459f5c-faed-fb52-842a-a744e6381023",
     "name" : "enable_outer_shadow",
     "label" : "Enable Outer Shadow",
@@ -716,6 +738,7 @@
     "intro_content_alignment" : "left",
     "select_content_type" : "fw",
     "bottom_column_count" : "col4",
+    "content_style" : "bodystyle1",
     "enable_outer_shadow" : true
   }
 }, {

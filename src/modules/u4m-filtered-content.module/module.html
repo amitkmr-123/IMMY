@@ -3,17 +3,6 @@
 
 <div class="filter-content-outer-wrapper">
 
-	{#	{% set moduleName = 'u4m-base-module' %}
-{% include "../partials/u4-module-includes.html" %}
-
-{{ macros.introGroup(module.intro_content, module.module_settings) }} 
-</div>
-</div>
-</section>	
-#}
-
-
-
 	{# =========== #}
 
 
@@ -21,12 +10,9 @@
 	{% set table =  module.filter_content.select_hubdb_table  %}
 	{% set query = ""%}
 
-
 	{% set batch_num = module.filter_content.post_count %}
 
-
-
-	{% if not request.query_dict.page_num %}
+  {% if not request.query_dict.page_num %}
 	{% set page_num = 1 %}
 	{% set offset_num = 0 %}
 	{% elif request.query_dict.page_num %}
@@ -85,7 +71,7 @@
 
 	{# ================= #}
 
-	{% set moduleName = 'u4m-base-module' %}
+	{% set moduleName = 'u4m-filter-content-top' %}
 	{% include "../partials/u4-module-includes.html" %}
 	{% for row in ft_resouces %} 
 
@@ -140,9 +126,11 @@
 					<div class="srchSection">
 						<input type="text" value="" id="filterTitle{{ name|replace('widget_','')|replace('module_','') }}" name="search" placeholder="Search..." class="resourceInput">
 						<div class="Searchbtn">
-							<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.29922C0 2.82065 2.82065 0 6.29923 0C9.7778 0 12.5985 2.82065 12.5985 6.29922C12.5985 7.78304 12.0805 9.15487 11.2196 10.2327L13.7953 12.8084C14.0682 13.0814 14.0682 13.5223 13.7953 13.7953C13.5223 14.0683 13.0814 14.0683 12.8084 13.7953L10.2327 11.2196C9.15487 12.0805 7.79004 12.5984 6.29923 12.5984C2.82065 12.5984 0 9.7778 0 6.29922ZM6.29923 1.39983C3.59056 1.39983 1.39983 3.59056 1.39983 6.29922C1.39983 9.00789 3.59056 11.1986 6.29923 11.1986C7.65006 11.1986 8.87487 10.6527 9.76377 9.76381C10.6527 8.87492 11.1986 7.65006 11.1986 6.29922C11.1986 3.59056 9.00789 1.39983 6.29923 1.39983Z" fill="#00161D"></path>
-							</svg></div>
+							
+<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.6339 18L10.2321 11.5982C9.69643 11.9911 9.10902 12.2991 8.46991 12.5223C7.8308 12.7455 7.15063 12.8571 6.42938 12.8571C4.64313 12.8571 3.125 12.2321 1.875 10.9821C0.625 9.73214 0 8.21429 0 6.42857C0 4.64286 0.625 3.125 1.875 1.875C3.125 0.625 4.64286 0 6.42857 0C8.21429 0 9.73214 0.625 10.9821 1.875C12.2321 3.125 12.8571 4.64313 12.8571 6.42938C12.8571 7.15063 12.7455 7.8308 12.5223 8.46991C12.2991 9.10902 11.9911 9.69643 11.5982 10.2321L18 16.6339L16.6339 18ZM6.42857 10.9286C7.67857 10.9286 8.74107 10.4911 9.61607 9.61607C10.4911 8.74107 10.9286 7.67857 10.9286 6.42857C10.9286 5.17857 10.4911 4.11607 9.61607 3.24107C8.74107 2.36607 7.67857 1.92857 6.42857 1.92857C5.17857 1.92857 4.11607 2.36607 3.24107 3.24107C2.36607 4.11607 1.92857 5.17857 1.92857 6.42857C1.92857 7.67857 2.36607 8.74107 3.24107 9.61607C4.11607 10.4911 5.17857 10.9286 6.42857 10.9286Z" fill="black"/>
+</svg>
+							</div>
 					</div>
 				</div> 
 				{# ================ #}
@@ -247,7 +235,7 @@
 
 
 			<div class='cardSctn'>
-				<div class='flex_row resourceList'>
+				<div class='flex_row resourceList col3_row'>
 					{% set resouceCount = resouces|length%}
 					{% for row in resouces %}
 					<div class='resourceCard {{module.filter_content.card_type == "type2" ? "col4" : "col3"  }}  post-item {{ row.type.name|lower|replace(' ','-') }} {% for tag in row.topics_tags %}{{ tag.name|lower|replace(' ','-') }} {% endfor %}'>
@@ -711,31 +699,6 @@
 		onInput($(this));
 	});
 
-	// ==============
-	//  function loadEvents() {
-	//     var url = window.location.href;
-	//     var path = new URL(url).pathname;
-	//     var parts = path.split("/resources");
-
-	//     var topicText = parts.length > 1 ? parts[1].replace("/", "") : null;
-
-	//     console.log('topicText', topicText);
-
-	//     $(".topic_ele").each(function() {
-	//       var getTopic = $(this).attr("data-topic-url");
-	//       if (getTopic === topicText) {
-	//         $('.filter_dropdown.topicSelect').addClass('active_tag_url_matched pageis_',+getTopic)
-	//         $(this).click();
-	//         console.log(getTopic ,'===', topicText)
-	//       }
-	//     });
-
-	//     console.log('loadEvents loaded');
-	//   }
-
-	//   $(document).ready(function() {
-	//     loadEvents();
-	//   });
 
 
 </script>

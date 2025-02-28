@@ -49,7 +49,7 @@
 </div>
 
 {% if module.enable_bottom_content %}
-<div class="btmContent">
+<div class="btmContent {{ module.module_settings.content_style }}">
 	<div class="page-center {{ module.module_overrides.container_size }}" {% if module.module_overrides.container_size == "custom" %} style="max-width:{{ module.module_overrides.custom_container_size }}rem" {% endif %}>
 		<div class="flex_row">
 			{% for item in module.bottom_content %}

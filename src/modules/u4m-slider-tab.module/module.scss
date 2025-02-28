@@ -403,7 +403,7 @@
     }
 
     .tabnav {
-        > li {
+        >li {
             margin: 0;
             flex: 1;
 
@@ -434,7 +434,7 @@
             }
 
             &.active {
-                > a {
+                >a {
                     @include tabletvertmin {
                         background-color: $DarkNavy;
                         color: $White;
@@ -443,7 +443,7 @@
             }
 
             &.activeMobile {
-                > a {
+                >a {
                     @include tabletvert {
                         background-color: $DarkNavy;
                         color: $White;
@@ -470,7 +470,7 @@
                 }
             }
 
-            > a {
+            >a {
                 padding-top: 20px;
                 padding-bottom: 15px;
                 padding-left: 20px;
@@ -482,6 +482,7 @@
                 border-radius: 10px 10px 0px 0px;
                 color: $FontGray;
                 position: relative;
+                font-weight: 700;
             }
 
             .tabcontent {
