@@ -430,7 +430,7 @@
       "preset" : null,
       "type" : "choice",
       "display_width" : null,
-      "default" : "BorderRadius25"
+      "default" : ""
     }, {
       "id" : "48d33633-bcd1-f95d-02ce-284a60606bf3",
       "name" : "top_padding",
@@ -562,7 +562,7 @@
     "type" : "group",
     "display_width" : null,
     "default" : {
-      "border_radius_type" : "BorderRadius25",
+      "border_radius_type" : "",
       "top_padding" : 100,
       "right_padding" : 0,
       "bottom_padding" : 100,
@@ -888,7 +888,7 @@
     "custom_bottom_padding" : 100,
     "custom_bottom_padding_mobile" : 50,
     "inner_container_spacing_group" : {
-      "border_radius_type" : "BorderRadius25",
+      "border_radius_type" : "",
       "top_padding" : 100,
       "right_padding" : 0,
       "bottom_padding" : 100,
