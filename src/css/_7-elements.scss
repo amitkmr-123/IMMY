@@ -416,7 +416,11 @@ ol {
 }
 
 li {
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
+
+  &::marker {
+    color: $Red;
+  }
 }
 
 ul ul,
@@ -938,4 +942,8 @@ section[class*="u4m-"] {
 
 .noRadius {
   overflow: unset;
+}
+
+.page-center.noRadius_page_center {
+  overflow: visible;
 }

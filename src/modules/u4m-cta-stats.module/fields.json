@@ -321,6 +321,16 @@
         "no_follow" : false
       }
     } ]
+  }, {
+    "id" : "2f21052c-4604-e71e-0817-1def1367d680",
+    "name" : "enable_shadow",
+    "label" : "Enable Shadow",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : true
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -365,7 +375,8 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    } ]
+    } ],
+    "enable_shadow" : true
   }
 }, {
   "id" : "7792a39f-08e2-c09c-58a2-a4e9a358fc55",

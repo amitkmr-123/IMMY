@@ -526,6 +526,16 @@
       "video" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
       "embed_path" : "https://www.youtube.com/embed/9xwazD5SyVg"
     }
+  }, {
+    "id" : "da1512a2-a276-fb0d-d0b6-8232656574b8",
+    "name" : "enable_shadow",
+    "label" : "Enable Shadow",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : true
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -551,7 +561,8 @@
       "video_type" : "file",
       "video" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
       "embed_path" : "https://www.youtube.com/embed/9xwazD5SyVg"
-    }
+    },
+    "enable_shadow" : true
   }
 }, {
   "id" : "fbc58b2b-b6db-82a2-8422-e7f6861ce34b",

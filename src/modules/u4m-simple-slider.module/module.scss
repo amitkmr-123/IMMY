@@ -21,6 +21,8 @@
                 overflow: visible;
                 flex-wrap: nowrap;
 
+                align-items: center;
+
                 @include tablet {
                     flex-direction: column;
                 }

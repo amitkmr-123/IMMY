@@ -2,7 +2,7 @@
   "global" : false,
   "content_types" : [ "LANDING_PAGE", "SITE_PAGE", "BLOG_LISTING", "BLOG_POST" ],
   "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
-  "module_id" : 186431830623,
+  "module_id" : 186712409220,
   "js_assets" : [ {
     "autoload" : true,
     "path" : "../../js/jquery.js",
