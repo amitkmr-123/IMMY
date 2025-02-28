@@ -1,6 +1,5 @@
 @import "../../css/_module-imports";
 
-
 .u4m-alternating-content {
   .flex_row {
     .leftCntt {
@@ -80,7 +79,6 @@
 }
 
 @include navbreak {
-
   .u4m-alternating-content {
     .flex_row {
       gap: 40px;
@@ -96,11 +94,9 @@
       }
     }
   }
-
 }
 
 @include tabletMid {
-
   .u4m-alternating-content {
     .flex_row {
       gap: 20px;
@@ -116,11 +112,9 @@
       }
     }
   }
-
 }
 
 @include tabletvert {
-
   .u4m-alternating-content {
     #chartdiv {
       width: 100%;
@@ -141,5 +135,4 @@
       }
     }
   }
-
 }

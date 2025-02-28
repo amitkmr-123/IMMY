@@ -1,6 +1,5 @@
 @import "../../css/_module-imports";
 
-
 .u4m-cta-stats {
     .page-center {
         padding: 0;
@@ -185,7 +184,6 @@
     }
 }
 
-
 .u4m-cta-stats {
     .innerContainer {
         .leftCnt {
@@ -232,7 +230,6 @@
     }
 }
 
-
 @include navbreak {
     .u4m-cta-stats {
         .innerContainer {
@@ -249,7 +246,6 @@
             }
         }
     }
-
 }
 
 @include tabletMid {
@@ -269,11 +265,9 @@
             }
         }
     }
-
 }
 
 @include tabletvert {
-
     .u4m-cta-stats {
         .innerContainer {
             gap: 0;
@@ -301,5 +295,4 @@
             }
         }
     }
-
 }

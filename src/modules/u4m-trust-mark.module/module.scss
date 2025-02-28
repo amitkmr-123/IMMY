@@ -11,7 +11,6 @@
     }
 
     .cmTrustInnerWrap {
-
         &.twoColmun {
             display: flex;
             flex-wrap: nowrap;
@@ -52,8 +51,6 @@
                 @include tabletMid {
                     margin-right: 0;
                 }
-
-
             }
         }
 
@@ -74,5 +71,4 @@
             max-width: 115px;
         }
     }
-
 }

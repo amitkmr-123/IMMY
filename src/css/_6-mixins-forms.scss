@@ -7,20 +7,20 @@
   float: none;
   overflow: auto;
 
-  input[type=color],
-  input[type=date],
-  input[type=datetime-local],
-  input[type=datetime],
-  input[type=email],
-  input[type=month],
-  input[type=number],
-  input[type=password],
-  input[type=search],
-  input[type=tel],
-  input[type=text],
-  input[type=time],
-  input[type=url],
-  input[type=week],
+  input[type="color"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="datetime"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
   select,
   textarea {
     border: 1rem solid transparent;
@@ -36,7 +36,6 @@
     min-height: 55px;
   }
 
-
   @include tablet {
     padding: 20rem;
   }
@@ -46,7 +45,6 @@
   }
 
   div.legal-consent-container {
-
     p,
     .hs-form-booleancheckbox label {
       @include b6;
@@ -65,7 +63,7 @@
       margin: 0;
 
       ul.hs-error-msgs {
-        animation: fadeIn2 .5s ease;
+        animation: fadeIn2 0.5s ease;
         margin-bottom: 20rem;
 
         li {
@@ -87,7 +85,7 @@
     }
 
     .hs-form-field {
-      >label {
+      > label {
         pointer-events: auto;
         font-weight: 400;
         font-size: 14rem;
@@ -103,24 +101,22 @@
     }
 
     .input {
-
-      input[type=color],
-      input[type=date],
-      input[type=datetime-local],
-      input[type=datetime],
-      input[type=email],
-      input[type=month],
-      input[type=number],
-      input[type=password],
-      input[type=search],
-      input[type=tel],
-      input[type=text],
-      input[type=time],
-      input[type=url],
-      input[type=week],
+      input[type="color"],
+      input[type="date"],
+      input[type="datetime-local"],
+      input[type="datetime"],
+      input[type="email"],
+      input[type="month"],
+      input[type="number"],
+      input[type="password"],
+      input[type="search"],
+      input[type="tel"],
+      input[type="text"],
+      input[type="time"],
+      input[type="url"],
+      input[type="week"],
       select,
       textarea {
-
         &.error,
         &.invalid {
           border: 1rem solid red;
@@ -179,7 +175,7 @@
         // Note anything below 16rem will trigger the zoom feature on iOS
       }
 
-      &+.hs-error-msgs {
+      & + .hs-error-msgs {
         position: relative;
         width: 100%;
         padding-left: 0;
@@ -187,7 +183,7 @@
         text-align: center;
         margin: 0rem 0 20rem;
         padding: 0;
-        animation: fadeIn1 .3s ease;
+        animation: fadeIn1 0.3s ease;
 
         @include phone {
           position: relative;
@@ -359,27 +355,29 @@
     .form-columns-1,
     .form-columns-2,
     .form-columns-3 {
-
       .input,
       select {
         margin-right: 0;
         width: 100%;
       }
 
+      .hs-input {
+        width: 100% !important;
+      }
       div div,
       div:last-child div {
         @include phone {
           margin-right: 8rem;
 
-          .hs-input:not([type=checkbox]):not([type=radio]) {
-            width: 100%
+          .hs-input:not([type="checkbox"]):not([type="radio"]) {
+            width: 100%;
           }
         }
       }
     }
 
     .form-columns-2 {
-      &>div {
+      & > div {
         width: calc(50% - 10rem);
 
         &:last-of-type {

@@ -35,7 +35,7 @@ section.u4m-hero {
 
       align-items: center;
 
-      >* {
+      > * {
         width: 100%;
 
         @include tabletvertmin {
@@ -129,7 +129,7 @@ section.u4m-hero {
     }
 
     .media_section {
-      >img {
+      > img {
         width: 100%;
       }
     }
@@ -174,7 +174,7 @@ section.u4m-hero {
   }
 
   &.outershadow {
-    >.page-center {
+    > .page-center {
       box-shadow: $shadow2;
     }
   }

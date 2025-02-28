@@ -79,7 +79,7 @@
         "description": "Learn all the steps to take to build a successful, optimized inbound marketing strategy. Do you need more leads?",
         "medium": { "id": "2", "name": "Guide", "type": "option", "order": 1 },
         "cover_image": {
-          "url": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/The_Ultimate_Guide_to_Inbound_Marketing_Cover-sm.png",
+          "url": "https://302335..fs1.hubspotusercontent-na1.net/hubfs/302335/The_Ultimate_Guide_to_Inbound_Marketing_Cover-sm.png",
           "width": 300,
           "height": 350,
           "type": "image"
@@ -1777,7 +1777,7 @@
           "order": 4
         },
         "cover_image": {
-          "url": "https://302335.fs1.hubspotusercontent-na1.net/hubfs/302335/featured-resource.png",
+          "url": "https://302335..fs1.hubspotusercontent-na1.net/hubfs/302335/featured-resource.png",
           "width": 600,
           "height": 341,
           "type": "image"

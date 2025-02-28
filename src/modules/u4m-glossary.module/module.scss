@@ -5,7 +5,7 @@
   padding-right: 0;
   overflow: auto;
 
-  &>.page-center {
+  & > .page-center {
     padding: 0;
     max-width: 100%;
     overflow: auto;
@@ -181,7 +181,7 @@
 
   .glossInr {
     min-height: calc(100vh - 210px);
-    transition: all .3sease-in-out;
+    transition: all 0.3sease-in-out;
 
     .glossList {
       .errMsg {
@@ -260,6 +260,12 @@
 
                 .glossBtnless {
                   display: none;
+                  .arrow {
+                    svg {
+                      transform: rotate(180deg);
+                      margin-left: 7rem;
+                    }
+                  }
                 }
               }
             }

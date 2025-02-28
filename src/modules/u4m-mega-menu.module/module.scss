@@ -47,8 +47,6 @@
                 @include tabletMid {
                     margin: 0;
                 }
-
-
             }
 
             @include tabletMid {
@@ -70,7 +68,6 @@
     }
 
     .cm-has-children {
-
         .megaWrap {
             &:before {
                 content: "";
@@ -84,7 +81,6 @@
                 cursor: pointer;
             }
         }
-
 
         &.normalMenu {
             &:before {
@@ -105,8 +101,6 @@
         }
 
         &:hover {
-
-
             .megaWrap {
                 opacity: 1;
                 visibility: visible;
@@ -116,7 +110,6 @@
                 @include tabletMidmin {
                     transform: rotate(180deg);
                 }
-
             }
         }
     }
@@ -149,12 +142,11 @@
 
             a {
                 &:hover {
-                    color: #0B74D5;
+                    color: #0b74d5;
                     text-decoration: underline;
                 }
             }
         }
-
     }
 
     .megaInnerWrap {
@@ -169,11 +161,9 @@
                 margin: 0;
             }
         }
-
     }
 
     .megaMenu-wrap {
-
         .megaInnerWrap {
             display: flex;
             flex-wrap: wrap;
@@ -181,9 +171,7 @@
             row-gap: 40px;
         }
 
-
         .childNavWrap {
-
             @include phone {
                 width: 100%;
             }
@@ -216,7 +204,6 @@
             width: 100%;
             height: 100%;
         }
-
     }
 
     .cmTitle {
@@ -242,7 +229,6 @@
         vertical-align: middle;
         margin-left: 5px;
         transition: all 0.3s ease;
-
 
         svg {
             width: 100%;
@@ -274,7 +260,6 @@
                 margin-left: 0;
                 cursor: pointer;
                 z-index: 1;
-
             }
         }
     }
@@ -284,5 +269,4 @@
             transform: rotate(180deg);
         }
     }
-
 }

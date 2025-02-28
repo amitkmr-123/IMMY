@@ -1,7 +1,5 @@
 @import "../../css/_module-imports";
 
-
-
 .u4m-image-and-icon-cards {
   .intro_content {
     margin-bottom: 40px;
@@ -32,7 +30,7 @@
 
       .items {
         padding: 0 20px;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
 
         .Inneritems {
           height: 100%;
@@ -75,9 +73,6 @@
                 color: currentColor;
               }
             }
-
-
-
           }
 
           .eyebrow_text {
@@ -137,7 +132,7 @@
     }
 
     .items {
-      transition: all .3s ease;
+      transition: all 0.3s ease;
 
       .borderRadius {
         &:before {
@@ -149,7 +144,7 @@
           bottom: 0;
           right: 0;
           left: 0;
-          transition: all .3s ease;
+          transition: all 0.3s ease;
         }
       }
 
