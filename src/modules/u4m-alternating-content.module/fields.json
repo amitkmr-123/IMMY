@@ -402,7 +402,7 @@
     "display_width" : null,
     "default" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Group%2025964.png",
+      "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/Group%2025964.png",
       "alt" : "Group 25964",
       "loading" : "lazy",
       "width" : 916,
@@ -494,7 +494,7 @@
       },
       "type" : "file",
       "display_width" : null,
-      "default" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4"
+      "default" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4"
     }, {
       "id" : "41a6b926-f97f-5fb7-2771-b4595da73981",
       "name" : "embed_path",
@@ -523,9 +523,19 @@
     "display_width" : null,
     "default" : {
       "video_type" : "file",
-      "video" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
+      "video" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
       "embed_path" : "https://www.youtube.com/embed/9xwazD5SyVg"
     }
+  }, {
+    "id" : "da1512a2-a276-fb0d-d0b6-8232656574b8",
+    "name" : "enable_shadow",
+    "label" : "Enable Shadow",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : true
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -537,7 +547,7 @@
     "border_radius_type" : "BorderRadius15",
     "image" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/Group%2025964.png",
+      "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/Group%2025964.png",
       "alt" : "Group 25964",
       "loading" : "lazy",
       "width" : 916,
@@ -549,9 +559,10 @@
     "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</p>",
     "video_section" : {
       "video_type" : "file",
-      "video" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
+      "video" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
       "embed_path" : "https://www.youtube.com/embed/9xwazD5SyVg"
-    }
+    },
+    "enable_shadow" : true
   }
 }, {
   "id" : "fbc58b2b-b6db-82a2-8422-e7f6861ce34b",
@@ -1135,7 +1146,7 @@
         "access" : null
       },
       "display" : "select",
-      "choices" : [ [ "Blue_bg", "Blue" ], [ "Red_bg", "Red" ], [ "BrightBlue_bg", "BrightBlue" ], [ "BrightRed_bg", "BrightRed" ], [ "Green_bg", "Green" ], [ "Purple_bg", "Purple" ], [ "Orange_bg", "Orange" ], [ "Teal_bg", "Teal" ], [ "Pink_bg", "Pink" ], [ "DarkNavy_bg", "DarkNavy" ], [ "LightGray_bg", "LightGray" ], [ "Gray_bg", "Gray" ], [ "Charcoal_bg", "Charcoal" ], [ "FontGray_bg", "FontGray" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ] ],
+      "choices" : [ [ "Blue_bg", "Blue" ], [ "Red_bg", "Red" ], [ "BrightBlue_bg", "Bright Blue" ], [ "BrightRed_bg", "Bright Red" ], [ "Green_bg", "Green" ], [ "Purple_bg", "Purple" ], [ "Orange_bg", "Orange" ], [ "Teal_bg", "Teal" ], [ "Pink_bg", "Pink" ], [ "DarkNavy_bg", "Dark Navy" ], [ "LightGray_bg", "Light Gray" ], [ "Gray_bg", "Gray" ], [ "Charcoal_bg", "Charcoal" ], [ "FontGray_bg", "Font Gray" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ] ],
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
@@ -1178,7 +1189,7 @@
         "access" : null
       },
       "display" : "select",
-      "choices" : [ [ "Blue_bg", "Blue" ], [ "Red_bg", "Red" ], [ "BrightBlue_bg", "BrightBlue" ], [ "BrightRed_bg", "BrightRed" ], [ "Green_bg", "Green" ], [ "Purple_bg", "Purple" ], [ "Orange_bg", "Orange" ], [ "Teal_bg", "Teal" ], [ "Pink_bg", "Pink" ], [ "DarkNavy_bg", "DarkNavy" ], [ "LightGray_bg", "LightGray" ], [ "Gray_bg", "Gray" ], [ "Charcoal_bg", "Charcoal" ], [ "FontGray_bg", "FontGray" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ], [ "custom", "Custom" ] ],
+      "choices" : [ [ "Blue_bg", "Blue" ], [ "Red_bg", "Red" ], [ "BrightBlue_bg", "Bright Blue" ], [ "BrightRed_bg", "Bright Red" ], [ "Green_bg", "Green" ], [ "Purple_bg", "Purple" ], [ "Orange_bg", "Orange" ], [ "Teal_bg", "Teal" ], [ "Pink_bg", "Pink" ], [ "DarkNavy_bg", "Dark Navy" ], [ "LightGray_bg", "Light Gray" ], [ "Gray_bg", "Gray" ], [ "Charcoal_bg", "Charcoal" ], [ "FontGray_bg", "Font Gray" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ], [ "custom", "Custom" ] ],
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,

@@ -3,7 +3,6 @@
 .cmTrustMarkWrap {
     .cmLogoList {
         align-items: center;
-        gap: 40px;
     }
 
     .noRadius {
@@ -11,7 +10,6 @@
     }
 
     .cmTrustInnerWrap {
-
         &.twoColmun {
             display: flex;
             flex-wrap: nowrap;
@@ -52,8 +50,6 @@
                 @include tabletMid {
                     margin-right: 0;
                 }
-
-
             }
         }
 
@@ -71,8 +67,6 @@
         .items {
             display: flex;
             align-items: center;
-            max-width: 115px;
         }
     }
-
 }

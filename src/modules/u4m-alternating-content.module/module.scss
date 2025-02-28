@@ -1,6 +1,5 @@
 @import "../../css/_module-imports";
 
-
 .u4m-alternating-content {
   .flex_row {
     .leftCntt {
@@ -34,6 +33,10 @@
     .rightCntt {
       max-width: calc(100% - 630px);
       width: 100%;
+
+      &.mediaShadow {
+        box-shadow: 0px 36px 36px -12px rgba($Black, 0.1);
+      }
 
       .embedVideo {
         padding-bottom: 56.6%;
@@ -80,7 +83,6 @@
 }
 
 @include navbreak {
-
   .u4m-alternating-content {
     .flex_row {
       gap: 40px;
@@ -96,11 +98,9 @@
       }
     }
   }
-
 }
 
 @include tabletMid {
-
   .u4m-alternating-content {
     .flex_row {
       gap: 20px;
@@ -116,11 +116,9 @@
       }
     }
   }
-
 }
 
 @include tabletvert {
-
   .u4m-alternating-content {
     #chartdiv {
       width: 100%;
@@ -141,5 +139,4 @@
       }
     }
   }
-
 }

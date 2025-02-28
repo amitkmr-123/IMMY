@@ -7,7 +7,7 @@
 		<div class=" leftCntt">
 			{{ macros.introGroup(module.intro_content, module.module_settings) }} 
 		</div>
-		<div class=" rightCntt">
+		<div class=" rightCntt {% if module.media_group.enable_shadow %} mediaShadow {% endif %}">
 			{% if module.media_group.media_type == "rotating-globe" %}
 			<div id="chartdiv"></div>
 			{% elif  module.media_group.media_type == "image" %}

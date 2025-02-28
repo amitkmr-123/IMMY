@@ -1,6 +1,5 @@
 @import "../../css/_module-imports";
 
-
 .cmSliderTab {
     .iconWrapper {
         color: inherit;
@@ -29,7 +28,6 @@
 
     .tabcontent {
         display: none;
-
     }
 
     .tabCardInner {
@@ -102,17 +100,17 @@
             }
 
             .intro_desc {
-                color: $White ;
+                color: $White;
             }
 
             .hs-button {
                 background-color: $white;
-                color: $Black ;
+                color: $Black;
 
                 &:hover,
                 &:focus {
                     background: rgba($White, 0.8);
-                    color: $Black ;
+                    color: $Black;
                 }
             }
 
@@ -145,7 +143,7 @@
                 &:hover,
                 &:focus {
                     background: $White;
-                    color: $Black ;
+                    color: $Black;
                     border-color: $White;
                 }
             }
@@ -180,7 +178,6 @@
                 width: 100%;
             }
         }
-
 
         .imgBg {
             padding-bottom: 70.175%;
@@ -226,7 +223,6 @@
                 flex-direction: column-reverse;
             }
         }
-
     }
 
     .cmFullWidthTab {
@@ -342,17 +338,17 @@
             }
 
             .intro_desc {
-                color: $White ;
+                color: $White;
             }
 
             .hs-button {
                 background-color: $white;
-                color: $Black ;
+                color: $Black;
 
                 &:hover,
                 &:focus {
                     background: rgba($White, 0.8);
-                    color: $Black ;
+                    color: $Black;
                 }
             }
 
@@ -385,7 +381,7 @@
                 &:hover,
                 &:focus {
                     background: $White;
-                    color: $Black ;
+                    color: $Black;
                     border-color: $White;
                 }
             }
@@ -435,11 +431,7 @@
                     align-items: center;
                     justify-content: center;
                 }
-
             }
-
-
-
 
             &.active {
                 >a {
@@ -448,14 +440,10 @@
                         color: $White;
                     }
                 }
-
-
             }
 
             &.activeMobile {
-
                 >a {
-
                     @include tabletvert {
                         background-color: $DarkNavy;
                         color: $White;
@@ -472,7 +460,6 @@
                             color: $White;
                             fill: $White;
                         }
-
                     }
                 }
 
@@ -480,7 +467,6 @@
                     @include tabletvert {
                         display: block;
                     }
-
                 }
             }
 
@@ -496,7 +482,7 @@
                 border-radius: 10px 10px 0px 0px;
                 color: $FontGray;
                 position: relative;
-
+                font-weight: 700;
             }
 
             .tabcontent {
@@ -543,8 +529,6 @@
             @include buttonTSecondSm;
         }
 
-
-
         @include tabletMid {
             margin: 0 -20px;
             padding: 40px 20px;
@@ -553,7 +537,6 @@
         @include tabletvert {
             display: none;
         }
-
     }
 
     .lightCntt {
@@ -566,17 +549,17 @@
         }
 
         .intro_desc {
-            color: $White ;
+            color: $White;
         }
 
         .hs-button {
             background-color: $white;
-            color: $Black ;
+            color: $Black;
 
             &:hover,
             &:focus {
                 background: rgba($White, 0.8);
-                color: $Black ;
+                color: $Black;
             }
         }
 
@@ -609,7 +592,7 @@
             &:hover,
             &:focus {
                 background: $White;
-                color: $Black ;
+                color: $Black;
                 border-color: $White;
             }
         }
@@ -659,7 +642,6 @@
         .btn_item {
             text-align: center;
 
-
             .hs-arrow-btn {
                 justify-content: center;
                 width: auto;
@@ -672,7 +654,6 @@
                 line-height: 1.363;
             }
         }
-
 
         .intro_desc {
             margin-top: 5px;
@@ -704,13 +685,10 @@
                     display: inline-block;
                     width: auto;
                     height: 100%;
-                    color:currentColor;
+                    color: currentColor;
                     fill: currentColor;
                 }
-
             }
         }
     }
-
-
 }

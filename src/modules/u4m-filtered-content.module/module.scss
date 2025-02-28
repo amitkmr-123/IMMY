@@ -5,9 +5,17 @@
       align-items: center;
     }
 
+    .feat_img {
+      padding-right: 10px;
+
+      @include tabletvert {
+        padding-right: 0;
+      }
+    }
+
     .img_wrap {
       border-radius: 10rem;
-      box-shadow: 0 24rem 24rem -12rem rgba(0, 0, 0, 0.1);
+      box-shadow: $shadow4;
       overflow: hidden;
       position: relative;
       &:after {

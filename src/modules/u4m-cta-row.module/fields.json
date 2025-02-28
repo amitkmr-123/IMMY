@@ -949,7 +949,7 @@
         "access" : null
       },
       "display" : "select",
-      "choices" : [ [ "Blue_bg", "Blue" ], [ "Red_bg", "Red" ], [ "BrightBlue_bg", "BrightBlue" ], [ "BrightRed_bg", "BrightRed" ], [ "Green_bg", "Green" ], [ "Purple_bg", "Purple" ], [ "Orange_bg", "Orange" ], [ "Teal_bg", "Teal" ], [ "Pink_bg", "Pink" ], [ "DarkNavy_bg", "DarkNavy" ], [ "LightGray_bg", "LightGray" ], [ "Gray_bg", "Gray" ], [ "Charcoal_bg", "Charcoal" ], [ "FontGray_bg", "FontGray" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ] ],
+      "choices" : [ [ "Blue_bg", "Blue" ], [ "Red_bg", "Red" ], [ "BrightBlue_bg", "Bright Blue" ], [ "BrightRed_bg", "Bright Red" ], [ "Green_bg", "Green" ], [ "Purple_bg", "Purple" ], [ "Orange_bg", "Orange" ], [ "Teal_bg", "Teal" ], [ "Pink_bg", "Pink" ], [ "DarkNavy_bg", "Dark Navy" ], [ "LightGray_bg", "Light Gray" ], [ "Gray_bg", "Gray" ], [ "Charcoal_bg", "Charcoal" ], [ "FontGray_bg", "Font Gray" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ] ],
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
@@ -992,7 +992,7 @@
         "access" : null
       },
       "display" : "select",
-      "choices" : [ [ "Blue_bg", "Blue" ], [ "Red_bg", "Red" ], [ "BrightBlue_bg", "BrightBlue" ], [ "BrightRed_bg", "BrightRed" ], [ "Green_bg", "Green" ], [ "Purple_bg", "Purple" ], [ "Orange_bg", "Orange" ], [ "Teal_bg", "Teal" ], [ "Pink_bg", "Pink" ], [ "DarkNavy_bg", "DarkNavy" ], [ "LightGray_bg", "LightGray" ], [ "Gray_bg", "Gray" ], [ "Charcoal_bg", "Charcoal" ], [ "FontGray_bg", "FontGray" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ], [ "custom", "Custom" ] ],
+      "choices" : [ [ "Blue_bg", "Blue" ], [ "Red_bg", "Red" ], [ "BrightBlue_bg", "Bright Blue" ], [ "BrightRed_bg", "Bright Red" ], [ "Green_bg", "Green" ], [ "Purple_bg", "Purple" ], [ "Orange_bg", "Orange" ], [ "Teal_bg", "Teal" ], [ "Pink_bg", "Pink" ], [ "DarkNavy_bg", "Dark Navy" ], [ "LightGray_bg", "Light Gray" ], [ "Gray_bg", "Gray" ], [ "Charcoal_bg", "Charcoal" ], [ "FontGray_bg", "Font Gray" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ], [ "custom", "Custom" ] ],
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
@@ -1062,7 +1062,7 @@
       "display_width" : null,
       "default" : {
         "size_type" : "auto",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/background.png",
+        "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/background.png",
         "alt" : "background",
         "loading" : "lazy",
         "width" : 1240,
@@ -1095,7 +1095,7 @@
       "select_gradient" : "gradient1",
       "overlay_image" : {
         "size_type" : "auto",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/background.png",
+        "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/background.png",
         "alt" : "background",
         "loading" : "lazy",
         "width" : 1240,
@@ -1199,7 +1199,7 @@
       "select_gradient" : "gradient1",
       "overlay_image" : {
         "size_type" : "auto",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/background.png",
+        "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/background.png",
         "alt" : "background",
         "loading" : "lazy",
         "width" : 1240,

@@ -1,5 +1,100 @@
 @include remScalling;
 
+
+
+
+@font-face {
+  font-family: "Verlag";
+  src: url("{{ get_asset_url('../fonts/Verlag-Black.ttf') }}") format("truetype"),
+  url("{{ get_asset_url('../fonts/Verlag-Black.woff') }}") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Verlag";
+  src: url("{{ get_asset_url('../fonts/Verlag-BlackItalic.ttf') }}") format("truetype"),
+  url("{{ get_asset_url('../fonts/Verlag-BlackItalic.woff') }}") format("woff");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Verlag";
+  src: url("{{ get_asset_url('../fonts/Verlag-Black.ttf') }}") format("truetype"),
+  url("{{ get_asset_url('../fonts/Verlag-Black.woff') }}") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Verlag";
+  src: url("{{ get_asset_url('../fonts/Verlag-BoldItalic.ttf') }}") format("truetype"),
+  url("{{ get_asset_url('../fonts/Verlag-BoldItalic.woff') }}") format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: "Verlag";
+  src: url("{{ get_asset_url('../fonts/Verlag-Book.ttf') }}") format("truetype"),
+  url("{{ get_asset_url('../fonts/Verlag-Book.woff') }}") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Verlag";
+  src: url("{{ get_asset_url('../fonts/Verlag-BookItalic.ttf') }}") format("truetype"),
+  url("{{ get_asset_url('../fonts/Verlag-BookItalic.woff') }}") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+
+@font-face {
+  font-family: "Verlag";
+  src: url("{{ get_asset_url('../fonts/Verlag-Light.ttf') }}") format("truetype"),
+  url("{{ get_asset_url('../fonts/Verlag-Light.woff') }}") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Verlag";
+  src: url("{{ get_asset_url('../fonts/Verlag-LightItalic.ttf') }}") format("truetype"),
+  url("{{ get_asset_url('../fonts/Verlag-LightItalic.woff') }}") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+
+
+@font-face {
+  font-family: "Verlag";
+  src: url("{{ get_asset_url('../fonts/Verlag-XLight.ttf') }}") format("truetype"),
+  url("{{ get_asset_url('../fonts/Verlag-XLight.woff') }}") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Verlag";
+  src: url("{{ get_asset_url('../fonts/Verlag-XLightItalic.ttf') }}") format("truetype"),
+  url("{{ get_asset_url('../fonts/Verlag-XLightItalic.woff') }}") format("woff");
+  font-weight: 200;
+  font-style: italic;
+}
+
+
+
+// * {
+
 // * {
 //   border: 1px solid red;
 // }
@@ -21,7 +116,7 @@ body {
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
   color: $FontGray;
-  font-weight: 325;
+  font-weight: 400;
   margin-top: 0;
 
   &.hide-header {
@@ -34,14 +129,6 @@ body.lp-sign-up {
 }
 
 /* Set default text size */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: normal;
-}
 
 h1 {
   @include h1;
@@ -329,7 +416,11 @@ ol {
 }
 
 li {
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
+
+  &::marker {
+    color: $Red;
+  }
 }
 
 ul ul,
@@ -851,4 +942,8 @@ section[class*="u4m-"] {
 
 .noRadius {
   overflow: unset;
+}
+
+.page-center.noRadius_page_center {
+  overflow: visible;
 }

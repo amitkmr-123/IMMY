@@ -7,20 +7,20 @@
   float: none;
   overflow: auto;
 
-  input[type=color],
-  input[type=date],
-  input[type=datetime-local],
-  input[type=datetime],
-  input[type=email],
-  input[type=month],
-  input[type=number],
-  input[type=password],
-  input[type=search],
-  input[type=tel],
-  input[type=text],
-  input[type=time],
-  input[type=url],
-  input[type=week],
+  input[type="color"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="datetime"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
   select,
   textarea {
     border: 1rem solid transparent;
@@ -35,7 +35,6 @@
     outline: none;
     min-height: 55px;
   }
-
 
   @include tablet {
     padding: 20rem;
@@ -65,7 +64,7 @@
       margin: 0;
 
       ul.hs-error-msgs {
-        animation: fadeIn2 .5s ease;
+        animation: fadeIn2 0.5s ease;
         margin-bottom: 20rem;
 
         li {
@@ -104,20 +103,20 @@
 
     .input {
 
-      input[type=color],
-      input[type=date],
-      input[type=datetime-local],
-      input[type=datetime],
-      input[type=email],
-      input[type=month],
-      input[type=number],
-      input[type=password],
-      input[type=search],
-      input[type=tel],
-      input[type=text],
-      input[type=time],
-      input[type=url],
-      input[type=week],
+      input[type="color"],
+      input[type="date"],
+      input[type="datetime-local"],
+      input[type="datetime"],
+      input[type="email"],
+      input[type="month"],
+      input[type="number"],
+      input[type="password"],
+      input[type="search"],
+      input[type="tel"],
+      input[type="text"],
+      input[type="time"],
+      input[type="url"],
+      input[type="week"],
       select,
       textarea {
 
@@ -187,7 +186,7 @@
         text-align: center;
         margin: 0rem 0 20rem;
         padding: 0;
-        animation: fadeIn1 .3s ease;
+        animation: fadeIn1 0.3s ease;
 
         @include phone {
           position: relative;
@@ -366,13 +365,17 @@
         width: 100%;
       }
 
+      .hs-input {
+        width: 100% !important;
+      }
+
       div div,
       div:last-child div {
         @include phone {
           margin-right: 8rem;
 
-          .hs-input:not([type=checkbox]):not([type=radio]) {
-            width: 100%
+          .hs-input:not([type="checkbox"]):not([type="radio"]) {
+            width: 100%;
           }
         }
       }

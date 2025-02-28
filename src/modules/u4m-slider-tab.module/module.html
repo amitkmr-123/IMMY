@@ -430,7 +430,7 @@
 		{% endif %}
 		{% elif item.media_column.select_media_type =="cmContent" %}
 		{% if item.media_column.content %}
-		<div class="cmContentWrap">
+		<div class="cmContentWrapInner">
 			{{ item.media_column.content }}
 		</div>
 		{% endif %}
@@ -538,7 +538,7 @@
 				{% endif %}
 				{% elif item.media_column.select_media_type =="cmContent" %}
 				{% if item.media_column.content %}
-				<div class="cmContentWrap">
+				<div class="cmContentWrapInner">
 					{{ item.media_column.content }}
 				</div>
 				{% endif %}

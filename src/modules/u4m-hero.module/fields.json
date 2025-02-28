@@ -416,7 +416,7 @@
     "display_width" : null,
     "default" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/heroimg.png",
+      "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/heroimg.png",
       "alt" : "heroimg",
       "loading" : "lazy",
       "width" : 580,
@@ -465,7 +465,7 @@
       "display_width" : null,
       "default" : {
         "size_type" : "auto",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/heroPoster.png",
+        "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/heroPoster.png",
         "alt" : "hero Poster",
         "loading" : "lazy",
         "width" : 833,
@@ -490,7 +490,7 @@
       },
       "type" : "file",
       "display_width" : null,
-      "default" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4"
+      "default" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4"
     }, {
       "id" : "185d1a81-f3ff-6474-955f-f49244287fbd",
       "name" : "embed_url",
@@ -521,7 +521,7 @@
       "video_type" : "hubspot",
       "poster_image" : {
         "size_type" : "auto",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/heroPoster.png",
+        "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/heroPoster.png",
         "alt" : "hero Poster",
         "loading" : "lazy",
         "width" : 833,
@@ -529,7 +529,7 @@
         "max_width" : 833,
         "max_height" : 582
       },
-      "video" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
+      "video" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
       "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg"
     }
   }, {
@@ -570,7 +570,7 @@
     "type" : "img",
     "image" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/heroimg.png",
+      "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/heroimg.png",
       "alt" : "heroimg",
       "loading" : "lazy",
       "width" : 580,
@@ -582,7 +582,7 @@
       "video_type" : "hubspot",
       "poster_image" : {
         "size_type" : "auto",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/images/heroPoster.png",
+        "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/heroPoster.png",
         "alt" : "hero Poster",
         "loading" : "lazy",
         "width" : 833,
@@ -590,7 +590,7 @@
         "max_width" : 833,
         "max_height" : 582
       },
-      "video" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
+      "video" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
       "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg"
     },
     "border_radius_type" : "BorderRadius15",
@@ -697,6 +697,28 @@
     "display_width" : null,
     "default" : "col4"
   }, {
+    "id" : "888be14f-1f8f-2f53-8108-d4aa1ff45efe",
+    "name" : "content_style",
+    "label" : "Bottom Content Style",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "enable_bottom_content",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "themeStyle", "Theme" ], [ "bodystyle1", "Body Style 1" ], [ "bodystyle2", "Body Style 2" ], [ "bodystyle3", "Body Style 3" ], [ "bodystyle4", "Body Style 4" ], [ "bodystyle5", "Body Style 5" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "bodystyle1"
+  }, {
     "id" : "52459f5c-faed-fb52-842a-a744e6381023",
     "name" : "enable_outer_shadow",
     "label" : "Enable Outer Shadow",
@@ -716,6 +738,7 @@
     "intro_content_alignment" : "left",
     "select_content_type" : "fw",
     "bottom_column_count" : "col4",
+    "content_style" : "bodystyle1",
     "enable_outer_shadow" : true
   }
 }, {
@@ -1234,7 +1257,7 @@
       "display_width" : null,
       "default" : {
         "size_type" : "auto",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/shutterstock_2249452161%201.png",
+        "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/shutterstock_2249452161%201.png",
         "alt" : "shutterstock_2249452161 1",
         "loading" : "lazy",
         "width" : 1340,
@@ -1275,7 +1298,7 @@
         "access" : null
       },
       "display" : "select",
-      "choices" : [ [ "Blue_bg", "Blue" ], [ "Red_bg", "Red" ], [ "BrightBlue_bg", "BrightBlue" ], [ "BrightRed_bg", "BrightRed" ], [ "Green_bg", "Green" ], [ "Purple_bg", "Purple" ], [ "Orange_bg", "Orange" ], [ "Teal_bg", "Teal" ], [ "Pink_bg", "Pink" ], [ "DarkNavy_bg", "DarkNavy" ], [ "LightGray_bg", "LightGray" ], [ "Gray_bg", "Gray" ], [ "Charcoal_bg", "Charcoal" ], [ "FontGray_bg", "FontGray" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ] ],
+      "choices" : [ [ "Blue_bg", "Blue" ], [ "Red_bg", "Red" ], [ "BrightBlue_bg", "Bright Blue" ], [ "BrightRed_bg", "Bright Red" ], [ "Green_bg", "Green" ], [ "Purple_bg", "Purple" ], [ "Orange_bg", "Orange" ], [ "Teal_bg", "Teal" ], [ "Pink_bg", "Pink" ], [ "DarkNavy_bg", "Dark Navy" ], [ "LightGray_bg", "Light Gray" ], [ "Gray_bg", "Gray" ], [ "Charcoal_bg", "Charcoal" ], [ "FontGray_bg", "Font Gray" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ] ],
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
@@ -1318,7 +1341,7 @@
         "access" : null
       },
       "display" : "select",
-      "choices" : [ [ "Blue_bg", "Blue" ], [ "Red_bg", "Red" ], [ "BrightBlue_bg", "BrightBlue" ], [ "BrightRed_bg", "BrightRed" ], [ "Green_bg", "Green" ], [ "Purple_bg", "Purple" ], [ "Orange_bg", "Orange" ], [ "Teal_bg", "Teal" ], [ "Pink_bg", "Pink" ], [ "DarkNavy_bg", "DarkNavy" ], [ "LightGray_bg", "LightGray" ], [ "Gray_bg", "Gray" ], [ "Charcoal_bg", "Charcoal" ], [ "FontGray_bg", "FontGray" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ], [ "custom", "Custom" ] ],
+      "choices" : [ [ "Blue_bg", "Blue" ], [ "Red_bg", "Red" ], [ "BrightBlue_bg", "Bright Blue" ], [ "BrightRed_bg", "Bright Red" ], [ "Green_bg", "Green" ], [ "Purple_bg", "Purple" ], [ "Orange_bg", "Orange" ], [ "Teal_bg", "Teal" ], [ "Pink_bg", "Pink" ], [ "DarkNavy_bg", "Dark Navy" ], [ "LightGray_bg", "Light Gray" ], [ "Gray_bg", "Gray" ], [ "Charcoal_bg", "Charcoal" ], [ "FontGray_bg", "Font Gray" ], [ "Black_bg", "Black" ], [ "White_bg", "White" ], [ "custom", "Custom" ] ],
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
@@ -1388,7 +1411,7 @@
       "display_width" : null,
       "default" : {
         "size_type" : "auto",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/shutterstock_2249452161%201.png",
+        "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/shutterstock_2249452161%201.png",
         "alt" : "shutterstock_2249452161 1",
         "loading" : "lazy",
         "width" : 1340,
@@ -1406,7 +1429,7 @@
       "background_type" : "gradient",
       "background_image" : {
         "size_type" : "auto",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/shutterstock_2249452161%201.png",
+        "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/shutterstock_2249452161%201.png",
         "alt" : "shutterstock_2249452161 1",
         "loading" : "lazy",
         "width" : 1340,
@@ -1425,7 +1448,7 @@
       "select_gradient" : "gradient5",
       "overlay_image" : {
         "size_type" : "auto",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/shutterstock_2249452161%201.png",
+        "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/shutterstock_2249452161%201.png",
         "alt" : "shutterstock_2249452161 1",
         "loading" : "lazy",
         "width" : 1340,
@@ -1514,7 +1537,7 @@
       "background_type" : "gradient",
       "background_image" : {
         "size_type" : "auto",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/shutterstock_2249452161%201.png",
+        "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/shutterstock_2249452161%201.png",
         "alt" : "shutterstock_2249452161 1",
         "loading" : "lazy",
         "width" : 1340,
@@ -1533,7 +1556,7 @@
       "select_gradient" : "gradient5",
       "overlay_image" : {
         "size_type" : "auto",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/shutterstock_2249452161%201.png",
+        "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/shutterstock_2249452161%201.png",
         "alt" : "shutterstock_2249452161 1",
         "loading" : "lazy",
         "width" : 1340,

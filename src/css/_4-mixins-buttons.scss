@@ -1,5 +1,6 @@
 // 
 @mixin button {
+  white-space: normal;
   display: inline-block;
   font-family: $font1;
   color: $White;
@@ -9,7 +10,7 @@
   padding: 16rem 40rem 16rem 40rem;
   transition: $animation1;
   text-transform: none;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 18rem;
   line-height: 1;
   letter-spacing: normal;
@@ -30,6 +31,7 @@
 }
 
 @mixin buttonThird {
+  white-space: normal;
   display: inline-block;
   font-family: $font1;
   color: $Black;
@@ -40,7 +42,7 @@
   transition: $animation1;
   text-transform: none;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 18rem;
   line-height: 1;
   letter-spacing: normal;
@@ -57,6 +59,7 @@
 }
 
 @mixin buttonSecond {
+  white-space: normal;
   display: inline-block;
   font-family: $font1;
   background-color: transparent;
@@ -71,7 +74,7 @@
   transition: $animation1;
   text-transform: none;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 18rem;
   line-height: 1;
   color: $Black;
