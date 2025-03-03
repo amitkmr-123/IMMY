@@ -1,7 +1,7 @@
 
 {% set dropArrow =  get_asset_url('../../templates/images/Vector.svg') %}
 
-<div class="filter-content-outer-wrapper">
+<div class="filter-content-outer-wrapper {{ module.module_overrides.inner_container_spacing_group.border_radius_type ? "" : "no_radius_selected" }}">
 
 	{# =========== #}
 

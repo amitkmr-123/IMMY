@@ -1,0 +1,597 @@
+{
+  "blog_listing.description.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.description.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.description.label" : {
+    "message" : "Description",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.description.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.featured_image.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.featured_image.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.featured_image.label" : {
+    "message" : "Featured Image",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.featured_image.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.label" : {
+    "message" : "Blog Listing",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.read_more.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.read_more.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.read_more.label" : {
+    "message" : "Read More",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.read_more.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.read_more_text.default" : {
+    "message" : "Read More",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.read_more_text.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.read_more_text.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.read_more_text.label" : {
+    "message" : "Read More Text",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.read_more_text.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.read_more_text.validation_regex" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.tag.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.tag.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.tag.label" : {
+    "message" : "Tag",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.tag.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.title.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.title.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.title.label" : {
+    "message" : "Title",
+    "description" : "",
+    "placeholders" : null
+  },
+  "blog_listing.title.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "featured_section.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "featured_section.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "featured_section.label" : {
+    "message" : "Featured Section",
+    "description" : "",
+    "placeholders" : null
+  },
+  "featured_section.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "featured_section.read_more_text.default" : {
+    "message" : "Learn More",
+    "description" : "",
+    "placeholders" : null
+  },
+  "featured_section.read_more_text.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "featured_section.read_more_text.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "featured_section.read_more_text.label" : {
+    "message" : "Read More Text",
+    "description" : "",
+    "placeholders" : null
+  },
+  "featured_section.read_more_text.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "featured_section.read_more_text.validation_regex" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "input.default.placeholder" : {
+    "message" : "Search",
+    "description" : null,
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "u4m-blog-listings",
+    "description" : "",
+    "placeholders" : null
+  },
+  "search_section.content_types.blog_posts.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.blog_posts.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.blog_posts.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.blog_posts.label" : {
+    "message" : "Blog posts",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.blog_posts.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.case_studies.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.case_studies.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.case_studies.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.case_studies.label" : {
+    "message" : "Case studies",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.case_studies.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.knowledge_articles.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.knowledge_articles.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.knowledge_articles.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.knowledge_articles.label" : {
+    "message" : "Knowledge articles",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.knowledge_articles.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.label" : {
+    "message" : "Search results include",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.landing_pages.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.landing_pages.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.landing_pages.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.landing_pages.label" : {
+    "message" : "Landing pages",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.landing_pages.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.website_pages.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.website_pages.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.website_pages.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.website_pages.label" : {
+    "message" : "Website pages",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.content_types.website_pages.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.default.content_types.case_studies" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.default.content_types.knowledge_articles" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.default.content_types.landing_pages" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.default.input.placeholder" : {
+    "message" : "Search",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.default.results.use_custom_search_results_template" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.include_search_button.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.include_search_button.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.include_search_button.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.include_search_button.label" : {
+    "message" : "Include search button",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.include_search_button.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.input.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.input.field_label.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.input.field_label.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.input.field_label.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.input.field_label.label" : {
+    "message" : "Label text",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.input.field_label.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.input.field_label.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.input.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.input.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.input.label" : {
+    "message" : "Input",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.input.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.input.placeholder.default" : {
+    "message" : "Search",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.input.placeholder.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.input.placeholder.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.input.placeholder.label" : {
+    "message" : "Placeholder text",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.input.placeholder.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.input.placeholder.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.label" : {
+    "message" : "Search Section",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.results.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.results.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.results.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.results.label" : {
+    "message" : "Results",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.results.path_id.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.results.path_id.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.results.path_id.inline_help_text" : {
+    "message" : "This is where people will go when they click to search their search term. Make sure to choose a page that contains the search results module.",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.results.path_id.label" : {
+    "message" : "Search results page",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.results.path_id.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.results.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.results.use_custom_search_results_template.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.results.use_custom_search_results_template.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.results.use_custom_search_results_template.inline_help_text" : {
+    "message" : "Turn this setting on to use a custom search results page instead of the default global search results page.",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.results.use_custom_search_results_template.label" : {
+    "message" : "Use custom search results page",
+    "description" : null,
+    "placeholders" : null
+  },
+  "search_section.results.use_custom_search_results_template.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  }
+}

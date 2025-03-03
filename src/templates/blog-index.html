@@ -1,0 +1,291 @@
+<!--
+  templateType: blog_listing
+  isAvailableForNewContent: true
+  label: IMMY-u4m - Blog Listing
+-->
+{% extends './base.html' %} {% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {# Blog Banner section #}
+  {% dnd_area 'dnd_area__banner'
+						label='Blog Banner'
+					%}
+  {% dnd_section full_width=true %}
+  {% dnd_column %}
+  {% dnd_row %}
+  {% dnd_module path='../modules/u4m-hero',
+  module_overrides={
+          "background_settings" : {
+            "background_type" : "color"
+          },
+          "bottom_padding" : "bottom-padding-none",
+          "container_size" : "full_width",
+          "inner_container_spacing_group" : {
+            "border_radius_type" : "",
+            "bottom_padding" : 80,
+            "change_spacing_in_mobile" : false,
+            "top_padding" : 80
+          },
+          "reverse_text" : false,
+          "top_padding" : "top-padding-none"
+        },
+        enable_bottom_content=false,
+        module_settings={
+          "enable_outer_shadow" : false,
+          "intro_content_alignment" : "center"
+        },
+        intro_content={
+          "button_group" : [ {
+            "button_size" : "large",
+            "button_style" : "hs-button",
+            "button_text" : "Insert CTA",
+            "button_type" : "std",
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "button_size" : "large",
+            "button_style" : "hs-arrow-btn",
+            "button_text" : "Optional CTA",
+            "button_type" : "std",
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          } ],
+          "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+          "content_style" : "themeStyle",
+          "eyebrow_text" : "OPTIONAL EYEBROW TEXT",
+          "heading" : "Events + News",
+          "heading_size" : "h1",
+          "include_button" : true,
+          "include_content" : true,
+          "include_eyebrow_text" : true,
+          "include_heading" : true
+        }
+  %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% end_dnd_section %}
+  {% end_dnd_area %}
+  {# End blog Banner section #}
+
+
+  {# Blog listing section #}
+  {% dnd_area 'dnd_area_blogg'
+						label='Main Content'
+					%}
+  {% dnd_section full_width=true %}
+  {% dnd_column %}
+  {% dnd_row %}
+  {% dnd_module path='../modules/u4m-blog-listings' %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+
+
+  {% end_dnd_section %}
+
+
+
+  {% end_dnd_area %}
+  {# End blog listing section #}
+  {% dnd_area 'dnd_area_btm_sec'
+						label='Bottom Section'
+					%}
+  {% dnd_section
+  full_width=true
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+  {% dnd_row %}
+  {% dnd_module
+        path="../modules/u4m-cards",
+        offset=0,
+        width=12,
+        module_settings={
+          "intro_content_alignment" : "center"
+        },
+        cards_items_group=[ {
+          "button_group" : {
+            "button_size" : "large",
+            "button_style" : "hs-arrow-btn",
+            "button_text" : "Subpage Link Here",
+            "button_type" : "std",
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "cards_icon_background_group" : {
+            "select_color" : "BrightBlue_bg"
+          },
+          "cards_icon_theme_group" : {
+            "select_color" : "White_Clr"
+          },
+          "content" : "<p>Donec malesuada arcu turpis, eget pretium nulla viverra pretium. Aenean laoreet mollis efficitur. Curabitur nec magna tellus. Cras viverra varius magna, non.</p>",
+          "content_style" : "bodystyle1",
+          "eyebrow_text" : "Optional Eyebrow Text",
+          "heading" : "Fungal Education",
+          "heading_size" : "h5",
+          "icon_type" : "",
+          "image_field" : {
+            "alt" : "Card Image",
+            "height" : 258,
+            "loading" : "lazy",
+            "max_height" : 258,
+            "max_width" : 386,
+            "size_type" : "auto",
+            "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/Card%20Image.png",
+            "width" : 386
+          },
+          "include_button" : true,
+          "include_content" : true,
+          "include_eyebrow_text" : true,
+          "include_heading" : true,
+          "normal_icon" : {
+            "name" : "500px",
+            "type" : "REGULAR",
+            "unicode" : "f26e"
+          }
+        }, {
+          "button_group" : {
+            "button_size" : "large",
+            "button_style" : "hs-arrow-btn",
+            "button_text" : "Subpage Link Here",
+            "button_type" : "std",
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "cards_icon_background_group" : {
+            "select_color" : "BrightBlue_bg"
+          },
+          "cards_icon_theme_group" : {
+            "select_color" : "White_Clr"
+          },
+          "content" : "<p>Donec malesuada arcu turpis, eget pretium nulla viverra pretium. Aenean laoreet mollis efficitur. Curabitur nec magna tellus. Cras viverra varius magna, non.</p>",
+          "content_style" : "bodystyle1",
+          "eyebrow_text" : "Optional Eyebrow Text",
+          "heading" : "Fungal Education",
+          "heading_size" : "h5",
+          "icon_type" : "",
+          "image_field" : {
+            "alt" : "Card Image",
+            "height" : 258,
+            "loading" : "lazy",
+            "max_height" : 258,
+            "max_width" : 386,
+            "size_type" : "auto",
+            "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/Card%20Image.png",
+            "width" : 386
+          },
+          "include_button" : true,
+          "include_content" : true,
+          "include_eyebrow_text" : true,
+          "include_heading" : true,
+          "normal_icon" : {
+            "name" : "500px",
+            "type" : "REGULAR",
+            "unicode" : "f26e"
+          }
+        }, {
+          "button_group" : {
+            "button_size" : "large",
+            "button_style" : "hs-arrow-btn",
+            "button_text" : "Subpage Link Here",
+            "button_type" : "std",
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "cards_icon_background_group" : {
+            "select_color" : "BrightBlue_bg"
+          },
+          "cards_icon_theme_group" : {
+            "select_color" : "White_Clr"
+          },
+          "content" : "<p>Donec malesuada arcu turpis, eget pretium nulla viverra pretium. Aenean laoreet mollis efficitur. Curabitur nec magna tellus. Cras viverra varius magna, non.</p>",
+          "content_style" : "bodystyle1",
+          "eyebrow_text" : "Optional Eyebrow Text",
+          "heading" : "Fungal Education",
+          "heading_size" : "h5",
+          "icon_type" : "",
+          "image_field" : {
+            "alt" : "Card Image",
+            "height" : 258,
+            "loading" : "lazy",
+            "max_height" : 258,
+            "max_width" : 386,
+            "size_type" : "auto",
+            "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/Card%20Image.png",
+            "width" : 386
+          },
+          "include_button" : true,
+          "include_content" : true,
+          "include_eyebrow_text" : true,
+          "include_heading" : true,
+          "normal_icon" : {
+            "name" : "500px",
+            "type" : "REGULAR",
+            "unicode" : "f26e"
+          }
+        } ],
+        intro_content={
+          "button_group" : [ {
+            "button_size" : "large",
+            "button_style" : "hs-button",
+            "button_text" : "Button",
+            "button_type" : "std",
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          } ],
+          "include_button" : true
+        }
+      %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% dnd_row %}
+  {% dnd_module
+        path="../modules/u4m-cta-stats",
+        offset=0,
+        width=12
+      %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

@@ -1,0 +1,289 @@
+{% set dropArrow =  get_asset_url('../../templates/images/Vector.svg') %}
+
+<div class="u4m-blog-listings">
+
+  {% set tag_posts = blog_recent_tag_posts(group.id, 'Featured', 1) %}
+  {% for tag_post in tag_posts %}
+  <div class="featured-post dnd_padd">
+    <div class="page-center">
+      <div class="flex_row">
+        {% if tag_post.featured_image %}
+        <div class="feat_img col6">
+          <div class="img_wrap">
+            <a href="{{ tag_post.absolute_url }}">
+              <img src="{{ tag_post.featured_image }}" alt="{{ tag_post.name | striptags }}">
+            </a>
+          </div>					
+        </div>
+        {% endif %}
+        <div class="feat_content col6">
+          {% if tag_post.topic_list %}
+          <div class='eyebrow_text'>
+            {% set included_topics = tag_post.topic_list | rejectattr("slug", "equalto", "Featured") | list %}
+            {% for topic in included_topics %}
+            {% if loop.first %}
+            <a class="featured-tag" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>
+            {% endif %}
+            {% endfor %}
+          </div>
+          {% endif %}
+          <h2 class="feat_title">
+            <a href="{{ tag_post.absolute_url }}">{{ tag_post.name }}</a>
+          </h2>
+          <p class="description"> {{ tag_post.post_list_content|striptags|truncatehtml(160, '.' , false) }}</p>
+          {% if module.featured_section.read_more_text %}
+          <div class='read-more'>
+            <a class="hs-button" href="{{ tag_post.absolute_url }}">{{ module.featured_section.read_more_text }}
+            </a>
+          </div>
+          {% endif %}
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  {# =========== #}
+
+  <div class="main-listing">
+    <div class="filter_nav">
+      <div class="page-center">
+        <div class="flex_row">
+          <div class=" SearchBtn search-col">
+            <div class="srchSection">
+
+
+
+              {% set search_page = module.search_section.results.use_custom_search_results_template is truthy and module.search_section.results.path_id ? content_by_id(module.search_section.results.path_id).absolute_url : site_settings.content_search_results_page_path %}
+
+              {% unless (search_page is string_containing "//") %}
+              {% set search_page = "/" ~ search_page %}
+              {% endunless %}
+
+              {% set search_page = search_page|regex_replace("http:", "") %}
+
+              {% set content_types = [
+  {
+    field_name: "website_pages",
+    content_type: "SITE_PAGE"
+  },
+  {
+    field_name: "landing_pages",
+    content_type: "LANDING_PAGE"
+  },
+  {
+    field_name: "blog_posts",
+    content_type: "BLOG_POST"
+  },
+  {
+    field_name: "listing_pages",
+    content_type: "LISTING_PAGE"
+  },
+  {
+    field_name: "knowledge_articles",
+    content_type: "KNOWLEDGE_ARTICLE"
+  },
+  {
+    field_name: "case_studies",
+    content_type: "HS_CASE_STUDY"
+  }
+] %}
+
+              {% require_head %}
+              <script id="hs-search-input__valid-content-types" type="application/json">
+    [
+      {% for type in content_types %}
+        "{{ type.content_type }}"{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ]
+              </script>
+              {% end_require_head %}
+
+              <div class="hs-search-field">
+
+                <div class="hs-search-field__bar">
+                  <form data-hs-do-not-collect="true" action="{{ search_page|escape_url }}">
+                    <div class="cmInputWrap">
+                      {% if module.search_section.input.field_label %}
+                      <label for="term">{{ module.search_section.input.field_label|sanitize_html }}</label>
+                      {% endif %}
+                      <input type="text" class="hs-search-field__input resourceInput" name="term" autocomplete="off" aria-label="{{ module.search_section.input.field_label|escape_attr || "Search" }}" placeholder="{{ module.search_section.input.placeholder|escape_attr }}">
+
+                      {% for type in content_types %}
+                      {% if module.content_types[type.field_name] is truthy %}
+                      <input type="hidden" name="type" value="{{ type.content_type }}">
+                      {% endif %}
+                      {% endfor %}
+                    </div>
+
+                    {% if module.search_section.include_search_button %}
+                    <button class="Searchbtn" aria-label="Search"> <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16.6339 18L10.2321 11.5982C9.69643 11.9911 9.10902 12.2991 8.46991 12.5223C7.8308 12.7455 7.15063 12.8571 6.42938 12.8571C4.64313 12.8571 3.125 12.2321 1.875 10.9821C0.625 9.73214 0 8.21429 0 6.42857C0 4.64286 0.625 3.125 1.875 1.875C3.125 0.625 4.64286 0 6.42857 0C8.21429 0 9.73214 0.625 10.9821 1.875C12.2321 3.125 12.8571 4.64313 12.8571 6.42938C12.8571 7.15063 12.7455 7.8308 12.5223 8.46991C12.2991 9.10902 11.9911 9.69643 11.5982 10.2321L18 16.6339L16.6339 18ZM6.42857 10.9286C7.67857 10.9286 8.74107 10.4911 9.61607 9.61607C10.4911 8.74107 10.9286 7.67857 10.9286 6.42857C10.9286 5.17857 10.4911 4.11607 9.61607 3.24107C8.74107 2.36607 7.67857 1.92857 6.42857 1.92857C5.17857 1.92857 4.11607 2.36607 3.24107 3.24107C2.36607 4.11607 1.92857 5.17857 1.92857 6.42857C1.92857 7.67857 2.36607 8.74107 3.24107 9.61607C4.11607 10.4911 5.17857 10.9286 6.42857 10.9286Z" fill="black"/>
+                      </svg></button>
+                    {% endif %}
+                  </form>
+                </div>
+                <ul class="hs-search-field__suggestions"></ul>
+              </div>
+
+
+
+            </div>
+          </div> 
+          {# ================ #}
+
+
+
+          <div class=" selctArrow tag-col">   
+            <div class="select_arrow_inner">               
+              {% set my_topics = blog_topics('group.id', 10) %}
+              <select id="tinynav1" class="tinynav tinynav1 filter_label" style="background-image: url({{dropArrow}})">
+                <option value="{{ group.absolute_url }}">Select Topic...</option>
+                {% for item in my_topics %}
+                {% if item=="Featured"%}
+                {% else %}
+                <option value="{{ blog_tag_url(group.id, item.slug) }}" {% if content.absolute_url == blog_tag_url(group.id, item.slug) %} selected{% endif %}>{{ item }}</option>
+                {% endif %}
+                {% endfor %}
+              </select>
+            </div>
+          </div> 
+          {# ================ #}
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class='listing-wrap dnd_padd'>
+      <div class="page-center">
+        <div class='cardSctn'>
+          <div class='flex_row postitems col3_row'>
+            {% for content in contents %}
+            <div class='col3 post-item'>
+              <div class='post-item-inner  {% if not content.featured_image %}noImage{% endif %}'>
+                {% if module.blog_listing.featured_image %}
+                {% if content.featured_image %}
+                <div class="featured-img">
+                  <a href="{{content.absolute_url}}">
+                    <img src="{{ content.featured_image }}" alt="{{ content.name | striptags }}">
+                  </a>
+
+                  <div class="overlay_bg">
+                    <span>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.58462 24L0 21.4154L17.7231 3.69231H1.84615V0H24V22.1538H20.3077V6.27692L2.58462 24Z" fill="white"/>
+                      </svg>
+                    </span>								
+                  </div>								
+
+                </div>
+                {% endif %}
+                {% endif %}
+                <div class="post-content">
+                  {% if module.blog_listing.tag %}
+                  <div class="card_eyebrow_text">
+                    {% if content.topic_list %}
+                    {% set included_topics = content.topic_list | rejectattr("slug", "equalto", "Featured") | list %}
+                    {% for topic in included_topics %}
+                    {% if loop.first %}
+                    <a class="featured-tag" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>
+                    {% endif %} 
+                    {% endfor %}
+                    {% endif %}
+                  </div>
+                  {% endif %}
+                  {% if module.blog_listing.title %}
+                  <h6 class="restitle">
+                    <a href="{{ content.absolute_url }}">{{ content.name }}</a>
+                  </h6>
+                  {% endif %}
+
+                  {% if module.blog_listing.description %}
+                  <p class="description">{{ content.post_list_content|striptags|truncatehtml(100, '.' , false) }}
+                  </p>
+                  {% endif %}
+
+                  {% if module.blog_listing.read_more %}
+                  <div class='read-more'>
+                    <a class="hs-arrow" href="{{ content.absolute_url }}">
+                      <span>{{ module.blog_listing.read_more_text }}</span>
+                      <div class="icon">
+                        <div class="inner">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12L4.9375 10.9375L9.125 6.75Z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  {% endif %}
+
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% if not simple_list_page %}
+        <div class="blog-pagination">
+          <div class="nav-links">
+            {% set page_list = [-2, -1, 0, 1, 2] %}
+            {% if contents.total_page_count - current_page_num == 1 %}{% set offset = -1 %}
+            {% elif contents.total_page_count - current_page_num == 0 %}{% set offset = -2 %}
+            {% elif current_page_num == 2 %}{% set offset = 1 %}
+            {% elif current_page_num == 1 %}{% set offset = 2 %}
+            {% else %}{% set offset = 0 %}{% endif %}
+            <div class="blog-pagination-left">
+              {% if last_page_num %}
+              <a class="prev page-numbers" href="{{ blog_page_link(last_page_num) }}"><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.79734 11.92L0.213344 10.24L4.65334 6.04L0.213344 1.84L1.79734 0.232L7.82134 6.064L1.79734 11.92Z" fill="#626262"/>
+                </svg></a>
+
+              {% endif %}
+
+              {% if contents.total_page_count > 5 %}
+              {% if current_page_num >= 4 %}
+              <a class="page_num" href="{{ blog_page_link(1) }}">1</a>
+              <a class="page_num elipses" href="{% if current_page_num <= 5 %}{{ blog_page_link(1) }}{% else %}{{ blog_page_link(current_page_num - 5) }}{% endif %}">...</a>
+              {% endif %}
+              {% endif %}
+            </div>
+            {% for page in page_list %}
+            {% set this_page = current_page_num + page + offset %}
+            {% if this_page > 0 and this_page <= contents.total_page_count %}
+            <a class="page_num{% if this_page == current_page_num %} active{% endif %}" href="{{ blog_page_link(this_page) }}">{{ this_page }}</a>
+            {% endif %}
+            {% endfor %}
+            {% if contents.total_page_count > 5 %}
+            {% if contents.total_page_count - current_page_num > 2 %}
+            <a class="page_num elipses" href="{% if contents.total_page_count - current_page_num <= 5 %}{{ contents.total_page_count }}{% else %}{{ blog_page_link(current_page_num + 5) }}{% endif %}">...</a>
+            <a href="{{ blog_page_link(contents.total_page_count) }}">{{ contents.total_page_count }}</a>
+            {% endif %}
+            {% endif %}   
+            {% if next_page_num %}
+            <a class="next page-numbers" href="{{ blog_page_link(current_page_num + 1) }}"><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.79734 11.92L0.213344 10.24L4.65334 6.04L0.213344 1.84L1.79734 0.232L7.82134 6.064L1.79734 11.92Z" fill="#626262"/>
+              </svg></a>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+{% require_js %}
+<script>
+
+</script>
+{% end_require_js %}
+
+
+
+
+

@@ -620,7 +620,7 @@
       "preset" : null,
       "type" : "choice",
       "display_width" : null,
-      "default" : "color"
+      "default" : ""
     }, {
       "id" : "5d97321e-e326-2d30-8757-51608da05ea6",
       "name" : "background_image",
@@ -803,7 +803,7 @@
     "type" : "group",
     "display_width" : null,
     "default" : {
-      "background_type" : "color",
+      "background_type" : "",
       "background_image" : {
         "size_type" : "auto",
         "src" : "",
@@ -903,7 +903,7 @@
     },
     "reverse_text" : false,
     "background_settings" : {
-      "background_type" : "color",
+      "background_type" : "",
       "background_image" : {
         "size_type" : "auto",
         "src" : "",

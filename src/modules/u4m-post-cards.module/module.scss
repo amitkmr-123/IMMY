@@ -1,0 +1,184 @@
+@import "../../css/_module-imports";
+
+.u4m-post-cards {
+    .intro_content {
+        margin-bottom: 40px;
+    }
+
+    .btmCntt.intro_content {
+        max-width: 100%;
+        margin: 0;
+        text-align: left;
+
+        .btn_item {
+            margin-top: 22px;
+        }
+
+        .mrg {
+            margin-bottom: 30px;
+            a.overlayLink {
+                position: absolute;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+
+            img {
+                width: 100%;
+                height: 100% !important;
+                object-fit: cover;
+            }
+        }
+
+        .pdd {
+            margin: 0 -20px;
+            row-gap: 30px;
+
+            .items {
+                padding: 0 20px;
+                transition: all 0.3s ease;
+
+                .Inneritems {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                    .btm_btn {
+                        margin-top: auto;
+                    }
+                }
+
+                .Inneritems.Bgcard {
+                    border: 1px solid rgba($Black, 0.1);
+                    box-shadow: 0px 24px 24px -12px rgba($Black, 0.1);
+                    padding: 20px 20px 30px 20px;
+                    height: 100%;
+
+                    .iconImg {
+                        margin-bottom: 20rem;
+                        height: 82px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 15px;
+
+                        img {
+                            height: 100%;
+                            object-fit: contain;
+                        }
+
+                        .normal {
+                            width: 100%;
+                            height: 100%;
+                            text-align: center;
+
+                            svg {
+                                width: auto;
+                                height: 100%;
+                                fill: currentColor;
+                                color: currentColor;
+                            }
+                        }
+                    }
+
+                    .eyebrow_text {
+                        text-align: center;
+                    }
+
+                    .intro_title {
+                        text-align: center;
+                    }
+
+                    .intro_desc {
+                        text-align: center;
+                    }
+
+                    .btn_item {
+                        text-align: center;
+
+                        .hs-arrow-btn {
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        .mrg.borderRadius {
+            overflow: hidden;
+            box-shadow: 0px 24px 24px -12px rgba($Black, 0.1);
+            position: relative;
+        }
+
+        .eyebrow_text {
+            margin-bottom: 10rem;
+            a {
+                color: inherit;
+            }
+        }
+
+        .intro_title {
+            margin-bottom: 10rem;
+            a {
+                color: inherit;
+            }
+        }
+
+        .arrowIcon {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            width: 24px;
+            height: 24px;
+            display: none;
+
+            svg {
+                fill: $White;
+                color: $White;
+
+                path {
+                    fill: $White;
+                    color: $White;
+                }
+            }
+        }
+
+        .items {
+            transition: all 0.3s ease;
+
+            .borderRadius {
+                &:before {
+                    content: "";
+                    opacity: 0;
+                    visibility: hidden;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    transition: all 0.3s ease;
+                }
+            }
+
+            &:hover {
+                transform: translateY(-10px);
+
+                .mrg.borderRadius {
+                    .arrowIcon {
+                        display: block;
+                    }
+                }
+
+                .borderRadius {
+                    &:before {
+                        background: linear-gradient(0deg, rgba($Black, 0.6), rgba($Black, 0.6));
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+}

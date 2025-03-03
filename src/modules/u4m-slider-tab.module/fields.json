@@ -2455,7 +2455,7 @@
         },
         "type" : "richtext",
         "display_width" : null,
-        "default" : "Content Here"
+        "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
       } ],
       "tab" : "CONTENT",
       "expanded" : false,
@@ -2476,7 +2476,7 @@
         },
         "file" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
         "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
-        "content" : "Content Here"
+        "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
       }
     } ],
     "tab" : "CONTENT",
@@ -2527,7 +2527,7 @@
         },
         "file" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
         "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
-        "content" : "Content Here"
+        "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
       }
     }, {
       "title" : "This is the Active Tab Title",
@@ -2572,7 +2572,7 @@
         },
         "file" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
         "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
-        "content" : "Content Here"
+        "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
       }
     }, {
       "title" : "This is the Active Tab Title",
@@ -2617,7 +2617,7 @@
         },
         "file" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
         "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
-        "content" : "Content Here"
+        "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
       }
     } ]
   } ],
@@ -3380,7 +3380,7 @@
         },
         "file" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
         "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
-        "content" : "Content Here"
+        "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
       }
     }, {
       "title" : "This is the Active Tab Title",
@@ -3425,7 +3425,7 @@
         },
         "file" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
         "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
-        "content" : "Content Here"
+        "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
       }
     }, {
       "title" : "This is the Active Tab Title",
@@ -3470,7 +3470,7 @@
         },
         "file" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
         "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
-        "content" : "Content Here"
+        "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
       }
     } ]
   }
