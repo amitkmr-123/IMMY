@@ -10,7 +10,11 @@
     max-width: 100%;
     overflow: auto;
   }
-
+  @include tabletvert {
+    .glossMain > div {
+      height: auto !important;
+    }
+  }
   form.glossTop {
     background-color: $DarkNavy;
     color: $white;
@@ -27,6 +31,9 @@
       top: 0;
       left: 0;
       right: 0;
+      @include tabletvert {
+        position: static;
+      }
     }
     .placeholder {
       height: 0;
@@ -110,7 +117,8 @@
               width: 35px;
             }
 
-            &.active {
+            &.active,
+            &:hover {
               background: $white;
 
               span {
@@ -144,6 +152,9 @@
               color: $white;
               font-size: 18px;
               line-height: 1;
+              @include tabletvert {
+                top: 1px;
+              }
             }
           }
         }
@@ -258,6 +269,9 @@
                 @include tabletvert {
                   text-align: left;
                   width: 100%;
+                  .glossBtn {
+                    display: flex;
+                  }
                 }
 
                 svg path {

@@ -197,7 +197,7 @@
       color: $black;
       align-items: center;
       align-items: center;
-      background-position: 98% 50%;
+      background-position: calc(100% - 20px) 50%;
       background-repeat: no-repeat;
     }
 
@@ -214,12 +214,14 @@
   //
   .resourceList {
     row-gap: 48px;
+    margin: 0 -20px;
   }
 
   .listing-wrap {
     position: relative;
     z-index: 2;
     background-color: $LightGray;
+    padding: 80rem 0;
   }
 
   .card_eyebrow_text,
@@ -307,13 +309,12 @@
   }
 
   .post-item-inner {
+    transition: 0.2s ease;
     &:hover {
       .overlay_bg {
         opacity: 1;
       }
-      .featured-img {
-        transform: translateY(-10px);
-      }
+      transform: translateY(-10px);
     }
   }
 

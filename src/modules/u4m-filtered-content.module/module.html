@@ -95,12 +95,15 @@
 				</h2>
 				<p class="description"> {{ row.description|safe|truncatehtml(160, '.' , false)|striptags}}
 				</p>
+       {% if not module.module_settings.remove_button %}
+ 
 				{% if row.button_text %}
 				<div class='read-more'>
 					<a class="hs-button" href="{{ row.page_url }}">{{ row.button_text }}
 					</a>
 				</div>
 				{% endif %}
+        {% endif %}
 			</div>
 
 
@@ -285,6 +288,7 @@
 
 								<p class="description"> {{ row.description|safe|truncatehtml(160, '.' , false)|striptags}}
 								</p>
+               {% if not module.module_settings.remove_button %} 
 								<div class='read-more'>
 									<a class="hs-arrow" href="{{ row.page_url }}">
 										<span>{{ row.button_text }}</span>
@@ -297,6 +301,7 @@
 										</div>
 									</a>
 								</div>
+                {% endif %}
 							</div>
 						</div>
 					</div>
