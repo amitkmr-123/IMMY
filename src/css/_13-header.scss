@@ -3,18 +3,23 @@
     z-index: 101;
 
     .BtnWrap {
-        @include tabletMid {
+        @include tablet {
             margin-top: 20px;
         }
 
         .hs-button {
             @include buttonThird;
+            white-space: nowrap;
+
+            @include midlaptop {
+                font-size: 16px;
+            }
         }
     }
 
     .navTrigger {
         .trigger_item {
-            @include tabletMid {
+            @include tablet {
                 background-color: $Black;
                 display: block;
                 height: 3px;
@@ -36,11 +41,11 @@
             }
         }
 
-        @include tabletMidmin {
+        @include tabletMin {
             display: none;
         }
 
-        @include tabletMid {
+        @include tablet {
             align-items: center;
             cursor: pointer;
             display: flex;
@@ -53,7 +58,7 @@
 
     .cm_active {
         .trigger_item {
-            @include tabletMid {
+            @include tablet {
                 &:first-child {
                     top: 10px;
                     transform: rotate(45deg);
@@ -88,7 +93,7 @@
         align-items: center;
         position: relative;
 
-        @include tabletMid {
+        @include tablet {
             flex-wrap: wrap;
             row-gap: 20px;
         }
@@ -110,11 +115,11 @@
         align-items: center;
         column-gap: 40px;
 
-        @include tablet {
-            column-gap: 20px;
+        @include midlaptop {
+            column-gap: 10px;
         }
 
-        @include tabletMid {
+        @include tablet {
             display: none;
             width: 100%;
         }
@@ -246,6 +251,13 @@
         position: relative;
         justify-content: center;
 
+        .hs-search-field__suggestions {
+
+            &:empty {
+                margin: 0;
+            }
+        }
+
         form {
             margin: 0;
             display: flex;
@@ -258,7 +270,7 @@
             }
         }
 
-        > div {
+        >div {
             width: 100%;
         }
     }

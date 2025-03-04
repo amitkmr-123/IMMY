@@ -1,13 +1,21 @@
 @import "../../css/_module-imports";
 
 .cmMegaMenu {
+    .normalMenu {
+        .menuItem {
+            a {
+                white-space: nowrap;
+            }
+        }
+    }
+
     .cmNav {
         padding: 0;
         margin: 0;
         display: flex;
         list-style: none;
 
-        @include tabletMid {
+        @include tablet {
             flex-direction: column;
         }
     }
@@ -16,7 +24,7 @@
         position: absolute;
         border: 1px solid rgba($Black, 0.1);
         border-radius: 15px;
-        margin-top: 13px;
+        margin-top: 10px;
         background-color: $White;
         opacity: 0;
         visibility: hidden;
@@ -24,14 +32,14 @@
         min-width: 207px;
 
         &.megaMenu-wrap {
-            top: 100%;
+            top: 85%;
             left: 50%;
             transform: translateX(-50%);
             width: 93.549%;
             z-index: 111;
             padding: 40px;
 
-            @include tabletMid {
+            @include tablet {
                 transform: unset;
                 width: 100%;
                 padding: 20px;
@@ -41,22 +49,23 @@
         &.normalMenu-wrap {
             padding: 30px 20px;
             left: 50%;
+            top: 85%;
             transform: translateX(-50%);
 
             .megaInnerWrap {
-                @include tabletMid {
+                @include tablet {
                     margin: 0;
                 }
             }
 
-            @include tabletMid {
+            @include tablet {
                 transform: unset;
                 width: 100%;
                 padding: 20px;
             }
         }
 
-        @include tabletMid {
+        @include tablet {
             position: static;
             opacity: 1;
             visibility: visible;
@@ -72,9 +81,9 @@
             &:before {
                 content: "";
                 display: block;
-                height: 13px;
+                height: 10px;
                 position: absolute;
-                top: -13px;
+                top: -10px;
                 width: 100%;
                 left: 50%;
                 transform: translateX(-50%);
@@ -96,7 +105,7 @@
             position: relative;
         }
 
-        @include tabletMid {
+        @include tablet {
             position: relative;
         }
 
@@ -107,7 +116,7 @@
             }
 
             .childArrow {
-                @include tabletMidmin {
+                @include tabletMin {
                     transform: rotate(180deg);
                 }
             }
@@ -150,16 +159,14 @@
     }
 
     .megaInnerWrap {
-        @include tabletMid {
-            display: flex;
-            row-gap: 40px;
-            flex-wrap: wrap;
+        @include tablet {
             margin: 0 -20px;
             column-gap: 0 !important;
+        }
 
-            @include tabletvert {
-                margin: 0;
-            }
+        @include tabletvert {
+            margin: 0;
+            row-gap: 25px;
         }
     }
 
@@ -169,6 +176,10 @@
             flex-wrap: wrap;
             justify-content: space-between;
             row-gap: 40px;
+
+            @include tabletvert {
+                row-gap: 25px;
+            }
         }
 
         .childNavWrap {
@@ -177,7 +188,7 @@
             }
         }
 
-        @include tabletMid {
+        @include tablet {
             display: none;
         }
     }
@@ -189,6 +200,10 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 20px;
+
+        @include tabletvert {
+            display: none;
+        }
     }
 
     .imageInnerWrap {
@@ -238,16 +253,16 @@
             fill: inherit;
         }
 
-        @include tabletMid {
+        @include tablet {
             display: none;
         }
 
         &.mb_childArrow {
-            @include tabletMidmin {
+            @include tabletMin {
                 display: none;
             }
 
-            @include tabletMid {
+            @include tablet {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -265,7 +280,7 @@
     }
 
     .cmActive {
-        @include tabletMid {
+        @include tablet {
             transform: rotate(180deg);
         }
     }
