@@ -127,6 +127,31 @@
     "type_product_icon_group" : [ ]
   }
 }, {
+  "id" : "4483ac93-1b79-ad77-f0dc-405c0924a742",
+  "name" : "module_settings",
+  "label" : "Module Settings",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "3936abad-caaf-a0f3-df29-4edd6f11eb01",
+    "name" : "remove_button",
+    "label" : "Remove Button",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : false
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "remove_button" : false
+  }
+}, {
   "id" : "module_overrides",
   "name" : "module_overrides",
   "label" : "Module Overrides",
@@ -620,7 +645,7 @@
       "preset" : null,
       "type" : "choice",
       "display_width" : null,
-      "default" : "color"
+      "default" : ""
     }, {
       "id" : "5d97321e-e326-2d30-8757-51608da05ea6",
       "name" : "background_image",
@@ -803,7 +828,7 @@
     "type" : "group",
     "display_width" : null,
     "default" : {
-      "background_type" : "color",
+      "background_type" : "",
       "background_image" : {
         "size_type" : "auto",
         "src" : "",
@@ -903,7 +928,7 @@
     },
     "reverse_text" : false,
     "background_settings" : {
-      "background_type" : "color",
+      "background_type" : "",
       "background_image" : {
         "size_type" : "auto",
         "src" : "",

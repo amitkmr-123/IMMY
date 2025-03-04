@@ -43,6 +43,15 @@ $('.header .navTrigger').click(function(){
 $('.header .cmSearchBtn').click(function(){
   $('.cmSearch').toggleClass('cm_active_search');
 });
-$('.cmSearch .close').click(function(){
+$('.cmSearch .close').click(function(e){
   $('.cmSearch').removeClass('cm_active_search');
+  e.stopPropagation();
 });
+$('.cmSearch').click(function(){
+  $(this).removeClass('cm_active_search');
+});
+$('.cmSearchInner').click(function(event){
+  event.stopPropagation();
+});
+
+

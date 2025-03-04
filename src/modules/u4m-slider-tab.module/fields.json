@@ -486,7 +486,7 @@
         "preset" : null,
         "type" : "choice",
         "display_width" : null,
-        "default" : "h2"
+        "default" : "h3"
       }, {
         "id" : "d16233b0-a25f-c0e5-bf3e-639b03d42456",
         "name" : "heading",
@@ -738,7 +738,7 @@
         "include_eyebrow_text" : false,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Tab Group Slide Headline Goes Here.",
         "include_content" : true,
         "content_style" : "themeStyle",
@@ -1233,7 +1233,7 @@
         "include_eyebrow_text" : false,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Tab Group Slide Headline Goes Here.",
         "include_content" : true,
         "content_style" : "themeStyle",
@@ -1410,7 +1410,7 @@
         "include_eyebrow_text" : false,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Tab Group Slide Headline Goes Here.",
         "include_content" : true,
         "content_style" : "themeStyle",
@@ -1587,7 +1587,7 @@
         "include_eyebrow_text" : false,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Tab Group Slide Headline Goes Here.",
         "include_content" : true,
         "content_style" : "themeStyle",
@@ -1764,7 +1764,7 @@
         "include_eyebrow_text" : false,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Tab Group Slide Headline Goes Here.",
         "include_content" : true,
         "content_style" : "themeStyle",
@@ -2057,7 +2057,7 @@
         "preset" : null,
         "type" : "choice",
         "display_width" : null,
-        "default" : "h2"
+        "default" : "h3"
       }, {
         "id" : "63860a4c-f31c-3230-5456-baacddd4575d",
         "name" : "heading",
@@ -2309,7 +2309,7 @@
         "include_eyebrow_text" : true,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Tab Group Slide Headline",
         "include_content" : true,
         "content_style" : "themeStyle",
@@ -2455,7 +2455,7 @@
         },
         "type" : "richtext",
         "display_width" : null,
-        "default" : "Content Here"
+        "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
       } ],
       "tab" : "CONTENT",
       "expanded" : false,
@@ -2476,7 +2476,7 @@
         },
         "file" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
         "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
-        "content" : "Content Here"
+        "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
       }
     } ],
     "tab" : "CONTENT",
@@ -2491,7 +2491,7 @@
         "include_eyebrow_text" : true,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Tab Group Slide Headline",
         "include_content" : true,
         "content_style" : "themeStyle",
@@ -2527,7 +2527,7 @@
         },
         "file" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
         "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
-        "content" : "Content Here"
+        "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
       }
     }, {
       "title" : "This is the Active Tab Title",
@@ -2536,7 +2536,7 @@
         "include_eyebrow_text" : true,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Tab Group Slide Headline",
         "include_content" : true,
         "content_style" : "themeStyle",
@@ -2572,7 +2572,7 @@
         },
         "file" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
         "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
-        "content" : "Content Here"
+        "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
       }
     }, {
       "title" : "This is the Active Tab Title",
@@ -2581,7 +2581,7 @@
         "include_eyebrow_text" : true,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Tab Group Slide Headline",
         "include_content" : true,
         "content_style" : "themeStyle",
@@ -2617,7 +2617,7 @@
         },
         "file" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
         "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
-        "content" : "Content Here"
+        "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
       }
     } ]
   } ],
@@ -2634,7 +2634,7 @@
         "include_eyebrow_text" : false,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Tab Group Slide Headline Goes Here.",
         "include_content" : true,
         "content_style" : "themeStyle",
@@ -2811,7 +2811,7 @@
         "include_eyebrow_text" : false,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Tab Group Slide Headline Goes Here.",
         "include_content" : true,
         "content_style" : "themeStyle",
@@ -2988,7 +2988,7 @@
         "include_eyebrow_text" : false,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Tab Group Slide Headline Goes Here.",
         "include_content" : true,
         "content_style" : "themeStyle",
@@ -3165,7 +3165,7 @@
         "include_eyebrow_text" : false,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Tab Group Slide Headline Goes Here.",
         "include_content" : true,
         "content_style" : "themeStyle",
@@ -3344,7 +3344,7 @@
         "include_eyebrow_text" : true,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Tab Group Slide Headline",
         "include_content" : true,
         "content_style" : "themeStyle",
@@ -3380,7 +3380,7 @@
         },
         "file" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
         "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
-        "content" : "Content Here"
+        "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
       }
     }, {
       "title" : "This is the Active Tab Title",
@@ -3389,7 +3389,7 @@
         "include_eyebrow_text" : true,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Tab Group Slide Headline",
         "include_content" : true,
         "content_style" : "themeStyle",
@@ -3425,7 +3425,7 @@
         },
         "file" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
         "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
-        "content" : "Content Here"
+        "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
       }
     }, {
       "title" : "This is the Active Tab Title",
@@ -3434,7 +3434,7 @@
         "include_eyebrow_text" : true,
         "eyebrow_text" : "Optional Eyebrow Text",
         "include_heading" : true,
-        "heading_size" : "h2",
+        "heading_size" : "h3",
         "heading" : "Tab Group Slide Headline",
         "include_content" : true,
         "content_style" : "themeStyle",
@@ -3470,7 +3470,7 @@
         },
         "file" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/videos/big_buck_bunny_720p_1mbb.mp4",
         "embed_url" : "https://www.youtube.com/embed/9xwazD5SyVg",
-        "content" : "Content Here"
+        "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
       }
     } ]
   }

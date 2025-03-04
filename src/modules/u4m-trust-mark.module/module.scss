@@ -26,6 +26,7 @@
                 column-gap: 0;
                 row-gap: 50px;
                 flex-direction: column;
+                align-items: flex-start;
             }
 
             .intro_content {
@@ -37,6 +38,7 @@
             .MainsliderCnntt {
                 flex: 1;
                 overflow: hidden;
+                max-width: 100%;
             }
 
             .logosType2 {

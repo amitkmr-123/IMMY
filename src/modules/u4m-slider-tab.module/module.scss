@@ -23,6 +23,8 @@
 
         @include tabletvert {
             padding: 20px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
         }
     }
 
@@ -483,6 +485,13 @@
                 color: $FontGray;
                 position: relative;
                 font-weight: 700;
+
+                @include tabletvert {
+                    background-color: $LightGray;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    text-align: left;
+                }
             }
 
             .tabcontent {
@@ -625,6 +634,7 @@
             height: 100%;
             display: flex;
             flex-direction: column;
+            border: 1px solid rgba($Black, 0.1);
 
             &:hover {
                 transform: translateY(-10px);

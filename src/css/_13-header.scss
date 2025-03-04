@@ -3,44 +3,49 @@
     z-index: 101;
 
     .BtnWrap {
-        @include tabletMid {
+        @include tablet {
             margin-top: 20px;
         }
 
         .hs-button {
             @include buttonThird;
+            white-space: nowrap;
+
+            @include midlaptop {
+                font-size: 16px;
+            }
         }
     }
 
     .navTrigger {
         .trigger_item {
-            @include tabletMid {
+            @include tablet {
                 background-color: $Black;
                 display: block;
                 height: 3px;
                 position: absolute;
-                transition: all .4s ease-in-out;
+                transition: all 0.4s ease-in-out;
                 width: 80%;
 
                 &:first-child {
-                    top: 3px
+                    top: 3px;
                 }
 
                 &:nth-child(2) {
-                    top: 11px
+                    top: 11px;
                 }
 
                 &:last-child {
-                    top: 19px
+                    top: 19px;
                 }
             }
         }
 
-        @include tabletMidmin {
+        @include tabletMin {
             display: none;
         }
 
-        @include tabletMid {
+        @include tablet {
             align-items: center;
             cursor: pointer;
             display: flex;
@@ -49,12 +54,11 @@
             position: relative;
             width: 30px;
         }
-
     }
 
     .cm_active {
         .trigger_item {
-            @include tabletMid {
+            @include tablet {
                 &:first-child {
                     top: 10px;
                     transform: rotate(45deg);
@@ -67,7 +71,7 @@
 
                 &:last-child {
                     top: 10px;
-                    transform: rotate(-45deg)
+                    transform: rotate(-45deg);
                 }
             }
         }
@@ -89,7 +93,7 @@
         align-items: center;
         position: relative;
 
-        @include tabletMid {
+        @include tablet {
             flex-wrap: wrap;
             row-gap: 20px;
         }
@@ -109,13 +113,13 @@
     .rightSection {
         display: flex;
         align-items: center;
-        column-gap: 40px;
+        column-gap: 30px;
 
-        @include tablet {
-            column-gap: 20px;
+        @include midlaptop {
+            column-gap: 10px;
         }
 
-        @include tabletMid {
+        @include tablet {
             display: none;
             width: 100%;
         }
@@ -126,7 +130,7 @@
         flex-wrap: wrap;
         justify-content: flex-end;
         align-items: center;
-        gap: 30px;
+        gap: 20px;
     }
 
     .cmSearchBtn {
@@ -138,7 +142,7 @@
         align-items: center;
         gap: 5px;
         line-height: 1.2857;
-        font-weight: 700;
+        font-weight: 500;
 
         .searchIcon {
             width: 20px;
@@ -154,7 +158,6 @@
         font-size: 14px;
         line-height: 1.2857;
 
-
         .hs-button {
             background-color: transparent;
             padding: 0;
@@ -165,6 +168,7 @@
             color: $White;
             display: flex;
             align-items: center;
+            font-weight: 500;
 
             &:after {
                 content: "";
@@ -176,12 +180,10 @@
                 background-repeat: no-repeat;
                 background-position: center;
                 margin-left: 7px;
-                margin-top: -1px;
             }
         }
     }
 }
-
 
 .cmSearch {
     opacity: 0;
@@ -193,7 +195,7 @@
     margin: auto;
     justify-content: center;
     position: fixed;
-    background-color: rgba($Black, .6);
+    background-color: rgba($Black, 0.6);
     backdrop-filter: blur(10px);
     top: 0;
     z-index: 999;
@@ -211,7 +213,7 @@
         width: 32px;
 
         &:hover {
-            opacity: 1
+            opacity: 1;
         }
 
         &:after {
@@ -221,7 +223,7 @@
             position: absolute;
             width: 2px;
             background-color: $White;
-            transform: rotate(-45deg)
+            transform: rotate(-45deg);
         }
 
         &::before {
@@ -231,7 +233,7 @@
             position: absolute;
             width: 2px;
             background-color: $White;
-            transform: rotate(45deg)
+            transform: rotate(45deg);
         }
     }
 
@@ -248,6 +250,13 @@
         margin: auto;
         position: relative;
         justify-content: center;
+
+        .hs-search-field__suggestions {
+
+            &:empty {
+                margin: 0;
+            }
+        }
 
         form {
             margin: 0;
@@ -311,6 +320,7 @@
             background-color: $White;
             position: absolute;
             width: 100%;
+            list-style: none;
 
             li {
                 &#results-for {
@@ -334,7 +344,6 @@
                     }
                 }
             }
-
         }
     }
 }

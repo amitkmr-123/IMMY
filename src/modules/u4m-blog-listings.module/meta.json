@@ -17,8 +17,8 @@
   "master_language" : "en",
   "categories" : [ "functionality" ],
   "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
-  "module_id" : 186712109939,
-  "label" : "Header Search",
-  "icon" : "../../../mV0_d-web-default-modules_hubspot/img/icon/edited-search-1.svg",
+  "module_id" : 186799928161,
+  "label" : "Blog Listings",
+  "icon" : "https://8292614.fs1.hubspotusercontent-na1.net/hubfs/8292614/4.svg",
   "is_available_for_new_content" : true
 }
