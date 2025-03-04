@@ -118,6 +118,7 @@ body {
   color: $FontGray;
   font-weight: 400;
   margin-top: 0;
+  -webkit-font-smoothing: antialiased;
 
   &.hide-header {
     margin-top: 0;
