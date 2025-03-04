@@ -100,14 +100,34 @@ $(document).ready(function () {
   });
 
   // Auto-submit on radio button selection & adjust height
-  $(document).on("change", ".glossCat input[type='radio']", function () {
-    submitForm();
-    $(this).parent().addClass("active").siblings().removeClass("active");
-    $(this).parents('.catItems').slideUp();
-  });
+//   $(document).on("change", ".glossCat input[type='radio']", function () {
+//     submitForm();
+//     $(this).parent().addClass("active").siblings().removeClass("active");
+//     $(this).parents('.catItems').slideUp();
+//   });
   $(document).on("click", ".mobileIcon", function () {
     $(this).toggleClass('active');
     $(this).next('.catItems').slideToggle();
   });
 
 });
+
+
+document.querySelectorAll('.glossTop a[href^="#"]').forEach(anchor => { 
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    
+    const target = document.querySelector(this.getAttribute('href'));
+    const glossTopHeight = document.querySelector('.glossTop')?.offsetHeight || 0; // Get .glossTop height
+
+    if (target) {
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY - glossTopHeight; 
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
