@@ -80,7 +80,7 @@
         column-gap: 4%;
 
         @include tabletMid {
-            row-gap: 40px;
+            row-gap: 30px;
         }
 
         .hs-menu-wrapper {
@@ -90,6 +90,10 @@
                 flex-wrap: wrap;
                 gap: 20px;
                 justify-content: space-between;
+
+                @include tabletMid {
+                    row-gap: 30px;
+                }
 
                 @include tabletvert {
                     text-align: center
@@ -187,8 +191,13 @@
                         justify-content: space-between;
                         column-gap: 20px;
 
+                        @include tabletMid {
+                            row-gap: 30px;
+                        }
+
                         @include tabletvert {
                             flex-direction: column;
+
                         }
 
                         >li {
