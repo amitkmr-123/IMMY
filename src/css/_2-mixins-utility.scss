@@ -89,8 +89,8 @@
   }
 }
 
-@mixin laptop {
-  @media (max-width: 1440px) {
+@mixin laptopMin {
+  @media (min-width: 1441px) {
     @content;
   }
 }
@@ -120,9 +120,7 @@
 }
 
 @mixin ie {
-
-  @media all and (-ms-high-contrast: none),
-  (-ms-high-contrast: active) {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     @content;
   }
 }

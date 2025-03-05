@@ -24,6 +24,9 @@ section.u4m-hero {
       .eyebrow_text {
         margin-bottom: 8rem;
       }
+      .intro_desc h4 {
+        margin-bottom: 20px;
+      }
     }
     .flex_row {
       row-gap: 40rem;
@@ -37,7 +40,7 @@ section.u4m-hero {
       }
 
       @include tabletMinlarge {
-        gap: 80rem;
+        gap: 110rem;
       }
 
       align-items: center;
@@ -54,7 +57,23 @@ section.u4m-hero {
         }
 
         @include tabletMinlarge {
-          width: calc((100% - 80px) / 2);
+          width: calc((100% - 110px) / 2);
+        }
+
+        &.media_section {
+          @include laptopMin {
+            width: 580px;
+            .media_sectionin img {
+              width: 100%;
+              object-fit: cover;
+              min-height: 580px;
+            }
+          }
+        }
+        &.left-section {
+          @include laptopMin {
+            width: calc(100% - 690px);
+          }
         }
       }
     }
@@ -151,7 +170,14 @@ section.u4m-hero {
   .bannerContent.fw {
     .intro_content {
       max-width: 820px;
-
+      .intro_desc {
+        max-width: 550px;
+      }
+      &.center .intro_desc {
+        max-width: 610px;
+        margin-left: auto;
+        margin-right: auto;
+      }
       .intro_btn_wrap {
         margin-top: 40rem;
       }
@@ -163,7 +189,30 @@ section.u4m-hero {
 
   .btmContent {
     padding-top: 50rem;
-
+    .page-center {
+      @include tabletMidmin {
+        padding-left: 60rem;
+        padding-right: 60rem;
+      }
+    }
+    .flex_row.rowcol6 {
+      gap: 80px;
+      .btmItem.col6 {
+        width: 100%;
+        @include tabletvertmin {
+          width: calc((100% - 80px) / 2);
+        }
+      }
+    }
+    .flex_row.rowcol4 {
+      gap: 20px;
+      .btmItem.col4 {
+        width: 100%;
+        @include tabletvertmin {
+          width: calc((100% - 40px) / 3);
+        }
+      }
+    }
     .flex_row {
       margin: 0 -20px;
       row-gap: 40px;

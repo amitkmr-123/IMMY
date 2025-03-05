@@ -51,7 +51,7 @@
 {% if module.enable_bottom_content %}
 <div class="btmContent {{ module.module_settings.content_style }}">
 	<div class="page-center {{ module.module_overrides.container_size }}" {% if module.module_overrides.container_size == "custom" %} style="max-width:{{ module.module_overrides.custom_container_size }}rem" {% endif %}>
-		<div class="flex_row">
+		<div class="flex_row row{{ module.module_settings.bottom_column_count }}">
 			{% for item in module.bottom_content %}
 			<div class="btmItem {{ module.module_settings.bottom_column_count }}">
 				{{ item.content }}
