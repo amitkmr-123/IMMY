@@ -14,7 +14,9 @@
 				</div>
 				{% endif %}
 				{% if item.include_heading %}
-				<{{ item.heading_size }} class="intro_title ">{{ item.prefix }}<span class="counter">{{ item.number }}</span>{{ item.suffix }}</{{ item.heading_size }}>
+				<{{ item.heading_size }} class="intro_title "><span class="suffix fntSize">{{ item.prefix }}</span><span class="counter">{{ item.number }}</span><span class="suffix fntSize">{{ item.suffix }}</span></{{ item.heading_size }}>
+          
+          
 					{% endif %}
 					{% if item.include_content %}
 					<div class="intro_desc {{ item.content_style }} ">

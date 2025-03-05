@@ -3,9 +3,11 @@
 section.u4m-hero {
   .intro_content {
     margin-bottom: 0;
+
     .intro_title {
       margin-bottom: 20rem;
     }
+
     .eyebrow_text {
       @include HeroEyebrow;
     }
@@ -24,10 +26,12 @@ section.u4m-hero {
       .eyebrow_text {
         margin-bottom: 8rem;
       }
+
       .intro_desc h4 {
         margin-bottom: 20px;
       }
     }
+
     .flex_row {
       row-gap: 40rem;
 
@@ -45,7 +49,7 @@ section.u4m-hero {
 
       align-items: center;
 
-      > * {
+      >* {
         width: 100%;
 
         @include tabletvertmin {
@@ -63,6 +67,7 @@ section.u4m-hero {
         &.media_section {
           @include laptopMin {
             width: 580px;
+
             .media_sectionin img {
               width: 100%;
               object-fit: cover;
@@ -70,6 +75,7 @@ section.u4m-hero {
             }
           }
         }
+
         &.left-section {
           @include laptopMin {
             width: calc(100% - 690px);
@@ -155,7 +161,7 @@ section.u4m-hero {
     }
 
     .media_section {
-      > img {
+      >img {
         width: 100%;
       }
     }
@@ -170,17 +176,21 @@ section.u4m-hero {
   .bannerContent.fw {
     .intro_content {
       max-width: 820px;
+
       .intro_desc {
         max-width: 550px;
       }
+
       &.center .intro_desc {
         max-width: 610px;
         margin-left: auto;
         margin-right: auto;
       }
+
       .intro_btn_wrap {
         margin-top: 40rem;
       }
+
       &.left {
         max-width: 675rem;
       }
@@ -189,30 +199,38 @@ section.u4m-hero {
 
   .btmContent {
     padding-top: 50rem;
+
     .page-center {
       @include tabletMidmin {
         padding-left: 60rem;
         padding-right: 60rem;
       }
     }
+
     .flex_row.rowcol6 {
       gap: 80px;
+
       .btmItem.col6 {
         width: 100%;
+
         @include tabletvertmin {
           width: calc((100% - 80px) / 2);
         }
       }
     }
+
     .flex_row.rowcol4 {
       gap: 20px;
+
       .btmItem.col4 {
         width: 100%;
+
         @include tabletvertmin {
           width: calc((100% - 40px) / 3);
         }
       }
     }
+
     .flex_row {
       margin: 0 -20px;
       row-gap: 40px;
@@ -224,6 +242,7 @@ section.u4m-hero {
         :is(h1, h2, h3, h4, h5, h6) {
           color: $Black;
           margin-bottom: 10px;
+          font-weight: 700;
         }
 
         p {
@@ -234,7 +253,7 @@ section.u4m-hero {
   }
 
   &.outershadow {
-    > .page-center {
+    >.page-center {
       box-shadow: $shadow2;
     }
   }

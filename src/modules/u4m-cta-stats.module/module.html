@@ -23,7 +23,7 @@
 						</div>
 						{% endif %}
 						{% if item.include_heading %}
-						<{{ item.heading_size }} class="intro_title ">{{ item.prefix }}<span class="counterCnt">{{ item.number }}</span>{{ item.suffix }}</{{ item.heading_size }}>
+						<{{ item.heading_size }} class="intro_title "><span class="fntSize">{{ item.prefix }}</span><span class="counterCnt">{{ item.number }}</span><span class="fntSize">{{ item.suffix }}</span></{{ item.heading_size }}>
 							{% endif %}
 							{% if item.include_content %}
 							<div class="intro_desc {{ item.content_style }} ">
