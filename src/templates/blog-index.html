@@ -250,6 +250,7 @@
       %}
   {% end_dnd_module %}
   {% end_dnd_row %}
+
   {% dnd_row %}
   {% dnd_module
         path="../modules/u4m-cta-stats",
@@ -258,8 +259,41 @@
       %}
   {% end_dnd_module %}
   {% end_dnd_row %}
+
+
+  {% dnd_row %}
+  {% dnd_module
+        path="../modules/u4m-cta-row",
+        offset=0,
+        width=12,
+
+           intro_content={
+            "heading" : "Blog Subscribe",
+            "include_button" : false,
+            "select_input_type" : "form",
+             "select_form": {
+               "form_id": "25acbad6-03ca-4adb-bd5c-1ade1af92c8c",
+               "response_type": "inline",
+               "message": "Thanks for submitting the form.",
+               "gotowebinar_webinar_key": null,
+               "webinar_id": null,
+               "webinar_source": null,
+               "form_type": "HUBSPOT"
+              }
+             },
+             module_overrides={
+              "top_padding" : "top-padding-none"
+            }
+      %}
+  {% end_dnd_module %}
+  {% end_dnd_row %}
+
+
   {% end_dnd_column %}
   {% end_dnd_section %}
   {% end_dnd_area %}
+
+
+
 </main>
 {% endblock body %}

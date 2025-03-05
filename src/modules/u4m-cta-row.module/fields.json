@@ -1,7 +1,7 @@
 [ {
   "id" : "081bfb60-a75d-a475-e7fb-44c8a8969c1a",
   "name" : "intro_content",
-  "label" : "Intro Content",
+  "label" : "Content",
   "required" : false,
   "locked" : false,
   "children" : [ {
@@ -136,11 +136,33 @@
     "display_width" : null,
     "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquip commodo consequat.</p>"
   }, {
+    "id" : "dd60d2d6-c70e-1d93-b41f-5df032b4e062",
+    "name" : "select_input_type",
+    "label" : "Select Input Type",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "button", "Button" ], [ "form", "Form" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "button"
+  }, {
     "id" : "4a517c8a-8c15-a721-dca5-db7b58a8c2a7",
     "name" : "include_button",
     "label" : "Include Button",
     "required" : false,
     "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.select_input_type",
+      "controlling_value_regex" : "button",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
     "display" : "checkbox",
     "type" : "boolean",
     "display_width" : null,
@@ -321,6 +343,31 @@
         "no_follow" : false
       }
     } ]
+  }, {
+    "id" : "56a7962c-df6c-6b90-3505-85b9e7b098fd",
+    "name" : "select_form",
+    "label" : "Select Form",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.select_input_type",
+      "controlling_value_regex" : "form",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "form",
+    "display_width" : null,
+    "default" : {
+      "form_id" : "25acbad6-03ca-4adb-bd5c-1ade1af92c8c",
+      "response_type" : "inline",
+      "message" : "Thanks for submitting the form.",
+      "gotowebinar_webinar_key" : null,
+      "webinar_id" : null,
+      "webinar_source" : null,
+      "form_type" : "HUBSPOT"
+    }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -336,6 +383,7 @@
     "include_content" : true,
     "content_style" : "themeStyle",
     "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquip commodo consequat.</p>",
+    "select_input_type" : "button",
     "include_button" : true,
     "button_group" : [ {
       "button_type" : "std",
@@ -365,7 +413,16 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    } ]
+    } ],
+    "select_form" : {
+      "form_id" : "25acbad6-03ca-4adb-bd5c-1ade1af92c8c",
+      "response_type" : "inline",
+      "message" : "Thanks for submitting the form.",
+      "gotowebinar_webinar_key" : null,
+      "webinar_id" : null,
+      "webinar_source" : null,
+      "form_type" : "HUBSPOT"
+    }
   }
 }, {
   "id" : "fbc58b2b-b6db-82a2-8422-e7f6861ce34b",
@@ -1062,8 +1119,8 @@
       "display_width" : null,
       "default" : {
         "size_type" : "auto",
-        "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/background.png",
-        "alt" : "background",
+        "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/shrooms.png",
+        "alt" : "shrooms",
         "loading" : "lazy",
         "width" : 1240,
         "height" : 412,
@@ -1095,8 +1152,8 @@
       "select_gradient" : "gradient1",
       "overlay_image" : {
         "size_type" : "auto",
-        "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/background.png",
-        "alt" : "background",
+        "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/shrooms.png",
+        "alt" : "shrooms",
         "loading" : "lazy",
         "width" : 1240,
         "height" : 412,
@@ -1199,8 +1256,8 @@
       "select_gradient" : "gradient1",
       "overlay_image" : {
         "size_type" : "auto",
-        "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/background.png",
-        "alt" : "background",
+        "src" : "https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/images/shrooms.png",
+        "alt" : "shrooms",
         "loading" : "lazy",
         "width" : 1240,
         "height" : 412,
