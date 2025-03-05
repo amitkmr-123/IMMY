@@ -1,398 +1,402 @@
 
 {% set dropArrow =  get_asset_url('../../templates/images/Vector.svg') %}
 
-<div class="filter-content-outer-wrapper {{ module.module_overrides.inner_container_spacing_group.border_radius_type ? "" : "no_radius_selected" }}">
+<div class="filter-content-outer-wrapper parent{{name}} {{ module.module_overrides.inner_container_spacing_group.border_radius_type ? "" : "no_radius_selected" }}">
 
-	{# =========== #}
+  {# =========== #}
 
 
 
-	{% set table =  module.filter_content.select_hubdb_table  %}
-	{% set query = ""%}
+  {% set table =  module.filter_content.select_hubdb_table  %}
+  {% set query = ""%}
 
-	{% set batch_num = module.filter_content.post_count %}
+  {% set batch_num = module.filter_content.post_count %}
 
   {% if not request.query_dict.page_num %}
-	{% set page_num = 1 %}
-	{% set offset_num = 0 %}
-	{% elif request.query_dict.page_num %}
-	{% set page_num = request.query_dict.page_num %}
-	{% set offset_num = page_num|add(-1) * batch_num %}
-	{% endif %}
+  {% set page_num = 1 %}
+  {% set offset_num = 0 %}
+  {% elif request.query_dict.page_num %}
+  {% set page_num = request.query_dict.page_num %}
+  {% set offset_num = page_num|add(-1) * batch_num %}
+  {% endif %}
 
 
-	{% set limit = "&limit=" ~ batch_num ~ "&offset=" ~ offset_num %}
+  {% set limit = "&limit=" ~ batch_num ~ "&offset=" ~ offset_num %}
 
 
-	{% set query =  "orderBy=hs_created_at" %}
+  {% set query =  "orderBy=hs_created_at" %}
 
 
-	{# ================== #}
-	{% if module.filter_content.select_filter == "type1" %}
+  {# ================== #}
+  {% if module.filter_content.select_filter == "type1" %}
 
-	{% if request.query_dict.type %}
-	{% set query = query  ~ '&type__in=' ~ request.query_dict.type|urlencode %}
-	{% endif %}
+  {% if request.query_dict.type %}
+  {% set query = query  ~ '&type__in=' ~ request.query_dict.type|urlencode %}
+  {% endif %}
 
-	{% if request.query_dict.topic %}
-	{% set query = query ~ '&topic__in=' ~ request.query_dict.topic|urlencode %}
-	{% endif %}
+  {% if request.query_dict.topic %}
+  {% set query = query ~ '&topic__in=' ~ request.query_dict.topic|urlencode %}
+  {% endif %}
 
-	{% endif %}
-	{# ================== #}
+  {% endif %}
+  {# ================== #}
 
-	{# ================== #}
-	{% if module.filter_content.select_filter == "type2" %}
+  {# ================== #}
+  {% if module.filter_content.select_filter == "type2" %}
 
-	{% if request.query_dict.product %}
-	{% set query = query ~ '&product__in=' ~ request.query_dict.product|urlencode %}
-	{% endif %}
+  {% if request.query_dict.product %}
+  {% set query = query ~ '&product__in=' ~ request.query_dict.product|urlencode %}
+  {% endif %}
 
-	{% if request.query_dict.language %}
-	{% set query = query ~ '&language__in=' ~ request.query_dict.language|urlencode %}
-	{% endif %}
+  {% if request.query_dict.language %}
+  {% set query = query ~ '&language__in=' ~ request.query_dict.language|urlencode %}
+  {% endif %}
 
-	{% endif %}
-	{# ================== #}
+  {% endif %}
+  {# ================== #}
 
-	{# ================== #}
-	{% if request.query_dict.search %}
-	{% set query = query  ~ '&name__icontains=' ~ request.query_dict.search|urlencode %}
-	{% endif %}
-
-
-	{% set resouces = hubdb_table_rows(table,query ~ limit) %}
-	{% set rowType = [] %}
-	{% set rowTagsType = [] %}
+  {# ================== #}
+  {% if request.query_dict.search %}
+  {% set query = query  ~ '&name__icontains=' ~ request.query_dict.search|urlencode %}
+  {% endif %}
 
 
-	{% set query2 = "orderBy=hs_created_at" %}
-	{% set ft_resouces = hubdb_table_rows(table,query~"&limit=1000") %}
+  {% set resouces = hubdb_table_rows(table,query ~ limit) %}
+  {% set rowType = [] %}
+  {% set rowTagsType = [] %}
 
-	{# ================= #}
 
-	{% set moduleName = 'u4m-filter-content-top' %}
-	{% include "../partials/u4-module-includes.html" %}
-	{% for row in ft_resouces %} 
+  {% set query2 = "orderBy=hs_created_at" %}
+  {% set ft_resouces = hubdb_table_rows(table,query~"&limit=1000") %}
 
-	{% if row.featured %}
-	<div class="featured-post">
+  {# ================= #}
 
-		<div class="flex_row">
+  {% set moduleName = 'u4m-filter-content-top' %}
+  {% include "../partials/u4-module-includes.html" %}
+  {% for row in ft_resouces %} 
 
-			<div class="feat_img col6">
-				<div class="img_wrap">
-					<a href="{{ row.page_url }}">
-						<img src="{{ row.image.url }}" alt="{{ row.name | striptags }}">
-					</a>
-				</div>					
-			</div>
+  {% if row.featured %}
+  <div class="featured-post">
 
-			<div class="feat_content col6">
-				<div class='eyebrow_text'>{{ row.type.name }}</div>
-				<h2 class="feat_title">
-					<a href="{{ row.page_url }}">{{ row.name }}</a>
-				</h2>
-				<p class="description"> {{ row.description|safe|truncatehtml(160, '.' , false)|striptags}}
-				</p>
-       {% if not module.module_settings.remove_button %}
- 
-				{% if row.button_text %}
-				<div class='read-more'>
-					<a class="hs-button" href="{{ row.page_url }}">{{ row.button_text }}
-					</a>
-				</div>
-				{% endif %}
+    <div class="flex_row">
+
+      <div class="feat_img col6">
+        <div class="img_wrap">
+          <a href="{{ row.page_url }}">
+            <img src="{{ row.image.url }}" alt="{{ row.name | striptags }}">
+          </a>
+        </div>					
+      </div>
+
+      <div class="feat_content col6">
+        <div class='eyebrow_text'>{{ row.type.name }}</div>
+        <h2 class="feat_title">
+          <a href="{{ row.page_url }}">{{ row.name }}</a>
+        </h2>
+        <p class="description"> {{ row.description|safe|truncatehtml(160, '.' , false)|striptags}}
+        </p>
+        {% if not module.module_settings.remove_button %}
+
+        {% if row.button_text %}
+        <div class='read-more'>
+          <a class="hs-button" href="{{ row.page_url }}">{{ row.button_text }}
+          </a>
+        </div>
         {% endif %}
-			</div>
+        {% endif %}
+      </div>
 
 
-		</div>
-	</div>
+    </div>
+  </div>
 
 
 
-	{% endif %}
-	{% endfor %}
+  {% endif %}
+  {% endfor %}
 </div>
 </div>
 </section>	
 {# =========== #}
 
 <div class="main-listing">
-	<div class="filter_nav">
-		<div class="page-center">
-			<div class="flex_row">
+  <div class="filter_nav">
+    <div class="page-center">
+      <div class="flex_row">
 
 
-				<div class=" SearchBtn search-col">
-					<div class="srchSection">
-						<input type="text" value="" id="filterTitle{{ name|replace('widget_','')|replace('module_','') }}" name="search" placeholder="Search..." class="resourceInput">
-						<div class="Searchbtn">
-							
-<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M16.6339 18L10.2321 11.5982C9.69643 11.9911 9.10902 12.2991 8.46991 12.5223C7.8308 12.7455 7.15063 12.8571 6.42938 12.8571C4.64313 12.8571 3.125 12.2321 1.875 10.9821C0.625 9.73214 0 8.21429 0 6.42857C0 4.64286 0.625 3.125 1.875 1.875C3.125 0.625 4.64286 0 6.42857 0C8.21429 0 9.73214 0.625 10.9821 1.875C12.2321 3.125 12.8571 4.64313 12.8571 6.42938C12.8571 7.15063 12.7455 7.8308 12.5223 8.46991C12.2991 9.10902 11.9911 9.69643 11.5982 10.2321L18 16.6339L16.6339 18ZM6.42857 10.9286C7.67857 10.9286 8.74107 10.4911 9.61607 9.61607C10.4911 8.74107 10.9286 7.67857 10.9286 6.42857C10.9286 5.17857 10.4911 4.11607 9.61607 3.24107C8.74107 2.36607 7.67857 1.92857 6.42857 1.92857C5.17857 1.92857 4.11607 2.36607 3.24107 3.24107C2.36607 4.11607 1.92857 5.17857 1.92857 6.42857C1.92857 7.67857 2.36607 8.74107 3.24107 9.61607C4.11607 10.4911 5.17857 10.9286 6.42857 10.9286Z" fill="black"/>
-</svg>
-							</div>
-					</div>
-				</div> 
-				{# ================ #}
+        <div class=" SearchBtn search-col">
+          <div class="srchSection">
+            <input type="text" value="" id="filterTitle{{ name|replace('widget_','')|replace('module_','') }}" name="search" placeholder="Search..." class="resourceInput">
+            <div class="Searchbtn">
 
-				{# ================ #}
-				{% if module.filter_content.select_filter == "type1" %}
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.6339 18L10.2321 11.5982C9.69643 11.9911 9.10902 12.2991 8.46991 12.5223C7.8308 12.7455 7.15063 12.8571 6.42938 12.8571C4.64313 12.8571 3.125 12.2321 1.875 10.9821C0.625 9.73214 0 8.21429 0 6.42857C0 4.64286 0.625 3.125 1.875 1.875C3.125 0.625 4.64286 0 6.42857 0C8.21429 0 9.73214 0.625 10.9821 1.875C12.2321 3.125 12.8571 4.64313 12.8571 6.42938C12.8571 7.15063 12.7455 7.8308 12.5223 8.46991C12.2991 9.10902 11.9911 9.69643 11.5982 10.2321L18 16.6339L16.6339 18ZM6.42857 10.9286C7.67857 10.9286 8.74107 10.4911 9.61607 9.61607C10.4911 8.74107 10.9286 7.67857 10.9286 6.42857C10.9286 5.17857 10.4911 4.11607 9.61607 3.24107C8.74107 2.36607 7.67857 1.92857 6.42857 1.92857C5.17857 1.92857 4.11607 2.36607 3.24107 3.24107C2.36607 4.11607 1.92857 5.17857 1.92857 6.42857C1.92857 7.67857 2.36607 8.74107 3.24107 9.61607C4.11607 10.4911 5.17857 10.9286 6.42857 10.9286Z" fill="black"/>
+              </svg>
+            </div>
+          </div>
+        </div> 
+        {# ================ #}
 
-
-				<div class=" selctArrow tag-col">  
-					<div class="select_arrow_inner"> 
-						<div class="filter_label type_filter_label" style="background-image: url({{dropArrow}})">
-							Select Type
-						</div>
-
-						<div class="filter_dropdown typeSelect type_filter" data-value="">
-							<div class="type_ele" data-type="" data-type-label>
-								<span class="tag_name">Select Type</span>
-							</div>
-							{% for type in hubdb_table_column(table, 'type').options %}
-							<div class="type_ele" data-type="{{ type.name|urlencode }}" data-type-label="{{ type.name }}" data-type-url="{{ type.name|replace(' ','-')|lower }}">
-								<span class="tag_name">{{ type.name }}</span>
-							</div>
-							{% endfor %}
-						</div>
-					</div>
-				</div> 
+        {# ================ #}
+        {% if module.filter_content.select_filter == "type1" %}
 
 
-				<div class=" selctArrow tag-col">   
-					<div class="select_arrow_inner"> 
-						<div class="filter_label topic_filter_label" style="background-image: url({{dropArrow}})">
-							Select Topic
-						</div>
+        <div class=" selctArrow tag-col">  
+          <div class="select_arrow_inner"> 
+            <div class="filter_label type_filter_label" style="background-image: url({{dropArrow}})">
+              Select Type
+            </div>
 
-						<div class="filter_dropdown topicSelect topic_filter" data-value="">
-							<div class="topic_ele" data-topic="" data-topic-label>
-								<span class="tag_name">Select Topic</span>
-							</div>
-							{% for topic in hubdb_table_column(table, 'topic').options %}
-							<div class="topic_ele" data-topic="{{ topic.name|urlencode }}" data-topic-label="{{ topic.name }}" data-topic-url="{{ topic.name|replace(' ','-')|lower }}">
-								<span class="tag_name">{{ topic.name }}</span>
-							</div>
-							{% endfor %}
-						</div>
-					</div>
-				</div> 
-
-				{% endif %}
-				{# ================ #}
+            <div class="filter_dropdown typeSelect type_filter" data-value="">
+              <div class="type_ele" data-type="" data-type-label>
+                <span class="tag_name">Select Type</span>
+              </div>
+              {% for type in hubdb_table_column(table, 'type').options %}
+              <div class="type_ele" data-type="{{ type.name|urlencode }}" data-type-label="{{ type.name }}" data-type-url="{{ type.name|replace(' ','-')|lower }}">
+                <span class="tag_name">{{ type.name }}</span>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div> 
 
 
-				{# ================ #}
-				{% if module.filter_content.select_filter == "type2" %}
+        <div class=" selctArrow tag-col">   
+          <div class="select_arrow_inner"> 
+            <div class="filter_label topic_filter_label" style="background-image: url({{dropArrow}})">
+              Select Topic
+            </div>
 
-				<div class=" selctArrow tag-col">   
-					<div class="select_arrow_inner"> 
-						<div class="filter_label type_filter_label" style="background-image: url({{dropArrow}})">
-							Select Product
-						</div>
+            <div class="filter_dropdown topicSelect topic_filter" data-value="">
+              <div class="topic_ele" data-topic="" data-topic-label>
+                <span class="tag_name">Select Topic</span>
+              </div>
+              {% for topic in hubdb_table_column(table, 'topic').options %}
+              <div class="topic_ele" data-topic="{{ topic.name|urlencode }}" data-topic-label="{{ topic.name }}" data-topic-url="{{ topic.name|replace(' ','-')|lower }}">
+                <span class="tag_name">{{ topic.name }}</span>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div> 
 
-						<div class="filter_dropdown typeSelect type_filter" data-value="">
-							<div class="type_ele" data-type="" data-type-label>
-								<span class="tag_name">Select Product</span>
-							</div>
-							{% for product in hubdb_table_column(table, 'product').options %}
-							<div class="type_ele" data-type="{{ product.name|urlencode }}" data-type-label="{{ product.name }}" data-type-url="{{ product.name|replace(' ','-')|lower }}">
-								<span class="tag_name">{{ product.name }}</span>
-							</div>
-							{% endfor %}
-						</div>
-					</div> 
-				</div>
-
-
-				<div class=" selctArrow tag-col">   
-					<div class="select_arrow_inner"> 
-						<div class="filter_label topic_filter_label" style="background-image: url({{dropArrow}})">
-							Select Language
-						</div>
-
-						<div class="filter_dropdown topicSelect topic_filter" data-value="">
-							<div class="topic_ele" data-topic="" data-topic-label>
-								<span class="tag_name">Select Language</span>
-							</div>
-							{% for language in hubdb_table_column(table, 'language').options %}
-							<div class="topic_ele" data-topic="{{ language.name|urlencode }}" data-topic-label="{{ language.name }}" data-topic-url="{{ language.name|replace(' ','-')|lower }}">
-								<span class="tag_name">{{ language.name }}</span>
-							</div>
-							{% endfor %}
-						</div>
-					</div> 
-				</div>
-				{% endif %}
+        {% endif %}
+        {# ================ #}
 
 
-			</div>
-		</div>
-	</div>
+        {# ================ #}
+        {% if module.filter_content.select_filter == "type2" %}
 
-	<div class='listing-wrap card_{{ module.filter_content.card_type }} dnd_padd'>
-		<div class="page-center">
+        <div class=" selctArrow tag-col">   
+          <div class="select_arrow_inner"> 
+            <div class="filter_label type_filter_label" style="background-image: url({{dropArrow}})">
+              Select Product
+            </div>
 
-
-			<div class='cardSctn'>
-				<div class='flex_row resourceList col3_row'>
-					{% set resouceCount = resouces|length%}
-					{% for row in resouces %}
-					<div class='resourceCard {{module.filter_content.card_type == "type2" ? "col4" : "col3"  }}  post-item {{ row.type.name|lower|replace(' ','-') }} {% for tag in row.topics_tags %}{{ tag.name|lower|replace(' ','-') }} {% endfor %}'>
-						<div class='post-item-inner  {% if not row.image.url %}noImage{% endif %}'>
-
-							{% if module.filter_content.card_type == "type1"%}
-							{% if row.image.url %}
-							<div class="featured-img">
-								<a href="{{row.page_url}}">
-									<img src="{{ row.image.url }}" alt="{{ row.name | striptags }}">
-								</a>
-
-								<div class="overlay_bg">
-								<span>
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M2.58462 24L0 21.4154L17.7231 3.69231H1.84615V0H24V22.1538H20.3077V6.27692L2.58462 24Z" fill="white"/>
-								</svg>
-</span>								
-</div>								
-
-							</div>
-							{% endif %}
-							{% endif %}
-
-							<div class="post-content">
-								<div class="card_eyebrow_text">
-									{% if module.filter_content.select_filter == "type1" %}
-									{% if row.type.name %}
-									<span class='featured-tag tag_{{ row.type.name|lower|replace(' ','-') }}'>{{ row.type.name }}</span>
-									{% endif %}
-									{% endif %}
-
-									{% if module.filter_content.select_filter == "type2" %}
-									{% if row.product.name %}
-									<span class='featured-tag tag_{{ row.product.name|lower|replace(' ','-') }} {{ row.product.name|lower|replace(' ','-') }}'>{% for item in module.filter_content.type_product_icon_group %}
-										{% if (row.product.name|lower|replace(' ','-') == item.type_product_label|lower|replace(' ','-') ) and item.icon_image.src %}
-										<span class="icon_img"><img src="{{ item.icon_image.src|escape_url }}" alt="{{ item.icon_image.alt|escape_attr }}"></span>
-										{% endif %}{% endfor %}{{ row.product.name }}</span>
-									{% endif %}
-									{% endif %}
+            <div class="filter_dropdown typeSelect type_filter" data-value="">
+              <div class="type_ele" data-type="" data-type-label>
+                <span class="tag_name">Select Product</span>
+              </div>
+              {% for product in hubdb_table_column(table, 'product').options %}
+              <div class="type_ele" data-type="{{ product.name|urlencode }}" data-type-label="{{ product.name }}" data-type-url="{{ product.name|replace(' ','-')|lower }}">
+                <span class="tag_name">{{ product.name }}</span>
+              </div>
+              {% endfor %}
+            </div>
+          </div> 
+        </div>
 
 
-								</div>
-								<h6 class="restitle">
-									<a href="{{ row.page_url }}">{{ row.name }}</a>
-								</h6>
+        <div class=" selctArrow tag-col">   
+          <div class="select_arrow_inner"> 
+            <div class="filter_label topic_filter_label" style="background-image: url({{dropArrow}})">
+              Select Language
+            </div>
 
-								<p class="description"> {{ row.description|safe|truncatehtml(160, '.' , false)|striptags}}
-								</p>
-               {% if not module.module_settings.remove_button %} 
-								<div class='read-more'>
-									<a class="hs-arrow" href="{{ row.page_url }}">
-										<span>{{ row.button_text }}</span>
-										<div class="icon">
-											<div class="inner">
-												<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12L4.9375 10.9375L9.125 6.75Z" />
-												</svg>
-											</div>
-										</div>
-									</a>
-								</div>
+            <div class="filter_dropdown topicSelect topic_filter" data-value="">
+              <div class="topic_ele" data-topic="" data-topic-label>
+                <span class="tag_name">Select Language</span>
+              </div>
+              {% for language in hubdb_table_column(table, 'language').options %}
+              <div class="topic_ele" data-topic="{{ language.name|urlencode }}" data-topic-label="{{ language.name }}" data-topic-url="{{ language.name|replace(' ','-')|lower }}">
+                <span class="tag_name">{{ language.name }}</span>
+              </div>
+              {% endfor %}
+            </div>
+          </div> 
+        </div>
+        {% endif %}
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class='listing-wrap card_{{ module.filter_content.card_type }} dnd_padd'>
+    <div class="page-center">
+
+
+      <div class='cardSctn'>
+        <div class='flex_row resourceList col3_row'>
+          {% set resouceCount = resouces|length%}
+          {% for row in resouces %}
+          <div class='resourceCard {{module.filter_content.card_type == "type2" ? "col4" : "col3"  }}  post-item {{ row.type.name|lower|replace(' ','-') }} {% for tag in row.topics_tags %}{{ tag.name|lower|replace(' ','-') }} {% endfor %}'>
+            <div class='post-item-inner  {% if not row.image.url %}noImage{% endif %}'>
+
+              {% if module.filter_content.card_type == "type1"%}
+              {% if row.image.url %}
+              <div class="featured-img">
+                <a href="{{row.page_url}}">
+                  <img src="{{ row.image.url }}" alt="{{ row.name | striptags }}">
+                </a>
+
+                <div class="overlay_bg">
+                  <span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.58462 24L0 21.4154L17.7231 3.69231H1.84615V0H24V22.1538H20.3077V6.27692L2.58462 24Z" fill="white"/>
+                    </svg>
+                  </span>								
+                </div>								
+
+              </div>
+              {% endif %}
+              {% endif %}
+
+              <div class="post-content">
+                <div class="post-content-inner">
+                  <div class="card_eyebrow_text">
+                    {% if module.filter_content.select_filter == "type1" %}
+                    {% if row.type.name %}
+                    <span class='featured-tag tag_{{ row.type.name|lower|replace(' ','-') }}'>{{ row.type.name }}</span>
+                    {% endif %}
+                    {% endif %}
+
+                    {% if module.filter_content.select_filter == "type2" %}
+                    {% if row.product.name %}
+                    <span class='featured-tag tag_{{ row.product.name|lower|replace(' ','-') }} {{ row.product.name|lower|replace(' ','-') }}'>{% for item in module.filter_content.type_product_icon_group %}
+                      {% if (row.product.name|lower|replace(' ','-') == item.type_product_label|lower|replace(' ','-') ) and item.icon_image.src %}
+                      <span class="icon_img"><img src="{{ item.icon_image.src|escape_url }}" alt="{{ item.icon_image.alt|escape_attr }}"></span>
+                      {% endif %}{% endfor %}<span>{{ row.product.name }}</span>
+                      </span>
+                    {% endif %}
+                    {% endif %}
+
+
+                  </div>
+                  <h6 class="restitle">
+                    <a href="{{ row.page_url }}">{{ row.name }}</a>
+                  </h6>
+                  {% if module.filter_content.card_type == "type1"%}
+                  <p class="description"> {{ row.description|safe|truncatehtml(160, '.' , false)|striptags}}
+                  </p>
+                  {% endif %}
+                </div>
+                {% if not module.module_settings.remove_button %} 
+                <div class='read-more'>
+                  <a class="hs-arrow" href="{{ row.page_url }}">
+                    <span>{{ row.button_text }}</span>
+                    <div class="icon">
+                      <div class="inner">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9.125 6.75H0V5.25H9.125L4.9375 1.0625L6 0L12 6L6 12L4.9375 10.9375L9.125 6.75Z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
+                </div>
                 {% endif %}
-							</div>
-						</div>
-					</div>
-					{% endfor %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
 
 
-					{% if resouceCount == 0%}
-					<div class="blank_contentWrap">
-						<h4>
-							Nothing found, Try another combination.
-						</h4>
-					</div>
-					{% endif %}
+          {% if resouceCount == 0%}
+          <div class="blank_contentWrap">
+            <h4>
+              Nothing found, Try another combination.
+            </h4>
+          </div>
+          {% endif %}
 
-				</div>
-			</div>
-
-
-			{% if module.filter_content.select_filter == "type1" %}
-			{% set typeQuery = request.query_dict.type|urlencode %}
-			{% set  typeQuerytext = "topic" %}
-			{% set topicQuery = request.query_dict.topic|urlencode %}
-			{% set  topicQuerytext = "topic" %}
-
-			{% endif %}
-
-			{% if module.filter_content.select_filter == "type2" %}
-			{% set typeQuery = request.query_dict.product|urlencode %}
-			{% set  typeQuerytext = "product" %}
-			{% set topicQuery = request.query_dict.language|urlencode %}
-			{% set  topicQuerytext = "language" %}
-			{% endif %}
-
-			<div class="pagi_wranation" >
-
-				{% set nav = hubdb_table_rows(table, query) %}
-				{% set total_pages = (nav|length/batch_num)|round(0, 'ceil') %} 
-				{% set more_pages = nav|length % batch_num %}
-
-				<nav  id="pagination{{ name|replace('widget_','')|replace('module_','') }}" class="hbdb_dsp_table_pagination pagination" data-total="{{total_pages}}" data-page="{{page_num}}">
-					<div class="nav-links">
+        </div>
+      </div>
 
 
-						{% if page_num > 1 %}
-						<a class="prev page-numbers" href="{{ content.absolute_url }}?{{typeQuerytext}}={{typeQuery}}&{{topicQuerytext}}={{topicQuery}}&page_num={{ page_num|add(-1) }}" data-page-num="{{ page_num|add(-1) }}">
+      {% if module.filter_content.select_filter == "type1" %}
+      {% set typeQuery = request.query_dict.type|urlencode %}
+      {% set  typeQuerytext = "type" %}
+      {% set topicQuery = request.query_dict.topic|urlencode %}
+      {% set  topicQuerytext = "topic" %}
 
-							<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M1.79734 11.92L0.213344 10.24L4.65334 6.04L0.213344 1.84L1.79734 0.232L7.82134 6.064L1.79734 11.92Z" fill="#626262"/>
-							</svg>
+      {% endif %}
 
-						</a>
-						{% endif %}
+      {% if module.filter_content.select_filter == "type2" %}
+      {% set typeQuery = request.query_dict.product|urlencode %}
+      {% set  typeQuerytext = "product" %}
+      {% set topicQuery = request.query_dict.language|urlencode %}
+      {% set  topicQuerytext = "language" %}
+      {% endif %}
 
+      <div class="pagi_wranation" >
 
-						{% set page_list = [-2, -1, 0, 1, 2] %}
-						{% if total_pages - page_num == 1 %}{% set offset = -1 %}
-						{% elif total_pages - page_num == 0 %}{% set offset = -2 %}
-						{% elif page_num == 2 %}{% set offset = 1 %}
-						{% elif page_num == 1 %}{% set offset = 2 %}
-						{% else %}{% set offset = 0 %}{% endif %}
+        {% set nav = hubdb_table_rows(table, query) %}
+        {% set total_pages = (nav|length/batch_num)|round(0, 'ceil') %} 
+        {% set more_pages = nav|length % batch_num %}
 
-
-						{% for page in page_list %}
-						{% set this_page = page_num|add(page)|add(offset) %}
-						{% if this_page > 0 and this_page <= total_pages %}
-						<a {% if this_page == page_num %}class="active"{% endif %} href="{{ content.absolute_url }}?{{typeQuerytext}}={{typeQuery}}&{{topicQuerytext}}={{topicQuery}}&page_num={{ this_page }}">{{ this_page }}</a>
-						{% endif %}
-						{% endfor %}
+        <nav  id="pagination{{ name|replace('widget_','')|replace('module_','') }}" class="hbdb_dsp_table_pagination pagination" data-total="{{total_pages}}" data-page="{{page_num}}">
+          <div class="nav-links">
 
 
+            {% if page_num > 1 %}
+            <a class="prev page-numbers" href="{{ content.absolute_url }}?{{typeQuerytext}}={{typeQuery}}&{{topicQuerytext}}={{topicQuery}}&page_num={{ page_num|add(-1) }}" data-page-num="{{ page_num|add(-1) }}">
 
-						{% if total_pages > page_num %}
-						<a class="next page-numbers {% if page_num >= total_pages %}hide page_num{% endif %}" href="{{ content.absolute_url }}?{{typeQuerytext}}={{typeQuery}}&{{topicQuerytext}}={{topicQuery}}&page_num={{ page_num|add(1) }}" data-page-num="{{ page_num|add(1) }}">
+              <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.79734 11.92L0.213344 10.24L4.65334 6.04L0.213344 1.84L1.79734 0.232L7.82134 6.064L1.79734 11.92Z" fill="#626262"/>
+              </svg>
 
-							<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M1.79734 11.92L0.213344 10.24L4.65334 6.04L0.213344 1.84L1.79734 0.232L7.82134 6.064L1.79734 11.92Z" fill="#626262"/>
-							</svg>
+            </a>
+            {% endif %}
 
-						</a>
-						{% endif %}
+
+            {% set page_list = [-2, -1, 0, 1, 2] %}
+            {% if total_pages - page_num == 1 %}{% set offset = -1 %}
+            {% elif total_pages - page_num == 0 %}{% set offset = -2 %}
+            {% elif page_num == 2 %}{% set offset = 1 %}
+            {% elif page_num == 1 %}{% set offset = 2 %}
+            {% else %}{% set offset = 0 %}{% endif %}
+
+
+            {% for page in page_list %}
+            {% set this_page = page_num|add(page)|add(offset) %}
+            {% if this_page > 0 and this_page <= total_pages %}
+            <a {% if this_page == page_num %}class="active"{% endif %} href="{{ content.absolute_url }}?{{typeQuerytext}}={{typeQuery}}&{{topicQuerytext}}={{topicQuery}}&page_num={{ this_page }}">{{ this_page }}</a>
+            {% endif %}
+            {% endfor %}
 
 
 
-					</div>
-				</nav>
+            {% if total_pages > page_num %}
+            <a class="next page-numbers {% if page_num >= total_pages %}hide page_num{% endif %}" href="{{ content.absolute_url }}?{{typeQuerytext}}={{typeQuery}}&{{topicQuerytext}}={{topicQuery}}&page_num={{ page_num|add(1) }}" data-page-num="{{ page_num|add(1) }}">
+
+              <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.79734 11.92L0.213344 10.24L4.65334 6.04L0.213344 1.84L1.79734 0.232L7.82134 6.064L1.79734 11.92Z" fill="#626262"/>
+              </svg>
+
+            </a>
+            {% endif %}
 
 
 
-			</div>
-		</div>
-	</div>
+          </div>
+        </nav>
+
+
+
+      </div>
+    </div>
+  </div>
 </div>
 
 
@@ -400,311 +404,297 @@
 
 
 
-
+{% set varname = name|replace(' ','')|replace('_','')|replace('-','')%}
 
 {% require_js%}
 <script>
 
-	window.addEventListener("DOMContentLoaded", function () {
-		let getLIstingWrap = document.querySelector(" .main-listing");
+  $(window).on('load', function(){
+    setTimeout(function () {
+      $(".main-listing").addClass('loaddedList');
+    }, 150);
 
-		setTimeout(function () {
-			getLIstingWrap.classList.add("loaddedList");
-		});
-	});
+    $('.selctArrow ').click(function(e){
+      e.stopPropagation();
+    });
 
-	var filterlabeln = document.querySelectorAll(".filter_label");
+$('body').click(function(){
+$('.select_arrow_inner').removeClass('dropdownopen');
+})
 
-	filterlabeln.forEach((label) => {
-		label.addEventListener("click", (event) => {
-			event.currentTarget.parentElement.classList.toggle("dropdownopen");
-		});
-	});
+    $('.parent{{name}} .filter_label').click(function(e){
+    $('.select_arrow_inner').removeClass('dropdownopen');
+      $(this).parent('.select_arrow_inner').toggleClass('dropdownopen');
+    e.stopPropagation();
+    console.log('arrow clicked')
+  })
 
-	document.querySelectorAll(".filter_label").forEach((filterLabel) => {
-		filterLabel.addEventListener("click", function (e) {
-			var selctArrow = this.parentElement;
-			var siblings = Array.from(selctArrow.parentElement.children).filter(
-				(child) => child !== selctArrow
-			);
-			siblings.forEach((sibling) => sibling.classList.remove("dropdownopen"));
-			e.stopPropagation();
-		});
-	});
+  document.querySelectorAll(".parent{{name}} .filter_dropdown").forEach((filterDropdown) => {
+                            filterDropdown.addEventListener("click", function (e) {
+    e.stopPropagation();
+  });
+  });
 
-	document.body.addEventListener("click", function () {
-		document.querySelectorAll(".selctArrow").forEach((selctArrow) => {
-			selctArrow.classList.remove("dropdownopen");
-		});
-	});
+  // ========================
 
-	document.querySelectorAll(".filter_label").forEach((filterLabel) => {
-		filterLabel.addEventListener("click", function () {
-			var selctArrow = this.parentElement;
-			var siblings = Array.from(selctArrow.parentElement.children).filter(
-				(child) => child !== selctArrow
-			);
-			siblings.forEach((sibling) => sibling.classList.remove("dropdownopen"));
-		});
-	});
-
-	document.querySelectorAll(".filter_dropdown").forEach((filterDropdown) => {
-		filterDropdown.addEventListener("click", function (e) {
-			e.stopPropagation();
-		});
-	});
-
-	// ========================
-
-	var wrapper = document.querySelector(".resourceList");
-	var pagination = document.querySelector(".pagination");
-	var items = Array.from(document.querySelectorAll(".resourceCard"));
-	let filteredItems = items;
-	let currPage = 1;
-	// var TagSelect = document.querySelector(".resourceSelect");
-	// var TopicSelect = document.querySelector(".topicSelect");
-	// var TopicSelectValueAttr = $(TopicSelect).attr("data-value");
-
-	var TypeSelectCheck = document.querySelectorAll(".typeSelect .filter_input");
-	var searchField = document.querySelector(".resourceInput");
-	var TypeSelectLabel = document.querySelector(".type_filter_label");
-	var TopicSelectLabel = document.querySelector(".topic_filter_label");
-
-	// ========================
-
-	let typeArrayValues = "";
-
-	function typeArrayUpdate(value) {
-		typeArrayValues = value;
-	}
-
-	function printTypeArrayUpdate() {
-		return typeArrayValues;
-	}
-
-	var params = new URLSearchParams(window.location.search);
-	var typeParam = params.get("type");
-
-	var typeArray = typeParam?.length > 0 ? typeParam?.split(",") : [];
-
-	// ========================
-
-	//========
-
-	$(".type_ele").each(function (f) {
-		$(this).click(function (f) {
-			f.preventDefault();
-
-			let getValue = $(this).attr("data-type");
-			let getValueLabel = $(this).attr("data-type-label");
-
-			var TopicfilterValue = $(".topic_filter_label").attr("data-value");
-
-			console.log(TopicfilterValue, "TopicfilterValue");
-
-			var url = window.location.href.split("?")[0];
-
-			{% if module.filter_content.select_filter == "type1" %}
-			if (getValueLabel != "") {
-				$(".filter_label.type_filter_label").text(getValueLabel);
-			} else {
-				$(".filter_label.type_filter_label").text("Select Type");
-			}
-			{% endif %}
-
-			{% if module.filter_content.select_filter == "type2" %}
-			if (getValueLabel != "") {
-				$(".filter_label.type_filter_label").text(getValueLabel);
-			} else {
-				$(".filter_label.type_filter_label").text("Select Product");
-			}
-			{% endif %}
+  var wrapper = document.querySelector(".resourceList");
+  var pagination = document.querySelector(".pagination");
+  var items{{varname}} = Array.from(document.querySelectorAll(".resourceCard"));
+  var filteredItems = items{{varname}};
+  var currPage = 1;
 
 
-			{% if module.filter_content.select_filter == "type1" %}
+  var TypeSelectCheck = document.querySelectorAll(".typeSelect .filter_input");
+  var searchField = document.querySelector(".resourceInput");
+  var TypeSelectLabel = document.querySelector(".type_filter_label");
+  var TopicSelectLabel = document.querySelector(".topic_filter_label");
 
-			if (getValue && TopicfilterValue) {
-				newUrl = url + "?type=" + getValue + "&topic=" + TopicfilterValue;
-			} else if (getValue) {
-				newUrl = url + "?type=" + getValue;
-			} else {
-				newUrl = url; // If both are empty, keep the base URL
-			}
-			{% endif %}
+  // ========================
 
-			{% if module.filter_content.select_filter == "type2" %}
+  var typeArrayValues{{varname}} = "";
 
-			if (getValue && TopicfilterValue) {
-				newUrl = url + "?product=" + getValue + "&language=" + TopicfilterValue;
-			} else if (getValue) {
-				newUrl = url + "?product=" + getValue;
-			} else {
-				newUrl = url; // If both are empty, keep the base URL
-			}
-			{% endif %}
+  function typeArrayUpdate(value) {
+    typeArrayValues{{varname}} = value;
+  }
 
-			window.history.pushState({ path: newUrl }, "", newUrl);
-			$(".listing-wrap .cardSctn").load(
-				newUrl + " .listing-wrap .cardSctn .resourceList"
-			);
-			$(".pagination").load(newUrl + " .pagination .nav-links");
-			$(".type_filter_label").attr("data-value", getValue);
-		});
-	});
+  function printTypeArrayUpdate() {
+    return typeArrayValues{{varname}};
+  }
 
-	$(".topic_ele").each(function (f) {
-		$(this).click(function (f) {
-			f.preventDefault();
+  var params{{varname}} = new URLSearchParams(window.location.search);
+  var typeParam{{varname}} = params{{varname}}.get("type");
 
-			let getValue = $(this).attr("data-topic");
-			let getValueLabel = $(this).attr("data-topic-label");
+  var typeArray = typeParam{{varname}}?.length > 0 ? typeParam{{varname}}?.split(",") : [];
 
-			var TypefilterValue = $(".type_filter_label").attr("data-value");
+  // ========================
 
-			console.log(getValue, "getValue");
+  //========
 
-			var url = window.location.href.split("?")[0];
+  $(".parent{{name}} .type_ele").each(function (f) {
+    $(this).click(function (f) {
+    f.preventDefault();
 
 
-			{% if module.filter_content.select_filter == "type1" %}
-			if (getValueLabel != "") {
-				$(".filter_label.topic_filter_label").text(getValueLabel);
-			} else {
-				$(".filter_label.topic_filter_label").text("Select Topic");
-			}
-			{% endif %}
-			{% if module.filter_content.select_filter == "type2" %}
-			if (getValueLabel != "") {
-				$(".filter_label.topic_filter_label").text(getValueLabel);
-			} else {
-				$(".filter_label.topic_filter_label").text("Select Language");
-			}
-			{% endif %}
+    var getValue = $(this).attr("data-type");
+    var getValueLabel = $(this).attr("data-type-label");
 
 
-			{% if module.filter_content.select_filter == "type1" %}
-			if (getValue && TypefilterValue) {
-				newUrl = url + "?type=" + TypefilterValue + "&topic=" + getValue;
-			} else if (getValue) {
-				newUrl = url + "?topic=" + getValue;
-			} else {
-				newUrl = url; // If both are empty, keep the base URL
-			}
-			{% endif %}
+    $(this).parents('.filter_nav').find('.select_arrow_inner').removeClass('dropdownopen');
 
-			{% if module.filter_content.select_filter == "type2" %}
-			if (getValue && TypefilterValue) {
-				newUrl = url + "?product=" + TypefilterValue + "&language=" + getValue;
-			} else if (getValue) {
-				newUrl = url + "?language=" + getValue;
-			} else {
-				newUrl = url; // If both are empty, keep the base URL
-			}
-			{% endif %}
+    console.log('getValue type',getValue);
 
-			window.history.pushState({ path: newUrl }, "", newUrl);
-			$(".listing-wrap .cardSctn").load(
-				newUrl + " .listing-wrap .cardSctn .resourceList"
-			);
-			$(".pagination").load(newUrl + " .pagination .nav-links");
-			$(".topic_filter_label").attr("data-value", getValue);
-		});
-	});
+    var TopicfilterValue = $(".parent{{name}} .topic_filter_label").attr("data-value");
 
-	// ===================
+                             console.log(TopicfilterValue, "TopicfilterValue");
 
-	// $(".pagi_wranation .nav-links a").each(function (f) {
-	$(document).on("click", ".pagi_wranation .nav-links a", function (event) {
-		event.preventDefault();
-		var currentPageWithQuery = $(this).attr("href");
-		window.history.pushState(
-			{ path: currentPageWithQuery },
-			"",
-			currentPageWithQuery
-		);
-		$(".listing-wrap .cardSctn").load(
-			currentPageWithQuery + " .listing-wrap .cardSctn .resourceList"
-		);
-		$(".pagination").load(currentPageWithQuery + " .pagination .nav-links");
-		$(".tag-col .type_filter").load(
-			currentPageWithQuery + " .tag-col .type_filter > div"
-		);
-	});
+    var url = window.location.href.split("?")[0];
 
-	var debounce = (fn, delay = 1000) => {
-		let timerId = null;
-		return (...args) => {
-			clearTimeout(timerId);
-			timerId = setTimeout(() => fn(...args), delay);
-		};
-	};
+    {% if module.filter_content.select_filter == "type1" %}
+    if (getValueLabel != "") {
+      $(".parent{{name}} .filter_label.type_filter_label").text(getValueLabel);
+        } else {
+        $(".parent{{name}} .filter_label.type_filter_label").text("Select Type");
+          }
+    {% endif %}
 
-	var onInput = debounce(function (currentTarget) {
-		var getSearchValue = currentTarget.val();
-		var formattedValue = getSearchValue.replace(/\s+/g, "+");
-		var getPageNum = currentTarget.data("page-num");
-
-		var url = window.location.href.split("?")[0];
-
-		var TypefilterValue = $(".type_filter_label").attr("data-value");
-		var TopicfilterValue = $(".topic_filter_label").attr("data-value");
+    {% if module.filter_content.select_filter == "type2" %}
+    if (getValueLabel != "") {
+      $(".parent{{name}} .filter_label.type_filter_label").text(getValueLabel);
+        } else {
+        $(".parent{{name}} .filter_label.type_filter_label").text("Select Product");
+          }
+    {% endif %}
 
 
-		{% if module.filter_content.select_filter == "type1" %}
+    {% if module.filter_content.select_filter == "type1" %}
 
-		if (getSearchValue != "") {
-			newUrl =
-				url +
-				"?product=" +
-				TypefilterValue +
-				"&language=" +
-				TopicfilterValue +
-				"&search=" +
-				formattedValue;
-		} else {
-			newUrl =
-				url +
-				"?product=" +
-				TypefilterValue +
-				"&language=" +
-				TopicfilterValue;
-		}
-		{% endif %}
+    if (getValue && TopicfilterValue) {
+      newUrl = url + "?type=" + getValue + "&topic=" + TopicfilterValue;
+    } else if (getValue) {
+      newUrl = url + "?type=" + getValue;
+    } else {
+      newUrl = url; // If both are empty, keep the base URL
+    }
+    {% endif %}
 
-		{% if module.filter_content.select_filter == "type2" %}
+    {% if module.filter_content.select_filter == "type2" %}
 
-		if (getSearchValue != "") {
-			newUrl =
-				url +
-				"?type=" +
-				TypefilterValue +
-				"&topic=" +
-				TopicfilterValue +
-				"&search=" +
-				formattedValue;
-		} else {
-			newUrl =
-				url +
-				"?type=" +
-				TypefilterValue +
-				"&topic=" +
-				TopicfilterValue;
-		}
-		{% endif %}
+    if (getValue && TopicfilterValue) {
+      newUrl = url + "?product=" + getValue + "&language=" + TopicfilterValue;
+    } else if (getValue) {
+      newUrl = url + "?product=" + getValue;
+    } else {
+      newUrl = url; // If both are empty, keep the base URL
+    }
+    {% endif %}
 
-		window.history.pushState({ path: newUrl }, "", newUrl);
-		$(".listing-wrap .cardSctn").load(
-			newUrl + " .listing-wrap .cardSctn .resourceList"
-		);
-		$(".pagination").load(newUrl + " .pagination .nav-links");
-	}, 500);
+    window.history.pushState({ path: newUrl }, "", newUrl);
+    $(".parent{{name}} .listing-wrap .cardSctn").load(
+      newUrl + " .parent{{name}} .listing-wrap .cardSctn .resourceList"
+     );
+    $(".parent{{name}} .pagination").load(newUrl + " .parent{{name}}  .pagination .nav-links");
+      $(".parent{{name}} .type_filter_label").attr("data-value", getValue);
+      });
+  });
 
-	$(".srchSection .resourceInput").on("keyup", function (event) {
-		event.preventDefault();
-		onInput($(this));
-	});
+  $(".parent{{name}} .topic_ele").each(function (f) {
+    $(this).click(function (f) {
+    f.preventDefault();
+
+    var getValue = $(this).attr("data-topic");
+    var getValueLabel = $(this).attr("data-topic-label");
+
+    $(this).parents('.filter_nav').find('.select_arrow_inner').removeClass('dropdownopen');
+
+    var TypefilterValue = $(".parent{{name}} .type_filter_label").attr("data-value");
+
+                            console.log(getValue, "getValue");
+
+    var url = window.location.href.split("?")[0];
 
 
+    {% if module.filter_content.select_filter == "type1" %}
+    if (getValueLabel != "") {
+      $(".parent{{name}} .filter_label.topic_filter_label").text(getValueLabel);
+        } else {
+        $(".parent{{name}} .filter_label.topic_filter_label").text("Select Topic");
+          }
+    {% endif %}
+    {% if module.filter_content.select_filter == "type2" %}
+    if (getValueLabel != "") {
+      $(".parent{{name}} .filter_label.topic_filter_label").text(getValueLabel);
+        } else {
+        $(".parent{{name}} .filter_label.topic_filter_label").text("Select Language");
+          }
+    {% endif %}
+
+
+    {% if module.filter_content.select_filter == "type1" %}
+    if (getValue && TypefilterValue) {
+      newUrl = url + "?type=" + TypefilterValue + "&topic=" + getValue;
+    } else if (getValue) {
+      newUrl = url + "?topic=" + getValue;
+    } else {
+      newUrl = url; // If both are empty, keep the base URL
+    }
+    {% endif %}
+
+    {% if module.filter_content.select_filter == "type2" %}
+    if (getValue && TypefilterValue) {
+      newUrl = url + "?product=" + TypefilterValue + "&language=" + getValue;
+    } else if (getValue) {
+      newUrl = url + "?language=" + getValue;
+    } else {
+      newUrl = url; // If both are empty, keep the base URL
+    }
+    {% endif %}
+
+    window.history.pushState({ path: newUrl }, "", newUrl);
+    $(".parent{{name}} .listing-wrap .cardSctn").load(
+      newUrl + " .parent{{name}} .listing-wrap .cardSctn .resourceList"
+     );
+    $(".parent{{name}} .pagination").load(newUrl + " .parent{{name}} .pagination .nav-links");
+      $(".parent{{name}} .topic_filter_label").attr("data-value", getValue);
+      });
+  });
+
+  // ===================
+
+  // $(".pagi_wranation .nav-links a").each(function (f) {
+  $(document).on("click", ".parent{{name}} .pagi_wranation .nav-links a", function (event) {
+                 event.preventDefault();
+  var currentPageWithQuery = $(this).attr("href");
+  window.history.pushState(
+    { path: currentPageWithQuery },
+    "",
+    currentPageWithQuery
+  );
+  $(".parent{{name}} .listing-wrap .cardSctn").load(
+    currentPageWithQuery + " .parent{{name}} .listing-wrap .cardSctn .resourceList"
+   );
+  $(".parent{{name}} .pagination").load(currentPageWithQuery + " .parent{{name}} .pagination .nav-links");
+    $(".parent{{name}} .tag-col .type_filter").load(
+    currentPageWithQuery + " .parent{{name}} .tag-col .type_filter > div"
+   );
+  });
+
+  var debounce = (fn, delay = 1000) => {
+    var timerId = null;
+    return (...args) => {
+      clearTimeout(timerId);
+      timerId = setTimeout(() => fn(...args), delay);
+    };
+  };
+
+  var onInput = debounce(function (currentTarget) {
+    var getSearchValue = currentTarget.val();
+    var formattedValue = getSearchValue.replace(/\s+/g, "+");
+    var getPageNum = currentTarget.data("page-num");
+
+    var url = window.location.href.split("?")[0];
+
+    var TypefilterValue = $(".parent{{name}} .type_filter_label").attr("data-value");
+                            var TopicfilterValue = $(".parent{{name}} .topic_filter_label").attr("data-value");
+
+
+                            {% if module.filter_content.select_filter == "type1" %}
+
+                            if (getSearchValue != "") {
+      newUrl =
+        url +
+        "?product=" +
+        TypefilterValue +
+        "&language=" +
+        TopicfilterValue +
+        "&search=" +
+        formattedValue;
+    } else {
+      newUrl =
+        url +
+        "?product=" +
+        TypefilterValue +
+        "&language=" +
+        TopicfilterValue;
+    }
+    {% endif %}
+
+    {% if module.filter_content.select_filter == "type2" %}
+
+    if (getSearchValue != "") {
+      newUrl =
+        url +
+        "?type=" +
+        TypefilterValue +
+        "&topic=" +
+        TopicfilterValue +
+        "&search=" +
+        formattedValue;
+    } else {
+      newUrl =
+        url +
+        "?type=" +
+        TypefilterValue +
+        "&topic=" +
+        TopicfilterValue;
+    }
+    {% endif %}
+
+    window.history.pushState({ path: newUrl }, "", newUrl);
+    $(".parent{{name}} .listing-wrap .cardSctn").load(
+      newUrl + " .parent{{name}} .listing-wrap .cardSctn .resourceList"
+     );
+    $(".parent{{name}} .pagination").load(newUrl + " .parent{{name}} .pagination .nav-links");
+      }, 500);
+
+  $(".parent{{name}} .srchSection .resourceInput").on("keyup", function (event) {
+    event.preventDefault();
+  onInput($(this));
+  });
+
+
+
+
+  })
 
 </script>
 

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const glossTop = document.querySelector(".glossTop");
   const glossInr = document.querySelector(".glossInr");
   const placeholder = document.createElement("div");
-  
+
   let isFixed = false;
 
   function checkSticky() {
@@ -51,7 +51,7 @@ $(document).ready(function () {
       success: function (response) {
         let newHtml = $(response).find(".glossList").html();
         $(".glossList").html(newHtml);
-        
+
         // Recalculate and adjust height after content update
         adjustGlossInrHeight();
 
@@ -91,7 +91,7 @@ $(document).ready(function () {
       .toggleClass("cntToggle")
       .siblings()
       .removeClass("cntToggle");
-      $(this).parents('.catItems').slideUp();
+    $(this).parents(".catItems").slideUp();
   });
 
   // Auto-submit on search input change & adjust height
@@ -100,14 +100,41 @@ $(document).ready(function () {
   });
 
   // Auto-submit on radio button selection & adjust height
-  $(document).on("change", ".glossCat input[type='radio']", function () {
-    submitForm();
-    $(this).parent().addClass("active").siblings().removeClass("active");
-    $(this).parents('.catItems').slideUp();
-  });
+  //   $(document).on("change", ".glossCat input[type='radio']", function () {
+  //     submitForm();
+  //     $(this).parent().addClass("active").siblings().removeClass("active");
+  //     $(this).parents('.catItems').slideUp();
+  //   });
   $(document).on("click", ".mobileIcon", function () {
-    $(this).toggleClass('active');
-    $(this).next('.catItems').slideToggle();
+    $(this).toggleClass("active");
+    $(this).next(".catItems").slideToggle();
   });
-
 });
+
+function Bookmarkmenu() {
+  if (window.innerWidth > 768) {
+    document.querySelectorAll('.glossTop a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute("href"));
+        const glossTopHeight =
+          document.querySelector(".glossTop")?.offsetHeight || 0; // Get .glossTop height
+
+        if (target) {
+          const targetPosition =
+            target.getBoundingClientRect().top +
+            window.scrollY -
+            glossTopHeight;
+
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth",
+          });
+        }
+      });
+    });
+  }
+}
+Bookmarkmenu();
+window.addEventListener("resize", Bookmarkmenu);

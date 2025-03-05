@@ -134,6 +134,13 @@
                 padding: 75px;
                 padding-right: 0;
 
+                .stats_group {
+                    .inner__intro {
+                        max-width: 220px;
+                        margin: auto;
+                    }
+                }
+
                 @include midlaptop {
                     padding: 0;
                 }
@@ -155,6 +162,10 @@
 
                 .intro_title {
                     margin-bottom: 10rem;
+
+                    .fntSize {
+                        font-size: 0.8em;
+                    }
                 }
 
                 .intro_desc {

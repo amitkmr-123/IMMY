@@ -1,14 +1,93 @@
-{% set moduleName = 'u4m-cta-row' %}
-{% include "../partials/u4-module-includes.html" %}
+{% macro introGroup(group, settings, overrides)%}
+{% if group.include_eyebrow_text or group.include_heading or group.include_content or  group.include_button%}
+<div class="intro_content input_{{group.select_input_type}} {% if settings %}{{settings.intro_content_alignment}}{% endif %}">
 
-	{{ macros.introGroup(module.intro_content, module.module_settings) }} 
-	</div>
+  <div class="intro__inner ">
+    {% if group.include_eyebrow_text%}
+    <div class="eyebrow_text">
+      {{ group.eyebrow_text }}
+    </div>
+    {% endif %}
+
+    {% if group.include_heading %}
+    <{{group.heading_size}} class="intro_title 		{% if group.include_heading_border %}hd_border{% endif %}">{{ group.heading }}{% if group.include_heading_border %}<span></span>{% endif %}</{{group.heading_size}}>
+      {% endif %}
+      {% if group.include_subheading %}
+      <div class="subheading">
+    {{ group.subheading }}
+  </div>
+  {% endif %}
+
+  {% if group.include_content %}
+  <div class="intro_desc {{ group.content_style }} {{settings.select_content_bg_color}}">
+    {{ group.content }}
+  </div>
+  {% endif %}
+
+  {% if group.select_input_type == "button" %}
+
+  {% if group.include_button %}
+  {{macros.buttonGroup(group.button_group)}}
+  {% endif %}
+
+  {% endif %}
+
+
+  {% if group.select_input_type == "form" %}
+
+  {% if group.select_form.form_id  %}
+  <div class="subsform_wrap">
+    {% form
+	form_to_use="{{ group.select_form.form_id }}"
+	response_response_type="{{ group.select_form.response_type }}"
+	response_message="{{ group.select_form.message }}"
+	response_redirect_id="{{ group.select_form.redirect_id }}"
+	response_redirect_url="{{group.select_form.redirect_url}}"
+	gotowebinar_webinar_key="{{ group.select_form.gotowebinar_webinar_key }}"
+%}
+  </div>
+  {% endif %}
+
+  {% endif %}
+
+</div>
+
+
+</div>
+{% endif %}
+{% endmacro%} 
+
+
+{#===============================#}
+{#===============================#}
+
+
+
+
+
+
+
+
+{% set moduleName = 'u4m-cta-row' %}
+
+{% if module.module_overrides.background_settings.background_type == "gradient" %}
+{% if module.module_overrides.background_settings.overlay_image.src %}
+{% set moduleExtraName = 'overlay_bg_added' %}
+{% endif %}
+{% endif %}
+
+{% include "../partials/u4-module-includes.html" %}
+{{ introGroup(module.intro_content, module.module_settings) }} 
+</div>
 </div>
 </section>
 
 
 
- 
+
+
+
+
 
 
 

@@ -87,6 +87,26 @@
     "display_width" : null,
     "default" : "Hero Module Headline Goes Right Over Here"
   }, {
+    "id" : "b08cba6d-0024-f9a9-4390-c9478fcb0e39",
+    "name" : "heading_color",
+    "label" : "Heading Color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_heading",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "color",
+    "display_width" : null,
+    "default" : {
+      "color" : null,
+      "opacity" : null
+    }
+  }, {
     "id" : "2f10bd6e-cf85-1cf6-5a4f-fa75e1e78238",
     "name" : "include_content",
     "label" : "Include Content",
@@ -333,6 +353,10 @@
     "include_heading" : true,
     "heading_size" : "h1",
     "heading" : "Hero Module Headline Goes Right Over Here",
+    "heading_color" : {
+      "color" : null,
+      "opacity" : null
+    },
     "include_content" : true,
     "content_style" : "themeStyle",
     "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>",

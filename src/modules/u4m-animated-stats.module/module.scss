@@ -1,42 +1,70 @@
 @import "../../css/_module-imports";
 
-.u4m-animated-stats .innerContainer .intro_content {
-  margin-bottom: 60rem;
+
+.u4m-animated-stats {
+  .innerContainer {
+    .intro_content {
+      margin-bottom: 60rem;
+    }
+
+    .intro_content.stats_group {
+      padding: 0 30px;
+      margin-bottom: 0rem;
+
+      .inner__intro {
+        .eyebrow_text {
+          margin-bottom: 10rem;
+        }
+
+        .intro_title {
+          margin-bottom: 10rem;
+
+          .fntSize {
+            font-size: 0.8em;
+          }
+
+        }
+
+
+        .intro_desc {
+          p {
+            &:last-child {
+              margin: 0;
+            }
+          }
+        }
+
+        .intro_desc.bodystyle2 {
+          line-height: 1.5;
+        }
+      }
+    }
+
+    .cmstats_group {
+      .flex_row {
+        row-gap: 40px;
+        margin: 0 -30px;
+      }
+    }
+  }
 }
 
-.u4m-animated-stats .innerContainer .intro_content.stats_group {
-  padding: 0 30px;
-  margin-bottom: 0rem;
-}
-
-.u4m-animated-stats .innerContainer .intro_content.stats_group .inner__intro .eyebrow_text {
-  margin-bottom: 10rem;
-}
-
-.u4m-animated-stats .innerContainer .intro_content.stats_group .inner__intro .intro_title {
-  margin-bottom: 10rem;
-}
-
-.u4m-animated-stats .innerContainer .intro_content.stats_group .inner__intro .intro_desc p:last-child {
-  margin: 0;
-}
-
-.u4m-animated-stats .innerContainer .intro_content.stats_group .inner__intro .intro_desc.bodystyle2 {
-  line-height: 1.5;
-}
-
-.u4m-animated-stats .innerContainer .cmstats_group .flex_row {
-  row-gap: 40px;
-  margin: 0 -30px;
-}
 
 @include tabletvert {
-  .u4m-animated-stats .innerContainer .intro_content.stats_group {
-    padding: 0;
+
+  .u4m-animated-stats {
+    .innerContainer {
+      .intro_content.stats_group {
+        padding: 0;
+      }
+
+      .cmstats_group {
+        .flex_row {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+    }
   }
 
-  .u4m-animated-stats .innerContainer .cmstats_group .flex_row {
-    margin-left: 0;
-    margin-right: 0;
-  }
 }

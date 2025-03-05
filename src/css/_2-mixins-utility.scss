@@ -89,8 +89,8 @@
   }
 }
 
-@mixin laptop {
-  @media (max-width: 1440px) {
+@mixin laptopMin {
+  @media (min-width: 1441px) {
     @content;
   }
 }
@@ -197,4 +197,10 @@
   text-decoration: none;
   transition: $animation1;
   display: inline-block;
+  color: $linksColor;
+
+  &:hover {
+    color: $linksColor !important;
+    text-decoration: underline;
+  }
 }

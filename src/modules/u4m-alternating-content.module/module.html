@@ -1,45 +1,58 @@
+
+
 {% set moduleName = 'u4m-alternating-content' %}
+
+{% if  module.media_group.media_type == "rotating-globe" %}
+{% if module.media_group.full_width %}
+{% set moduleExtraName = 'img_fullWidth' %}
+{% endif %}
+{% endif %}
+
+
 {% include "../partials/u4-module-includes.html" %}
+
+
 
 <div  class="mainWrp"> 
 
-	<div class="flex_row {% if module.media_group.make_image_full_width %}full_widthImg{% endif %} {{ module.module_settings.media_group_alignment }}">
-		<div class=" leftCntt">
-			{{ macros.introGroup(module.intro_content, module.module_settings) }} 
-		</div>
-		<div class=" rightCntt {% if module.media_group.enable_shadow %} mediaShadow {% endif %}">
-			{% if module.media_group.media_type == "rotating-globe" %}
-			<div id="chartdiv"></div>
-			{% elif  module.media_group.media_type == "image" %}
-			{% if module.media_group.image.src %}
-			<div class="MainImg {{ module.media_group.border_radius_type }}"> 
-				<div class="imgBg" style="background-image:url({{ module.media_group.image.src|escape_url }})"></div>
-			</div>
-			{% endif %}
-			{% elif  module.media_group.media_type == "rich-text" %}
-			<div class="{{ module.media_group.content_style }}"> 
-				<p>
-					{{ module.media_group.content }}
-				</p>
-			</div>
-			{% elif  module.media_group.media_type == "video" %}
-			{% if module.media_group.video_section.video_type == 'file' %}
-			{% if module.media_group.video_section.video %}
-			<video class="video-media" controls>
-				<source src="{{ module.media_group.video_section.video }}" type="video/mp4">
-			</video>
-			{% endif %}
-			{% endif %}
-			{% if module.media_group.video_section.video_type == 'embed' %}
-			<div class="embedVideo">
-				<iframe src="{{ module.media_group.video_section.embed_path }}?autoplay=1&loop=0&mute=1&showinfo=0&controls=1"  frameborder="0" allowfullscreen="" class="iframe_video" ></iframe>
-			</div>
-			{% endif %}
-			{% endif %}
-		</div>
+  <div class="flex_row {% if module.media_group.make_image_full_width %}full_widthImg{% endif %} {{ module.module_settings.media_group_alignment }}">
+    <div class=" leftCntt">
+      {{ macros.introGroup(module.intro_content, module.module_settings) }} 
+    </div>
+    <div class=" rightCntt ">
+      {% if module.media_group.media_type == "rotating-globe" %}
+   
+      <div id="chartdiv"></div>
+      {% elif  module.media_group.media_type == "image" %}
+      {% if module.media_group.image.src %}
+      <div class="MainImg {% if module.media_group.enable_shadow %} mediaShadow {% endif %} {{ module.media_group.border_radius_type }}"> 
+        <div class="imgBg" style="background-image:url({{ module.media_group.image.src|escape_url }})"></div>
+      </div>
+      {% endif %}
+      {% elif  module.media_group.media_type == "rich-text" %}
+      <div class="{{ module.media_group.content_style }}"> 
+        <p>
+          {{ module.media_group.content }}
+        </p>
+      </div>
+      {% elif  module.media_group.media_type == "video" %}
+      {% if module.media_group.video_section.video_type == 'file' %}
+      {% if module.media_group.video_section.video %}
+      <video class="video-media" controls>
+        <source src="{{ module.media_group.video_section.video }}" type="video/mp4">
+      </video>
+      {% endif %}
+      {% endif %}
+      {% if module.media_group.video_section.video_type == 'embed' %}
+      <div class="embedVideo">
+        <iframe src="{{ module.media_group.video_section.embed_path }}?autoplay=1&loop=0&mute=1&showinfo=0&controls=1"  frameborder="0" allowfullscreen="" class="iframe_video" ></iframe>
+      </div>
+      {% endif %}
+      {% endif %}
+    </div>
 
 
-	</div>
+  </div>
 
 </div>
 </div>
@@ -47,86 +60,112 @@
 
 {% require_js %}
 <script>
-	am4core.useTheme(am4themes_animated);
+  am4core.useTheme(am4themes_animated);
 
-	// Create globe instance
-	var chart = am4core.create("chartdiv", am4maps.MapChart);
-	chart.geodata = am4geodata_worldLow;
-	chart.projection = new am4maps.projections.Orthographic();
-	chart.panBehavior = "rotateLongLat";
-	chart.deltaLongitude = 0;
-	chart.deltaLatitude = -20;
-	chart.padding(20, 20, 20, 20);
+  // Create globe instance
+  var chart = am4core.create("chartdiv", am4maps.MapChart);
+  chart.geodata = am4geodata_worldLow;
+  chart.projection = new am4maps.projections.Orthographic();
+  chart.panBehavior = "rotateLongLat";
+  chart.deltaLongitude = 0;
+  chart.deltaLatitude = -20;
+  chart.padding(20, 20, 20, 20);
 
-	// Background (White Empty Areas)
-	chart.background.fill = am4core.color("ffffff");
-	chart.background.fillOpacity = 0;
+  // Background (White Empty Areas)
+  chart.background.fill = am4core.color("ffffff");
+  chart.background.fillOpacity = 0;
 
-	// Country map polygons
-	var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
-	polygonSeries.useGeodata = true;
-	polygonSeries.mapPolygons.template.fill = am4core.color("#8C8C8C"); // Grey land areas
-	polygonSeries.mapPolygons.template.stroke = am4core.color("#8C8C8C"); // Borders
-	polygonSeries.mapPolygons.template.strokeWidth = 1;
-	polygonSeries.mapPolygons.template.strokeDasharray = "1,1"; // Dashed borders
+  // Country map polygons
+  var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
+  polygonSeries.useGeodata = true;
+  polygonSeries.mapPolygons.template.fill = am4core.color("#8C8C8C"); // Grey land areas
+  polygonSeries.mapPolygons.template.stroke = am4core.color("#8C8C8C"); // Borders
+  polygonSeries.mapPolygons.template.strokeWidth = 1;
+  polygonSeries.mapPolygons.template.strokeDasharray = "1,1"; // Dashed borders
 
-	// Grid overlay (Grey horizontal & vertical lines)
-	var gridSeries = chart.series.push(new am4maps.GraticuleSeries());
-	gridSeries.mapLines.template.stroke = am4core.color("#8C8C8C"); 
-	gridSeries.mapLines.template.strokeOpacity = 0.5;
-	gridSeries.fitExtent = false;
+  // Grid overlay (Grey horizontal & vertical lines)
+  var gridSeries = chart.series.push(new am4maps.GraticuleSeries());
+  gridSeries.mapLines.template.stroke = am4core.color("#8C8C8C"); 
+  gridSeries.mapLines.template.strokeOpacity = 0.5;
+  gridSeries.fitExtent = false;
 
-	// Bullet (Marker) series
-	var imageSeries = chart.series.push(new am4maps.MapImageSeries());
-	var imageTemplate = imageSeries.mapImages.template;
+  // Bullet (Marker) series
+  var imageSeries = chart.series.push(new am4maps.MapImageSeries());
+  var imageTemplate = imageSeries.mapImages.template;
 
-	// Bullet design
-	var circle = imageTemplate.createChild(am4core.Circle);
-	circle.radius = 4;
-	circle.fill = am4core.color("#00539b");
-	circle.stroke = am4core.color("#00539b");
-	circle.strokeWidth = 1;
+  // Bullet design
+  var circle = imageTemplate.createChild(am4core.Circle);
+  circle.radius = 4;
+  circle.fill = am4core.color("#00539b");
+  circle.stroke = am4core.color("#00539b");
+  circle.strokeWidth = 1;
 
-	// Enable and customize tooltip
-	var tooltip = new am4core.Tooltip();
-	tooltip.background.fill = am4core.color("#00539b");
-	tooltip.background.fillOpacity = 1;
-	tooltip.background.stroke = am4core.color("#FFFFFF");
-	tooltip.background.cornerRadius = 5;
-	tooltip.label.fill = am4core.color("#FFFFFF");
-	tooltip.label.fontFamily = "Verlag Bold, serif";
-	tooltip.label.fontSize = 16;
-	tooltip.label.fontWeight = "400";
+  // Enable and customize tooltip
+  var tooltip = new am4core.Tooltip();
+  tooltip.background.fill = am4core.color("#00539b");
+  tooltip.background.fillOpacity = 1;
+  tooltip.background.stroke = am4core.color("#FFFFFF");
+  tooltip.background.cornerRadius = 5;
+  tooltip.label.fill = am4core.color("#FFFFFF");
+  tooltip.label.fontFamily = "Verlag Bold, serif";
+  tooltip.label.fontSize = 16;
+  tooltip.label.fontWeight = "400";
 
-	// Apply tooltip to imageTemplate
-	imageTemplate.tooltip = tooltip;
-	imageTemplate.tooltipText = "{title}";
+  // Apply tooltip to imageTemplate
+  imageTemplate.tooltip = tooltip;
+  imageTemplate.tooltipText = "{title}";
 
-	// Map data fields
-	imageTemplate.propertyFields.latitude = "latitude";
-	imageTemplate.propertyFields.longitude = "longitude";
+  // Map data fields
+  imageTemplate.propertyFields.latitude = "latitude";
+  imageTemplate.propertyFields.longitude = "longitude";
 
-	// Fetch data from external JSON
-	fetch('https://immy.com/countries')
-		.then(response => response.json())
-		.then(data => {
-		if (data.recordsets && data.recordsets.length > 0) {
-			let locations = data.recordsets[0].map(item => ({
-				title: item["Ship To Country"],
-				latitude: parseFloat(item.Latitude),
-				longitude: parseFloat(item.Longitude)
-			}));
-			imageSeries.data = locations;
-		} else {
-			console.error("Invalid JSON structure: Missing recordsets.");
-		}
-	})
-		.catch(error => console.error("Error loading JSON:", error));
+  // Fetch data from external JSON
+  fetch('https://immy.com/countries')
+    .then(response => response.json())
+    .then(data => {
+    if (data.recordsets && data.recordsets.length > 0) {
+      let locations = data.recordsets[0].map(item => ({
+        title: item["Ship To Country"],
+        latitude: parseFloat(item.Latitude),
+        longitude: parseFloat(item.Longitude)
+      }));
+      imageSeries.data = locations;
+    } else {
+      console.error("Invalid JSON structure: Missing recordsets.");
+    }
+  })
+    .catch(error => console.error("Error loading JSON:", error));
 
-	// Rotate the globe smoothly
-	chart.events.on("ready", function () {
-		chart.deltaLongitude += 1;
-		setInterval(() => { chart.deltaLongitude += 0.2; }, 50);
-	});
+  // Rotate the globe smoothly
+  chart.events.on("ready", function () {
+    chart.deltaLongitude += 1;
+    setInterval(() => { chart.deltaLongitude += 0.2; }, 50);
+  });
 </script>
+
+
+<script>
+$(window).on('load',function(){
+setTimeout(function(){
+$('.u4m-alternating-content.img_fullWidth').each(function(){
+var gethartDiv = $(this).find('#chartdiv').detach();
+$(this).append(gethartDiv); 
+
+{# if ($(window).width() > 767) {
+$(this).append(gethartDiv); // Append to (this) when width > 767
+} #}
+
+if ($(window).width() < 767) {
+$(this).find('.rightCntt').append(gethartDiv); // Append to .rightCntt when width <= 767
+}
+
+
+})
+
+},200)
+
+})
+
+</script>
+
 {% end_require_js %}

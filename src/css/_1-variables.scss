@@ -24,13 +24,30 @@ $Charcoal: #767678;
 $FontGray: #626262;
 $Black: #000000;
 $White: #ffffff;
+$linksColor: #0b74d5;
 
 //  Updated Gradient Color
 $gradient1: linear-gradient(110.45deg, $Blue 13.65%, $Red 86.49%), $White;
-$gradient2: linear-gradient(297.46deg, $DarkNavy 0%, $Blue 75%, $BrightBlue 100%), $White;
-$gradient3: linear-gradient(270deg, $Black 29.96%, rgba($Black, 0.8075) 61.48%, rgba($Black, 0.85) 100%);
+$gradient2: linear-gradient(
+    297.46deg,
+    $DarkNavy 0%,
+    $Blue 75%,
+    $BrightBlue 100%
+  ),
+  $White;
+$gradient3: linear-gradient(
+  270deg,
+  $Black 29.96%,
+  rgba($Black, 0.8075) 61.48%,
+  rgba($Black, 0.85) 100%
+);
 $gradient4: linear-gradient(131.63deg, $Blue 23.49%, $Red 109.76%), $White;
-$gradient5: linear-gradient(270deg, rgba($Black, 0) 29.96%, rgba($Black, 0.8075) 61.48%, rgba($Black, 0.85) 100%);
+$gradient5: linear-gradient(
+  270deg,
+  rgba($Black, 0) 29.96%,
+  rgba($Black, 0.8075) 61.48%,
+  rgba($Black, 0.85) 100%
+);
 
 //  Base Font
 $font1: "Verlag";
@@ -67,3 +84,4 @@ $containerSize: 1340rem;
 $containerInnerSpacing: 50rem;
 
 $black80: rgba($Black, 0.8);
+$size16: 16px;

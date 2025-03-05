@@ -780,7 +780,7 @@
         "step" : 1,
         "type" : "number",
         "display_width" : null,
-        "default" : 55
+        "default" : 85
       }, {
         "id" : "8611cad7-38fa-6dd5-d95d-97a7212381a5",
         "name" : "bottom_padding",
@@ -802,7 +802,7 @@
         "step" : 1,
         "type" : "number",
         "display_width" : null,
-        "default" : 55
+        "default" : 85
       }, {
         "id" : "3de6a168-3a93-ee24-2dcf-263032a78952",
         "name" : "change_spacing_in_mobile",
@@ -892,9 +892,9 @@
       "default" : {
         "border_radius_type" : "BorderRadius25",
         "top_padding" : 139,
-        "right_padding" : 55,
+        "right_padding" : 85,
         "bottom_padding" : 139,
-        "left_padding" : 55,
+        "left_padding" : 85,
         "change_spacing_in_mobile" : true,
         "mobile_spacing_group" : {
           "top_padding" : 50,
@@ -940,9 +940,9 @@
       "inner_container_spacing_group" : {
         "border_radius_type" : "BorderRadius25",
         "top_padding" : 139,
-        "right_padding" : 55,
+        "right_padding" : 85,
         "bottom_padding" : 139,
-        "left_padding" : 55,
+        "left_padding" : 85,
         "change_spacing_in_mobile" : true,
         "mobile_spacing_group" : {
           "top_padding" : 50,
@@ -996,9 +996,9 @@
       "inner_container_spacing_group" : {
         "border_radius_type" : "BorderRadius25",
         "top_padding" : 139,
-        "right_padding" : 55,
+        "right_padding" : 85,
         "bottom_padding" : 139,
-        "left_padding" : 55,
+        "left_padding" : 85,
         "change_spacing_in_mobile" : true,
         "mobile_spacing_group" : {
           "top_padding" : 50,

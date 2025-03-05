@@ -34,7 +34,7 @@
 						</a>
 					</div>
 					{% endif %}
-					<div class="cntcnt">
+					<div class="{% if module.intro_content.include_logo %} topLogo {% endif %} cntcnt">
 						{{ macros.introGroup(module.intro_content) }}
 					</div>
 				</div>

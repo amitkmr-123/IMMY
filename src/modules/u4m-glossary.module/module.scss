@@ -62,20 +62,34 @@
             color: $white;
             margin: 0;
             border: 1px solid;
-            border-radius: 5px;
-            padding: 5px 10px;
+            border-radius: 10px;
+            padding: 10px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            &::after {
-              content: "+";
+            font-size: 20px;
+            line-height: 1.1;
+            padding: 8px 10px;
+            .iconWrapper {
+              color: $white;
+              &.minus {
+                display: none;
+              }
+              svg {
+                fill: currentColor;
+              }
             }
           }
           &.active {
             h4 {
-              &::after {
-                content: "-";
+              .iconWrapper {
+                &.minus {
+                  display: block;
+                }
+                &.plus {
+                  display: none;
+                }
               }
             }
           }

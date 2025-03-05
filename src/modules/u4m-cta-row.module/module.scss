@@ -15,5 +15,67 @@
         }
       }
     }
+
+    .subsform_wrap {
+      form {
+        background-color: transparent;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        align-items: flex-end;
+
+        @include tabletvert {
+          justify-content: center;
+        }
+
+        .hs-form-field {
+          order: 1;
+          width: calc(100% - 135rem);
+          text-align: left;
+          padding-right: 20rem;
+
+          @include tabletvert {
+            width: 100%;
+            padding-right: 0rem;
+            text-align: center;
+          }
+        }
+
+        .hs_error_rollup {
+          order: 3;
+        }
+
+        .hs_submit {
+          order: 2;
+          @include tabletvert {
+            margin-top: 20rem;
+          }
+        }
+
+        ul.no-list.hs-error-msgs.inputs-list {
+          display: none;
+        }
+
+        .hs-form-field .input input {
+          margin: 0;
+          min-height: 50rem;
+          padding: 10rem 16rem;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  &.overlay_bg_added {
+    .bg_overlay[class*="gradient"] {
+      // mix-blend-mode: multiply;
+    }
+    .bg_overlay.gradient1 {
+      background: linear-gradient(110.45deg, $Blue 13.65%, $Red 101.2%), $White;
+    }
+
+    .bg_overlay.overlay_img {
+      // opacity: 0.3;
+    }
   }
 }
