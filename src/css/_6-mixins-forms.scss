@@ -383,10 +383,10 @@
 
     .form-columns-2 {
       &>div {
-        width: calc(50% - 10rem);
+        width: calc(50% - 15rem);
 
         &:last-of-type {
-          margin-left: 20rem;
+          margin-left: 30rem;
 
           @include phone {
             margin-left: 0;

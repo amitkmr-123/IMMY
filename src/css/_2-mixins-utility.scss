@@ -120,7 +120,9 @@
 }
 
 @mixin ie {
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+  @media all and (-ms-high-contrast: none),
+  (-ms-high-contrast: active) {
     @content;
   }
 }
@@ -195,4 +197,10 @@
   text-decoration: none;
   transition: $animation1;
   display: inline-block;
+  color: $linksColor;
+
+  &:hover {
+    color: $linksColor !important;
+    text-decoration: underline;
+  }
 }
