@@ -265,31 +265,33 @@
 
               <div class="post-content">
                 <div class="post-content-inner">
-				<div class="card_eyebrow_text">
-                  {% if module.filter_content.select_filter == "type1" %}
-                  {% if row.type.name %}
-                  <span class='featured-tag tag_{{ row.type.name|lower|replace(' ','-') }}'>{{ row.type.name }}</span>
-                  {% endif %}
-                  {% endif %}
+                  <div class="card_eyebrow_text">
+                    {% if module.filter_content.select_filter == "type1" %}
+                    {% if row.type.name %}
+                    <span class='featured-tag tag_{{ row.type.name|lower|replace(' ','-') }}'>{{ row.type.name }}</span>
+                    {% endif %}
+                    {% endif %}
 
-                  {% if module.filter_content.select_filter == "type2" %}
-                  {% if row.product.name %}
-                  <span class='featured-tag tag_{{ row.product.name|lower|replace(' ','-') }} {{ row.product.name|lower|replace(' ','-') }}'>{% for item in module.filter_content.type_product_icon_group %}
-                    {% if (row.product.name|lower|replace(' ','-') == item.type_product_label|lower|replace(' ','-') ) and item.icon_image.src %}
-                    <span class="icon_img"><img src="{{ item.icon_image.src|escape_url }}" alt="{{ item.icon_image.alt|escape_attr }}"></span>
-                    {% endif %}{% endfor %}{{ row.product.name }}</span>
-                  {% endif %}
-                  {% endif %}
+                    {% if module.filter_content.select_filter == "type2" %}
+                    {% if row.product.name %}
+                    <span class='featured-tag tag_{{ row.product.name|lower|replace(' ','-') }} {{ row.product.name|lower|replace(' ','-') }}'>{% for item in module.filter_content.type_product_icon_group %}
+                      {% if (row.product.name|lower|replace(' ','-') == item.type_product_label|lower|replace(' ','-') ) and item.icon_image.src %}
+                      <span class="icon_img"><img src="{{ item.icon_image.src|escape_url }}" alt="{{ item.icon_image.alt|escape_attr }}"></span>
+                      {% endif %}{% endfor %}<span>{{ row.product.name }}</span>
+                      </span>
+                    {% endif %}
+                    {% endif %}
 
 
+                  </div>
+                  <h6 class="restitle">
+                    <a href="{{ row.page_url }}">{{ row.name }}</a>
+                  </h6>
+                  {% if module.filter_content.card_type == "type1"%}
+                  <p class="description"> {{ row.description|safe|truncatehtml(160, '.' , false)|striptags}}
+                  </p>
+                  {% endif %}
                 </div>
-                <h6 class="restitle">
-                  <a href="{{ row.page_url }}">{{ row.name }}</a>
-                </h6>
-
-                <p class="description"> {{ row.description|safe|truncatehtml(160, '.' , false)|striptags}}
-                </p>
-				</div>
                 {% if not module.module_settings.remove_button %} 
                 <div class='read-more'>
                   <a class="hs-arrow" href="{{ row.page_url }}">
@@ -416,115 +418,123 @@
       e.stopPropagation();
     });
 
+$('body').click(function(){
+$('.select_arrow_inner').removeClass('dropdownopen');
+})
+
     $('.parent{{name}} .filter_label').click(function(e){
+    $('.select_arrow_inner').removeClass('dropdownopen');
       $(this).parent('.select_arrow_inner').toggleClass('dropdownopen');
-      e.stopPropagation();
-      console.log('arrow clicked')
-    })
+    e.stopPropagation();
+    console.log('arrow clicked')
+  })
 
-    document.querySelectorAll(".parent{{name}} .filter_dropdown").forEach((filterDropdown) => {
-      filterDropdown.addEventListener("click", function (e) {
-        e.stopPropagation();
+  document.querySelectorAll(".parent{{name}} .filter_dropdown").forEach((filterDropdown) => {
+                            filterDropdown.addEventListener("click", function (e) {
+    e.stopPropagation();
+  });
+  });
+
+  // ========================
+
+  var wrapper = document.querySelector(".resourceList");
+  var pagination = document.querySelector(".pagination");
+  var items{{varname}} = Array.from(document.querySelectorAll(".resourceCard"));
+  var filteredItems = items{{varname}};
+  var currPage = 1;
+
+
+  var TypeSelectCheck = document.querySelectorAll(".typeSelect .filter_input");
+  var searchField = document.querySelector(".resourceInput");
+  var TypeSelectLabel = document.querySelector(".type_filter_label");
+  var TopicSelectLabel = document.querySelector(".topic_filter_label");
+
+  // ========================
+
+  var typeArrayValues{{varname}} = "";
+
+  function typeArrayUpdate(value) {
+    typeArrayValues{{varname}} = value;
+  }
+
+  function printTypeArrayUpdate() {
+    return typeArrayValues{{varname}};
+  }
+
+  var params{{varname}} = new URLSearchParams(window.location.search);
+  var typeParam{{varname}} = params{{varname}}.get("type");
+
+  var typeArray = typeParam{{varname}}?.length > 0 ? typeParam{{varname}}?.split(",") : [];
+
+  // ========================
+
+  //========
+
+  $(".parent{{name}} .type_ele").each(function (f) {
+    $(this).click(function (f) {
+    f.preventDefault();
+
+
+    var getValue = $(this).attr("data-type");
+    var getValueLabel = $(this).attr("data-type-label");
+
+
+    $(this).parents('.filter_nav').find('.select_arrow_inner').removeClass('dropdownopen');
+
+    console.log('getValue type',getValue);
+
+    var TopicfilterValue = $(".parent{{name}} .topic_filter_label").attr("data-value");
+
+                             console.log(TopicfilterValue, "TopicfilterValue");
+
+    var url = window.location.href.split("?")[0];
+
+    {% if module.filter_content.select_filter == "type1" %}
+    if (getValueLabel != "") {
+      $(".parent{{name}} .filter_label.type_filter_label").text(getValueLabel);
+        } else {
+        $(".parent{{name}} .filter_label.type_filter_label").text("Select Type");
+          }
+    {% endif %}
+
+    {% if module.filter_content.select_filter == "type2" %}
+    if (getValueLabel != "") {
+      $(".parent{{name}} .filter_label.type_filter_label").text(getValueLabel);
+        } else {
+        $(".parent{{name}} .filter_label.type_filter_label").text("Select Product");
+          }
+    {% endif %}
+
+
+    {% if module.filter_content.select_filter == "type1" %}
+
+    if (getValue && TopicfilterValue) {
+      newUrl = url + "?type=" + getValue + "&topic=" + TopicfilterValue;
+    } else if (getValue) {
+      newUrl = url + "?type=" + getValue;
+    } else {
+      newUrl = url; // If both are empty, keep the base URL
+    }
+    {% endif %}
+
+    {% if module.filter_content.select_filter == "type2" %}
+
+    if (getValue && TopicfilterValue) {
+      newUrl = url + "?product=" + getValue + "&language=" + TopicfilterValue;
+    } else if (getValue) {
+      newUrl = url + "?product=" + getValue;
+    } else {
+      newUrl = url; // If both are empty, keep the base URL
+    }
+    {% endif %}
+
+    window.history.pushState({ path: newUrl }, "", newUrl);
+    $(".parent{{name}} .listing-wrap .cardSctn").load(
+      newUrl + " .parent{{name}} .listing-wrap .cardSctn .resourceList"
+     );
+    $(".parent{{name}} .pagination").load(newUrl + " .parent{{name}}  .pagination .nav-links");
+      $(".parent{{name}} .type_filter_label").attr("data-value", getValue);
       });
-    });
-
-    // ========================
-
-    var wrapper = document.querySelector(".resourceList");
-    var pagination = document.querySelector(".pagination");
-    var items{{varname}} = Array.from(document.querySelectorAll(".resourceCard"));
-    var filteredItems = items{{varname}};
-    var currPage = 1;
-
-
-    var TypeSelectCheck = document.querySelectorAll(".typeSelect .filter_input");
-    var searchField = document.querySelector(".resourceInput");
-    var TypeSelectLabel = document.querySelector(".type_filter_label");
-    var TopicSelectLabel = document.querySelector(".topic_filter_label");
-
-    // ========================
-
-    var typeArrayValues{{varname}} = "";
-
-    function typeArrayUpdate(value) {
-      typeArrayValues{{varname}} = value;
-    }
-
-    function printTypeArrayUpdate() {
-      return typeArrayValues{{varname}};
-    }
-
-    var params{{varname}} = new URLSearchParams(window.location.search);
-    var typeParam{{varname}} = params{{varname}}.get("type");
-
-    var typeArray = typeParam{{varname}}?.length > 0 ? typeParam{{varname}}?.split(",") : [];
-
-    // ========================
-
-    //========
-
-    $(".parent{{name}} .type_ele").each(function (f) {
-      $(this).click(function (f) {
-      f.preventDefault();
-
-
-      var getValue = $(this).attr("data-type");
-      var getValueLabel = $(this).attr("data-type-label");
-
-      console.log('getValue type',getValue);
-
-      var TopicfilterValue = $(".parent{{name}} .topic_filter_label").attr("data-value");
-
-                               console.log(TopicfilterValue, "TopicfilterValue");
-
-      var url = window.location.href.split("?")[0];
-
-      {% if module.filter_content.select_filter == "type1" %}
-      if (getValueLabel != "") {
-        $(".parent{{name}} .filter_label.type_filter_label").text(getValueLabel);
-          } else {
-          $(".parent{{name}} .filter_label.type_filter_label").text("Select Type");
-            }
-      {% endif %}
-
-      {% if module.filter_content.select_filter == "type2" %}
-      if (getValueLabel != "") {
-        $(".parent{{name}} .filter_label.type_filter_label").text(getValueLabel);
-          } else {
-          $(".parent{{name}} .filter_label.type_filter_label").text("Select Product");
-            }
-      {% endif %}
-
-
-      {% if module.filter_content.select_filter == "type1" %}
-
-      if (getValue && TopicfilterValue) {
-        newUrl = url + "?type=" + getValue + "&topic=" + TopicfilterValue;
-      } else if (getValue) {
-        newUrl = url + "?type=" + getValue;
-      } else {
-        newUrl = url; // If both are empty, keep the base URL
-      }
-      {% endif %}
-
-      {% if module.filter_content.select_filter == "type2" %}
-
-      if (getValue && TopicfilterValue) {
-        newUrl = url + "?product=" + getValue + "&language=" + TopicfilterValue;
-      } else if (getValue) {
-        newUrl = url + "?product=" + getValue;
-      } else {
-        newUrl = url; // If both are empty, keep the base URL
-      }
-      {% endif %}
-
-      window.history.pushState({ path: newUrl }, "", newUrl);
-      $(".parent{{name}} .listing-wrap .cardSctn").load(
-        newUrl + " .parent{{name}} .listing-wrap .cardSctn .resourceList"
-       );
-      $(".parent{{name}} .pagination").load(newUrl + " .parent{{name}}  .pagination .nav-links");
-        $(".parent{{name}} .type_filter_label").attr("data-value", getValue);
-        });
   });
 
   $(".parent{{name}} .topic_ele").each(function (f) {
@@ -533,6 +543,8 @@
 
     var getValue = $(this).attr("data-topic");
     var getValueLabel = $(this).attr("data-topic-label");
+
+    $(this).parents('.filter_nav').find('.select_arrow_inner').removeClass('dropdownopen');
 
     var TypefilterValue = $(".parent{{name}} .type_filter_label").attr("data-value");
 

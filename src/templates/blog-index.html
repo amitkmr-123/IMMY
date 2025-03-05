@@ -15,7 +15,7 @@
   {% dnd_module path='../modules/u4m-hero',
   module_overrides={
           "background_settings" : {
-            "background_type" : "color"
+            "background_type" : ""
           },
           "bottom_padding" : "bottom-padding-none",
           "container_size" : "full_width",
@@ -34,37 +34,11 @@
           "intro_content_alignment" : "center"
         },
         intro_content={
-          "button_group" : [ {
-            "button_size" : "large",
-            "button_style" : "hs-button",
-            "button_text" : "Insert CTA",
-            "button_type" : "std",
-            "link" : {
-              "no_follow" : false,
-              "open_in_new_tab" : false,
-              "url" : {
-                "href" : "",
-                "type" : "EXTERNAL"
-              }
-            }
-          }, {
-            "button_size" : "large",
-            "button_style" : "hs-arrow-btn",
-            "button_text" : "Optional CTA",
-            "button_type" : "std",
-            "link" : {
-              "no_follow" : false,
-              "open_in_new_tab" : false,
-              "url" : {
-                "href" : "",
-                "type" : "EXTERNAL"
-              }
-            }
-          } ],
-          "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+          "button_group" : [],
+          "content" : "",
           "content_style" : "themeStyle",
-          "eyebrow_text" : "OPTIONAL EYEBROW TEXT",
-          "heading" : "Events + News",
+          "eyebrow_text" : "",
+          "heading" : group.public_title,
           "heading_size" : "h1",
           "include_button" : true,
           "include_content" : true,

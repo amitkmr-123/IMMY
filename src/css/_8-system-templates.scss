@@ -114,6 +114,11 @@ section.u4m-search-results {
   max-width: 1000rem;
   margin: 100rem auto;
 
+  @include tabletMid {
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
+
   ul.hs-search-results__listing {
     a {
       font-size: 20rem;
@@ -162,4 +167,53 @@ section.u4m-subscriptions-confirmation {
 
 .hs-search-results__pagination__link--number {
   padding: 1.35rem 14.7rem;
+}
+
+section.u4m-search-results {
+  ul.hs-search-results__listing {
+    gap: 40rem 0;
+
+    .hs-search-results__description {
+      @include b2;
+      margin: 0;
+    }
+
+    .hs-search-results__featured-image-wrapper {
+      padding-right: 15rem;
+      img {
+        width: 100%;
+      }
+
+      @include tabletvert {
+        padding-right: 0;
+        margin-bottom: 20rem;
+      }
+    }
+
+    .hs-search-results__content {
+      padding-left: 15rem;
+
+      @include tabletvert {
+        padding-left: 0;
+      }
+    }
+
+    a {
+      @include h4;
+    }
+  }
+
+  nav.hs-search-results__pagination {
+    margin-top: 30rem;
+    gap: 10rem 15rem;
+    font-size: 18rem;
+
+    .hs-search-results__pagination__link--number {
+      width: 30rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 30rem;
+    }
+  }
 }

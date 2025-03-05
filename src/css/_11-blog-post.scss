@@ -217,3 +217,16 @@ section.u4m-blog-post {
     }
   }
 }
+
+.u4m-blog-post {
+  .date a,
+  .date a:hover {
+    color: inherit !important;
+  }
+  .content.post_body {
+    max-width: 715px;
+  }
+  .topics {
+    @include eyebrow;
+  }
+}
