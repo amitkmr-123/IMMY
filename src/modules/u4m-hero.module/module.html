@@ -7,41 +7,41 @@
 
 {% if module.module_settings.select_content_type=="tc" %}
 <div class="bannerMain">
-	<div class="flex_row">
-		<div class="left-section">
-			<div class="intro_wrapp">
-				{{ macros.introGroup(module.intro_content, module.module_settings) }} 
-			</div>
-		</div>
-		<div class="media_section">
-			<div class="media_sectionin {{ module.media.border_radius_type }} {{ module.media.shadow_type }}">
-				{% if module.media.type=="img"%}
-				{% if module.media.image.src %}
-				<img src="{{ module.media.image.src }}" alt="{{ module.media.image.alt }}">
-				{% endif %}
-				{% elif module.media.type=="vd"%}
-				<div class="vid_section">
-					{% if module.media.video_section.poster_image.src %}
-					<div class="bannerVideo" data-popup-id="videopop-{{ name }}">
-						<div class="bannerVideoPoster" style="background-image:url({{ module.media.video_section.poster_image.src }});">
-							<div class="playIcon">
-								<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
-									<circle opacity="0.8" cx="60" cy="60" r="60" fill="#002F58"/>
-									<path d="M84 57.7679C85.3333 58.5378 85.3333 60.4623 84 61.2321L50.25 80.7176C48.9167 81.4874 47.25 80.5252 47.25 78.9856L47.25 40.0144C47.25 38.4748 48.9167 37.5126 50.25 38.2824L84 57.7679Z" fill="white"/>
-								</svg>
-							</div>
-						</div> 
-					</div> 
-					{% endif %}  
-				</div>
-				{% endif %}
-			</div>
-		</div>
-	</div>
+  <div class="flex_row">
+    <div class="left-section">
+      <div class="intro_wrapp">
+        {{ macros.introGroup(module.intro_content, module.module_settings) }} 
+      </div>
+    </div>
+    <div class="media_section">
+      <div class="media_sectionin {{ module.media.border_radius_type }} {{ module.media.shadow_type }}">
+        {% if module.media.type=="img"%}
+        {% if module.media.image.src %}
+        <img src="{{ module.media.image.src }}" alt="{{ module.media.image.alt }}">
+        {% endif %}
+        {% elif module.media.type=="vd"%}
+        <div class="vid_section">
+          {% if module.media.video_section.poster_image.src %}
+          <div class="bannerVideo" data-popup-id="videopop-{{ name }}">
+            <div class="bannerVideoPoster" style="background-image:url({{ module.media.video_section.poster_image.src }});">
+              <div class="playIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
+                  <circle opacity="0.8" cx="60" cy="60" r="60" fill="#002F58"/>
+                  <path d="M84 57.7679C85.3333 58.5378 85.3333 60.4623 84 61.2321L50.25 80.7176C48.9167 81.4874 47.25 80.5252 47.25 78.9856L47.25 40.0144C47.25 38.4748 48.9167 37.5126 50.25 38.2824L84 57.7679Z" fill="white"/>
+                </svg>
+              </div>
+            </div> 
+          </div> 
+          {% endif %}  
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
 </div>
 {% else %}
 <div class="bannerContent {{ module.module_settings.select_content_type }}">
-	{{ macros.introGroup(module.intro_content, module.module_settings) }} 
+  {{ macros.introGroup(module.intro_content, module.module_settings) }} 
 </div>
 {% endif %}
 
@@ -50,15 +50,15 @@
 
 {% if module.enable_bottom_content %}
 <div class="btmContent {{ module.module_settings.content_style }}">
-	<div class="page-center {{ module.module_overrides.container_size }}" {% if module.module_overrides.container_size == "custom" %} style="max-width:{{ module.module_overrides.custom_container_size }}rem" {% endif %}>
-		<div class="flex_row row{{ module.module_settings.bottom_column_count }}">
-			{% for item in module.bottom_content %}
-			<div class="btmItem {{ module.module_settings.bottom_column_count }}">
-				{{ item.content }}
-			</div>
-			{% endfor %}
-		</div>
-	</div>
+  <div class="page-center {{ module.module_overrides.container_size }}" {% if module.module_overrides.container_size == "custom" %} style="max-width:{{ module.module_overrides.custom_container_size }}rem" {% endif %}>
+    <div class="flex_row row{{ module.module_settings.bottom_column_count }}">
+      {% for item in module.bottom_content %}
+      <div class="btmItem {{ module.module_settings.bottom_column_count }}">
+        {{ item.content }}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>
 {% endif %}
 </section>
@@ -68,30 +68,37 @@
 
 {% if module.media.type=="vd"%}
 <div id="videopop-{{ name }}" class="bannerVideoPopup">
-	<div class="bannerVideoPopupInr page-center">
-		<div class="bannerpopVideo page-center">
-			<div class="close {{ module.module_settings.theme }}_color">
-				<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 122.88 122.88"><defs></defs><title>cross</title><path d="M6,6H6a20.53,20.53,0,0,1,29,0l26.5,26.49L87.93,6a20.54,20.54,0,0,1,29,0h0a20.53,20.53,0,0,1,0,29L90.41,61.44,116.9,87.93a20.54,20.54,0,0,1,0,29h0a20.54,20.54,0,0,1-29,0L61.44,90.41,35,116.9a20.54,20.54,0,0,1-29,0H6a20.54,20.54,0,0,1,0-29L32.47,61.44,6,34.94A20.53,20.53,0,0,1,6,6Z"/></svg>
-			</div>
-			{% if module.media.video_section.video_type == 'file' %}
-			<video id="video-videopop-{{ name }}" poster="{{ module.media.video_section.poster_image.src }}" src="{{ module.media.video_section.video }}" controls></video>
-			{% else %}
-			<div class="iframe_wrap">
-				<div class="iframe_wrap_inr">
-					{% if module.media.video_section.embed_url is string_containing "youtube.com" %}
-					<iframe src="" data-src="{{ module.media.video_section.embed_url }}?autoplay=1&loop=0&mute=1&showinfo=0&controls=1" frameborder="0" allowFullScreen class="iframe_video"></iframe>
-					{% else %}
-					<iframe src="" data-src="{{ module.media.video_section.embed_url}}?autoplay=1&loop=0&autopause=0&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowFullScreen class="iframe_video"></iframe>
-					{% endif %}
-				</div>    
-			</div>
-			{% endif %}
-		</div>
-	</div>
+  <div class="bannerVideoPopupInr page-center">
+    <div class="bannerpopVideo page-center">
+      <div class="close {{ module.module_settings.theme }}_color">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 122.88 122.88"><defs></defs><title>cross</title><path d="M6,6H6a20.53,20.53,0,0,1,29,0l26.5,26.49L87.93,6a20.54,20.54,0,0,1,29,0h0a20.53,20.53,0,0,1,0,29L90.41,61.44,116.9,87.93a20.54,20.54,0,0,1,0,29h0a20.54,20.54,0,0,1-29,0L61.44,90.41,35,116.9a20.54,20.54,0,0,1-29,0H6a20.54,20.54,0,0,1,0-29L32.47,61.44,6,34.94A20.53,20.53,0,0,1,6,6Z"/></svg>
+      </div>
+      {% if module.media.video_section.video_type == 'file' %}
+      <video id="video-videopop-{{ name }}" poster="{{ module.media.video_section.poster_image.src }}" src="{{ module.media.video_section.video }}" controls></video>
+      {% else %}
+      <div class="iframe_wrap">
+        <div class="iframe_wrap_inr">
+          {% if module.media.video_section.embed_url is string_containing "youtube.com" %}
+          <iframe src="" data-src="{{ module.media.video_section.embed_url }}?autoplay=1&loop=0&mute=1&showinfo=0&controls=1" frameborder="0" allowFullScreen class="iframe_video"></iframe>
+          {% else %}
+          <iframe src="" data-src="{{ module.media.video_section.embed_url}}?autoplay=1&loop=0&autopause=0&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowFullScreen class="iframe_video"></iframe>
+          {% endif %}
+        </div>    
+      </div>
+      {% endif %}
+    </div>
+  </div>
 </div>
 {% endif %}
 
-
-
+{% if module.intro_content.include_heading %}
+{% require_css %}
+<style> 
+  .u4m-hero.{{ name }} .intro_content .intro_title{
+    color:{{ module.intro_content.heading_color.rgba }};
+  }
+</style>
+{% end_require_css %}
+{% endif %}
 
 
