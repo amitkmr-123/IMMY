@@ -499,6 +499,12 @@
                     display: block;
                 }
             }
+
+            &:not(:last-child) {
+                @include tabletvert {
+                    margin-bottom: 10px;
+                }
+            }
         }
     }
 
