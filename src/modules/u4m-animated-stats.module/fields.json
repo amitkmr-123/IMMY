@@ -943,7 +943,7 @@
       "preset" : null,
       "type" : "choice",
       "display_width" : null,
-      "default" : ""
+      "default" : "BorderRadius25"
     }, {
       "id" : "48d33633-bcd1-f95d-02ce-284a60606bf3",
       "name" : "top_padding",
@@ -954,7 +954,7 @@
       "step" : 1,
       "type" : "number",
       "display_width" : null,
-      "default" : 0
+      "default" : 80
     }, {
       "id" : "60e2a3f2-d388-17dc-c420-f7d819caa54c",
       "name" : "right_padding",
@@ -976,7 +976,7 @@
       "step" : 1,
       "type" : "number",
       "display_width" : null,
-      "default" : 0
+      "default" : 80
     }, {
       "id" : "d92aba00-5806-6a06-0388-6b9c37ba4101",
       "name" : "left_padding",
@@ -1022,7 +1022,7 @@
         "step" : 1,
         "type" : "number",
         "display_width" : null,
-        "default" : 100
+        "default" : 50
       }, {
         "id" : "3c711700-554b-4d12-a5e8-e8f272d5f188",
         "name" : "right_padding",
@@ -1044,7 +1044,7 @@
         "step" : 1,
         "type" : "number",
         "display_width" : null,
-        "default" : 100
+        "default" : 50
       }, {
         "id" : "320427d8-59c0-22a2-5d64-3bae9bb1b987",
         "name" : "left_padding",
@@ -1063,9 +1063,9 @@
       "type" : "group",
       "display_width" : null,
       "default" : {
-        "top_padding" : 100,
+        "top_padding" : 50,
         "right_padding" : 0,
-        "bottom_padding" : 100,
+        "bottom_padding" : 50,
         "left_padding" : 0
       }
     } ],
@@ -1075,16 +1075,16 @@
     "type" : "group",
     "display_width" : null,
     "default" : {
-      "border_radius_type" : "",
-      "top_padding" : 0,
+      "border_radius_type" : "BorderRadius25",
+      "top_padding" : 80,
       "right_padding" : 0,
-      "bottom_padding" : 0,
+      "bottom_padding" : 80,
       "left_padding" : 0,
       "change_spacing_in_mobile" : false,
       "mobile_spacing_group" : {
-        "top_padding" : 100,
+        "top_padding" : 50,
         "right_padding" : 0,
-        "bottom_padding" : 100,
+        "bottom_padding" : 50,
         "left_padding" : 0
       }
     }
@@ -1401,16 +1401,16 @@
     "custom_bottom_padding" : 75,
     "custom_bottom_padding_mobile" : 50,
     "inner_container_spacing_group" : {
-      "border_radius_type" : "",
-      "top_padding" : 0,
+      "border_radius_type" : "BorderRadius25",
+      "top_padding" : 80,
       "right_padding" : 0,
-      "bottom_padding" : 0,
+      "bottom_padding" : 80,
       "left_padding" : 0,
       "change_spacing_in_mobile" : false,
       "mobile_spacing_group" : {
-        "top_padding" : 100,
+        "top_padding" : 50,
         "right_padding" : 0,
-        "bottom_padding" : 100,
+        "bottom_padding" : 50,
         "left_padding" : 0
       }
     },
