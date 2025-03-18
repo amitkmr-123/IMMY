@@ -6,7 +6,7 @@
 <div class="btmCntt intro_content">
 	<div class="pdd flex_row {{ module.module_settings.card_column_count }}_row">
 		{% for item in module.cards_items_group %}
-		<div class="items {{ module.module_settings.card_column_count }}">
+		<div class="items {{ module.module_settings.card_column_count }} {{ module.module_settings.card_type }}__type">
 			<div class="Inneritems {% if module.module_settings.card_type == "bg_card"%} Bgcard {{ module.module_settings.card_border_radius_type }} {% endif %}">
 				<div class="top_item">
 					{% if module.module_settings.card_type == "normal_card"%} 
@@ -69,8 +69,9 @@
 						<div class="intro_desc 	{{ item.content_style }}"> {{ item.content }} </div>
 				{% endif %}
 			</div>
-			<div class="btm_btn">
+			<div class="btm_btn {% if (item.include_button) and (item.hide_the_actual_button) %} hide-me{% endif %}">
 				{% if item.include_button %}
+        				
 				<div class="btn_item">
 					{% if item.button_group.button_type == "std" %}
 					{% set href = item.button_group.link.url.href %}

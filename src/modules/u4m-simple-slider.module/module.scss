@@ -153,12 +153,19 @@
                     }
 
                     .authorImage {
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 100%;
+                        overflow: hidden;
+                        position: relative;
+                        background-color: $Black;
+                        flex: 0 0 80px;
+
                         img {
-                            border-radius: 100%;
-                            overflow: hidden;
-                            width: 80px;
-                            height: 80px !important;
-                            object-fit: cover;
+                            display: none;
                         }
                     }
 
@@ -324,6 +331,30 @@
 
         button {
             background: $Black;
+        }
+    }
+
+    // because the height changes slide to slide on the page, it might trigger layout shifts
+    // if so, could remove the :not(.is-active) styles.
+    .splide {
+        .splide__track {
+            .splide__list {
+                align-items: center;
+
+                .splide__slide {
+                    transition: height 0.25s ease-in-out, opacity 0.25s ease-in-out;
+
+                    &.is-active {
+                        height: 100%;
+                        opacity: 1;
+                    }
+
+                    &:not(.is-active) {
+                        height: 0;
+                        opacity: 0;
+                    }
+                }
+            }
         }
     }
 }

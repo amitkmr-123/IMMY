@@ -703,13 +703,32 @@
   }, {
     "id" : "78a70e63-c770-0274-0783-4685ccebcf9b",
     "name" : "include_button",
-    "label" : "Include Button",
+    "label" : "Include Card Link",
     "required" : false,
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
     "display_width" : null,
     "default" : false
+  }, {
+    "id" : "352a046b-eff3-20d8-87ac-90e190a4a760",
+    "name" : "hide_the_actual_button",
+    "label" : "Hide the actual button",
+    "help_text" : "the full card will be clickable, select this option if you do not want a physical button beneath the card.",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "cards_items_group.include_button",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : true
   }, {
     "id" : "79c7b904-8eed-7838-f663-4885fb0c597b",
     "name" : "button_group",
@@ -912,6 +931,7 @@
     "content_style" : "bodystyle1",
     "content" : "<p>Donec malesuada arcu turpis, eget pretium nulla viverra pretium. Aenean laoreet mollis efficitur. Curabitur nec magna tellus. Cras viverra varius magna, non.</p>",
     "include_button" : false,
+    "hide_the_actual_button" : true,
     "button_group" : {
       "button_type" : "std",
       "button_style" : "hs-button",
@@ -967,6 +987,7 @@
     "content_style" : "bodystyle1",
     "content" : "<p>Donec malesuada arcu turpis, eget pretium nulla viverra pretium. Aenean laoreet mollis efficitur. Curabitur nec magna tellus. Cras viverra varius magna, non.</p>",
     "include_button" : false,
+    "hide_the_actual_button" : true,
     "button_group" : {
       "button_type" : "std",
       "button_style" : "hs-button",
@@ -1022,6 +1043,7 @@
     "content_style" : "bodystyle1",
     "content" : "<p>Donec malesuada arcu turpis, eget pretium nulla viverra pretium. Aenean laoreet mollis efficitur. Curabitur nec magna tellus. Cras viverra varius magna, non.</p>",
     "include_button" : false,
+    "hide_the_actual_button" : true,
     "button_group" : {
       "button_type" : "std",
       "button_style" : "hs-button",

@@ -444,6 +444,17 @@
     "type" : "choice",
     "display_width" : null,
     "default" : "center"
+  }, {
+    "id" : "16bf6275-c498-4121-714b-6d368adbf6da",
+    "name" : "apply_above_footer_style",
+    "label" : "Apply \"above footer\" style",
+    "inline_help_text" : "this will set the CTA up to look like it's overlapping with the footer.",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : false
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -451,7 +462,8 @@
   "type" : "group",
   "display_width" : null,
   "default" : {
-    "intro_content_alignment" : "center"
+    "intro_content_alignment" : "center",
+    "apply_above_footer_style" : false
   }
 }, {
   "id" : "module_overrides",

@@ -2,6 +2,10 @@
   position: relative;
   z-index: 101;
 
+  &.lpHeader {
+    display: none;
+  }
+
   .page-center {
     @include tabletMidmin {
       padding-left: 20rem;
@@ -91,6 +95,15 @@
   .topHeader {
     background-color: $DarkNavy;
     padding: 10px 0;
+
+    .cmSearchBtn,
+    .topBtnWrap {
+
+      &:focus,
+      &:hover {
+        opacity: .7;
+      }
+    }
   }
 
   .bottomInnerWrap {
@@ -276,7 +289,7 @@
       }
     }
 
-    > div {
+    >div {
       width: 100%;
     }
   }

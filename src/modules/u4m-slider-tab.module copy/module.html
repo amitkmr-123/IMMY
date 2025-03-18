@@ -1,3 +1,7 @@
+<!--
+  templateType: "none"
+  isAvailableForNewContent: false
+-->
 {% set moduleName = 'cmSliderTab' %}
 {% include "../partials/u4-module-includes.html" %}
 {% set etqPdfHubDbTableId = "111344816" %}
@@ -328,7 +332,7 @@
 						{% endif %}
 						{% for row in hubdbTableRows %}
 							<div class="hubdb-row">
-								<a href="/documents?docNum={{ row.product_doc_number }}&fileName={{ row.pdf_file_name }}" target="_blank">{{ row.pdf_file_name }}</a>
+								<a href="/documents/{{ row.product_doc_number }}?fileName={{ row.pdf_file_name }}" target="_blank">{{ row.pdf_file_name }}</a>
 							</div>
 						{% endfor %}
 					</div>

@@ -5,16 +5,18 @@
   padding-right: 0;
   overflow: auto;
 
-  & > .page-center {
+  &>.page-center {
     padding: 0;
     max-width: 100%;
     overflow: auto;
   }
+
   @include tabletvert {
-    .glossMain > div {
+    .glossMain>div {
       height: auto !important;
     }
   }
+
   form.glossTop {
     background-color: $DarkNavy;
     color: $white;
@@ -26,15 +28,18 @@
     top: 0;
     transition: all 0.3s ease-in-out;
     z-index: 1000;
+
     &.fixed {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
+
       @include tabletvert {
         position: static;
       }
     }
+
     .placeholder {
       height: 0;
     }
@@ -45,17 +50,24 @@
       gap: 50px;
       align-items: flex-end;
 
+      @include tablet {
+        flex-direction: column-reverse;
+        gap: 20px;
+      }
+
       @include tabletvert {
-        gap: 30px;
+        // gap: 30px;
         padding: 0;
       }
 
       .glossCat {
         flex: 1;
+
         .mobileIcon {
           display: none;
+
           @include tabletvert {
-            display: block;
+            //display: block;
           }
 
           h4 {
@@ -71,22 +83,27 @@
             font-size: 20px;
             line-height: 1.1;
             padding: 8px 10px;
+
             .iconWrapper {
               color: $white;
+
               &.minus {
                 display: none;
               }
+
               svg {
                 fill: currentColor;
               }
             }
           }
+
           &.active {
             h4 {
               .iconWrapper {
                 &.minus {
                   display: block;
                 }
+
                 &.plus {
                   display: none;
                 }
@@ -94,6 +111,7 @@
             }
           }
         }
+
         .catItems {
           @include tabletvertmin {
             display: block !important;
@@ -103,19 +121,23 @@
             visibility: visible !important;
             height: auto !important;
           }
+
+
+
           @include tabletvert {
-            display: none;
+            //display: none;
           }
         }
+
         ul {
           display: flex;
           gap: 20px;
           flex-wrap: wrap;
           margin: 0;
 
-          @include tabletvert {
+          @include tablet {
             gap: 10px;
-            padding-top: 20px;
+            padding-top: 0px;
           }
 
           li {
@@ -126,7 +148,7 @@
             height: 50px;
             margin-bottom: 0;
 
-            @include tabletvert {
+            @include tablet {
               height: 35px;
               width: 35px;
             }
@@ -166,7 +188,8 @@
               color: $white;
               font-size: 18px;
               line-height: 1;
-              @include tabletvert {
+
+              @include tablet {
                 top: 1px;
               }
             }
@@ -178,16 +201,19 @@
         width: 300px;
 
         @include tablet {
-          width: 230px;
-        }
-
-        @include tabletvert {
           width: 100%;
         }
+
+
 
         h4 {
           color: $white;
           margin-bottom: 20px;
+
+          @include tablet {
+            margin-bottom: 12px;
+
+          }
         }
 
         input[type="search"] {
@@ -202,6 +228,7 @@
           padding: 13rem 16rem;
           min-height: auto;
           margin: 0;
+
           &::placeholder {
             color: $black;
           }
@@ -283,6 +310,7 @@
                 @include tabletvert {
                   text-align: left;
                   width: 100%;
+
                   .glossBtn {
                     display: flex;
                   }
@@ -291,13 +319,16 @@
                 svg path {
                   fill: currentColor;
                 }
+
                 .hs-sec-btn {
                   display: flex;
                   font-size: 16rem;
                   gap: 10px;
                 }
+
                 .glossBtnless {
                   display: none;
+
                   .arrow {
                     svg {
                       transform: rotate(180deg);

@@ -619,6 +619,24 @@ section[class*="u4m-"] {
     background-position: center;
     mix-blend-mode: overlay;
   }
+
+  &.is_gradient5 {
+    background-size: cover;
+    background-position: center;
+
+    .bg_overlay_gradient_gradient5 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $gradient5;
+
+      @include tablet {
+        background: rgba($Black, .7);
+      }
+    }
+  }
 }
 
 .bg_image {
@@ -940,4 +958,25 @@ section[class*="u4m-"] {
 
 .page-center.noRadius_page_center {
   overflow: visible;
+}
+
+
+
+.hs_cos_wrapper_type_cta {
+  .hs-arrow-btn {
+    position: relative;
+
+    &:after {
+      content: url("https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/elements/arrow.svg");
+      position: relative;
+      width: 12px;
+      height: 12px;
+      margin-left: 6px;
+      margin-top: -3px;
+
+      .reverse-text & {
+        content: url("https://45419021.fs1.hubspotusercontent-na1.net/hubfs/45419021/IMMY/elements/arrowWhite.svg");
+      }
+    }
+  }
 }

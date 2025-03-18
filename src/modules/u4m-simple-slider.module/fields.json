@@ -11,17 +11,53 @@
     "default" : 4
   },
   "children" : [ {
+    "id" : "8ca8d911-2e9d-5a07-956b-6f08c6903e78",
+    "name" : "use_rich_text_field_for_quote",
+    "label" : "Use Rich Text field for quote",
+    "help_text" : "select this option to use a \"Rich Text\" field for your quote rather than a text field. Rich text will give more UI options for text.",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "display_width" : null,
+    "default" : false
+  }, {
     "id" : "e76e9f87-d007-5b44-963c-45a0055a10f2",
     "name" : "quote",
     "label" : "Quote",
     "required" : false,
     "locked" : false,
     "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "quote_items.use_rich_text_field_for_quote",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "NOT_EQUAL",
+      "access" : null
+    },
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
     "display_width" : null,
     "default" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure"
+  }, {
+    "id" : "05056244-6c68-77f9-3e48-02cae42b404b",
+    "name" : "rich_text_quote",
+    "label" : "Rich text Quote",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "quote_items.use_rich_text_field_for_quote",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>"
   }, {
     "id" : "2867e5f6-956e-3083-1fbe-1a40604ad2a3",
     "name" : "link",
@@ -514,7 +550,9 @@
   "type" : "group",
   "display_width" : null,
   "default" : [ {
+    "use_rich_text_field_for_quote" : false,
     "quote" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure",
+    "rich_text_quote" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>",
     "link" : {
       "url" : {
         "content_id" : null,
@@ -575,7 +613,9 @@
       }
     }
   }, {
+    "use_rich_text_field_for_quote" : false,
     "quote" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure",
+    "rich_text_quote" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>",
     "link" : {
       "url" : {
         "content_id" : null,
@@ -636,7 +676,9 @@
       }
     }
   }, {
+    "use_rich_text_field_for_quote" : false,
     "quote" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure",
+    "rich_text_quote" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>",
     "link" : {
       "url" : {
         "content_id" : null,
@@ -697,7 +739,9 @@
       }
     }
   }, {
+    "use_rich_text_field_for_quote" : false,
     "quote" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure",
+    "rich_text_quote" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>",
     "link" : {
       "url" : {
         "content_id" : null,

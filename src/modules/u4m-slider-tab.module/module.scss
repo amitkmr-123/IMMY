@@ -409,6 +409,16 @@
             margin: 0;
             flex: 1;
 
+            &:not(.active) {
+                a {
+
+                    &:hover,
+                    &:focus {
+                        opacity: .7;
+                    }
+                }
+            }
+
             .iconWrapper {
                 display: none;
 
@@ -485,6 +495,8 @@
                 color: $FontGray;
                 position: relative;
                 font-weight: 700;
+                display: flex;
+                justify-content: center;
 
                 @include tabletvert {
                     background-color: $LightGray;
@@ -631,6 +643,7 @@
     .cmCardTabInner {
         .tabCardInner {
             row-gap: 40px;
+            justify-content: center;
         }
 
         .Inneritems {
