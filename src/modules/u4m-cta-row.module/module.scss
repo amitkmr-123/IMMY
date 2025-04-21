@@ -1,6 +1,15 @@
 @import "../../css/_module-imports";
 
 .u4m-cta-row {
+  &.above-footer {
+    background: $gradient6;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: -1rem !important;
+  }
+
+
   .page-center {
     .innerContainer {
       .intro_content {
@@ -47,6 +56,7 @@
 
         .hs_submit {
           order: 2;
+
           @include tabletvert {
             margin-top: 20rem;
           }
@@ -70,6 +80,7 @@
     .bg_overlay[class*="gradient"] {
       // mix-blend-mode: multiply;
     }
+
     .bg_overlay.gradient1 {
       background: linear-gradient(110.45deg, $Blue 13.65%, $Red 101.2%), $White;
     }

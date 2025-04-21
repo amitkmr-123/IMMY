@@ -1,0 +1,13 @@
+@import "../../css/_module-imports";
+
+.loading-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  .dots {
+    min-width: 24px;
+    display: inline-block;
+    animation: blink 1.5s infinite;
+  }
+}

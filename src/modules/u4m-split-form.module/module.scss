@@ -17,7 +17,7 @@
           padding: 80px 100px;
           position: relative;
           display: flex;
-          align-items: center;
+          align-items: flex-start;
 
           @include tabletMid {
             width: 100%;
@@ -28,15 +28,16 @@
           }
 
           .cntLogo {
-            padding-bottom: 0;
-            width: 189px;
-            position: absolute;
-            top: 80px;
+            max-width: 189px;
+
+            // width: 189px;
+            // position: absolute;
+            // top: 80px;
 
 
-            @include tabletvert {
-              top: 50px;
-            }
+            // @include tabletvert {
+            //   top: 50px;
+            // }
           }
 
           .cntcnt.topLogo {
@@ -150,6 +151,22 @@
                   .inputs-list {
                     column-count: 2;
                   }
+                }
+              }
+
+              .legal-consent-container {
+                .hs-dependent-field {
+                  margin-top: 10px;
+                  margin-bottom: 10px;
+                  color: $White;
+
+                  li span {
+                    color: $White;
+                  }
+                }
+
+                .hs-richtext {
+                  font-size: 13rem;
                 }
               }
             }

@@ -31,6 +31,7 @@
       .items {
         padding: 0 20px;
         transition: all 0.3s ease;
+        overflow: hidden;
 
         .Inneritems {
           height: 100%;
@@ -39,6 +40,11 @@
 
           .btm_btn {
             margin-top: auto;
+
+            &.hide-me {
+              height: 0;
+            }
+
           }
         }
 
@@ -92,6 +98,27 @@
 
             .hs-arrow-btn {
               justify-content: center;
+            }
+          }
+        }
+
+        &.normal_card__type {
+          position: relative;
+
+          .Inneritems {
+            .btm_btn {
+              a {
+                &::before {
+                  content: '';
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  top: 0;
+                  left: 0;
+
+
+                }
+              }
             }
           }
         }

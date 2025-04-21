@@ -10,14 +10,19 @@
 					<div class="bg {{ module.module_settings.content_group_background_settings.border_radius_type }} {{ module.module_settings.content_group_background_settings.select_color }}"> </div>
 					<div class="Innercnt">
 						<div class="cnt">
-							{% if item.quote %}
+							{% if (item.quote) or (item.rich_text_quote) %}
 							<h5 class="qute">
-								<span>“</span> {{ item.quote }} <span>”</span>
+                {% unless item.use_rich_text_field_for_quote %}
+  								<span>“</span> {{ item.quote }} <span>”</span>                                
+                {% else %}
+  									<span>{{ item.rich_text_quote }}</span>                 
+                {% endunless %}
+
 							</h5>
 							{% endif %}
 							<div class="btmCntt">
 								{% if item.image.src %}
-								<div class="authorImage">
+								<div class="authorImage" style="background-image: url({{ item.image.src|escape_url }})">
 									{% set href = item.link.url.href %}
 									{% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
 									{% set href = "mailto:" + href %}
@@ -163,8 +168,9 @@
 																	perPage: 1,
 																	perMove: 1,
 																	arrows: false,
-																	autoplay: true,
-																	interval: 4000,
+																	autoplay: false,
+																	interval: 8000,
+																	speed: 500,
 																	autoHeight: true,
 																	focus: 0,  // Align slides to the left
 																	gap: 0, // Ensure gap is correctly applied
