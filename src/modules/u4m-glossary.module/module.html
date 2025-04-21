@@ -174,6 +174,12 @@
                 <span>Z</span>
               </a>
             </li>
+            <li>
+              <a href="#symbol">
+                <input type="radio" name="alphabets" onsubmit="this.form.submit()" value="#symbol">
+                <span>#</span>
+              </a>
+            </li>
 
           </ul> 
         </div>
@@ -186,82 +192,123 @@
   </form>
   <div class="glossInr">
 
-    {% set query = "orderBy=name" %}   
+  {% set all_rows = hubdb_table_rows(module.select_hubdb_table, "orderBy=name") %}
+  {% set rows = [] %}
 
-    {% set rows  = [] %}
-    {% if request.query_dict.search %}
-    {% set query = query ~ '&name__icontains=' ~ request.query_dict.search %} 
-    {% endif %}
-
-    {% if request.query_dict.alphabets %}
-    {% set query = query ~ '&name__icontains=' ~ request.query_dict.alphabets %} 
-    {% set Queryrows = hubdb_table_rows(module.select_hubdb_table, query) %} 
-    {% for item in Queryrows %} 
-    {% if item.name|truncate(1,true,"")|lower ==  request.query_dict.alphabets|lower %}
-    {% do rows.append(item) %}
-    {% endif %}
-    {% endfor %}
-
-    {% endif %}
-
-
-
-    {% if request.query_dict.alphabets %}
-    {% set rows = rows %}
-    {% else %}
+  {% if request.query_dict.search %}
+    {% set query = "orderBy=name&name__icontains=" ~ request.query_dict.search %}
     {% set rows = hubdb_table_rows(module.select_hubdb_table, query) %}
-    {% endif %}
+  {% elif request.query_dict.alphabets %}
+    {% set alpha = request.query_dict.alphabets|lower %}
+    {% for item in all_rows %}
+      {% set first_char = item.name|truncate(1, true, "")|lower %}
+      {% set is_symbol = first_char not in 'abcdefghijklmnopqrstuvwxyz' %}
+      {% if alpha == 'symbol' and is_symbol %}
+        {% do rows.append(item) %}
+      {% elif alpha == first_char %}
+        {% do rows.append(item) %}
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    {% set rows = all_rows %}
+  {% endif %}
 
+  {% set az_rows = [] %}
+  {% set symbol_rows = [] %}
+
+  {% for row in rows %}
+    {% set first_char = row.name|truncate(1,true,"")|lower %}
+    {% if first_char in 'abcdefghijklmnopqrstuvwxyz' %}
+      {% do az_rows.append(row) %}
+    {% else %}
+      {% do symbol_rows.append(row) %}
+    {% endif %}
+  {% endfor %}
+
+  <div class="glossList">
+    {% if (az_rows|length + symbol_rows|length) == 0 %}
+      <div class="errMsg"><div class="page-center">No Result Found</div></div>
+    {% endif %}
 
     {% set printed_letters = [] %}
 
+    {# ---- A–Z FIRST ---- #}
+    {% for row in az_rows %}
+      {% set first_letter = row.name[:1]|lower %}
+      {% set section_id = first_letter %}
 
-    <div class="glossList">
-      {% if rows|length == 0 %}
-      <div class="errMsg"><div class="page-center">No Result Found</div></div>
+      {% if section_id not in printed_letters %}
+        {% if printed_letters|length > 0 %}</div></div>{% endif %}
+        <div id="{{ section_id }}" class="glossGroup">
+          <div class="page-center">
+            <div class="first_letter">{{ first_letter|upper }}</div>
+            {% set printed_letters = printed_letters + [section_id] %}
       {% endif %}
 
-      {% set printed_letters = [] %}
-
-      {% for row in rows %}
-      {% set first_letter = row.name[:1] %} {# Get the first letter of the name #} 
-
-      {% if first_letter not in printed_letters %} 
-      {% if printed_letters|length > 0 %}
-    </div> </div>{# Close previous .glossGroup before starting a new one #}
-  {% endif %}
-
-  <div id="{{ first_letter|lower }}" class="glossGroup"> 
-    <div class="page-center"> 
-      <div id="{{ first_letter|lower }}" class="first_letter">{{ first_letter }}</div>
-      {% set printed_letters = printed_letters + [first_letter] %}
-      {% endif %}
-
-      <div class="glossItems"> 
+      <div class="glossItems">
         <div class="glossItembrd">
           <div class="glossItem">
-            <div class="name"><h4>{{ row.name }}</h4></div>
-            <div class="cnt">{{ row.description }}</div> 
+            <div class="name"><h4>{% if row.italicize %}<i>{% endif %}{{ row.name }}{% if row.italicize %}</i>{% endif %}</h4></div>
+            <div class="cnt" {% if row.description|length < 300 %}style="height: auto;"{% endif %}>{{ row.description }}</div>
           </div>
           <div class="glossBtnwrap">
+            {% if row.description|length > 300 %}
             <div class="glossBtn">
-              <div class="glossBtntext hs-sec-btn">See More <span class="arrow"><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 7.42843L0 1.77306L1.275 0.571289L6 5.0249L10.725 0.571289L12 1.77306L6 7.42843Z" fill="black"/>
+              <div class="glossBtntext hs-sec-btn">See More <span class="arrow">
+                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 7.42843L0 1.77306L1.275 0.571289L6 5.0249L10.725 0.571289L12 1.77306L6 7.42843Z" fill="black"/>
                 </svg>
-                </span></div>
-              <div class="glossBtnless hs-sec-btn">See Less <span class="arrow"><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 7.42843L0 1.77306L1.275 0.571289L6 5.0249L10.725 0.571289L12 1.77306L6 7.42843Z" fill="black"/>
+              </span></div>
+              <div class="glossBtnless hs-sec-btn">See Less <span class="arrow">
+                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 7.42843L0 1.77306L1.275 0.571289L6 5.0249L10.725 0.571289L12 1.77306L6 7.42843Z" fill="black"/>
                 </svg>
-                </span></div>
+              </span></div>
             </div>
+            {% endif %}
           </div>
         </div>
       </div>
 
-      {% if loop.last %}
-    </div> </div>{# Close the last .glossGroup #}
-  {% endif %}
-  {% endfor %}
+      {% if loop.last %}</div></div>{% endif %}
+    {% endfor %}
+
+    {# ---- SYMBOLS LAST ---- #}
+    {% if symbol_rows|length > 0 %}
+      <div id="symbol" class="glossGroup">
+        <div class="page-center">
+          <div class="first_letter">#</div>
+
+          {% for row in symbol_rows %}
+            <div class="glossItems">
+              <div class="glossItembrd">
+                <div class="glossItem">
+                  <div class="name"><h4>{% if row.italicize %}<i>{% endif %}{{ row.name }}{% if row.italicize %}</i>{% endif %}</h4></div>
+                  <div class="cnt" {% if row.description|length < 300 %}style="height: auto;"{% endif %}>{{ row.description }}</div>
+                </div>
+                <div class="glossBtnwrap">
+                  {% if row.description|length > 300 %}
+                  <div class="glossBtn">
+                    <div class="glossBtntext hs-sec-btn">See More <span class="arrow">
+                      <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 7.42843L0 1.77306L1.275 0.571289L6 5.0249L10.725 0.571289L12 1.77306L6 7.42843Z" fill="black"/>
+                      </svg>
+                    </span></div>
+                    <div class="glossBtnless hs-sec-btn">See Less <span class="arrow">
+                      <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 7.42843L0 1.77306L1.275 0.571289L6 5.0249L10.725 0.571289L12 1.77306L6 7.42843Z" fill="black"/>
+                      </svg>
+                    </span></div>
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
 </div>
 
 
