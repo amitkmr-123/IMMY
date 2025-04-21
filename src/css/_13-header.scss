@@ -1,6 +1,12 @@
 .header {
-  position: relative;
+  // position: relative;
+  // z-index: 101;
+
+  position: fixed;
+  width: 100%;
+  top: 0;
   z-index: 101;
+  background-color: $White;
 
   &.lpHeader {
     display: none;

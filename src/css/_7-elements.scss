@@ -104,8 +104,12 @@ body {
   line-height: $baseLineHeight;
   color: $FontGray;
   font-weight: 400;
-  margin-top: 0;
+  margin-top: 158px;
   -webkit-font-smoothing: antialiased;
+
+  @include tablet {
+    margin-top: 142px;
+  }
 
   &.hide-header {
     margin-top: 0;
